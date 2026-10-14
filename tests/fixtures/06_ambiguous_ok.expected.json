@@ -1,0 +1,29 @@
+{
+  "id": "06_ambiguous_ok",
+  "title": "Một câu ok có thể chỉ là đã nghe",
+  "group": "indirect",
+  "split": "dev",
+  "input_format": "named",
+  "lesson": "Ok có thể là tín hiệu nghe được, không phải đồng thuận; lời cuối xác nhận đề xuất chưa chốt.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "thanh toán",
+      "type": "unresolved",
+      "status": "unresolved",
+      "contains": "ví điện tử",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T13"
+    }
+  ],
+  "intermediate_turns": [
+    "T2"
+  ],
+  "history_turns": [
+    "T2",
+    "T13"
+  ],
+  "transcript_sha256": "1ddb1dde0b17dc3293b7450307702dd6d46c3e3f7af11ee88fcd4115f563f01d"
+}

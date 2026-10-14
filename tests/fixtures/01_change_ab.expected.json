@@ -1,0 +1,41 @@
+{
+  "id": "01_change_ab",
+  "title": "Bỏ máy chủ riêng, chọn dịch vụ quản lý",
+  "group": "change",
+  "split": "dev",
+  "input_format": "named",
+  "lesson": "Giữ B là quyết định cuối; hội thoại không cần nhắc lại tên chủ đề ở mọi lượt.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "lưu trữ",
+      "type": "decision",
+      "status": "confirmed",
+      "contains": "phương án B",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T13"
+    },
+    {
+      "topic": "triển khai",
+      "type": "action",
+      "status": "confirmed",
+      "contains": "bản cấu hình",
+      "owner": "Lan",
+      "due": "thứ Sáu",
+      "conditions": [],
+      "evidence_turn": "T16"
+    }
+  ],
+  "intermediate_turns": [
+    "T3",
+    "T8"
+  ],
+  "history_turns": [
+    "T3",
+    "T8",
+    "T13"
+  ],
+  "transcript_sha256": "9fdac1c4656e0d3ad5a559f439a46430c3c732f79539a4e91f4d259e1a523f67"
+}

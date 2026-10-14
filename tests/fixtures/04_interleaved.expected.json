@@ -1,0 +1,38 @@
+{
+  "id": "04_interleaved",
+  "title": "Quay lại chuyện lưu trữ sau khi bàn lịch demo",
+  "group": "change",
+  "split": "holdout",
+  "input_format": "named",
+  "lesson": "Đại từ và tham chiếu quay lại chủ đề có thể làm local gắn câu chốt đúng chữ vào sai chủ đề.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "lưu trữ",
+      "type": "decision",
+      "status": "confirmed",
+      "contains": "phương án B",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T15"
+    },
+    {
+      "topic": "lịch demo",
+      "type": "unresolved",
+      "status": "unresolved",
+      "contains": "chiều thứ Tư",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T8"
+    }
+  ],
+  "intermediate_turns": [
+    "T2",
+    "T4",
+    "T8"
+  ],
+  "history_turns": [],
+  "transcript_sha256": "e2388c718ef10acad1a854f548b2fe9a0033d787b89a9cb8dd66038baad8f0f6"
+}

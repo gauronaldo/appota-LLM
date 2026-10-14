@@ -1,0 +1,246 @@
+{
+  "dataset_version": "2.0",
+  "engine": "local",
+  "model": null,
+  "prompt_version": "1.0",
+  "split": "holdout",
+  "run_at": "2026-10-14T07:25:00.280682+00:00",
+  "core_hashes": {
+    "src/meeting_trace/meeting/core.py": "cf7f10a20cb762f93fc752a9ccbe34f38bac300d66979765495bd3a8e0071661",
+    "src/meeting_trace/meeting/schema.py": "93cf6233283031c5ffa7fa48970fbaa2e37ff6b8cb6995aaec69ad7e7849983a",
+    "src/meeting_trace/meeting/prompts.py": "257b0d9938245ba1c849f46188a0c27b560b63477d854fae6a5fac0ef79f8165",
+    "src/meeting_trace/meeting/llm.py": "7cf5d67284540ebe361960f800da442c80733f9ef0db9e91571ac6d484d78666"
+  },
+  "total": 8,
+  "passed": 0,
+  "metrics": {
+    "decision_tp": 0,
+    "decision_fp": 1,
+    "decision_fn": 3,
+    "intermediate_promoted": 0,
+    "intermediate_total": 6,
+    "invented_owner_due": 0,
+    "decision_precision": 0.0,
+    "decision_recall": 0.0,
+    "intermediate_promotion_rate": 0.0
+  },
+  "cases": [
+    {
+      "id": "04_interleaved",
+      "title": "Quay lại chuyện lưu trữ sau khi bàn lịch demo",
+      "group": "change",
+      "input_format": "named",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai decision: lưu trữ / phương án B",
+        "Thiếu/sai unresolved: lịch demo / chiều thứ Tư",
+        "Mục ngoài kỳ vọng: decision / lịch demo / Chốt dùng phương án B cho phần đó."
+      ],
+      "expectation": "decision/lưu trữ: phương án B (confirmed, owner=None, due=None, conditions=[]); unresolved/lịch demo: chiều thứ Tư (unresolved, owner=None, due=None, conditions=[])",
+      "actual": "decision/lịch demo: Chốt dùng phương án B cho phần đó. (confirmed, owner=None, due=None)",
+      "lesson": "Đại từ và tham chiếu quay lại chủ đề có thể làm local gắn câu chốt đúng chữ vào sai chủ đề.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 1,
+        "decision_fn": 1,
+        "intermediate_promoted": 0,
+        "intermediate_total": 3,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "05_unnamed_reversal",
+      "title": "Đổi cổng thanh toán trong transcript không có người nói",
+      "group": "change",
+      "input_format": "plain",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Pipeline không xử lý được input: Dòng 1: cần định dạng Người nói: nội dung.",
+        "Thiếu/sai decision: thanh toán / cổng B"
+      ],
+      "expectation": "decision/thanh toán: cổng B (confirmed, owner=None, due=None, conditions=[])",
+      "actual": "Lỗi pipeline: Dòng 1: cần định dạng Người nói: nội dung.",
+      "lesson": "Transcript vẫn có kết luận rõ dù thiếu người nói; parser hiện tại phải được đánh giá là chưa hỗ trợ, không biến lỗi input thành kết quả trống đạt.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 1,
+        "intermediate_promoted": 0,
+        "intermediate_total": 2,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "09_named_assignee_no_speaker",
+      "title": "Người nhận được nêu trong nội dung, không biết ai nói",
+      "group": "indirect",
+      "input_format": "plain",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Pipeline không xử lý được input: Dòng 1: cần định dạng Người nói: nội dung.",
+        "Thiếu/sai action: báo cáo / gửi báo cáo"
+      ],
+      "expectation": "action/báo cáo: gửi báo cáo (confirmed, owner=Lan, due=thứ Sáu, conditions=[])",
+      "actual": "Lỗi pipeline: Dòng 1: cần định dạng Người nói: nội dung.",
+      "lesson": "Không cần biết người phát biểu để nhận ra tên người được giao việc được nói rõ trong nội dung.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 0,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "10_indirect_consensus",
+      "title": "Thống nhất qua nhiều lượt mà không nói từ chốt",
+      "group": "indirect",
+      "input_format": "named",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai decision: báo cáo / một cột"
+      ],
+      "expectation": "decision/báo cáo: một cột (confirmed, owner=None, due=None, conditions=[])",
+      "actual": "Không có mục",
+      "lesson": "Đồng thuận có thể được thể hiện bằng nhiều lượt và lời kết luận gián tiếp, không chỉ từ khóa chốt.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 1,
+        "intermediate_promoted": 0,
+        "intermediate_total": 1,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "14_request_not_assignment",
+      "title": "Yêu cầu của khách không tự thành việc đã giao",
+      "group": "unresolved",
+      "input_format": "mixed",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Pipeline không xử lý được input: Dòng 2: cần định dạng Người nói: nội dung.",
+        "Thiếu/sai request_feedback: báo cáo / bộ lọc theo tháng",
+        "Thiếu/sai unresolved: báo cáo / chưa thống nhất"
+      ],
+      "expectation": "request_feedback/báo cáo: bộ lọc theo tháng (needs_confirmation, owner=None, due=None, conditions=[]); unresolved/báo cáo: chưa thống nhất (unresolved, owner=None, due=None, conditions=[])",
+      "actual": "Lỗi pipeline: Dòng 2: cần định dạng Người nói: nội dung.",
+      "lesson": "Dữ liệu có và thiếu nhãn xen kẽ phải được đưa vào test; yêu cầu không tự tạo owner hoặc deadline.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 0,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "15_conditional_task",
+      "title": "Lời nhận việc còn phụ thuộc quyền truy cập",
+      "group": "unresolved",
+      "input_format": "named",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai action: hoàn tiền / kiểm tra luồng hoàn tiền",
+        "Thiếu/sai issue: sandbox / chưa mở quyền sandbox",
+        "Mục ngoài kỳ vọng: issue / chưa xác định chủ đề / Vướng mắc là đối tác chưa mở quyền sandbox cho nhóm."
+      ],
+      "expectation": "action/hoàn tiền: kiểm tra luồng hoàn tiền (needs_confirmation, owner=Lan, due=None, conditions=['Nếu đối tác mở quyền sandbox']); issue/sandbox: chưa mở quyền sandbox (needs_confirmation, owner=None, due=None, conditions=[])",
+      "actual": "issue/chưa xác định chủ đề: Vướng mắc là đối tác chưa mở quyền sandbox cho nhóm. (needs_confirmation, owner=None, due=None)",
+      "lesson": "Lời nhận việc có điều kiện không được nâng thành cam kết vô điều kiện hoặc tự thêm hạn từ lịch demo.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 0,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "19_speakerless_commitment",
+      "title": "Có việc và hạn, không có dữ liệu xác định người nhận",
+      "group": "clear",
+      "input_format": "plain",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Pipeline không xử lý được input: Dòng 1: cần định dạng Người nói: nội dung.",
+        "Thiếu/sai action: hướng dẫn / thay ảnh hướng dẫn"
+      ],
+      "expectation": "action/hướng dẫn: thay ảnh hướng dẫn (needs_confirmation, owner=None, due=ngày mai, conditions=[])",
+      "actual": "Lỗi pipeline: Dòng 1: cần định dạng Người nói: nội dung.",
+      "lesson": "Một lời tự nhận rõ không cho phép bịa danh tính khi transcript không có người nói.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 0,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "20_explicit_name_in_content",
+      "title": "Người nói Huy giao việc cho Mai",
+      "group": "clear",
+      "input_format": "named",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai action: báo cáo / gửi báo cáo"
+      ],
+      "expectation": "action/báo cáo: gửi báo cáo (confirmed, owner=Mai, due=thứ Sáu, conditions=[])",
+      "actual": "Không có mục",
+      "lesson": "Tên người nhận ở trong nội dung có thể khác người nói; không dùng vị trí đầu dòng để suy ra owner.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 0,
+        "invented_owner_due": 0
+      }
+    }
+  ],
+  "groups": {
+    "change": {
+      "total": 2,
+      "passed": 0
+    },
+    "clear": {
+      "total": 2,
+      "passed": 0
+    },
+    "indirect": {
+      "total": 2,
+      "passed": 0
+    },
+    "unresolved": {
+      "total": 2,
+      "passed": 0
+    }
+  },
+  "input_formats": {
+    "mixed": {
+      "total": 1,
+      "passed": 0
+    },
+    "named": {
+      "total": 4,
+      "passed": 0
+    },
+    "plain": {
+      "total": 3,
+      "passed": 0
+    }
+  }
+}

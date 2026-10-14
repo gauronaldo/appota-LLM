@@ -1,0 +1,31 @@
+{
+  "id": "02_change_aba",
+  "title": "Lịch demo đổi sang chiều rồi quay lại buổi sáng",
+  "group": "change",
+  "split": "dev",
+  "input_format": "named",
+  "lesson": "Một lần chốt giữa cuộc họp có thể bị thay; phải theo dõi lần quay lại A.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "lịch demo",
+      "type": "decision",
+      "status": "confirmed",
+      "contains": "phương án A",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T15"
+    }
+  ],
+  "intermediate_turns": [
+    "T2",
+    "T8"
+  ],
+  "history_turns": [
+    "T2",
+    "T8",
+    "T15"
+  ],
+  "transcript_sha256": "039636020bcc57166bdfc5246f4da6412deef199bcbfd9e1b26b9f0e67cc18d5"
+}

@@ -1,0 +1,16 @@
+Huy: Báo cáo tháng này đã được đối soát xong trong bảng chung.
+Minh: Có cần hỏi lại khách về định dạng không?
+Huy: Không, họ xác nhận dùng file CSV như tháng trước.
+Lan: Như vậy chỉ còn người gửi bản cuối, không phải xây chức năng mới.
+Minh: Ai đang giữ luồng email với khách?
+Mai: Em đang giữ luồng đó và có đủ người nhận.
+Huy: Phần ghi chú giao dịch treo đã có ở trang cuối báo cáo.
+Mai: Em thấy rồi, không cần thêm một bảng nữa.
+Huy: Mai gửi báo cáo đã đối soát trước thứ Sáu nhé.
+Mai: Em xác nhận phần việc đó, gửi đúng bản đang nằm trong bảng chung.
+Lan: Mai có cần đính kèm bảng chú giải mã giao dịch không?
+Minh: Có, bảng đó đã nằm trong bản cuối, mình không tạo thêm một bản khác.
+Huy: Không có yêu cầu làm lại phần đối soát.
+Mai: Thời hạn trong câu là thứ Sáu, em đã rõ.
+Lan: Phần này không còn câu hỏi nào cần chốt.
+Minh: Mình kết thúc cuộc họp nhé.

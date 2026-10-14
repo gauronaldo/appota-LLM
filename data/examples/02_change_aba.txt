@@ -1,0 +1,19 @@
+Minh: Về lịch demo, khách đang giữ hai khung giờ cho mình.
+Lan: Đề xuất chọn phương án A, sáng thứ Năm. Huy lúc đó cũng có mặt.
+Huy: Sáng thứ Năm anh đi cùng nhóm hỗ trợ, vẫn tham gia được.
+Mai: Bản dữ liệu demo cần chạy trước một lần để tránh chờ trên màn hình.
+Lan: Đợt trước chạy thử khoảng mười phút, em đang kiểm tra bản mới.
+Minh: Khách vừa nhắn buổi sáng có cuộc họp khác.
+Mai: Nếu đổi thì chiều thứ Năm bên mình có ai vướng không?
+Minh: Về lịch demo, chốt phương án B, chuyển sang chiều thứ Năm.
+Lan: Em chưa gửi lịch chính thức, để em hỏi lại người phụ trách phía khách.
+Huy: Chiều anh có lịch hỗ trợ nhưng có thể đổi.
+Mai: Mình cần chắc có người ra quyết định bên khách tham gia nữa.
+Lan: Em vừa nhận phản hồi: người duyệt chỉ tham gia buổi sáng.
+Minh: Vậy cuộc họp kia của họ đã xử lý thế nào?
+Lan: Họ dời cuộc họp kia rồi, giữ lại khung sáng ban đầu cho mình.
+Minh: Về lịch demo, chốt quay về phương án A, sáng thứ Năm.
+Huy: Như vậy anh không cần đổi lịch hỗ trợ chiều nữa.
+Mai: Em ghi rõ lịch chiều đã bị thay, để người đọc không dùng nhầm.
+Lan: Lịch gửi ra sẽ chỉ có buổi sáng.
+Minh: Mình thống nhất nội dung chính rồi, dừng phần này nhé.

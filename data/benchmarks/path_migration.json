@@ -1,0 +1,6 @@
+{
+  "meeting/core.py": "src/meeting_trace/meeting/core.py",
+  "meeting/schema.py": "src/meeting_trace/meeting/schema.py",
+  "meeting/prompts.py": "src/meeting_trace/meeting/prompts.py",
+  "meeting/llm.py": "src/meeting_trace/meeting/llm.py"
+}

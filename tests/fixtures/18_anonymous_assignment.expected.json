@@ -1,0 +1,24 @@
+{
+  "id": "18_anonymous_assignment",
+  "title": "Cam kết đã rõ, danh tính người nhận chưa rõ",
+  "group": "clear",
+  "split": "dev",
+  "input_format": "labels",
+  "lesson": "Không đồng nhất nhãn diarization với tên thật; có thể giữ evidence nhưng owner cần để null.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "kiểm thử",
+      "type": "action",
+      "status": "needs_confirmation",
+      "contains": "kiểm thử hồi quy",
+      "owner": null,
+      "due": "thứ Sáu",
+      "conditions": [],
+      "evidence_turn": "T6"
+    }
+  ],
+  "intermediate_turns": [],
+  "history_turns": [],
+  "transcript_sha256": "cd8be0f15490adaaad6e8ff57fba5498d4caacb7d1a9dfd210b5f74547c616c6"
+}

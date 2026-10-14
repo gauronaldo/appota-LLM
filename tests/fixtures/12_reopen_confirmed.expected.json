@@ -1,0 +1,29 @@
+{
+  "id": "12_reopen_confirmed",
+  "title": "Mở lại quyết định đã chốt vì thông tin mới",
+  "group": "unresolved",
+  "split": "dev",
+  "input_format": "named",
+  "lesson": "Lời hoãn sau cùng làm lần chốt trước hết hiệu lực; không tự biến lịch cũ thành hạn sửa lỗi.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "phát hành",
+      "type": "unresolved",
+      "status": "unresolved",
+      "contains": "hoãn bản 2.1",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T12"
+    }
+  ],
+  "intermediate_turns": [
+    "T3"
+  ],
+  "history_turns": [
+    "T3",
+    "T12"
+  ],
+  "transcript_sha256": "bd3330aa162c13df3dc068e9ac05fa5cdc7385eca678fd33d78ce13fd1d62a2a"
+}

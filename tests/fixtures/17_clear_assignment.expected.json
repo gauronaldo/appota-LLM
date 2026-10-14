@@ -1,0 +1,74 @@
+{
+  "id": "17_clear_assignment",
+  "title": "Quyết định và công việc thiếu một trường được tách riêng",
+  "group": "clear",
+  "split": "dev",
+  "input_format": "named",
+  "lesson": "Thiếu hạn và thiếu người là hai trường hợp khác nhau; giữ null thay vì chuyển thông tin từ việc bên cạnh.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "báo cáo",
+      "type": "decision",
+      "status": "confirmed",
+      "contains": "biểu đồ đường",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T5"
+    },
+    {
+      "topic": "nhãn biểu đồ",
+      "type": "request_feedback",
+      "status": "needs_confirmation",
+      "contains": "chữ quá nhỏ",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T7"
+    },
+    {
+      "topic": "tài liệu",
+      "type": "action",
+      "status": "confirmed",
+      "contains": "cập nhật tài liệu",
+      "owner": "Lan",
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T9"
+    },
+    {
+      "topic": "bảo mật",
+      "type": "action",
+      "status": "needs_confirmation",
+      "contains": "rà soát quyền truy cập",
+      "owner": null,
+      "due": "thứ Hai",
+      "conditions": [],
+      "evidence_turn": "T13"
+    },
+    {
+      "topic": "đăng nhập",
+      "type": "issue",
+      "status": "needs_confirmation",
+      "contains": "chưa có quyền sandbox",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T20"
+    },
+    {
+      "topic": "phân quyền",
+      "type": "unresolved",
+      "status": "unresolved",
+      "contains": "cách cấp quyền",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T23"
+    }
+  ],
+  "intermediate_turns": [],
+  "history_turns": [],
+  "transcript_sha256": "1d701ac42664432d5011c5a8c7a4a71300effa107b36809a91cd5f5a1da88daf"
+}

@@ -218,3 +218,30 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project additions
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+runtime/
+*.log
+.DS_Store
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+# Meeting Trace local artifacts and private working notes
+runtime/
+dist/
+.env.*
+!.env.example
+docs/PROJECT_WALKTHROUGH.md
+docs/reports/MISSION1_ALIGNMENT.md
+docs/reports/VERIFICATION.md
+docs/assets/

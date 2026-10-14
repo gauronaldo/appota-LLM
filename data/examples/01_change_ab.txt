@@ -1,0 +1,21 @@
+Minh: Về lưu trữ, hôm nay mình cần chọn chỗ đặt dữ liệu cho bản thử.
+Lan: Bản thử khoảng ba nghìn người dùng thôi, chưa có số liệu tải thật.
+Huy: Đề xuất dùng phương án A, tức là thuê máy chủ riêng. Mình tự cấu hình được.
+Mai: Tiền thuê có nằm trong dự toán tháng này không anh?
+Huy: Anh mới hỏi giá, chưa tính người trực và phần sao lưu.
+Lan: Nếu cộng hai khoản đó thì phương án A vượt ngân sách rồi.
+Minh: Có cách nào chạy được trước mà không phải trực cả cuối tuần không?
+Huy: Đề xuất dùng phương án B, dịch vụ quản lý sẵn. Chi phí bản thử thấp hơn.
+Mai: Dữ liệu có xuất ra được khi mình đổi nhà cung cấp không?
+Huy: Có, định dạng xuất vẫn là CSV. Anh đã kiểm tra phần đó.
+Lan: Vậy B hợp với giai đoạn thử hơn, sau này đủ số liệu hãy tính máy chủ riêng.
+Minh: Anh đồng ý với lý do đó.
+Minh: Chốt dùng phương án B cho bản thử. Chưa mua máy chủ riêng ở đợt này.
+Mai: Em ghi B vào phần quyết định, A chỉ giữ ở phần phương án đã bàn.
+Minh: Về triển khai, phần cấu hình ai nhận được?
+Lan: Em nhận làm bản cấu hình trước thứ Sáu.
+Huy: Tài khoản thử đã có trong nhóm từ sáng nay.
+Lan: Em cần quyền tạo môi trường, tài khoản chỉ xem thì chưa đủ.
+Huy: Quyền tạo môi trường đã mở rồi, tài khoản đó không chỉ có quyền xem.
+Mai: Còn câu hỏi nào ảnh hưởng đến lựa chọn hôm nay không?
+Minh: Không, mình kết thúc ở đây.

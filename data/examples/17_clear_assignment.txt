@@ -1,0 +1,24 @@
+Minh: Về báo cáo, khách đã xem hai loại biểu đồ trong bản demo.
+Mai: Họ muốn so xu hướng theo thời gian, không phải so từng nhóm độc lập.
+Lan: Biểu đồ đường phù hợp với cách đọc đó hơn biểu đồ cột.
+Huy: Số liệu trả từ API giống nhau, không cần đổi phần dữ liệu.
+Minh: Chốt dùng biểu đồ đường trên màn hình báo cáo.
+Mai: Khách xem bản demo trên điện thoại nên màn hình nhỏ hơn máy của mình.
+Mai: Về nhãn biểu đồ, phản hồi của khách là chữ quá nhỏ khi xem trên điện thoại.
+Minh: Về tài liệu, mình cần hướng dẫn dùng bố cục mới.
+Lan: Em nhận cập nhật tài liệu sử dụng.
+Huy: Phần đó chưa có hạn trong lịch giao việc, đừng tự lấy ngày phát hành.
+Lan: Đúng, hôm nay em nhận việc nhưng chưa cam kết thời hạn cụ thể.
+Minh: Về bảo mật, cần xem lại quyền tải báo cáo của khách.
+Minh: Cần làm rà soát quyền truy cập trước thứ Hai.
+Mai: Ai sẽ nhận phần rà soát này?
+Minh: Chưa có người nhận trong cuộc họp, cần xác nhận sau.
+Lan: Vậy chỉ việc tài liệu là có người nhận rõ tên.
+Huy: Phần rà soát chưa thể chuyển luôn cho Lan, em ấy đang giữ việc tài liệu.
+Minh: Đúng, mình ghi riêng từng mục.
+Minh: Về đăng nhập, luồng thử của khách đang bị chặn ở đâu?
+Huy: Vướng mắc là chưa có quyền sandbox để thử luồng đăng nhập của khách.
+Lan: Đó là quyền ở phía khách, không phải lỗi đăng nhập đã tái hiện được.
+Minh: Về phân quyền, mình vẫn chưa biết khách cần những vai trò nào.
+Minh: Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp.
+Mai: Em ghi câu hỏi phân quyền riêng với công việc rà soát quyền hiện tại.

@@ -1,0 +1,24 @@
+{
+  "id": "19_speakerless_commitment",
+  "title": "Có việc và hạn, không có dữ liệu xác định người nhận",
+  "group": "clear",
+  "split": "holdout",
+  "input_format": "plain",
+  "lesson": "Một lời tự nhận rõ không cho phép bịa danh tính khi transcript không có người nói.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "hướng dẫn",
+      "type": "action",
+      "status": "needs_confirmation",
+      "contains": "thay ảnh hướng dẫn",
+      "owner": null,
+      "due": "ngày mai",
+      "conditions": [],
+      "evidence_turn": "T5"
+    }
+  ],
+  "intermediate_turns": [],
+  "history_turns": [],
+  "transcript_sha256": "cc64f6908592f1a03afeb634e99d7d40abe812dcf1b28b4b8ad16f4c7a8145cd"
+}

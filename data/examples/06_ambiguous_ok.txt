@@ -1,0 +1,17 @@
+Minh: Về thanh toán, bản demo còn dùng chuyển khoản thủ công.
+Huy: Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác.
+Lan: Ok, anh nói tiếp đi.
+Huy: Luồng tích hợp cần đổi cả màn hình xác nhận.
+Mai: Bên đối tác có gửi tài liệu sandbox chưa?
+Huy: Mới gửi link đăng ký, anh chưa có tài khoản chạy thử.
+Lan: Để em xem đã, màn hình hiện tại còn lỗi căn lề.
+Minh: Câu ok lúc nãy là em đồng ý triển khai luôn à?
+Lan: Em chỉ nói là nghe được, chưa xem đủ khối lượng.
+Mai: Nếu vậy mình chưa biết phần này có kịp cùng đợt thử không.
+Huy: Anh cũng chưa có số giờ ước tính chính xác.
+Minh: Mình đang gần hết giờ, hôm nay không lấy im lặng làm đồng ý nhé.
+Minh: Chưa chốt chuyện thêm ví điện tử ở đợt này.
+Lan: Em hiểu, không coi đó là việc đã được giao cho em.
+Mai: Bản ghi sẽ giữ nó ở phần đang bàn.
+Huy: Đúng, hiện mới là đề xuất.
+Minh: Còn phần thanh toán hiện tại vẫn chạy như cũ.

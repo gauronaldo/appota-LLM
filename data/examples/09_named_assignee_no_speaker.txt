@@ -1,0 +1,16 @@
+Báo cáo cho khách cần dùng số liệu đã đối soát, không dùng bản xuất chiều qua.
+Phần giao dịch hoàn tiền đã được kiểm tra chưa?
+Đã kiểm tra xong trong bảng chung, còn thiếu phần ghi chú về giao dịch treo.
+Ghi chú đó đã có ở trang cuối, chỉ cần đưa cùng báo cáo.
+Khách muốn nhận trước cuối tuần vì họ phải họp nội bộ.
+Nếu gửi báo cáo thiếu phần treo thì họ sẽ hiểu nhầm số dư.
+Mình thống nhất giữ cả phần ghi chú, không cắt cho ngắn.
+Lan đang phụ trách liên hệ với khách, người gửi báo cáo vẫn là Lan.
+Lan gửi báo cáo trước thứ Sáu.
+Trong file nhớ có bản số liệu và phần ghi chú, nhưng không cần gửi log kỹ thuật.
+Đây là việc đã được giao, không phải đề nghị tìm người làm.
+Có cần gửi thêm biểu đồ để khách xem nhanh không?
+Lần này họ chỉ yêu cầu file số liệu và phần ghi chú, chưa cần biểu đồ.
+Bản đã đối soát đang nằm ở thư mục chung, đừng dùng bản cũ trong email tuần trước.
+Địa chỉ người nhận vẫn dùng danh sách ở luồng trao đổi hiện tại.
+Mình kết thúc phần trao đổi về báo cáo ở đây.

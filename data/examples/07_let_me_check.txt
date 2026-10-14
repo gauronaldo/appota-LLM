@@ -1,0 +1,17 @@
+Huy: Có khách nói bấm đăng nhập hai lần mới vào được.
+Mai: Họ dùng trình duyệt nào? Em chưa thấy lỗi đó ở máy mình.
+Huy: Bản ghi hỗ trợ nói Safari trên điện thoại.
+Lan: Để em xem lỗi này đã.
+Minh: Ý em là nhận sửa luôn hay cần xem mới biết?
+Lan: Em cần xem video để biết có phải lỗi sản phẩm không.
+Huy: Video có trong phiếu hỗ trợ, nhưng lúc bấm hơi khuất tay.
+Mai: Có thể lần đầu họ chưa đóng bàn phím, mình không nên đoán.
+Lan: Đúng, chưa có bằng chứng cho một nguyên nhân cụ thể.
+Minh: Vậy hiện chưa có người nhận làm bản sửa.
+Huy: Cũng chưa có hạn giải quyết mà mình có thể hứa với khách.
+Huy: Vướng mắc là chưa tái hiện được lỗi đăng nhập trên môi trường thử.
+Mai: Em ghi đây là báo cáo lỗi chưa xác minh.
+Lan: Đừng ghi câu để em xem thành em cam kết sửa trong hôm nay.
+Minh: Đồng ý, chưa giao việc sửa khi chưa rõ lỗi.
+Huy: Thông tin trình duyệt trong phiếu có thể dùng để điều tra sau.
+Mai: Phần này vẫn cần người phụ trách hỗ trợ làm rõ với khách.

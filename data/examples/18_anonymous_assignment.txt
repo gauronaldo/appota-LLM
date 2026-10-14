@@ -1,0 +1,15 @@
+Người nói 1: Về kiểm thử, lỗi hiển thị giá đã được sửa trong bản mới.
+Người nói 2: Em đã xem bản sửa, cần chạy lại ba loại khuyến mãi.
+Người nói 3: Có thể kiểm tra bằng bộ dữ liệu mẫu đang dùng không?
+Người nói 2: Có, không cần xin dữ liệu thật của khách.
+Người nói 1: Ai có thể nhận phần hồi quy này?
+Người nói 2: Em nhận làm kiểm thử hồi quy trước thứ Sáu.
+Người nói 3: Em nghe rõ nội dung và hạn rồi.
+Người nói 1: Ba loại khuyến mãi là giảm phần trăm, giảm tiền và mua theo bộ đúng không?
+Người nói 2: Đúng, mỗi loại cần thử cả lúc thêm và xóa sản phẩm.
+Người nói 3: Dữ liệu mẫu đã có sẵn đủ ba loại, không cần tạo đơn hàng thật.
+Người nói 1: Kết quả để trong bảng thử hiện tại để mình so với đợt trước.
+Người nói 2: Em đã thấy bảng đó, hạn em vừa nói là thứ Sáu.
+Người nói 3: Phần sửa code đã hoàn tất nên không đưa thành việc mới nữa.
+Người nói 1: Nếu có lỗi khác ngoài phạm vi này thì ghi riêng, đừng trộn vào kết quả hồi quy.
+Người nói 2: Không có thay đổi gì khác ở phần này.

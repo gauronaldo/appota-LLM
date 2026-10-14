@@ -1,0 +1,17 @@
+Minh: Về phát hành, mình còn phải xác nhận việc hoàn tiền trước khi quyết lịch.
+Lan: Bản sửa đã qua kiểm thử hồi quy sáng nay.
+Huy: Anh thử cả hoàn một phần lẫn hoàn toàn bộ, số tiền đều khớp.
+Mai: Nhóm hỗ trợ đã có hướng dẫn trả lời khách khi họ hỏi về trạng thái mới.
+Minh: Còn vấn đề nào đang chặn việc phát hành không?
+Lan: Không còn lỗi chặn, chỉ có một chỉnh sửa chữ không ảnh hưởng luồng.
+Huy: Chỉnh sửa chữ đó đã nằm trong bản 2.1 rồi.
+Mai: Lịch bên khách cho phép cập nhật đầu tuần.
+Minh: Nghĩa là không cần điều kiện còn chờ từ phía họ nữa.
+Lan: Đúng, họ đã xác nhận trong email hôm qua.
+Minh: Về phát hành, chốt đưa bản 2.1 lên vào thứ Hai.
+Mai: Em ghi lịch đó là quyết định cuối của cuộc họp.
+Huy: Các kiểm tra vừa nói đều đã hoàn tất, không phải việc giao mới.
+Lan: Mình dùng đúng bản đã thử hôm nay, không thêm thay đổi ngoài bản đó.
+Minh: Nếu có thông tin mới thì cần mở lại quyết định, không tự bỏ qua.
+Mai: Hiện chưa có thông tin mới để thay lịch.
+Minh: Mình kết thúc phần phát hành ở đây.

@@ -1,0 +1,16 @@
+Huy: Môi trường thử của đối tác vẫn chặn địa chỉ mạng của mình.
+Lan: Họ đã nhận yêu cầu mở quyền từ tuần trước chưa?
+Huy: Họ nhận rồi nhưng chưa xác nhận lúc nào hoàn tất.
+Mai: Vậy nhóm mình chưa chạy được luồng tích hợp từ đầu đến cuối.
+Minh: Phần tích hợp có người nhận xử lý khi có quyền không?
+Lan: Nếu đối tác mở quyền sandbox thì em mới nhận kiểm tra luồng hoàn tiền.
+Minh: Em chưa cam kết bắt đầu trước khi quyền được mở, đúng không?
+Lan: Đúng, hiện em không có cách chạy thử trên môi trường của họ.
+Huy: Mình cũng chưa có ngày mở quyền để suy ra hạn kiểm tra.
+Mai: Không nên ghi thứ Sáu chỉ vì đó là lịch demo dự kiến.
+Huy: Vướng mắc là đối tác chưa mở quyền sandbox cho nhóm.
+Minh: Cần giữ điều kiện của lời nhận việc trong bản ghi.
+Lan: Nếu quyền không được mở thì mình phải bàn lại cách kiểm tra.
+Mai: Em ghi công việc ở trạng thái cần xác nhận, chưa có deadline.
+Huy: Lỗi này thuộc quyền truy cập, chưa phải lỗi của luồng hoàn tiền.
+Minh: Đúng, hôm nay chưa có bằng chứng để kết luận luồng đó hỏng.

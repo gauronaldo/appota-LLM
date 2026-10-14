@@ -1,0 +1,36 @@
+{
+  "id": "15_conditional_task",
+  "title": "Lời nhận việc còn phụ thuộc quyền truy cập",
+  "group": "unresolved",
+  "split": "holdout",
+  "input_format": "named",
+  "lesson": "Lời nhận việc có điều kiện không được nâng thành cam kết vô điều kiện hoặc tự thêm hạn từ lịch demo.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "hoàn tiền",
+      "type": "action",
+      "status": "needs_confirmation",
+      "contains": "kiểm tra luồng hoàn tiền",
+      "owner": "Lan",
+      "due": null,
+      "conditions": [
+        "Nếu đối tác mở quyền sandbox"
+      ],
+      "evidence_turn": "T6"
+    },
+    {
+      "topic": "sandbox",
+      "type": "issue",
+      "status": "needs_confirmation",
+      "contains": "chưa mở quyền sandbox",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T11"
+    }
+  ],
+  "intermediate_turns": [],
+  "history_turns": [],
+  "transcript_sha256": "c16ceb0cac3af37e9e0dc76e86104f11770de321ce12719d43c874dbba6884a2"
+}

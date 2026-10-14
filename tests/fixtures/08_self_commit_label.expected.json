@@ -1,0 +1,24 @@
+{
+  "id": "08_self_commit_label",
+  "title": "Có cam kết rõ nhưng chỉ có nhãn người nói",
+  "group": "indirect",
+  "split": "dev",
+  "input_format": "labels",
+  "lesson": "Cam kết và hạn có thật; nhãn người nói chưa phải tên người nhận việc đã xác minh.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "giỏ hàng",
+      "type": "action",
+      "status": "needs_confirmation",
+      "contains": "xem lỗi",
+      "owner": null,
+      "due": "chiều nay",
+      "conditions": [],
+      "evidence_turn": "T8"
+    }
+  ],
+  "intermediate_turns": [],
+  "history_turns": [],
+  "transcript_sha256": "2363c85fb6164728fb9cb0309bb24ad899979a2d5d2294eaad4e20abe9caa7f3"
+}

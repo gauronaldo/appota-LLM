@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meeting-trace"
+version = "0.1.0"
+description = "Vietnamese meeting intelligence MVP with traceable evidence"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+meeting-trace = "meeting_trace.web.server:main"
+meeting-trace-extract = "meeting_trace.cli:main"
+meeting-trace-evaluate = "meeting_trace.evaluation.runner:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"meeting_trace.web" = ["static/*.html", "static/*.css", "static/*.js"]

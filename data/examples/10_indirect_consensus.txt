@@ -1,0 +1,16 @@
+Mai: Màn hình báo cáo trên điện thoại đang có hai cột, khách phải kéo ngang.
+Lan: Mình chuyển sang một cột cho đợt này được không? Dễ đọc hơn.
+Huy: Dữ liệu vẫn giữ đủ, chỉ là đổi cách xếp các khối đúng không?
+Lan: Đúng, không bỏ bớt biểu đồ hoặc bộ lọc.
+Minh: Nếu đổi như vậy có phải sửa API không?
+Lan: Không, chỉ đổi phần trình bày.
+Huy: Anh đồng ý dùng một cột cho màn hình báo cáo ở đợt này.
+Mai: Phía hỗ trợ cũng muốn giữ bộ lọc trên cùng, một cột sẽ rõ hơn.
+Mai: Em đồng ý phương án một cột, không cần giữ hai cột nữa.
+Minh: Có ai còn vướng về cách trình bày đó không?
+Lan: Em không có ý kiến khác.
+Huy: Phía API không bị ảnh hưởng.
+Minh: Vậy cứ theo một cột cho màn hình báo cáo ở đợt này nhé.
+Mai: Bản hướng dẫn khách sẽ dùng bố cục đó.
+Lan: Em hiểu đây là phương án chung của nhóm, không chỉ là đề xuất ban đầu.
+Minh: Đúng, mình chuyển sang nội dung tiếp theo.

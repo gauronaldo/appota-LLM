@@ -1,0 +1,16 @@
+Người nói 1: Video lỗi giỏ hàng đã có trong nhóm, mọi người xem được chưa?
+Người nói 2: Em xem rồi, lúc đổi số lượng thì tổng tiền không cập nhật.
+Người nói 3: Trên bản web hay bản điện thoại?
+Người nói 2: Web. Em thử lại được bằng đúng sản phẩm trong video.
+Người nói 1: Như vậy có bằng chứng để xử lý, không cần đợi khách gửi thêm.
+Người nói 3: Phần tính tổng nằm cùng module với khuyến mãi.
+Người nói 2: Em đã đọc module đó trong đợt trước.
+Người nói 2: Để em xem lỗi này và báo lại chiều nay.
+Người nói 1: Có cần đổi người đang làm phần khuyến mãi không?
+Người nói 2: Chưa cần, việc trước mắt là tìm chỗ không cập nhật.
+Người nói 3: Trong phiếu hỗ trợ có cả mã sản phẩm và thời điểm khách thao tác.
+Người nói 1: Mình cần biết nguyên nhân trước, chưa nhất thiết phải có bản sửa ngay.
+Người nói 2: Đúng, em sẽ báo lại những gì tái hiện được, không hứa một cách sửa khi chưa xem code.
+Người nói 3: Kết quả chiều nay có thể trao đổi trong luồng hỗ trợ này.
+Người nói 1: Được, hôm nay mình chỉ xử lý trường hợp trong video, chưa mở rộng sang mọi loại giỏ hàng.
+Người nói 2: Em đã rõ phạm vi đó.

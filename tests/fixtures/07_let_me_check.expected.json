@@ -1,0 +1,34 @@
+{
+  "id": "07_let_me_check",
+  "title": "Để em xem lỗi này chưa thành lời nhận sửa",
+  "group": "indirect",
+  "split": "dev",
+  "input_format": "named",
+  "lesson": "Không biến ý định xem xét thành cam kết sửa; cần giữ sự mơ hồ để PM xác nhận.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "đăng nhập",
+      "type": "issue",
+      "status": "needs_confirmation",
+      "contains": "chưa tái hiện",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T12"
+    },
+    {
+      "topic": "đăng nhập",
+      "type": "unresolved",
+      "status": "needs_confirmation",
+      "contains": "xem lỗi",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T4"
+    }
+  ],
+  "intermediate_turns": [],
+  "history_turns": [],
+  "transcript_sha256": "d8df9e24ac28239caa6b99ae52f264e8aa6ffc74860c60590571ca85ee1e561f"
+}

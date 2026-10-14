@@ -1,0 +1,16 @@
+Minh: Về phát hành, bản 2.1 đã chạy xong kiểm thử thường ngày.
+Lan: Nhóm hỗ trợ chưa ghi nhận lỗi mới trên môi trường thử.
+Minh: Chốt phát hành bản 2.1 vào thứ Hai.
+Huy: Khoan, em vừa thấy lỗi mới trong luồng hoàn tiền.
+Mai: Lỗi này có tái hiện được không hay chỉ có log lạ?
+Huy: Tái hiện được ở hai giao dịch liên tiếp, số tiền hoàn bị ghi hai lần.
+Lan: Nếu thế thì không thể để đi cùng đợt phát hành.
+Minh: Như vậy thông tin lúc chốt vừa rồi không còn đầy đủ.
+Huy: Em chưa biết phạm vi ảnh hưởng, không hứa sửa trong hôm nay.
+Mai: Đừng lấy lịch thứ Hai làm deadline sửa nếu chưa có người nhận.
+Minh: Đồng ý, mình tách hai chuyện đó.
+Minh: Chưa chốt lịch phát hành nữa; hoãn bản 2.1 để đánh giá lỗi hoàn tiền.
+Lan: Em ghi quyết định phát hành lúc đầu đã được mở lại.
+Huy: Đúng, chưa có kết luận sửa thế nào trong cuộc họp này.
+Mai: Những người vắng mặt cần thấy lời hoãn ở phần cuối.
+Minh: Không gửi thông báo phát hành dựa trên câu chốt ban đầu.

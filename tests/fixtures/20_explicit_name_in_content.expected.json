@@ -1,0 +1,24 @@
+{
+  "id": "20_explicit_name_in_content",
+  "title": "Người nói Huy giao việc cho Mai",
+  "group": "clear",
+  "split": "holdout",
+  "input_format": "named",
+  "lesson": "Tên người nhận ở trong nội dung có thể khác người nói; không dùng vị trí đầu dòng để suy ra owner.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "báo cáo",
+      "type": "action",
+      "status": "confirmed",
+      "contains": "gửi báo cáo",
+      "owner": "Mai",
+      "due": "thứ Sáu",
+      "conditions": [],
+      "evidence_turn": "T9"
+    }
+  ],
+  "intermediate_turns": [],
+  "history_turns": [],
+  "transcript_sha256": "1ca963fa1659744d4cec2c7d55247e4bc9046d7948cc03f241de63ea33a246d8"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "16_clear_decision",
+  "title": "Chốt lịch phát hành sau khi xác nhận đủ điều kiện",
+  "group": "clear",
+  "split": "dev",
+  "input_format": "named",
+  "lesson": "Tình huống tường minh vẫn cần có trong suite để kiểm tra kết luận còn hiệu lực khi cuộc họp kết thúc.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "phát hành",
+      "type": "decision",
+      "status": "confirmed",
+      "contains": "bản 2.1",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T11"
+    }
+  ],
+  "intermediate_turns": [],
+  "history_turns": [],
+  "transcript_sha256": "3b5031acdbe08c80d4b2e96223308efc607d3a22f48bb5081e1c3936d5023a6c"
+}

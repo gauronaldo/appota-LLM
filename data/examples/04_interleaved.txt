@@ -1,0 +1,19 @@
+Minh: Về lưu trữ, anh muốn giải quyết việc đặt dữ liệu trước.
+Huy: Máy chủ riêng A giúp mình tự xử lý những cấu hình đặc biệt.
+Lan: Nhưng hiện tại đâu có ai trực phần hạ tầng này.
+Mai: Nếu dùng dịch vụ B thì bên cung cấp chịu phần vận hành ban đầu.
+Huy: Anh thấy B cũng ổn, chỉ cần kiểm tra cách xuất dữ liệu.
+Lan: Em đã xem, xuất được đầy đủ. Phần này không còn là trở ngại.
+Minh: Đợi chút, khách vừa hỏi về lịch trình bày.
+Minh: Về lịch demo, hay mình chuyển sang chiều thứ Tư cho họ tiện?
+Mai: Em chưa hỏi được người duyệt bên khách.
+Huy: Chiều thứ Tư anh có thể tham gia, nhưng không biết bên họ.
+Lan: Mình giữ câu hỏi lịch lại, đừng gửi lời mời lúc này.
+Minh: Ừ, quay lại chuyện đầu tiên nhé.
+Mai: Lập luận của Lan là mình chưa có người vận hành máy chủ riêng.
+Huy: Anh đồng ý, bản thử thì không nên tạo thêm việc trực.
+Minh: Chốt dùng phương án B cho phần đó.
+Lan: Vậy không tạo đơn mua máy chủ riêng nữa.
+Mai: Còn lịch demo em ghi là phải hỏi khách rồi mới quyết.
+Minh: Đúng, hai chuyện này đừng gộp lại.
+Huy: Anh đã rõ phần lựa chọn lưu trữ.

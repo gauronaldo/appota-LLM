@@ -1,0 +1,17 @@
+Đợt thử trước mình tích hợp cổng A vì tài liệu dễ đọc hơn.
+Nếu tiếp tục A thì gần như không cần thay giao diện thanh toán.
+Nhưng phí giao dịch tháng vừa rồi cao hơn con số trong báo giá ban đầu.
+Có tính cả phí tối thiểu theo tháng không?
+Có, bên kế toán đã cộng vào rồi.
+Cổng B có hỗ trợ hoàn tiền một phần không?
+Bên họ xác nhận có, nhưng mình phải gọi thêm một API.
+Nhóm tích hợp có đủ thời gian cho thay đổi này trước đợt thử tiếp không?
+Nếu chỉ làm luồng thanh toán và hoàn tiền thì có thể.
+Vậy chuyển sang B có vẻ hợp lý hơn cho đợt tiếp.
+Đừng bỏ qua phần đối soát; lần trước lỗi nằm ở đó.
+Bên B có file đối soát mẫu, mình đã đọc cấu trúc.
+Phí đã được xác nhận bằng email, không còn là giá tạm tính.
+Chốt chuyển sang cổng B cho đợt thử tiếp theo.
+Cổng A vẫn giữ cho giao dịch cũ, không xóa lịch sử.
+Nếu có vấn đề ở môi trường thử thì phải báo lại, không tự đổi sang A.
+Ghi giúp phần quyết định này để người vắng mặt biết.

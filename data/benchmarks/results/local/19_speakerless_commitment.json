@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "local",
+    "model": null,
+    "transcript_sha256": "cc64f6908592f1a03afeb634e99d7d40abe812dcf1b28b4b8ad16f4c7a8145cd",
+    "automated": true,
+    "semantic_verification": false
+  },
+  "turns": [],
+  "topics": [],
+  "items": [],
+  "review_queue": [],
+  "error": {
+    "stage": "input",
+    "type": "ValueError",
+    "message": "Dòng 1: cần định dạng Người nói: nội dung."
+  }
+}

@@ -1,0 +1,15 @@
+Bản hướng dẫn hiện vẫn có ảnh của giao diện cũ.
+Khách dùng ảnh đó để tìm nút nên dễ bấm nhầm chỗ.
+Phần nội dung chữ đã đúng, chỉ cần thay ảnh ở ba bước.
+Ai có thể làm phần đó trước khi gửi cho khách?
+Em nhận thay ảnh hướng dẫn trước ngày mai.
+Có cần viết lại toàn bộ tài liệu không?
+Không, chỉ thay ba ảnh rồi kiểm tra lại thứ tự bước.
+Người nhận việc có quyền mở tài liệu chung rồi.
+Ảnh mới cần chụp ở màn hình điện thoại hay máy tính?
+Khách đang dùng máy tính, lần này mình chụp màn hình máy tính.
+Vậy ảnh ở phần đăng nhập cũng dùng máy tính cho nhất quán nhé.
+Đúng, chỉ thay ảnh thôi, không đổi những hướng dẫn đã được khách kiểm tra.
+Nếu có một bước không khớp giao diện thì đánh dấu để mình xem lại.
+Không có quyết định sản phẩm mới trong phần trao đổi này.
+Mình kết thúc ở đây, tài liệu mới vẫn lưu cùng thư mục với bản hiện tại.

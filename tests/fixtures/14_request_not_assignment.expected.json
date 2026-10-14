@@ -1,0 +1,34 @@
+{
+  "id": "14_request_not_assignment",
+  "title": "Yêu cầu của khách không tự thành việc đã giao",
+  "group": "unresolved",
+  "split": "holdout",
+  "input_format": "mixed",
+  "lesson": "Dữ liệu có và thiếu nhãn xen kẽ phải được đưa vào test; yêu cầu không tự tạo owner hoặc deadline.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "báo cáo",
+      "type": "request_feedback",
+      "status": "needs_confirmation",
+      "contains": "bộ lọc theo tháng",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T2"
+    },
+    {
+      "topic": "báo cáo",
+      "type": "unresolved",
+      "status": "unresolved",
+      "contains": "chưa thống nhất",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T12"
+    }
+  ],
+  "intermediate_turns": [],
+  "history_turns": [],
+  "transcript_sha256": "086b2c701426dd5ca362deebdcb6ef7977fbb7b398ea85673edd7de8a906d260"
+}

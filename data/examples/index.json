@@ -1,0 +1,142 @@
+[
+  {
+    "id": "01_change_ab",
+    "title": "Bỏ máy chủ riêng, chọn dịch vụ quản lý",
+    "group": "change",
+    "split": "dev",
+    "input_format": "named"
+  },
+  {
+    "id": "02_change_aba",
+    "title": "Lịch demo đổi sang chiều rồi quay lại buổi sáng",
+    "group": "change",
+    "split": "dev",
+    "input_format": "named"
+  },
+  {
+    "id": "03_switch_condition",
+    "title": "Đổi nhà cung cấp nhưng giữ điều kiện phê duyệt",
+    "group": "change",
+    "split": "dev",
+    "input_format": "labels"
+  },
+  {
+    "id": "04_interleaved",
+    "title": "Quay lại chuyện lưu trữ sau khi bàn lịch demo",
+    "group": "change",
+    "split": "holdout",
+    "input_format": "named"
+  },
+  {
+    "id": "05_unnamed_reversal",
+    "title": "Đổi cổng thanh toán trong transcript không có người nói",
+    "group": "change",
+    "split": "holdout",
+    "input_format": "plain"
+  },
+  {
+    "id": "06_ambiguous_ok",
+    "title": "Một câu ok có thể chỉ là đã nghe",
+    "group": "indirect",
+    "split": "dev",
+    "input_format": "named"
+  },
+  {
+    "id": "07_let_me_check",
+    "title": "Để em xem lỗi này chưa thành lời nhận sửa",
+    "group": "indirect",
+    "split": "dev",
+    "input_format": "named"
+  },
+  {
+    "id": "08_self_commit_label",
+    "title": "Có cam kết rõ nhưng chỉ có nhãn người nói",
+    "group": "indirect",
+    "split": "dev",
+    "input_format": "labels"
+  },
+  {
+    "id": "09_named_assignee_no_speaker",
+    "title": "Người nhận được nêu trong nội dung, không biết ai nói",
+    "group": "indirect",
+    "split": "holdout",
+    "input_format": "plain"
+  },
+  {
+    "id": "10_indirect_consensus",
+    "title": "Thống nhất qua nhiều lượt mà không nói từ chốt",
+    "group": "indirect",
+    "split": "holdout",
+    "input_format": "named"
+  },
+  {
+    "id": "11_unresolved_budget",
+    "title": "Thiếu báo giá nên chưa chọn phương án",
+    "group": "unresolved",
+    "split": "dev",
+    "input_format": "named"
+  },
+  {
+    "id": "12_reopen_confirmed",
+    "title": "Mở lại quyết định đã chốt vì thông tin mới",
+    "group": "unresolved",
+    "split": "dev",
+    "input_format": "named"
+  },
+  {
+    "id": "13_speakerless_pending",
+    "title": "Transcript không nhãn kết thúc mà chưa chọn",
+    "group": "unresolved",
+    "split": "dev",
+    "input_format": "plain"
+  },
+  {
+    "id": "14_request_not_assignment",
+    "title": "Yêu cầu của khách không tự thành việc đã giao",
+    "group": "unresolved",
+    "split": "holdout",
+    "input_format": "mixed"
+  },
+  {
+    "id": "15_conditional_task",
+    "title": "Lời nhận việc còn phụ thuộc quyền truy cập",
+    "group": "unresolved",
+    "split": "holdout",
+    "input_format": "named"
+  },
+  {
+    "id": "16_clear_decision",
+    "title": "Chốt lịch phát hành sau khi xác nhận đủ điều kiện",
+    "group": "clear",
+    "split": "dev",
+    "input_format": "named"
+  },
+  {
+    "id": "17_clear_assignment",
+    "title": "Quyết định và công việc thiếu một trường được tách riêng",
+    "group": "clear",
+    "split": "dev",
+    "input_format": "named"
+  },
+  {
+    "id": "18_anonymous_assignment",
+    "title": "Cam kết đã rõ, danh tính người nhận chưa rõ",
+    "group": "clear",
+    "split": "dev",
+    "input_format": "labels"
+  },
+  {
+    "id": "19_speakerless_commitment",
+    "title": "Có việc và hạn, không có dữ liệu xác định người nhận",
+    "group": "clear",
+    "split": "holdout",
+    "input_format": "plain"
+  },
+  {
+    "id": "20_explicit_name_in_content",
+    "title": "Người nói Huy giao việc cho Mai",
+    "group": "clear",
+    "split": "holdout",
+    "input_format": "named"
+  }
+]

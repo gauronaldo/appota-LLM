@@ -1,0 +1,16 @@
+Mai: Phản hồi từ khách sáng nay có một yêu cầu mới.
+Khách muốn có bộ lọc theo tháng trên màn hình báo cáo.
+Lan: Họ muốn lọc theo ngày tạo hay theo ngày giao dịch?
+Mai: Em chưa thấy họ nói rõ hai trường đó.
+Huy: Hai cách lọc trả ra số khác nhau ở giao dịch treo.
+Khách còn nói các nhãn trên biểu đồ nhỏ quá, đọc trên điện thoại khó.
+Lan: Phần nhãn thì em hiểu vấn đề, còn bộ lọc cần hỏi thêm.
+Minh: Hiện chưa có người nhận triển khai bộ lọc, đúng không?
+Huy: Đúng, chỉ có yêu cầu từ khách được chuyển vào cuộc họp.
+Mai: Em chưa hứa thời điểm giao chức năng này.
+Minh: Đừng dùng ngày khách gửi yêu cầu làm deadline của nhóm.
+Lan: Mình chưa thống nhất dùng trường thời gian nào để lọc.
+Huy: API chưa đổi theo yêu cầu này.
+Nếu khách muốn theo ngày giao dịch thì phải nói rõ cách xử lý các giao dịch đang treo.
+Mai: Em hiểu, hiện chưa đủ thông tin để hứa một cách lọc cụ thể.
+Minh: Kết luận hôm nay là yêu cầu cần làm rõ trước khi giao việc.

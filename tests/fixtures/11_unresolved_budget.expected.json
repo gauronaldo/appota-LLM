@@ -1,0 +1,31 @@
+{
+  "id": "11_unresolved_budget",
+  "title": "Thiếu báo giá nên chưa chọn phương án",
+  "group": "unresolved",
+  "split": "dev",
+  "input_format": "named",
+  "lesson": "Thiếu dữ liệu để chọn không được biến thành quyết định hoặc việc chuyển dữ liệu.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "hạ tầng",
+      "type": "unresolved",
+      "status": "unresolved",
+      "contains": "hoãn lựa chọn",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T13"
+    }
+  ],
+  "intermediate_turns": [
+    "T2",
+    "T6"
+  ],
+  "history_turns": [
+    "T2",
+    "T6",
+    "T13"
+  ],
+  "transcript_sha256": "2b59e7aad962ee27154e03bc474ee2529b873bad765a8ab5496996da8dbd9cc8"
+}

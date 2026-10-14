@@ -1,0 +1,24 @@
+{
+  "id": "09_named_assignee_no_speaker",
+  "title": "Người nhận được nêu trong nội dung, không biết ai nói",
+  "group": "indirect",
+  "split": "holdout",
+  "input_format": "plain",
+  "lesson": "Không cần biết người phát biểu để nhận ra tên người được giao việc được nói rõ trong nội dung.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "báo cáo",
+      "type": "action",
+      "status": "confirmed",
+      "contains": "gửi báo cáo",
+      "owner": "Lan",
+      "due": "thứ Sáu",
+      "conditions": [],
+      "evidence_turn": "T9"
+    }
+  ],
+  "intermediate_turns": [],
+  "history_turns": [],
+  "transcript_sha256": "a3f4b0130f031851943214ca44f72bc9a32bf8bb37097dee5cc070f09941236a"
+}

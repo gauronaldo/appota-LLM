@@ -1,0 +1,17 @@
+Người nói 1: Mình cần chọn nhà cung cấp gửi email cho đợt ra mắt.
+Người nói 2: Gói A rẻ hơn nếu chỉ nhìn số lượng email dự kiến.
+Người nói 3: Gói đó có lưu dữ liệu ở khu vực mình yêu cầu không?
+Người nói 2: Trong báo giá chưa ghi, em chưa hỏi lại.
+Người nói 1: Điều đó phải được xác nhận trước khi ký.
+Người nói 3: Bên B đã trả lời phần khu vực lưu trữ, nhưng giá cao hơn một chút.
+Người nói 2: Vậy em nghiêng sang B. Ít nhất mình biết rõ phần dữ liệu.
+Người nói 1: Hợp đồng B đã được bên pháp chế xem chưa?
+Người nói 3: Chưa, mới có bản nháp họ gửi chiều qua.
+Người nói 2: Nếu bỏ điều kiện này thì mình đang quyết hơi sớm.
+Người nói 1: Đúng, không được xem đây là quyền ký ngay.
+Người nói 1: Chốt chọn gói B nếu pháp chế duyệt điều khoản lưu dữ liệu.
+Người nói 3: Nếu họ không duyệt thì mình quay lại so sánh, không tự dùng A đúng không?
+Người nói 1: Đúng, khi đó cần một quyết định khác.
+Người nói 2: Em ghi cả điều kiện, không chỉ ghi mỗi tên gói.
+Người nói 3: Bản báo giá hiện tại vẫn dùng để tham khảo thôi.
+Người nói 1: Mình dừng ở đây, chưa ký trong hôm nay.

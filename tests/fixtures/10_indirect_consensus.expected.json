@@ -1,0 +1,26 @@
+{
+  "id": "10_indirect_consensus",
+  "title": "Thống nhất qua nhiều lượt mà không nói từ chốt",
+  "group": "indirect",
+  "split": "holdout",
+  "input_format": "named",
+  "lesson": "Đồng thuận có thể được thể hiện bằng nhiều lượt và lời kết luận gián tiếp, không chỉ từ khóa chốt.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "báo cáo",
+      "type": "decision",
+      "status": "confirmed",
+      "contains": "một cột",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T13"
+    }
+  ],
+  "intermediate_turns": [
+    "T2"
+  ],
+  "history_turns": [],
+  "transcript_sha256": "a8826e769c6f934dc3a64100f00b96bcccac8c21de616812d3896c50b0f139c4"
+}

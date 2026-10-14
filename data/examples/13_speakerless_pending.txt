@@ -1,0 +1,16 @@
+Khách muốn tải toàn bộ báo cáo theo tháng, nhưng file có thể rất lớn.
+Hay mình chia thành từng tuần rồi để khách tải nhiều file nhỏ?
+Như vậy họ phải ghép lại, phía khách đang dùng Excel thủ công.
+Nếu dùng một file thì giới hạn dung lượng cần kiểm tra trước.
+Con số trong tài liệu là giới hạn lý thuyết, chưa có phép thử của mình.
+Một bên lo khách phải thao tác nhiều, một bên lo tải file bị treo.
+Cả hai lo ngại đều có cơ sở, chưa đủ dữ liệu để bỏ một bên.
+Người phụ trách phía khách hôm nay không tham gia.
+Mình cần hiểu họ dùng dữ liệu để làm gì trước khi chọn cách tải.
+Chưa có ai cam kết làm chức năng tải theo tuần.
+Đừng ghi đề xuất đầu cuộc họp thành công việc của nhóm giao diện.
+Hôm nay chưa thống nhất cách xuất báo cáo, mình giữ cả hai lựa chọn để hỏi khách.
+Các yêu cầu hiện tại chưa đủ để xác định định dạng cuối.
+Trong biên bản ghi rõ phần này còn mở.
+Mình vẫn chưa biết khách cần tải một lần hay tải lặp lại hằng tuần.
+Mình kết thúc cuộc họp ở đây.

@@ -1,0 +1,3 @@
+* text=auto eol=lf
+# Expectations are hashed as bytes: keep authored bytes unchanged across checkouts.
+tests/fixtures/*.expected.json -text whitespace=cr-at-eol

@@ -1,0 +1,29 @@
+{
+  "id": "03_switch_condition",
+  "title": "Đổi nhà cung cấp nhưng giữ điều kiện phê duyệt",
+  "group": "change",
+  "split": "dev",
+  "input_format": "labels",
+  "lesson": "Điều kiện là một phần của quyết định; không được biến chọn có điều kiện thành quyền triển khai ngay.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "email",
+      "type": "decision",
+      "status": "confirmed",
+      "contains": "gói B",
+      "owner": null,
+      "due": null,
+      "conditions": [
+        "nếu pháp chế duyệt"
+      ],
+      "evidence_turn": "T12"
+    }
+  ],
+  "intermediate_turns": [
+    "T2",
+    "T7"
+  ],
+  "history_turns": [],
+  "transcript_sha256": "fd94f5f90df631183e24471abc089d09c2a527c2bce6de443fd2b9f1de87ff0b"
+}

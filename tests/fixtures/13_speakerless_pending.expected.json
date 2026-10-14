@@ -1,0 +1,26 @@
+{
+  "id": "13_speakerless_pending",
+  "title": "Transcript không nhãn kết thúc mà chưa chọn",
+  "group": "unresolved",
+  "split": "dev",
+  "input_format": "plain",
+  "lesson": "Dữ liệu không có nhãn người nói vẫn đủ để nhận ra chưa có kết luận; cần báo lỗi parser như một thất bại hỗ trợ input.",
+  "dataset_version": "2.0",
+  "items": [
+    {
+      "topic": "xuất báo cáo",
+      "type": "unresolved",
+      "status": "unresolved",
+      "contains": "chưa thống nhất",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T12"
+    }
+  ],
+  "intermediate_turns": [
+    "T2"
+  ],
+  "history_turns": [],
+  "transcript_sha256": "471c93f827265cda07346de4758867e5146c58e209c0786f6bfff8313a5ac7c0"
+}
