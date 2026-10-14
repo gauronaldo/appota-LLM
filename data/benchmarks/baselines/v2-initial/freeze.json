@@ -1,0 +1,10 @@
+{
+  "frozen_at": "2026-10-12T16:36:09.001696+00:00",
+  "hashes": {
+    "meeting/core.py": "cf7f10a20cb762f93fc752a9ccbe34f38bac300d66979765495bd3a8e0071661",
+    "meeting/schema.py": "93cf6233283031c5ffa7fa48970fbaa2e37ff6b8cb6995aaec69ad7e7849983a",
+    "meeting/prompts.py": "257b0d9938245ba1c849f46188a0c27b560b63477d854fae6a5fac0ef79f8165",
+    "meeting/llm.py": "7cf5d67284540ebe361960f800da442c80733f9ef0db9e91571ac6d484d78666"
+  },
+  "prompt_version": "1.0"
+}

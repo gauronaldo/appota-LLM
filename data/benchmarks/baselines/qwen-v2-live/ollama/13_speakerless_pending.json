@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "471c93f827265cda07346de4758867e5146c58e209c0786f6bfff8313a5ac7c0",
+    "automated": true,
+    "semantic_verification": true,
+    "verification_method": "llm_judgment",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Khách muốn tải toàn bộ báo cáo theo tháng, nhưng file có thể rất lớn."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Hay mình chia thành từng tuần rồi để khách tải nhiều file nhỏ?"
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Như vậy họ phải ghép lại, phía khách đang dùng Excel thủ công."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nếu dùng một file thì giới hạn dung lượng cần kiểm tra trước."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Con số trong tài liệu là giới hạn lý thuyết, chưa có phép thử của mình."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Một bên lo khách phải thao tác nhiều, một bên lo tải file bị treo."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Cả hai lo ngại đều có cơ sở, chưa đủ dữ liệu để bỏ một bên."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Người phụ trách phía khách hôm nay không tham gia."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Mình cần hiểu họ dùng dữ liệu để làm gì trước khi chọn cách tải."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Chưa có ai cam kết làm chức năng tải theo tuần."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Đừng ghi đề xuất đầu cuộc họp thành công việc của nhóm giao diện."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Hôm nay chưa thống nhất cách xuất báo cáo, mình giữ cả hai lựa chọn để hỏi khách."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Các yêu cầu hiện tại chưa đủ để xác định định dạng cuối."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Trong biên bản ghi rõ phần này còn mở."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Mình vẫn chưa biết khách cần tải một lần hay tải lặp lại hằng tuần."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Mình kết thúc cuộc họp ở đây."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "cách xuất báo cáo",
+      "events": [
+        {
+          "turn_id": "T12",
+          "kind": "change",
+          "quote": "Hôm nay chưa thống nhất cách xuất báo cáo, mình giữ cả hai lựa chọn để hỏi khách."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "support",
+          "quote": "Các yêu cầu hiện tại chưa đủ để xác định định dạng cuối."
+        },
+        {
+          "turn_id": "T14",
+          "kind": "support",
+          "quote": "Trong biên bản ghi rõ phần này còn mở."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "cách xuất báo cáo",
+      "type": "unresolved",
+      "status": "needs_confirmation",
+      "content": "Hôm nay chưa thống nhất cách xuất báo cáo, mình giữ cả hai lựa chọn để hỏi khách.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T12",
+          "quote": "Hôm nay chưa thống nhất cách xuất báo cáo, mình giữ cả hai lựa chọn để hỏi khách."
+        },
+        {
+          "turn_id": "T13",
+          "quote": "Các yêu cầu hiện tại chưa đủ để xác định định dạng cuối."
+        },
+        {
+          "turn_id": "T14",
+          "quote": "Trong biên bản ghi rõ phần này còn mở."
+        }
+      ],
+      "reason": "Các yêu cầu hiện tại chưa đủ để xác định định dạng cuối, nên giữ cả hai lựa chọn để hỏi khách.",
+      "history": [
+        {
+          "turn_id": "T12",
+          "kind": "change",
+          "quote": "Hôm nay chưa thống nhất cách xuất báo cáo, mình giữ cả hai lựa chọn để hỏi khách."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "support",
+          "quote": "Các yêu cầu hiện tại chưa đủ để xác định định dạng cuối."
+        },
+        {
+          "turn_id": "T14",
+          "kind": "support",
+          "quote": "Trong biên bản ghi rõ phần này còn mở."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [
+    {
+      "item_id": "I1",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Các yêu cầu hiện tại chưa đủ để xác định định dạng cuối, nên giữ cả hai lựa chọn để hỏi khách. Các thông tin trong evidence đều phù hợp và không mâu thuẫn với nhau, cũng như không thay đổi ý kiến của các bên liên quan trong cuộc họp. Không có hạn chế thời gian được đề cập, nên trạng thái 'needs_confirmation' là phù hợp. Owner và due vẫn chưa được xác định, nhưng không ảnh hưởng đến việc đánh giá tiêu chí này vì đây là một yêu cầu chung chưa được quyết định cụ thể. Các thông tin đều được hỗ trợ bởi các dòng văn bản liên quan trong transcript gốc mà không có mâu thuẫn hoặc thiếu ngữ cảnh đáng kể. Không có cam kết nào về thời gian thực hiện, nên trạng thái 'needs_confirmation' vẫn giữ nguyên.",
+      "evidence": [
+        {
+          "turn_id": "T12",
+          "quote": "Hôm nay chưa thống nhất cách xuất báo cáo, mình giữ cả hai lựa chọn để hỏi khách."
+        },
+        {
+          "turn_id": "T13",
+          "quote": "Các yêu cầu hiện tại chưa đủ để xác định định dạng cuối."
+        },
+        {
+          "turn_id": "T14",
+          "quote": "Trong biên bản ghi rõ phần này còn mở."
+        }
+      ]
+    }
+  ],
+  "run_seconds": 54.482
+}

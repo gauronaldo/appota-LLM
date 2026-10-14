@@ -1,0 +1,357 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "local",
+    "model": null,
+    "transcript_sha256": "1d701ac42664432d5011c5a8c7a4a71300effa107b36809a91cd5f5a1da88daf",
+    "automated": true,
+    "semantic_verification": false
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Minh",
+      "text": "Về báo cáo, khách đã xem hai loại biểu đồ trong bản demo."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Mai",
+      "text": "Họ muốn so xu hướng theo thời gian, không phải so từng nhóm độc lập."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Lan",
+      "text": "Biểu đồ đường phù hợp với cách đọc đó hơn biểu đồ cột."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Huy",
+      "text": "Số liệu trả từ API giống nhau, không cần đổi phần dữ liệu."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Minh",
+      "text": "Chốt dùng biểu đồ đường trên màn hình báo cáo."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Mai",
+      "text": "Khách xem bản demo trên điện thoại nên màn hình nhỏ hơn máy của mình."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Mai",
+      "text": "Về nhãn biểu đồ, phản hồi của khách là chữ quá nhỏ khi xem trên điện thoại."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Minh",
+      "text": "Về tài liệu, mình cần hướng dẫn dùng bố cục mới."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Lan",
+      "text": "Em nhận cập nhật tài liệu sử dụng."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Huy",
+      "text": "Phần đó chưa có hạn trong lịch giao việc, đừng tự lấy ngày phát hành."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Lan",
+      "text": "Đúng, hôm nay em nhận việc nhưng chưa cam kết thời hạn cụ thể."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Minh",
+      "text": "Về bảo mật, cần xem lại quyền tải báo cáo của khách."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Minh",
+      "text": "Cần làm rà soát quyền truy cập trước thứ Hai."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Mai",
+      "text": "Ai sẽ nhận phần rà soát này?"
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Minh",
+      "text": "Chưa có người nhận trong cuộc họp, cần xác nhận sau."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Lan",
+      "text": "Vậy chỉ việc tài liệu là có người nhận rõ tên."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": "Huy",
+      "text": "Phần rà soát chưa thể chuyển luôn cho Lan, em ấy đang giữ việc tài liệu."
+    },
+    {
+      "id": "T18",
+      "line": 18,
+      "speaker": "Minh",
+      "text": "Đúng, mình ghi riêng từng mục."
+    },
+    {
+      "id": "T19",
+      "line": 19,
+      "speaker": "Minh",
+      "text": "Về đăng nhập, luồng thử của khách đang bị chặn ở đâu?"
+    },
+    {
+      "id": "T20",
+      "line": 20,
+      "speaker": "Huy",
+      "text": "Vướng mắc là chưa có quyền sandbox để thử luồng đăng nhập của khách."
+    },
+    {
+      "id": "T21",
+      "line": 21,
+      "speaker": "Lan",
+      "text": "Đó là quyền ở phía khách, không phải lỗi đăng nhập đã tái hiện được."
+    },
+    {
+      "id": "T22",
+      "line": 22,
+      "speaker": "Minh",
+      "text": "Về phân quyền, mình vẫn chưa biết khách cần những vai trò nào."
+    },
+    {
+      "id": "T23",
+      "line": 23,
+      "speaker": "Minh",
+      "text": "Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp."
+    },
+    {
+      "id": "T24",
+      "line": 24,
+      "speaker": "Mai",
+      "text": "Em ghi câu hỏi phân quyền riêng với công việc rà soát quyền hiện tại."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "báo cáo",
+      "events": [
+        {
+          "turn_id": "T5",
+          "kind": "finalize",
+          "quote": "Chốt dùng biểu đồ đường trên màn hình báo cáo."
+        }
+      ]
+    },
+    {
+      "topic": "nhãn biểu đồ",
+      "events": [
+        {
+          "turn_id": "T7",
+          "kind": "request_feedback",
+          "quote": "Về nhãn biểu đồ, phản hồi của khách là chữ quá nhỏ khi xem trên điện thoại."
+        }
+      ]
+    },
+    {
+      "topic": "tài liệu",
+      "events": [
+        {
+          "turn_id": "T9",
+          "kind": "assign",
+          "quote": "Em nhận cập nhật tài liệu sử dụng."
+        },
+        {
+          "turn_id": "T11",
+          "kind": "assign",
+          "quote": "Đúng, hôm nay em nhận việc nhưng chưa cam kết thời hạn cụ thể."
+        }
+      ]
+    },
+    {
+      "topic": "bảo mật",
+      "events": [
+        {
+          "turn_id": "T13",
+          "kind": "assign",
+          "quote": "Cần làm rà soát quyền truy cập trước thứ Hai."
+        }
+      ]
+    },
+    {
+      "topic": "đăng nhập",
+      "events": [
+        {
+          "turn_id": "T20",
+          "kind": "issue",
+          "quote": "Vướng mắc là chưa có quyền sandbox để thử luồng đăng nhập của khách."
+        }
+      ]
+    },
+    {
+      "topic": "phân quyền",
+      "events": [
+        {
+          "turn_id": "T23",
+          "kind": "defer",
+          "quote": "Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "báo cáo",
+      "type": "decision",
+      "status": "confirmed",
+      "content": "Chốt dùng biểu đồ đường trên màn hình báo cáo.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T5",
+          "quote": "Chốt dùng biểu đồ đường trên màn hình báo cáo."
+        }
+      ],
+      "reason": "Có câu chốt tường minh; đây là kết luận cuối được nhận diện của chủ đề.",
+      "history": [
+        {
+          "turn_id": "T5",
+          "kind": "finalize",
+          "quote": "Chốt dùng biểu đồ đường trên màn hình báo cáo."
+        }
+      ]
+    },
+    {
+      "id": "I2",
+      "topic": "nhãn biểu đồ",
+      "type": "request_feedback",
+      "status": "needs_confirmation",
+      "content": "phản hồi của khách là chữ quá nhỏ khi xem trên điện thoại.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T7",
+          "quote": "Về nhãn biểu đồ, phản hồi của khách là chữ quá nhỏ khi xem trên điện thoại."
+        }
+      ],
+      "reason": "Có yêu cầu/phản hồi; chưa tự chuyển thành công việc hoặc quyết định.",
+      "history": []
+    },
+    {
+      "id": "I3",
+      "topic": "tài liệu",
+      "type": "action",
+      "status": "confirmed",
+      "content": "Em nhận cập nhật tài liệu sử dụng.",
+      "owner": "Lan",
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T9",
+          "quote": "Em nhận cập nhật tài liệu sử dụng."
+        }
+      ],
+      "reason": "Giữ người nhận và hạn chỉ khi có bằng chứng nguyên văn; thiếu trường thì để null.",
+      "history": []
+    },
+    {
+      "id": "I4",
+      "topic": "tài liệu",
+      "type": "action",
+      "status": "confirmed",
+      "content": "Đúng, hôm nay em nhận việc nhưng chưa cam kết thời hạn cụ thể.",
+      "owner": "Lan",
+      "due": "cụ thể",
+      "evidence": [
+        {
+          "turn_id": "T11",
+          "quote": "Đúng, hôm nay em nhận việc nhưng chưa cam kết thời hạn cụ thể."
+        }
+      ],
+      "reason": "Giữ người nhận và hạn chỉ khi có bằng chứng nguyên văn; thiếu trường thì để null.",
+      "history": []
+    },
+    {
+      "id": "I5",
+      "topic": "bảo mật",
+      "type": "action",
+      "status": "needs_confirmation",
+      "content": "Cần làm rà soát quyền truy cập trước thứ Hai.",
+      "owner": null,
+      "due": "thứ Hai",
+      "evidence": [
+        {
+          "turn_id": "T13",
+          "quote": "Cần làm rà soát quyền truy cập trước thứ Hai."
+        }
+      ],
+      "reason": "Giữ người nhận và hạn chỉ khi có bằng chứng nguyên văn; thiếu trường thì để null.",
+      "history": []
+    },
+    {
+      "id": "I6",
+      "topic": "đăng nhập",
+      "type": "issue",
+      "status": "needs_confirmation",
+      "content": "Vướng mắc là chưa có quyền sandbox để thử luồng đăng nhập của khách.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T20",
+          "quote": "Vướng mắc là chưa có quyền sandbox để thử luồng đăng nhập của khách."
+        }
+      ],
+      "reason": "Có phát biểu nêu vướng mắc; cần người dùng kiểm tra ý nghĩa và tình trạng.",
+      "history": []
+    },
+    {
+      "id": "I7",
+      "topic": "phân quyền",
+      "type": "unresolved",
+      "status": "unresolved",
+      "content": "Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T23",
+          "quote": "Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp."
+        }
+      ],
+      "reason": "Không có kết luận tường minh cuối cùng hoặc đã hoãn/mở lại.",
+      "history": [
+        {
+          "turn_id": "T23",
+          "kind": "defer",
+          "quote": "Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp."
+        }
+      ]
+    }
+  ],
+  "review_queue": []
+}

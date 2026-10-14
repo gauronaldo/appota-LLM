@@ -1,0 +1,287 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "1ddb1dde0b17dc3293b7450307702dd6d46c3e3f7af11ee88fcd4115f563f01d",
+    "automated": true,
+    "semantic_verification": true,
+    "verification_method": "llm_judgment",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về thanh toán, bản demo còn dùng chuyển khoản thủ công."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Ok, anh nói tiếp đi."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Luồng tích hợp cần đổi cả màn hình xác nhận."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Bên đối tác có gửi tài liệu sandbox chưa?"
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Mới gửi link đăng ký, anh chưa có tài khoản chạy thử."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Để em xem đã, màn hình hiện tại còn lỗi căn lề."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Câu ok lúc nãy là em đồng ý triển khai luôn à?"
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Em chỉ nói là nghe được, chưa xem đủ khối lượng."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Nếu vậy mình chưa biết phần này có kịp cùng đợt thử không."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Anh cũng chưa có số giờ ước tính chính xác."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Mình đang gần hết giờ, hôm nay không lấy im lặng làm đồng ý nhé."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Chưa chốt chuyện thêm ví điện tử ở đợt này."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Em hiểu, không coi đó là việc đã được giao cho em."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Bản ghi sẽ giữ nó ở phần đang bàn."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Đúng, hiện mới là đề xuất."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Còn phần thanh toán hiện tại vẫn chạy như cũ."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "thanh toán",
+      "events": [
+        {
+          "turn_id": "T17",
+          "kind": "change",
+          "quote": "Còn phần thanh toán hiện tại vẫn chạy như cũ."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "defer",
+          "quote": "Chưa chốt chuyện thêm ví điện tử ở đợt này."
+        }
+      ]
+    },
+    {
+      "topic": "ví điện tử",
+      "events": [
+        {
+          "turn_id": "T2",
+          "kind": "support",
+          "quote": "Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác."
+        },
+        {
+          "turn_id": "T16",
+          "kind": "support",
+          "quote": "Đúng, hiện mới là đề xuất."
+        },
+        {
+          "turn_id": "T14",
+          "kind": "defer",
+          "quote": "Em hiểu, không coi đó là việc đã được giao cho em."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "thanh toán",
+      "type": "decision",
+      "status": "confirmed",
+      "content": "Phần thanh toán hiện tại vẫn chạy như cũ.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T17",
+          "quote": "Còn phần thanh toán hiện tại vẫn chạy như cũ."
+        }
+      ],
+      "reason": "Đề xuất và thảo luận đã kết thúc mà chưa có quyết định rõ ràng, nên giữ nguyên tình trạng hiện tại.",
+      "history": [
+        {
+          "turn_id": "T2",
+          "kind": "support",
+          "quote": "Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác."
+        },
+        {
+          "turn_id": "T17",
+          "kind": "change",
+          "quote": "Còn phần thanh toán hiện tại vẫn chạy như cũ."
+        }
+      ]
+    },
+    {
+      "id": "I2",
+      "topic": "ví điện tử",
+      "type": "issue",
+      "status": "unresolved",
+      "content": "Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T2",
+          "quote": "Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác."
+        },
+        {
+          "turn_id": "T14",
+          "quote": "Em hiểu, không coi đó là việc đã được giao cho em."
+        }
+      ],
+      "reason": "Đề xuất chưa được chốt và không có ai nhận trách nhiệm thực hiện.",
+      "history": [
+        {
+          "turn_id": "T2",
+          "kind": "support",
+          "quote": "Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác."
+        },
+        {
+          "turn_id": "T16",
+          "kind": "support",
+          "quote": "Đúng, hiện mới là đề xuất."
+        },
+        {
+          "turn_id": "T14",
+          "kind": "defer",
+          "quote": "Em hiểu, không coi đó là việc đã được giao cho em."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [
+    {
+      "item_id": "I1",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Đề xuất về thanh toán đã được thảo luận và kết luận giữ nguyên tình trạng hiện tại, không có thay đổi nào khác. Content giữ đầy đủ mọi điều kiện/ràng buộc liên quan, không bị biến dạng hay bỏ sót thông tin. Không có ai nhận trách nhiệm thực hiện hoặc đặt hạn chót, nên owner/due là null là phù hợp. Quyết định này vẫn còn hiệu lực ở cuối transcript và chưa được xác nhận lại trong các lượt sau, nên status confirmed là chính xác.",
+      "evidence": [
+        {
+          "turn_id": "T17",
+          "quote": "Còn phần thanh toán hiện tại vẫn chạy như cũ."
+        }
+      ]
+    },
+    {
+      "item_id": "I2",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Đề xuất về ví điện tử đã được đưa ra nhưng chưa được chốt và không có ai nhận trách nhiệm thực hiện. Content giữ đầy đủ mọi điều kiện/ràng buộc liên quan, không bị biến dạng hay bỏ sót thông tin. Không có hạn chót nào đặt nên owner/due là null là phù hợp. Quyết định này vẫn còn hiệu lực ở cuối transcript và chưa được xác nhận lại trong các lượt sau, nên status unresolved là chính xác.",
+      "evidence": [
+        {
+          "turn_id": "T2",
+          "quote": "Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác."
+        },
+        {
+          "turn_id": "T14",
+          "quote": "Em hiểu, không coi đó là việc đã được giao cho em."
+        }
+      ]
+    }
+  ],
+  "run_seconds": 185.903,
+  "postvalidation": {
+    "kind": "literal_only_no_new_inference",
+    "at": "2026-10-14T10:09:36.782651+00:00",
+    "source_canonical_sha256": "44b876c6454e93b7ed48944c58ca03146ab728adbd4635d60bef104719dc76ae",
+    "core_hashes": {
+      "src/meeting_trace/meeting/core.py": "82a9558034e9f1cd9fda0242baa25b5e067a0a3f36313dabf4e7146dd25f875b",
+      "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+      "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+      "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+      "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3"
+    }
+  }
+}

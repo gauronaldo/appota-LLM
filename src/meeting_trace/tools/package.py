@@ -20,7 +20,9 @@ EXCLUDED_PARTS = {'__pycache__', '.pytest_cache', '.ruff_cache', '.git', '.venv'
 
 
 def source_files():
-    files = [ROOT / name for name in ROOT_FILES + SHOWCASE_DOCS]
+    files = [ROOT / name for name in ROOT_FILES]
+    files.extend(ROOT / name for name in SHOWCASE_DOCS if (ROOT / name).is_file())
+    files.extend(path for path in [ROOT / 'docs/reports/TESTS_OLLAMA.md', ROOT / 'docs/reports/REEVALUATION.md'] if path.is_file())
     for name in SOURCE_DIRS:
         for path in (ROOT / name).rglob('*'):
             secret_file = path.name.startswith('.env') and path.name != '.env.example'

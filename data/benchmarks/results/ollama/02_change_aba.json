@@ -1,0 +1,338 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "039636020bcc57166bdfc5246f4da6412deef199bcbfd9e1b26b9f0e67cc18d5",
+    "automated": true,
+    "semantic_verification": true,
+    "verification_method": "llm_judgment",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về lịch demo, khách đang giữ hai khung giờ cho mình."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Đề xuất chọn phương án A, sáng thứ Năm. Huy lúc đó cũng có mặt."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Sáng thứ Năm anh đi cùng nhóm hỗ trợ, vẫn tham gia được."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Bản dữ liệu demo cần chạy trước một lần để tránh chờ trên màn hình."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Đợt trước chạy thử khoảng mười phút, em đang kiểm tra bản mới."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Khách vừa nhắn buổi sáng có cuộc họp khác."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Nếu đổi thì chiều thứ Năm bên mình có ai vướng không?"
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về lịch demo, chốt phương án B, chuyển sang chiều thứ Năm."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Em chưa gửi lịch chính thức, để em hỏi lại người phụ trách phía khách."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Chiều anh có lịch hỗ trợ nhưng có thể đổi."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Mình cần chắc có người ra quyết định bên khách tham gia nữa."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Em vừa nhận phản hồi: người duyệt chỉ tham gia buổi sáng."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Vậy cuộc họp kia của họ đã xử lý thế nào?"
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Họ dời cuộc họp kia rồi, giữ lại khung sáng ban đầu cho mình."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về lịch demo, chốt quay về phương án A, sáng thứ Năm."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Như vậy anh không cần đổi lịch hỗ trợ chiều nữa."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em ghi rõ lịch chiều đã bị thay, để người đọc không dùng nhầm."
+    },
+    {
+      "id": "T18",
+      "line": 18,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Lịch gửi ra sẽ chỉ có buổi sáng."
+    },
+    {
+      "id": "T19",
+      "line": 19,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Mình thống nhất nội dung chính rồi, dừng phần này nhé."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "lịch demo",
+      "events": [
+        {
+          "turn_id": "T1",
+          "kind": "change",
+          "quote": "Về lịch demo, khách đang giữ hai khung giờ cho mình."
+        },
+        {
+          "turn_id": "T2",
+          "kind": "proposal",
+          "quote": "Đề xuất chọn phương án A, sáng thứ Năm. Huy lúc đó cũng có mặt."
+        },
+        {
+          "turn_id": "T3",
+          "kind": "support",
+          "quote": "Sáng thứ Năm anh đi cùng nhóm hỗ trợ, vẫn tham gia được."
+        },
+        {
+          "turn_id": "T4",
+          "kind": "other",
+          "quote": "Bản dữ liệu demo cần chạy trước một lần để tránh chờ trên màn hình."
+        },
+        {
+          "turn_id": "T5",
+          "kind": "other",
+          "quote": "Đợt trước chạy thử khoảng mười phút, em đang kiểm tra bản mới."
+        },
+        {
+          "turn_id": "T6",
+          "kind": "change",
+          "quote": "Khách vừa nhắn buổi sáng có cuộc họp khác."
+        },
+        {
+          "turn_id": "T7",
+          "kind": "other",
+          "quote": "Nếu đổi thì chiều thứ Năm bên mình có ai vướng không?"
+        },
+        {
+          "turn_id": "T8",
+          "kind": "change",
+          "quote": "Về lịch demo, chốt phương án B, chuyển sang chiều thứ Năm."
+        },
+        {
+          "turn_id": "T9",
+          "kind": "other",
+          "quote": "Em chưa gửi lịch chính thức, để em hỏi lại người phụ trách phía khách."
+        },
+        {
+          "turn_id": "T10",
+          "kind": "support",
+          "quote": "Chiều anh có lịch hỗ trợ nhưng có thể đổi."
+        },
+        {
+          "turn_id": "T11",
+          "kind": "other",
+          "quote": "Mình cần chắc có người ra quyết định bên khách tham gia nữa."
+        },
+        {
+          "turn_id": "T12",
+          "kind": "other",
+          "quote": "Em vừa nhận phản hồi: người duyệt chỉ tham gia buổi sáng."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "other",
+          "quote": "Vậy cuộc họp kia của họ đã xử lý thế nào?"
+        },
+        {
+          "turn_id": "T14",
+          "kind": "other",
+          "quote": "Họ dời cuộc họp kia rồi, giữ lại khung sáng ban đầu cho mình."
+        },
+        {
+          "turn_id": "T15",
+          "kind": "change",
+          "quote": "Về lịch demo, chốt quay về phương án A, sáng thứ Năm."
+        },
+        {
+          "turn_id": "T16",
+          "kind": "support",
+          "quote": "Như vậy anh không cần đổi lịch hỗ trợ chiều nữa."
+        },
+        {
+          "turn_id": "T17",
+          "kind": "other",
+          "quote": "Em ghi rõ lịch chiều đã bị thay, để người đọc không dùng nhầm."
+        },
+        {
+          "turn_id": "T18",
+          "kind": "other",
+          "quote": "Lịch gửi ra sẽ chỉ có buổi sáng."
+        },
+        {
+          "turn_id": "T19",
+          "kind": "change",
+          "quote": "Mình thống nhất nội dung chính rồi, dừng phần này nhé."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "lịch demo",
+      "type": "decision",
+      "status": "confirmed",
+      "content": "Về lịch demo, chốt phương án A, sáng thứ Năm.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T15",
+          "quote": "Về lịch demo, chốt quay về phương án A, sáng thứ Năm."
+        },
+        {
+          "turn_id": "T16",
+          "quote": "Như vậy anh không cần đổi lịch hỗ trợ chiều nữa."
+        }
+      ],
+      "reason": "Huy có thể tham gia buổi sáng thứ Năm, Lan đã nhận phản hồi từ khách chỉ tham gia buổi sáng, Minh thống nhất chốt lịch demo.",
+      "history": [
+        {
+          "turn_id": "T2",
+          "kind": "proposal",
+          "quote": "Đề xuất chọn phương án A, sáng thứ Năm. Huy lúc đó cũng có mặt."
+        },
+        {
+          "turn_id": "T3",
+          "kind": "support",
+          "quote": "Sáng thứ Năm anh đi cùng nhóm hỗ trợ, vẫn tham gia được."
+        },
+        {
+          "turn_id": "T6",
+          "kind": "change",
+          "quote": "Khách vừa nhắn buổi sáng có cuộc họp khác."
+        },
+        {
+          "turn_id": "T8",
+          "kind": "change",
+          "quote": "Về lịch demo, chốt phương án B, chuyển sang chiều thứ Năm."
+        },
+        {
+          "turn_id": "T12",
+          "kind": "other",
+          "quote": "Em vừa nhận phản hồi: người duyệt chỉ tham gia buổi sáng."
+        },
+        {
+          "turn_id": "T15",
+          "kind": "change",
+          "quote": "Về lịch demo, chốt quay về phương án A, sáng thứ Năm."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [
+    {
+      "item_id": "I1",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Huy có thể tham gia buổi sáng thứ Năm, Lan đã nhận phản hồi từ khách chỉ tham gia buổi sáng, Minh thống nhất chốt lịch demo. Các điều kiện và chủ đề đều được giữ nguyên trong quá trình thảo luận, và lịch demo cuối cùng đã được xác nhận bởi các bên liên quan. Không có dấu hiệu nào cho thấy việc giao nhiệm vụ hoặc hạn chót bị thay đổi không hợp lệ. Các quyết định đều dựa trên thông tin mới từ khách hàng và khả năng của các thành viên nhóm.",
+      "evidence": [
+        {
+          "turn_id": "T15",
+          "quote": "Về lịch demo, chốt quay về phương án A, sáng thứ Năm."
+        },
+        {
+          "turn_id": "T16",
+          "quote": "Như vậy anh không cần đổi lịch hỗ trợ chiều nữa."
+        }
+      ]
+    }
+  ],
+  "run_seconds": 77.74,
+  "postvalidation": {
+    "kind": "literal_only_no_new_inference",
+    "at": "2026-10-14T10:09:36.767600+00:00",
+    "source_canonical_sha256": "6474e8e1b8d7dd6563c7e600058f35e342eec159396671eb285c07f6d8a536be",
+    "core_hashes": {
+      "src/meeting_trace/meeting/core.py": "82a9558034e9f1cd9fda0242baa25b5e067a0a3f36313dabf4e7146dd25f875b",
+      "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+      "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+      "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+      "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3"
+    }
+  }
+}

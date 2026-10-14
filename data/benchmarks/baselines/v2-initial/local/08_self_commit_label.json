@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "local",
+    "model": null,
+    "transcript_sha256": "2363c85fb6164728fb9cb0309bb24ad899979a2d5d2294eaad4e20abe9caa7f3",
+    "automated": true,
+    "semantic_verification": false
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Người nói 1",
+      "text": "Video lỗi giỏ hàng đã có trong nhóm, mọi người xem được chưa?"
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Người nói 2",
+      "text": "Em xem rồi, lúc đổi số lượng thì tổng tiền không cập nhật."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Người nói 3",
+      "text": "Trên bản web hay bản điện thoại?"
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Người nói 2",
+      "text": "Web. Em thử lại được bằng đúng sản phẩm trong video."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Người nói 1",
+      "text": "Như vậy có bằng chứng để xử lý, không cần đợi khách gửi thêm."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Người nói 3",
+      "text": "Phần tính tổng nằm cùng module với khuyến mãi."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Người nói 2",
+      "text": "Em đã đọc module đó trong đợt trước."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Người nói 2",
+      "text": "Để em xem lỗi này và báo lại chiều nay."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Người nói 1",
+      "text": "Có cần đổi người đang làm phần khuyến mãi không?"
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Người nói 2",
+      "text": "Chưa cần, việc trước mắt là tìm chỗ không cập nhật."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Người nói 3",
+      "text": "Trong phiếu hỗ trợ có cả mã sản phẩm và thời điểm khách thao tác."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Người nói 1",
+      "text": "Mình cần biết nguyên nhân trước, chưa nhất thiết phải có bản sửa ngay."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Người nói 2",
+      "text": "Đúng, em sẽ báo lại những gì tái hiện được, không hứa một cách sửa khi chưa xem code."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Người nói 3",
+      "text": "Kết quả chiều nay có thể trao đổi trong luồng hỗ trợ này."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Người nói 1",
+      "text": "Được, hôm nay mình chỉ xử lý trường hợp trong video, chưa mở rộng sang mọi loại giỏ hàng."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Người nói 2",
+      "text": "Em đã rõ phạm vi đó."
+    }
+  ],
+  "topics": [],
+  "items": [],
+  "review_queue": []
+}

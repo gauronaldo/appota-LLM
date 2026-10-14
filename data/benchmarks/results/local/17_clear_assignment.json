@@ -5,151 +5,177 @@
     "model": null,
     "transcript_sha256": "1d701ac42664432d5011c5a8c7a4a71300effa107b36809a91cd5f5a1da88daf",
     "automated": true,
-    "semantic_verification": false
+    "semantic_verification": false,
+    "verification_method": "literal_rules",
+    "approval_required": true
   },
   "turns": [
     {
       "id": "T1",
       "line": 1,
       "speaker": "Minh",
+      "speaker_label": "Minh",
       "text": "Về báo cáo, khách đã xem hai loại biểu đồ trong bản demo."
     },
     {
       "id": "T2",
       "line": 2,
       "speaker": "Mai",
+      "speaker_label": "Mai",
       "text": "Họ muốn so xu hướng theo thời gian, không phải so từng nhóm độc lập."
     },
     {
       "id": "T3",
       "line": 3,
       "speaker": "Lan",
+      "speaker_label": "Lan",
       "text": "Biểu đồ đường phù hợp với cách đọc đó hơn biểu đồ cột."
     },
     {
       "id": "T4",
       "line": 4,
       "speaker": "Huy",
+      "speaker_label": "Huy",
       "text": "Số liệu trả từ API giống nhau, không cần đổi phần dữ liệu."
     },
     {
       "id": "T5",
       "line": 5,
       "speaker": "Minh",
+      "speaker_label": "Minh",
       "text": "Chốt dùng biểu đồ đường trên màn hình báo cáo."
     },
     {
       "id": "T6",
       "line": 6,
       "speaker": "Mai",
+      "speaker_label": "Mai",
       "text": "Khách xem bản demo trên điện thoại nên màn hình nhỏ hơn máy của mình."
     },
     {
       "id": "T7",
       "line": 7,
       "speaker": "Mai",
+      "speaker_label": "Mai",
       "text": "Về nhãn biểu đồ, phản hồi của khách là chữ quá nhỏ khi xem trên điện thoại."
     },
     {
       "id": "T8",
       "line": 8,
       "speaker": "Minh",
+      "speaker_label": "Minh",
       "text": "Về tài liệu, mình cần hướng dẫn dùng bố cục mới."
     },
     {
       "id": "T9",
       "line": 9,
       "speaker": "Lan",
+      "speaker_label": "Lan",
       "text": "Em nhận cập nhật tài liệu sử dụng."
     },
     {
       "id": "T10",
       "line": 10,
       "speaker": "Huy",
+      "speaker_label": "Huy",
       "text": "Phần đó chưa có hạn trong lịch giao việc, đừng tự lấy ngày phát hành."
     },
     {
       "id": "T11",
       "line": 11,
       "speaker": "Lan",
+      "speaker_label": "Lan",
       "text": "Đúng, hôm nay em nhận việc nhưng chưa cam kết thời hạn cụ thể."
     },
     {
       "id": "T12",
       "line": 12,
       "speaker": "Minh",
+      "speaker_label": "Minh",
       "text": "Về bảo mật, cần xem lại quyền tải báo cáo của khách."
     },
     {
       "id": "T13",
       "line": 13,
       "speaker": "Minh",
+      "speaker_label": "Minh",
       "text": "Cần làm rà soát quyền truy cập trước thứ Hai."
     },
     {
       "id": "T14",
       "line": 14,
       "speaker": "Mai",
+      "speaker_label": "Mai",
       "text": "Ai sẽ nhận phần rà soát này?"
     },
     {
       "id": "T15",
       "line": 15,
       "speaker": "Minh",
+      "speaker_label": "Minh",
       "text": "Chưa có người nhận trong cuộc họp, cần xác nhận sau."
     },
     {
       "id": "T16",
       "line": 16,
       "speaker": "Lan",
+      "speaker_label": "Lan",
       "text": "Vậy chỉ việc tài liệu là có người nhận rõ tên."
     },
     {
       "id": "T17",
       "line": 17,
       "speaker": "Huy",
+      "speaker_label": "Huy",
       "text": "Phần rà soát chưa thể chuyển luôn cho Lan, em ấy đang giữ việc tài liệu."
     },
     {
       "id": "T18",
       "line": 18,
       "speaker": "Minh",
+      "speaker_label": "Minh",
       "text": "Đúng, mình ghi riêng từng mục."
     },
     {
       "id": "T19",
       "line": 19,
       "speaker": "Minh",
+      "speaker_label": "Minh",
       "text": "Về đăng nhập, luồng thử của khách đang bị chặn ở đâu?"
     },
     {
       "id": "T20",
       "line": 20,
       "speaker": "Huy",
+      "speaker_label": "Huy",
       "text": "Vướng mắc là chưa có quyền sandbox để thử luồng đăng nhập của khách."
     },
     {
       "id": "T21",
       "line": 21,
       "speaker": "Lan",
+      "speaker_label": "Lan",
       "text": "Đó là quyền ở phía khách, không phải lỗi đăng nhập đã tái hiện được."
     },
     {
       "id": "T22",
       "line": 22,
       "speaker": "Minh",
+      "speaker_label": "Minh",
       "text": "Về phân quyền, mình vẫn chưa biết khách cần những vai trò nào."
     },
     {
       "id": "T23",
       "line": 23,
       "speaker": "Minh",
+      "speaker_label": "Minh",
       "text": "Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp."
     },
     {
       "id": "T24",
       "line": 24,
       "speaker": "Mai",
+      "speaker_label": "Mai",
       "text": "Em ghi câu hỏi phân quyền riêng với công việc rà soát quyền hiện tại."
     }
   ],
@@ -353,5 +379,7 @@
       ]
     }
   ],
-  "review_queue": []
+  "review_queue": [],
+  "semantic_checks": [],
+  "run_seconds": 0.002
 }

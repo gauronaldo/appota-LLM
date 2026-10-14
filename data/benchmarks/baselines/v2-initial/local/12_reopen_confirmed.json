@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "local",
+    "model": null,
+    "transcript_sha256": "bd3330aa162c13df3dc068e9ac05fa5cdc7385eca678fd33d78ce13fd1d62a2a",
+    "automated": true,
+    "semantic_verification": false
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Minh",
+      "text": "Về phát hành, bản 2.1 đã chạy xong kiểm thử thường ngày."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Lan",
+      "text": "Nhóm hỗ trợ chưa ghi nhận lỗi mới trên môi trường thử."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Minh",
+      "text": "Chốt phát hành bản 2.1 vào thứ Hai."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Huy",
+      "text": "Khoan, em vừa thấy lỗi mới trong luồng hoàn tiền."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Mai",
+      "text": "Lỗi này có tái hiện được không hay chỉ có log lạ?"
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Huy",
+      "text": "Tái hiện được ở hai giao dịch liên tiếp, số tiền hoàn bị ghi hai lần."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Lan",
+      "text": "Nếu thế thì không thể để đi cùng đợt phát hành."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Minh",
+      "text": "Như vậy thông tin lúc chốt vừa rồi không còn đầy đủ."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Huy",
+      "text": "Em chưa biết phạm vi ảnh hưởng, không hứa sửa trong hôm nay."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Mai",
+      "text": "Đừng lấy lịch thứ Hai làm deadline sửa nếu chưa có người nhận."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Minh",
+      "text": "Đồng ý, mình tách hai chuyện đó."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Minh",
+      "text": "Chưa chốt lịch phát hành nữa; hoãn bản 2.1 để đánh giá lỗi hoàn tiền."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Lan",
+      "text": "Em ghi quyết định phát hành lúc đầu đã được mở lại."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Huy",
+      "text": "Đúng, chưa có kết luận sửa thế nào trong cuộc họp này."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Mai",
+      "text": "Những người vắng mặt cần thấy lời hoãn ở phần cuối."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Minh",
+      "text": "Không gửi thông báo phát hành dựa trên câu chốt ban đầu."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "phát hành",
+      "events": [
+        {
+          "turn_id": "T3",
+          "kind": "finalize",
+          "quote": "Chốt phát hành bản 2.1 vào thứ Hai."
+        },
+        {
+          "turn_id": "T11",
+          "kind": "support",
+          "quote": "Đồng ý, mình tách hai chuyện đó."
+        },
+        {
+          "turn_id": "T12",
+          "kind": "defer",
+          "quote": "Chưa chốt lịch phát hành nữa; hoãn bản 2.1 để đánh giá lỗi hoàn tiền."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "phát hành",
+      "type": "unresolved",
+      "status": "unresolved",
+      "content": "Chưa chốt lịch phát hành nữa; hoãn bản 2.1 để đánh giá lỗi hoàn tiền.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T12",
+          "quote": "Chưa chốt lịch phát hành nữa; hoãn bản 2.1 để đánh giá lỗi hoàn tiền."
+        }
+      ],
+      "reason": "Không có kết luận tường minh cuối cùng hoặc đã hoãn/mở lại.",
+      "history": [
+        {
+          "turn_id": "T3",
+          "kind": "finalize",
+          "quote": "Chốt phát hành bản 2.1 vào thứ Hai."
+        },
+        {
+          "turn_id": "T12",
+          "kind": "defer",
+          "quote": "Chưa chốt lịch phát hành nữa; hoãn bản 2.1 để đánh giá lỗi hoàn tiền."
+        }
+      ]
+    }
+  ],
+  "review_queue": []
+}

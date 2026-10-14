@@ -4,8 +4,10 @@ import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlsplit
 
-from ..meeting.core import extract, parse_transcript, validate_items
+from ..meeting.core import extract, parse_transcript, check_candidates
+from ..meeting.review import ReviewStore
 from ..config import PATHS, STATIC_DIR
+REVIEWS = ReviewStore()
 
 def examples():
     rows = []
@@ -48,14 +50,20 @@ class Handler(BaseHTTPRequestHandler):
             case_id = parse_qs(parsed.query).get('id', [''])[0]
             if case_id not in {r['id'] for r in examples()}:
                 return self.send(404, dict(error='Không có test case này.'))
-            path = PATHS.benchmarks / 'results' / 'local' / (case_id + '.json')
+            engine = parse_qs(parsed.query).get('engine', ['local'])[0]
+            if engine not in ('local', 'openai', 'ollama'):
+                return self.send(400, dict(error='Bộ trích xuất không hợp lệ.'))
+            path = PATHS.benchmarks / 'results' / engine / (case_id + '.json')
             if not path.exists():
                 return self.send(404, dict(error='Chưa có kết quả đã chạy. Chạy python src evaluate --split dev rồi --split holdout.'))
-            return self.send(200, json.loads(path.read_text(encoding='utf-8')))
+            return self.send(200, REVIEWS.create(json.loads(path.read_text(encoding='utf-8'))))
         if parsed.path == '/api/tests':
+            engine = parse_qs(parsed.query).get('engine', ['local'])[0]
+            if engine not in ('local', 'openai', 'ollama'):
+                return self.send(400, dict(error='Bộ trích xuất không hợp lệ.'))
             reports = []
             for split in ['dev', 'holdout']:
-                path = PATHS.benchmarks / 'results' / 'local' / (split + '_report.json')
+                path = PATHS.benchmarks / 'results' / engine / (split + '_report.json')
                 if path.exists():
                     reports.append(json.loads(path.read_text(encoding='utf-8')))
             return self.send(200, reports)
@@ -76,14 +84,19 @@ class Handler(BaseHTTPRequestHandler):
                 raise ValueError('Cần JSON object.')
             if self.path == '/api/extract':
                 engine = data.get('engine', 'local')
-                return self.send(200, extract(data.get('transcript', ''), engine=engine))
+                return self.send(200, REVIEWS.create(extract(data.get('transcript', ''), engine=engine, model=data.get('model'))))
             if self.path == '/api/validate':
                 turns = parse_transcript(data.get('transcript', ''))
                 candidates = data.get('items')
                 if not isinstance(candidates, list) or len(candidates) > 300:
                     raise ValueError('Danh sách items không hợp lệ.')
-                items, review = validate_items(candidates, turns)
-                return self.send(200, dict(items=items, review_queue=review))
+                items, review, checks = check_candidates(candidates, turns, data.get('engine', 'local'), data.get('model'))
+                return self.send(200, dict(items=items, review_queue=review, semantic_checks=checks))
+            if self.path == '/api/review':
+                return self.send(200, REVIEWS.act(data.get('session_id'), data.get('revision'),
+                    data.get('review_key'), data.get('action'), data.get('changes'), data.get('reason', '')))
+            if self.path == '/api/export':
+                return self.send(200, REVIEWS.export(data.get('session_id'), data.get('revision')))
             return self.send(404, dict(error='Không tìm thấy.'))
         except (ValueError, TypeError) as error:
             return self.send(400, dict(error=str(error)))

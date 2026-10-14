@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "local",
+    "model": null,
+    "transcript_sha256": "3b5031acdbe08c80d4b2e96223308efc607d3a22f48bb5081e1c3936d5023a6c",
+    "automated": true,
+    "semantic_verification": false
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Minh",
+      "text": "Về phát hành, mình còn phải xác nhận việc hoàn tiền trước khi quyết lịch."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Lan",
+      "text": "Bản sửa đã qua kiểm thử hồi quy sáng nay."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Huy",
+      "text": "Anh thử cả hoàn một phần lẫn hoàn toàn bộ, số tiền đều khớp."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Mai",
+      "text": "Nhóm hỗ trợ đã có hướng dẫn trả lời khách khi họ hỏi về trạng thái mới."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Minh",
+      "text": "Còn vấn đề nào đang chặn việc phát hành không?"
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Lan",
+      "text": "Không còn lỗi chặn, chỉ có một chỉnh sửa chữ không ảnh hưởng luồng."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Huy",
+      "text": "Chỉnh sửa chữ đó đã nằm trong bản 2.1 rồi."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Mai",
+      "text": "Lịch bên khách cho phép cập nhật đầu tuần."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Minh",
+      "text": "Nghĩa là không cần điều kiện còn chờ từ phía họ nữa."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Lan",
+      "text": "Đúng, họ đã xác nhận trong email hôm qua."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Minh",
+      "text": "Về phát hành, chốt đưa bản 2.1 lên vào thứ Hai."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Mai",
+      "text": "Em ghi lịch đó là quyết định cuối của cuộc họp."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Huy",
+      "text": "Các kiểm tra vừa nói đều đã hoàn tất, không phải việc giao mới."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Lan",
+      "text": "Mình dùng đúng bản đã thử hôm nay, không thêm thay đổi ngoài bản đó."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Minh",
+      "text": "Nếu có thông tin mới thì cần mở lại quyết định, không tự bỏ qua."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Mai",
+      "text": "Hiện chưa có thông tin mới để thay lịch."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": "Minh",
+      "text": "Mình kết thúc phần phát hành ở đây."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "phát hành",
+      "events": [
+        {
+          "turn_id": "T11",
+          "kind": "finalize",
+          "quote": "Về phát hành, chốt đưa bản 2.1 lên vào thứ Hai."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "phát hành",
+      "type": "decision",
+      "status": "confirmed",
+      "content": "chốt đưa bản 2.1 lên vào thứ Hai.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T11",
+          "quote": "Về phát hành, chốt đưa bản 2.1 lên vào thứ Hai."
+        }
+      ],
+      "reason": "Có câu chốt tường minh; đây là kết luận cuối được nhận diện của chủ đề.",
+      "history": [
+        {
+          "turn_id": "T11",
+          "kind": "finalize",
+          "quote": "Về phát hành, chốt đưa bản 2.1 lên vào thứ Hai."
+        }
+      ]
+    }
+  ],
+  "review_queue": []
+}

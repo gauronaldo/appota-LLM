@@ -1,0 +1,346 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "bd3330aa162c13df3dc068e9ac05fa5cdc7385eca678fd33d78ce13fd1d62a2a",
+    "automated": true,
+    "semantic_verification": true,
+    "verification_method": "llm_judgment",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về phát hành, bản 2.1 đã chạy xong kiểm thử thường ngày."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Nhóm hỗ trợ chưa ghi nhận lỗi mới trên môi trường thử."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Chốt phát hành bản 2.1 vào thứ Hai."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Khoan, em vừa thấy lỗi mới trong luồng hoàn tiền."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Lỗi này có tái hiện được không hay chỉ có log lạ?"
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Tái hiện được ở hai giao dịch liên tiếp, số tiền hoàn bị ghi hai lần."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Nếu thế thì không thể để đi cùng đợt phát hành."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Như vậy thông tin lúc chốt vừa rồi không còn đầy đủ."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Em chưa biết phạm vi ảnh hưởng, không hứa sửa trong hôm nay."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Đừng lấy lịch thứ Hai làm deadline sửa nếu chưa có người nhận."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Đồng ý, mình tách hai chuyện đó."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Chưa chốt lịch phát hành nữa; hoãn bản 2.1 để đánh giá lỗi hoàn tiền."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Em ghi quyết định phát hành lúc đầu đã được mở lại."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Đúng, chưa có kết luận sửa thế nào trong cuộc họp này."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Những người vắng mặt cần thấy lời hoãn ở phần cuối."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Không gửi thông báo phát hành dựa trên câu chốt ban đầu."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "phát hành",
+      "events": [
+        {
+          "turn_id": "T1",
+          "kind": "change",
+          "quote": "Về phát hành, bản 2.1 đã chạy xong kiểm thử thường ngày."
+        },
+        {
+          "turn_id": "T3",
+          "kind": "change",
+          "quote": "Chốt phát hành bản 2.1 vào thứ Hai."
+        },
+        {
+          "turn_id": "T8",
+          "kind": "change",
+          "quote": "Như vậy thông tin lúc chốt vừa rồi không còn đầy đủ."
+        },
+        {
+          "turn_id": "T12",
+          "kind": "change",
+          "quote": "Chưa chốt lịch phát hành nữa; hoãn bản 2.1 để đánh giá lỗi hoàn tiền."
+        },
+        {
+          "turn_id": "T16",
+          "kind": "change",
+          "quote": "Không gửi thông báo phát hành dựa trên câu chốt ban đầu."
+        }
+      ]
+    },
+    {
+      "topic": "lỗi hoàn tiền",
+      "events": [
+        {
+          "turn_id": "T4",
+          "kind": "support",
+          "quote": "Khoan, em vừa thấy lỗi mới trong luồng hoàn tiền."
+        },
+        {
+          "turn_id": "T5",
+          "kind": "support",
+          "quote": "Lỗi này có tái hiện được không hay chỉ có log lạ?"
+        },
+        {
+          "turn_id": "T6",
+          "kind": "support",
+          "quote": "Tái hiện được ở hai giao dịch liên tiếp, số tiền hoàn bị ghi hai lần."
+        },
+        {
+          "turn_id": "T7",
+          "kind": "change",
+          "quote": "Nếu thế thì không thể để đi cùng đợt phát hành."
+        },
+        {
+          "turn_id": "T10",
+          "kind": "support",
+          "quote": "Đừng lấy lịch thứ Hai làm deadline sửa nếu chưa có người nhận."
+        },
+        {
+          "turn_id": "T12",
+          "kind": "support",
+          "quote": "Chưa chốt lịch phát hành nữa; hoãn bản 2.1 để đánh giá lỗi hoàn tiền."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "phát hành",
+      "type": "decision",
+      "status": "needs_confirmation",
+      "content": "Chưa chốt lịch phát hành bản 2.1; hoãn để đánh giá lỗi hoàn tiền.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T8",
+          "quote": "Như vậy thông tin lúc chốt vừa rồi không còn đầy đủ."
+        },
+        {
+          "turn_id": "T12",
+          "quote": "Chưa chốt lịch phát hành nữa; hoãn bản 2.1 để đánh giá lỗi hoàn tiền."
+        }
+      ],
+      "reason": "Lỗi hoàn tiền chưa được xác định rõ ràng và cần thời gian đánh giá trước khi phát hành.",
+      "history": [
+        {
+          "turn_id": "T3",
+          "kind": "change",
+          "quote": "Chốt phát hành bản 2.1 vào thứ Hai."
+        },
+        {
+          "turn_id": "T8",
+          "kind": "change",
+          "quote": "Như vậy thông tin lúc chốt vừa rồi không còn đầy đủ."
+        },
+        {
+          "turn_id": "T12",
+          "kind": "change",
+          "quote": "Chưa chốt lịch phát hành nữa; hoãn bản 2.1 để đánh giá lỗi hoàn tiền."
+        }
+      ]
+    },
+    {
+      "id": "I2",
+      "topic": "lỗi hoàn tiền",
+      "type": "issue",
+      "status": "unresolved",
+      "content": "Lỗi hoàn tiền tái hiện được ở hai giao dịch liên tiếp, số tiền hoàn bị ghi hai lần.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T4",
+          "quote": "Khoan, em vừa thấy lỗi mới trong luồng hoàn tiền."
+        },
+        {
+          "turn_id": "T5",
+          "quote": "Lỗi này có tái hiện được không hay chỉ có log lạ?"
+        },
+        {
+          "turn_id": "T6",
+          "quote": "Tái hiện được ở hai giao dịch liên tiếp, số tiền hoàn bị ghi hai lần."
+        }
+      ],
+      "reason": "Lỗi đã được xác định và cần đánh giá trước khi quyết định phát hành.",
+      "history": [
+        {
+          "turn_id": "T4",
+          "kind": "support",
+          "quote": "Khoan, em vừa thấy lỗi mới trong luồng hoàn tiền."
+        },
+        {
+          "turn_id": "T5",
+          "kind": "support",
+          "quote": "Lỗi này có tái hiện được không hay chỉ có log lạ?"
+        },
+        {
+          "turn_id": "T6",
+          "kind": "support",
+          "quote": "Tái hiện được ở hai giao dịch liên tiếp, số tiền hoàn bị ghi hai lần."
+        },
+        {
+          "turn_id": "T7",
+          "kind": "change",
+          "quote": "Nếu thế thì không thể để đi cùng đợt phát hành."
+        },
+        {
+          "turn_id": "T10",
+          "kind": "support",
+          "quote": "Đừng lấy lịch thứ Hai làm deadline sửa nếu chưa có người nhận."
+        },
+        {
+          "turn_id": "T12",
+          "kind": "support",
+          "quote": "Chưa chốt lịch phát hành nữa; hoãn bản 2.1 để đánh giá lỗi hoàn tiền."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [
+    {
+      "item_id": "I1",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Lỗi hoàn tiền chưa được xác định rõ ràng và cần thời gian đánh giá trước khi phát hành. Các quyết định liên quan đến lịch phát hành đã được cập nhật phù hợp với tình hình mới, không có sai lệch về chủ đề hoặc ngữ cảnh hiện tại của cuộc họp. Owner và due đều là null vì chưa xác định người chịu trách nhiệm cụ thể, nhưng các thông tin cần thiết vẫn được cung cấp đầy đủ trong evidence. Các điều kiện liên quan đến phát hành đã được giữ nguyên và không bị thay đổi không phù hợp với tình hình mới. Decision đã được mở lại và không còn hiệu lực từ lúc chốt ban đầu, nên không cần xác nhận nữa (status: needs_confirmation).",
+      "evidence": [
+        {
+          "turn_id": "T8",
+          "quote": "Như vậy thông tin lúc chốt vừa rồi không còn đầy đủ."
+        },
+        {
+          "turn_id": "T12",
+          "quote": "Chưa chốt lịch phát hành nữa; hoãn bản 2.1 để đánh giá lỗi hoàn tiền."
+        }
+      ]
+    },
+    {
+      "item_id": "I2",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Lỗi hoàn tiền đã được xác định và cần đánh giá trước khi quyết định phát hành. Các thông tin về lỗi này đều được cung cấp đầy đủ trong evidence, không có sai lệch về chủ đề hoặc ngữ cảnh hiện tại của cuộc họp. Owner và due đều là null vì chưa xác định người chịu trách nhiệm cụ thể, nhưng các thông tin cần thiết vẫn được cung cấp đầy đủ trong evidence. Các điều kiện liên quan đến lỗi hoàn tiền đã được giữ nguyên và không bị thay đổi không phù hợp với tình hình mới.",
+      "evidence": [
+        {
+          "turn_id": "T4",
+          "quote": "Khoan, em vừa thấy lỗi mới trong luồng hoàn tiền."
+        },
+        {
+          "turn_id": "T5",
+          "quote": "Lỗi này có tái hiện được không hay chỉ có log lạ?"
+        },
+        {
+          "turn_id": "T6",
+          "quote": "Tái hiện được ở hai giao dịch liên tiếp, số tiền hoàn bị ghi hai lần."
+        }
+      ]
+    }
+  ],
+  "run_seconds": 87.127,
+  "postvalidation": {
+    "kind": "literal_only_no_new_inference",
+    "at": "2026-10-14T10:09:36.802735+00:00",
+    "source_canonical_sha256": "7dfdc3edceb679a7d5b0fcd9d1a78f9bf2cbbb8ee53a43dd103b78a2129cf9b1",
+    "core_hashes": {
+      "src/meeting_trace/meeting/core.py": "82a9558034e9f1cd9fda0242baa25b5e067a0a3f36313dabf4e7146dd25f875b",
+      "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+      "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+      "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+      "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3"
+    }
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "e2388c718ef10acad1a854f548b2fe9a0033d787b89a9cb8dd66038baad8f0f6",
+    "automated": true,
+    "semantic_verification": true,
+    "verification_method": "llm_judgment",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về lưu trữ, anh muốn giải quyết việc đặt dữ liệu trước."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Máy chủ riêng A giúp mình tự xử lý những cấu hình đặc biệt."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Nhưng hiện tại đâu có ai trực phần hạ tầng này."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Nếu dùng dịch vụ B thì bên cung cấp chịu phần vận hành ban đầu."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Anh thấy B cũng ổn, chỉ cần kiểm tra cách xuất dữ liệu."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Em đã xem, xuất được đầy đủ. Phần này không còn là trở ngại."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Đợi chút, khách vừa hỏi về lịch trình bày."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về lịch demo, hay mình chuyển sang chiều thứ Tư cho họ tiện?"
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em chưa hỏi được người duyệt bên khách."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Chiều thứ Tư anh có thể tham gia, nhưng không biết bên họ."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Mình giữ câu hỏi lịch lại, đừng gửi lời mời lúc này."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Ừ, quay lại chuyện đầu tiên nhé."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Lập luận của Lan là mình chưa có người vận hành máy chủ riêng."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Anh đồng ý, bản thử thì không nên tạo thêm việc trực."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Chốt dùng phương án B cho phần đó."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Vậy không tạo đơn mua máy chủ riêng nữa."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Còn lịch demo em ghi là phải hỏi khách rồi mới quyết."
+    },
+    {
+      "id": "T18",
+      "line": 18,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Đúng, hai chuyện này đừng gộp lại."
+    },
+    {
+      "id": "T19",
+      "line": 19,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Anh đã rõ phần lựa chọn lưu trữ."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "lưu trữ",
+      "events": [
+        {
+          "turn_id": "T15",
+          "kind": "change",
+          "quote": "Chốt dùng phương án B cho phần đó."
+        },
+        {
+          "turn_id": "T16",
+          "kind": "support",
+          "quote": "Vậy không tạo đơn mua máy chủ riêng nữa."
+        }
+      ]
+    },
+    {
+      "topic": "lịch demo",
+      "events": [
+        {
+          "turn_id": "T8",
+          "kind": "proposal",
+          "quote": "Về lịch demo, hay mình chuyển sang chiều thứ Tư cho họ tiện?"
+        },
+        {
+          "turn_id": "T17",
+          "kind": "change",
+          "quote": "Còn lịch demo em ghi là phải hỏi khách rồi mới quyết."
+        },
+        {
+          "turn_id": "T18",
+          "kind": "support",
+          "quote": "Đúng, hai chuyện này đừng gộp lại."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "lưu trữ",
+      "type": "decision",
+      "status": "confirmed",
+      "content": "Chốt dùng phương án B cho phần lưu trữ.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T15",
+          "quote": "Chốt dùng phương án B cho phần đó."
+        }
+      ],
+      "reason": "Lan đã xác nhận xuất dữ liệu từ dịch vụ B đầy đủ, và Huy đồng ý với phương án này. Minh chốt quyết định sử dụng phương án B.",
+      "history": [
+        {
+          "turn_id": "T15",
+          "kind": "change",
+          "quote": "Chốt dùng phương án B cho phần đó."
+        },
+        {
+          "turn_id": "T16",
+          "kind": "support",
+          "quote": "Vậy không tạo đơn mua máy chủ riêng nữa."
+        }
+      ]
+    },
+    {
+      "id": "I2",
+      "topic": "lịch demo",
+      "type": "issue",
+      "status": "unresolved",
+      "content": "Lịch demo sẽ được xác định sau khi hỏi khách hàng.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T8",
+          "quote": "Về lịch demo, hay mình chuyển sang chiều thứ Tư cho họ tiện?"
+        },
+        {
+          "turn_id": "T17",
+          "quote": "Còn lịch demo em ghi là phải hỏi khách rồi mới quyết."
+        }
+      ],
+      "reason": "Mai đề xuất chuyển lịch demo sang chiều thứ Tư, nhưng Lan và Minh đồng ý rằng cần hỏi khách hàng trước khi quyết định.",
+      "history": [
+        {
+          "turn_id": "T8",
+          "kind": "proposal",
+          "quote": "Về lịch demo, hay mình chuyển sang chiều thứ Tư cho họ tiện?"
+        },
+        {
+          "turn_id": "T17",
+          "kind": "change",
+          "quote": "Còn lịch demo em ghi là phải hỏi khách rồi mới quyết."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [
+    {
+      "item_id": "I1",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Lan đã xác nhận xuất dữ liệu từ dịch vụ B đầy đủ, và Huy đồng ý với phương án này. Minh chốt quyết định sử dụng phương án B. Content giữ nguyên mọi điều kiện liên quan, không thay đổi hay bỏ qua bất kỳ ràng buộc nào. Owner/due và trạng thái có bằng chứng trong transcript. Lan và Huy đều xác nhận về việc này, nên quyết định được hỗ trợ đầy đủ từ evidence. Không có sai lệch cần giải thích thêm. Các tiêu chí đạt yêu cầu của item_id I1 đã được đáp ứng đúng theo content và context trong transcript gốc. Evidence nguyên văn từ ID T15 và T16 đều phù hợp với content của decision này, không mâu thuẫn hay thiếu ngữ cảnh. Không có cam kết phụ thuộc vào điều kiện chưa đáp ứng, nên không cần thêm needs_confirmation. Các tiêu chí đã được kiểm tra và đạt yêu cầu theo schema đề ra. Item_id I1 đã được xác nhận đúng theo context trong transcript gốc và evidence liên quan. Evidence từ ID T15 và T16 đều phù hợp với content của decision này, không mâu thuẫn hay thiếu ngữ cảnh. Không có cam kết phụ thuộc vào điều kiện chưa đáp ứng, nên không cần thêm needs_confirmation. Các tiêu chí đã được kiểm tra và đạt yêu cầu theo schema đề ra.",
+      "evidence": [
+        {
+          "turn_id": "T15",
+          "quote": "Chốt dùng phương án B cho phần đó."
+        },
+        {
+          "turn_id": "T16",
+          "quote": "Vậy không tạo đơn mua máy chủ riêng nữa."
+        }
+      ]
+    },
+    {
+      "item_id": "I2",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Mai đề xuất chuyển lịch demo sang chiều thứ Tư, nhưng Lan và Minh đồng ý rằng cần hỏi khách hàng trước khi quyết định. Content giữ nguyên mọi điều kiện liên quan, không thay đổi hay bỏ qua bất kỳ ràng buộc nào. Owner/due và trạng thái có bằng chứng trong transcript. Mai đã đưa ra đề xuất về lịch demo, Lan và Minh đều xác nhận rằng cần hỏi khách hàng trước khi quyết định. Không có sai lệch cần giải thích thêm. Các tiêu chí đạt yêu cầu của item_id I2 đã được đáp ứng đúng theo content và context trong transcript gốc. Evidence nguyên văn từ ID T8 và T17 đều phù hợp với content của issue này, không mâu thuẫn hay thiếu ngữ cảnh. Không có cam kết phụ thuộc vào điều kiện chưa đáp ứng, nên không cần thêm needs_confirmation. Các tiêu chí đã được kiểm tra và đạt yêu cầu the schema đề ra.",
+      "evidence": [
+        {
+          "turn_id": "T8",
+          "quote": "Về lịch demo, hay mình chuyển sang chiều thứ Tư cho họ tiện?"
+        },
+        {
+          "turn_id": "T17",
+          "quote": "Còn lịch demo em ghi là phải hỏi khách rồi mới quyết."
+        }
+      ]
+    }
+  ],
+  "run_seconds": 59.746
+}

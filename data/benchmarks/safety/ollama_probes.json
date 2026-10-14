@@ -1,0 +1,556 @@
+{
+  "engine": "ollama",
+  "model": "qwen2.5:7b",
+  "run_at": "2026-10-14T09:53:00.867027+00:00",
+  "core_hashes": {
+    "src/meeting_trace/meeting/core.py": "b4f0fa6cdbf414bfb18f363c7ae62f86fab7050cfe1e504485053441651ca640",
+    "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+    "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+    "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+    "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3"
+  },
+  "transcript": "Minh: Về lưu trữ, chốt phương án A.\nLan: Báo giá A vừa thay đổi, vượt ngân sách mất rồi.\nMinh: Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt.\nLan: Tôi chưa nhận làm cấu hình, chỉ đang xem quyền truy cập.\nHuy: Về lịch demo, chốt chiều thứ Tư.\nNgười nói 2: Về tài liệu, em nhận làm hướng dẫn trước ngày mai.",
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về lưu trữ, chốt phương án A."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Báo giá A vừa thay đổi, vượt ngân sách mất rồi."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Tôi chưa nhận làm cấu hình, chỉ đang xem quyền truy cập."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Về lịch demo, chốt chiều thứ Tư."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Về tài liệu, em nhận làm hướng dẫn trước ngày mai."
+    }
+  ],
+  "cases": [
+    {
+      "id": "good_conditional",
+      "expected_accept": true,
+      "actual_accept": false,
+      "passed": false,
+      "item": {
+        "id": "P1",
+        "topic": "lưu trữ",
+        "type": "decision",
+        "status": "confirmed",
+        "content": "Dùng phương án B nếu pháp chế duyệt.",
+        "owner": null,
+        "due": null,
+        "evidence": [
+          {
+            "turn_id": "T3",
+            "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+          }
+        ],
+        "reason": "Candidate tổng hợp để kiểm tra.",
+        "history": []
+      }
+    },
+    {
+      "id": "superseded",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "item": {
+        "id": "P2",
+        "topic": "lưu trữ",
+        "type": "decision",
+        "status": "confirmed",
+        "content": "Dùng phương án A.",
+        "owner": null,
+        "due": null,
+        "evidence": [
+          {
+            "turn_id": "T1",
+            "quote": "Về lưu trữ, chốt phương án A."
+          }
+        ],
+        "reason": "Candidate tổng hợp để kiểm tra.",
+        "history": []
+      }
+    },
+    {
+      "id": "unsupported_content",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "item": {
+        "id": "P3",
+        "topic": "lưu trữ",
+        "type": "decision",
+        "status": "confirmed",
+        "content": "Dùng phương án C.",
+        "owner": null,
+        "due": null,
+        "evidence": [
+          {
+            "turn_id": "T3",
+            "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+          }
+        ],
+        "reason": "Candidate tổng hợp để kiểm tra.",
+        "history": []
+      }
+    },
+    {
+      "id": "wrong_topic",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "item": {
+        "id": "P4",
+        "topic": "lịch demo",
+        "type": "decision",
+        "status": "confirmed",
+        "content": "Dùng phương án B nếu pháp chế duyệt.",
+        "owner": null,
+        "due": null,
+        "evidence": [
+          {
+            "turn_id": "T3",
+            "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+          }
+        ],
+        "reason": "Candidate tổng hợp để kiểm tra.",
+        "history": []
+      }
+    },
+    {
+      "id": "dropped_condition",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "item": {
+        "id": "P5",
+        "topic": "lưu trữ",
+        "type": "decision",
+        "status": "confirmed",
+        "content": "Dùng phương án B.",
+        "owner": null,
+        "due": null,
+        "evidence": [
+          {
+            "turn_id": "T3",
+            "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+          }
+        ],
+        "reason": "Candidate tổng hợp để kiểm tra.",
+        "history": []
+      }
+    },
+    {
+      "id": "uncommitted_owner",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "item": {
+        "id": "P6",
+        "topic": "cấu hình",
+        "type": "action",
+        "status": "confirmed",
+        "content": "Lan nhận làm cấu hình.",
+        "owner": "Lan",
+        "due": null,
+        "evidence": [
+          {
+            "turn_id": "T4",
+            "quote": "Tôi chưa nhận làm cấu hình, chỉ đang xem quyền truy cập."
+          }
+        ],
+        "reason": "Candidate tổng hợp để kiểm tra.",
+        "history": []
+      }
+    },
+    {
+      "id": "good_unknown_owner",
+      "expected_accept": true,
+      "actual_accept": true,
+      "passed": true,
+      "item": {
+        "id": "P7",
+        "topic": "tài liệu",
+        "type": "action",
+        "status": "needs_confirmation",
+        "content": "Em nhận làm hướng dẫn trước ngày mai.",
+        "owner": null,
+        "due": "ngày mai",
+        "evidence": [
+          {
+            "turn_id": "T6",
+            "quote": "Về tài liệu, em nhận làm hướng dẫn trước ngày mai."
+          }
+        ],
+        "reason": "Candidate tổng hợp để kiểm tra.",
+        "history": []
+      }
+    }
+  ],
+  "total": 7,
+  "passed": 6,
+  "items": [
+    {
+      "id": "P7",
+      "topic": "tài liệu",
+      "type": "action",
+      "status": "needs_confirmation",
+      "content": "Em nhận làm hướng dẫn trước ngày mai.",
+      "owner": null,
+      "due": "ngày mai",
+      "evidence": [
+        {
+          "turn_id": "T6",
+          "quote": "Về tài liệu, em nhận làm hướng dẫn trước ngày mai."
+        }
+      ],
+      "reason": "Candidate tổng hợp để kiểm tra.",
+      "history": []
+    }
+  ],
+  "review_queue": [
+    {
+      "item": {
+        "id": "P6",
+        "topic": "cấu hình",
+        "type": "action",
+        "status": "confirmed",
+        "content": "Lan nhận làm cấu hình.",
+        "owner": "Lan",
+        "due": null,
+        "evidence": [
+          {
+            "turn_id": "T4",
+            "quote": "Tôi chưa nhận làm cấu hình, chỉ đang xem quyền truy cập."
+          }
+        ],
+        "reason": "Candidate tổng hợp để kiểm tra.",
+        "history": []
+      },
+      "errors": [
+        "Người phụ trách thiếu bằng chứng giao việc hoặc tự nhận việc"
+      ]
+    },
+    {
+      "item": {
+        "id": "P1",
+        "topic": "lưu trữ",
+        "type": "decision",
+        "status": "confirmed",
+        "content": "Dùng phương án B nếu pháp chế duyệt.",
+        "owner": null,
+        "due": null,
+        "evidence": [
+          {
+            "turn_id": "T3",
+            "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+          }
+        ],
+        "reason": "Candidate tổng hợp để kiểm tra.",
+        "history": []
+      },
+      "errors": [
+        "supported: fail",
+        "conditions_preserved: fail",
+        "assignment_supported: fail",
+        "Candidate 'Dùng phương án A.' không được hỗ trợ bởi bất kỳ đoạn hội thoại nào. Candidate này đã bị hủy trong T3 và thay thế bằng 'Dùng phương án B nếu pháp chế duyệt.' nên không thể xác nhận trạng thái confirmed cho nó. Content của candidate này mâu thuẫn với quyết định mới trong T3, do đó không được hỗ trợ bởi evidence. Đồng thời, content giữ đầy đủ mọi điều kiện/ràng buộc liên quan đã bị thay đổi, nên không còn phù hợp nữa. Owner và due cũng không có bằng chứng xác nhận. Trạng thái confirmed là sai lệch so với thực tế trong transcript."
+      ],
+      "semantic_check": {
+        "item_id": "P1",
+        "supported": "fail",
+        "topic_correct": "pass",
+        "current": "pass",
+        "conditions_preserved": "fail",
+        "assignment_supported": "fail",
+        "reason": "Candidate 'Dùng phương án A.' không được hỗ trợ bởi bất kỳ đoạn hội thoại nào. Candidate này đã bị hủy trong T3 và thay thế bằng 'Dùng phương án B nếu pháp chế duyệt.' nên không thể xác nhận trạng thái confirmed cho nó. Content của candidate này mâu thuẫn với quyết định mới trong T3, do đó không được hỗ trợ bởi evidence. Đồng thời, content giữ đầy đủ mọi điều kiện/ràng buộc liên quan đã bị thay đổi, nên không còn phù hợp nữa. Owner và due cũng không có bằng chứng xác nhận. Trạng thái confirmed là sai lệch so với thực tế trong transcript.",
+        "evidence": [
+          {
+            "turn_id": "T3",
+            "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+          }
+        ]
+      }
+    },
+    {
+      "item": {
+        "id": "P2",
+        "topic": "lưu trữ",
+        "type": "decision",
+        "status": "confirmed",
+        "content": "Dùng phương án A.",
+        "owner": null,
+        "due": null,
+        "evidence": [
+          {
+            "turn_id": "T1",
+            "quote": "Về lưu trữ, chốt phương án A."
+          }
+        ],
+        "reason": "Candidate tổng hợp để kiểm tra.",
+        "history": []
+      },
+      "errors": [
+        "supported: fail",
+        "conditions_preserved: fail",
+        "assignment_supported: fail",
+        "Candidate 'Dùng phương án A.' không được hỗ trợ bởi bất kỳ đoạn hội thoại nào. Candidate này đã bị hủy trong T3 và thay thế bằng 'Dùng phương án B nếu pháp chế duyệt.' nên không thể xác nhận trạng thái confirmed cho nó. Content của candidate này mâu thuẫn với quyết định mới trong T3, do đó không được hỗ trợ bởi evidence. Đồng thời, content giữ đầy đủ mọi điều kiện/ràng buộc liên quan đã bị thay đổi, nên không còn phù hợp nữa. Owner và due cũng không có bằng chứng xác nhận. Trạng thái confirmed là sai lệch so với thực tế trong transcript."
+      ],
+      "semantic_check": {
+        "item_id": "P2",
+        "supported": "fail",
+        "topic_correct": "pass",
+        "current": "pass",
+        "conditions_preserved": "fail",
+        "assignment_supported": "fail",
+        "reason": "Candidate 'Dùng phương án A.' không được hỗ trợ bởi bất kỳ đoạn hội thoại nào. Candidate này đã bị hủy trong T3 và thay thế bằng 'Dùng phương án B nếu pháp chế duyệt.' nên không thể xác nhận trạng thái confirmed cho nó. Content của candidate này mâu thuẫn với quyết định mới trong T3, do đó không được hỗ trợ bởi evidence. Đồng thời, content giữ đầy đủ mọi điều kiện/ràng buộc liên quan đã bị thay đổi, nên không còn phù hợp nữa. Owner và due cũng không có bằng chứng xác nhận. Trạng thái confirmed là sai lệch so với thực tế trong transcript.",
+        "evidence": [
+          {
+            "turn_id": "T3",
+            "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+          }
+        ]
+      }
+    },
+    {
+      "item": {
+        "id": "P3",
+        "topic": "lưu trữ",
+        "type": "decision",
+        "status": "confirmed",
+        "content": "Dùng phương án C.",
+        "owner": null,
+        "due": null,
+        "evidence": [
+          {
+            "turn_id": "T3",
+            "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+          }
+        ],
+        "reason": "Candidate tổng hợp để kiểm tra.",
+        "history": []
+      },
+      "errors": [
+        "supported: fail",
+        "conditions_preserved: fail",
+        "assignment_supported: fail",
+        "Candidate 'Dùng phương án C.' không được hỗ trợ bởi bất kỳ đoạn hội thoại nào. Candidate này không xuất hiện trong transcript, do đó không thể xác nhận trạng thái confirmed cho nó. Content của candidate này mâu thuẫn với quyết định mới trong T3, do đó không được hỗ trợ bởi evidence. Đồng thời, content giữ đầy đủ mọi điều kiện/ràng buộc liên quan đã bị thay đổi, nên không còn phù hợp nữa. Owner và due cũng không có bằng chứng xác nhận. Trạng thái confirmed là sai lệch so với thực tế trong transcript."
+      ],
+      "semantic_check": {
+        "item_id": "P3",
+        "supported": "fail",
+        "topic_correct": "pass",
+        "current": "pass",
+        "conditions_preserved": "fail",
+        "assignment_supported": "fail",
+        "reason": "Candidate 'Dùng phương án C.' không được hỗ trợ bởi bất kỳ đoạn hội thoại nào. Candidate này không xuất hiện trong transcript, do đó không thể xác nhận trạng thái confirmed cho nó. Content của candidate này mâu thuẫn với quyết định mới trong T3, do đó không được hỗ trợ bởi evidence. Đồng thời, content giữ đầy đủ mọi điều kiện/ràng buộc liên quan đã bị thay đổi, nên không còn phù hợp nữa. Owner và due cũng không có bằng chứng xác nhận. Trạng thái confirmed là sai lệch so với thực tế trong transcript.",
+        "evidence": [
+          {
+            "turn_id": "T3",
+            "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+          }
+        ]
+      }
+    },
+    {
+      "item": {
+        "id": "P4",
+        "topic": "lịch demo",
+        "type": "decision",
+        "status": "confirmed",
+        "content": "Dùng phương án B nếu pháp chế duyệt.",
+        "owner": null,
+        "due": null,
+        "evidence": [
+          {
+            "turn_id": "T3",
+            "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+          }
+        ],
+        "reason": "Candidate tổng hợp để kiểm tra.",
+        "history": []
+      },
+      "errors": [
+        "supported: fail",
+        "conditions_preserved: fail",
+        "assignment_supported: fail",
+        "Candidate 'Dùng phương án B nếu pháp chế duyệt.' không được hỗ trợ bởi bất kỳ đoạn hội thoại nào. Candidate này đã xuất hiện trong T3 nhưng không có bằng chứng xác nhận trạng thái confirmed cho nó. Content của candidate này mâu thuẫn với quyết định mới trong T3, do đó không được hỗ trợ bởi evidence. Đồng thời, content giữ đầy đủ mọi điều kiện/ràng buộc liên quan đã bị thay đổi, nên không còn phù合的输出结果如下所示：\n\n```json\n{\n  "
+      ],
+      "semantic_check": {
+        "item_id": "P4",
+        "supported": "fail",
+        "topic_correct": "pass",
+        "current": "pass",
+        "conditions_preserved": "fail",
+        "assignment_supported": "fail",
+        "reason": "Candidate 'Dùng phương án B nếu pháp chế duyệt.' không được hỗ trợ bởi bất kỳ đoạn hội thoại nào. Candidate này đã xuất hiện trong T3 nhưng không có bằng chứng xác nhận trạng thái confirmed cho nó. Content của candidate này mâu thuẫn với quyết định mới trong T3, do đó không được hỗ trợ bởi evidence. Đồng thời, content giữ đầy đủ mọi điều kiện/ràng buộc liên quan đã bị thay đổi, nên không còn phù合的输出结果如下所示：\n\n```json\n{\n  ",
+        "evidence": [
+          {
+            "turn_id": "T3",
+            "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+          }
+        ]
+      }
+    },
+    {
+      "item": {
+        "id": "P5",
+        "topic": "lưu trữ",
+        "type": "decision",
+        "status": "confirmed",
+        "content": "Dùng phương án B.",
+        "owner": null,
+        "due": null,
+        "evidence": [
+          {
+            "turn_id": "T3",
+            "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+          }
+        ],
+        "reason": "Candidate tổng hợp để kiểm tra.",
+        "history": []
+      },
+      "errors": [
+        "assignment_supported: fail",
+        "Candidate 'Dùng phương án B.' được hỗ trợ bởi evidence trong T3. Content của candidate này không mâu thuẫn với quyết định mới và giữ đầy đủ mọi điều kiện/ràng buộc liên quan. Tuy nhiên, owner và due không có bằng chứng xác nhận. Trạng thái confirmed là sai lệch so với thực tế trong transcript."
+      ],
+      "semantic_check": {
+        "item_id": "P5",
+        "supported": "pass",
+        "topic_correct": "pass",
+        "current": "pass",
+        "conditions_preserved": "pass",
+        "assignment_supported": "fail",
+        "reason": "Candidate 'Dùng phương án B.' được hỗ trợ bởi evidence trong T3. Content của candidate này không mâu thuẫn với quyết định mới và giữ đầy đủ mọi điều kiện/ràng buộc liên quan. Tuy nhiên, owner và due không có bằng chứng xác nhận. Trạng thái confirmed là sai lệch so với thực tế trong transcript.",
+        "evidence": [
+          {
+            "turn_id": "T3",
+            "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+          }
+        ]
+      }
+    }
+  ],
+  "semantic_checks": [
+    {
+      "item_id": "P1",
+      "supported": "fail",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "fail",
+      "assignment_supported": "fail",
+      "reason": "Candidate 'Dùng phương án A.' không được hỗ trợ bởi bất kỳ đoạn hội thoại nào. Candidate này đã bị hủy trong T3 và thay thế bằng 'Dùng phương án B nếu pháp chế duyệt.' nên không thể xác nhận trạng thái confirmed cho nó. Content của candidate này mâu thuẫn với quyết định mới trong T3, do đó không được hỗ trợ bởi evidence. Đồng thời, content giữ đầy đủ mọi điều kiện/ràng buộc liên quan đã bị thay đổi, nên không còn phù hợp nữa. Owner và due cũng không có bằng chứng xác nhận. Trạng thái confirmed là sai lệch so với thực tế trong transcript.",
+      "evidence": [
+        {
+          "turn_id": "T3",
+          "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+        }
+      ]
+    },
+    {
+      "item_id": "P2",
+      "supported": "fail",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "fail",
+      "assignment_supported": "fail",
+      "reason": "Candidate 'Dùng phương án A.' không được hỗ trợ bởi bất kỳ đoạn hội thoại nào. Candidate này đã bị hủy trong T3 và thay thế bằng 'Dùng phương án B nếu pháp chế duyệt.' nên không thể xác nhận trạng thái confirmed cho nó. Content của candidate này mâu thuẫn với quyết định mới trong T3, do đó không được hỗ trợ bởi evidence. Đồng thời, content giữ đầy đủ mọi điều kiện/ràng buộc liên quan đã bị thay đổi, nên không còn phù hợp nữa. Owner và due cũng không có bằng chứng xác nhận. Trạng thái confirmed là sai lệch so với thực tế trong transcript.",
+      "evidence": [
+        {
+          "turn_id": "T3",
+          "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+        }
+      ]
+    },
+    {
+      "item_id": "P3",
+      "supported": "fail",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "fail",
+      "assignment_supported": "fail",
+      "reason": "Candidate 'Dùng phương án C.' không được hỗ trợ bởi bất kỳ đoạn hội thoại nào. Candidate này không xuất hiện trong transcript, do đó không thể xác nhận trạng thái confirmed cho nó. Content của candidate này mâu thuẫn với quyết định mới trong T3, do đó không được hỗ trợ bởi evidence. Đồng thời, content giữ đầy đủ mọi điều kiện/ràng buộc liên quan đã bị thay đổi, nên không còn phù hợp nữa. Owner và due cũng không có bằng chứng xác nhận. Trạng thái confirmed là sai lệch so với thực tế trong transcript.",
+      "evidence": [
+        {
+          "turn_id": "T3",
+          "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+        }
+      ]
+    },
+    {
+      "item_id": "P4",
+      "supported": "fail",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "fail",
+      "assignment_supported": "fail",
+      "reason": "Candidate 'Dùng phương án B nếu pháp chế duyệt.' không được hỗ trợ bởi bất kỳ đoạn hội thoại nào. Candidate này đã xuất hiện trong T3 nhưng không có bằng chứng xác nhận trạng thái confirmed cho nó. Content của candidate này mâu thuẫn với quyết định mới trong T3, do đó không được hỗ trợ bởi evidence. Đồng thời, content giữ đầy đủ mọi điều kiện/ràng buộc liên quan đã bị thay đổi, nên không còn phù合的输出结果如下所示：\n\n```json\n{\n  ",
+      "evidence": [
+        {
+          "turn_id": "T3",
+          "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+        }
+      ]
+    },
+    {
+      "item_id": "P5",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "fail",
+      "reason": "Candidate 'Dùng phương án B.' được hỗ trợ bởi evidence trong T3. Content của candidate này không mâu thuẫn với quyết định mới và giữ đầy đủ mọi điều kiện/ràng buộc liên quan. Tuy nhiên, owner và due không có bằng chứng xác nhận. Trạng thái confirmed là sai lệch so với thực tế trong transcript.",
+      "evidence": [
+        {
+          "turn_id": "T3",
+          "quote": "Về lưu trữ, hủy quyết định A. Chốt dùng phương án B nếu pháp chế duyệt."
+        }
+      ]
+    },
+    {
+      "item_id": "P7",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Candidate 'Em nhận làm hướng dẫn trước ngày mai.' được hỗ trợ bởi evidence trong T6. Content của candidate này không mâu thuẫn với quyết định mới và giữ đầy đủ mọi điều kiện/ràng buộc liên quan. Owner và due có bằng chứng xác nhận. Trạng thái needs_confirmation là phù hợp với thực tế trong transcript.",
+      "evidence": [
+        {
+          "turn_id": "T6",
+          "quote": "Về tài liệu, em nhận làm hướng dẫn trước ngày mai."
+        }
+      ]
+    }
+  ],
+  "error": null
+}

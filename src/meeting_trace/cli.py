@@ -12,7 +12,7 @@ def main():
         sys.stderr.reconfigure(encoding='utf-8')
     parser = argparse.ArgumentParser(description='Transcript → diễn biến → dữ liệu có evidence')
     parser.add_argument('transcript', type=Path)
-    parser.add_argument('--engine', choices=['local', 'openai'], default='local')
+    parser.add_argument('--engine', choices=['local', 'openai', 'ollama'], default='local')
     parser.add_argument('--model')
     parser.add_argument('--output', type=Path, help='Nên lưu transcript riêng tư vào runtime/ (được gitignore).')
     args = parser.parse_args()

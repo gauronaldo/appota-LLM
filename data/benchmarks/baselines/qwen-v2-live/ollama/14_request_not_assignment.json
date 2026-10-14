@@ -1,0 +1,278 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "086b2c701426dd5ca362deebdcb6ef7977fbb7b398ea85673edd7de8a906d260",
+    "automated": true,
+    "semantic_verification": true,
+    "verification_method": "llm_judgment",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Phản hồi từ khách sáng nay có một yêu cầu mới."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Khách muốn có bộ lọc theo tháng trên màn hình báo cáo."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Họ muốn lọc theo ngày tạo hay theo ngày giao dịch?"
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em chưa thấy họ nói rõ hai trường đó."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Hai cách lọc trả ra số khác nhau ở giao dịch treo."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Khách còn nói các nhãn trên biểu đồ nhỏ quá, đọc trên điện thoại khó."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Phần nhãn thì em hiểu vấn đề, còn bộ lọc cần hỏi thêm."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Hiện chưa có người nhận triển khai bộ lọc, đúng không?"
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Đúng, chỉ có yêu cầu từ khách được chuyển vào cuộc họp."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em chưa hứa thời điểm giao chức năng này."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Đừng dùng ngày khách gửi yêu cầu làm deadline của nhóm."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Mình chưa thống nhất dùng trường thời gian nào để lọc."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "API chưa đổi theo yêu cầu này."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nếu khách muốn theo ngày giao dịch thì phải nói rõ cách xử lý các giao dịch đang treo."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em hiểu, hiện chưa đủ thông tin để hứa một cách lọc cụ thể."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Kết luận hôm nay là yêu cầu cần làm rõ trước khi giao việc."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "bộ lọc theo thời gian",
+      "events": [
+        {
+          "turn_id": "T10",
+          "kind": "change",
+          "quote": "Em chưa hứa thời điểm giao chức năng này."
+        },
+        {
+          "turn_id": "T9",
+          "kind": "support",
+          "quote": "Đúng, chỉ có yêu cầu từ khách được chuyển vào cuộc họp."
+        },
+        {
+          "turn_id": "T12",
+          "kind": "support",
+          "quote": "Mình chưa thống nhất dùng trường thời gian nào để lọc."
+        }
+      ]
+    },
+    {
+      "topic": "thời gian lọc",
+      "events": [
+        {
+          "turn_id": "T5",
+          "kind": "support",
+          "quote": "Hai cách lọc trả ra số khác nhau ở giao dịch treo."
+        },
+        {
+          "turn_id": "T6",
+          "kind": "support",
+          "quote": "Khách còn nói các nhãn trên biểu đồ nhỏ quá, đọc trên điện thoại khó."
+        },
+        {
+          "turn_id": "T14",
+          "kind": "support",
+          "quote": "Nếu khách muốn theo ngày giao dịch thì phải nói rõ cách xử lý các giao dịch đang treo."
+        }
+      ]
+    },
+    {
+      "topic": "thời gian lọc",
+      "events": [
+        {
+          "turn_id": "T3",
+          "kind": "support",
+          "quote": "Họ muốn lọc theo ngày tạo hay theo ngày giao dịch?"
+        },
+        {
+          "turn_id": "T4",
+          "kind": "support",
+          "quote": "Em chưa thấy họ nói rõ hai trường đó."
+        },
+        {
+          "turn_id": "T15",
+          "kind": "support",
+          "quote": "Em hiểu, hiện chưa đủ thông tin để hứa một cách lọc cụ thể."
+        }
+      ]
+    },
+    {
+      "topic": "thời gian lọc",
+      "events": [
+        {
+          "turn_id": "T7",
+          "kind": "support",
+          "quote": "Phần nhãn thì em hiểu vấn đề, còn bộ lọc cần hỏi thêm."
+        },
+        {
+          "turn_id": "T8",
+          "kind": "support",
+          "quote": "Hiện chưa có người nhận triển khai bộ lọc, đúng không?"
+        },
+        {
+          "turn_id": "T16",
+          "kind": "change",
+          "quote": "Kết luận hôm nay là yêu cầu cần làm rõ trước khi giao việc."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "bộ lọc theo thời gian",
+      "type": "issue",
+      "status": "unresolved",
+      "content": "Yêu cầu từ khách cần làm rõ trước khi giao việc.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T10",
+          "quote": "Em chưa hứa thời điểm giao chức năng này."
+        },
+        {
+          "turn_id": "T9",
+          "quote": "Đúng, chỉ có yêu cầu từ khách được chuyển vào cuộc họp."
+        },
+        {
+          "turn_id": "T12",
+          "quote": "Mình chưa thống nhất dùng trường thời gian nào để lọc."
+        }
+      ],
+      "reason": "Chưa thống nhất được trường thời gian nào để lọc và chưa có người nhận triển khai bộ lọc.",
+      "history": [
+        {
+          "turn_id": "T10",
+          "kind": "change",
+          "quote": "Em chưa hứa thời điểm giao chức năng này."
+        },
+        {
+          "turn_id": "T9",
+          "kind": "support",
+          "quote": "Đúng, chỉ có yêu cầu từ khách được chuyển vào cuộc họp."
+        },
+        {
+          "turn_id": "T12",
+          "kind": "support",
+          "quote": "Mình chưa thống nhất dùng trường thời gian nào để lọc."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [
+    {
+      "item_id": "I1",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Chưa thống nhất được trường thời gian nào để lọc và chưa có người nhận triển khai bộ lọc. Các thông tin này vẫn giữ nguyên trong lịch sử, không thay đổi từ các lượt sau của transcript. Yêu cầu cần làm rõ trước khi giao việc vẫn còn hiệu lực ở cuối transcript. Không đủ ngữ cảnh để xác định cam kết mới hoặc thay đổi trạng thái, nên quyết định dựa trên nội dung hiện tại là phù hợp và đầy đủ.",
+      "evidence": [
+        {
+          "turn_id": "T10",
+          "quote": "Em chưa hứa thời điểm giao chức năng này."
+        },
+        {
+          "turn_id": "T9",
+          "quote": "Đúng, chỉ có yêu cầu từ khách được chuyển vào cuộc họp."
+        },
+        {
+          "turn_id": "T12",
+          "quote": "Mình chưa thống nhất dùng trường thời gian nào để lọc."
+        }
+      ]
+    }
+  ],
+  "run_seconds": 122.02
+}

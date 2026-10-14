@@ -1,0 +1,351 @@
+{
+  "dataset_version": "2.0",
+  "engine": "ollama",
+  "model": "qwen2.5:7b",
+  "prompt_version": "2.1",
+  "split": "dev",
+  "run_at": "2026-10-14T09:51:44.532460+00:00",
+  "core_hashes": {
+    "src/meeting_trace/meeting/core.py": "b4f0fa6cdbf414bfb18f363c7ae62f86fab7050cfe1e504485053441651ca640",
+    "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+    "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+    "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+    "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3"
+  },
+  "evaluation_kind": "recheck_observed_v2",
+  "total": 12,
+  "passed": 1,
+  "metrics": {
+    "decision_tp": 2,
+    "decision_fp": 2,
+    "decision_fn": 3,
+    "intermediate_promoted": 0,
+    "intermediate_total": 11,
+    "invented_owner_due": 1,
+    "decision_precision": 0.5,
+    "decision_recall": 0.4,
+    "intermediate_promotion_rate": 0.0
+  },
+  "cases": [
+    {
+      "id": "01_change_ab",
+      "title": "Bỏ máy chủ riêng, chọn dịch vụ quản lý",
+      "group": "change",
+      "input_format": "named",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai decision: lưu trữ / phương án B",
+        "Thiếu/sai action: triển khai / bản cấu hình",
+        "1 mục không qua validator",
+        "Thiếu diễn biến T3",
+        "Thiếu diễn biến T8",
+        "Thiếu diễn biến T13"
+      ],
+      "expectation": "decision/lưu trữ: phương án B (confirmed, owner=None, due=None, conditions=[]); action/triển khai: bản cấu hình (confirmed, owner=Lan, due=thứ Sáu, conditions=[])",
+      "actual": "Không có mục",
+      "lesson": "Giữ B là quyết định cuối; hội thoại không cần nhắc lại tên chủ đề ở mọi lượt.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 1,
+        "intermediate_promoted": 0,
+        "intermediate_total": 2,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "02_change_aba",
+      "title": "Lịch demo đổi sang chiều rồi quay lại buổi sáng",
+      "group": "change",
+      "input_format": "named",
+      "dataset_version": "2.0",
+      "passed": true,
+      "errors": [],
+      "expectation": "decision/lịch demo: phương án A (confirmed, owner=None, due=None, conditions=[])",
+      "actual": "decision/lịch demo: Về lịch demo, chốt phương án A, sáng thứ Năm. (confirmed, owner=None, due=None)",
+      "lesson": "Một lần chốt giữa cuộc họp có thể bị thay; phải theo dõi lần quay lại A.",
+      "metrics": {
+        "decision_tp": 1,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 2,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "03_switch_condition",
+      "title": "Đổi nhà cung cấp nhưng giữ điều kiện phê duyệt",
+      "group": "change",
+      "input_format": "labels",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai decision: email / gói B",
+        "Mục ngoài kỳ vọng: decision / lưu trữ / Chốt chọn gói B nếu pháp chế duyệt điều khoản lưu dữ liệu.",
+        "Mục ngoài kỳ vọng: issue / hợp đồng pháp chế / Hợp đồng B đã được bên pháp chế xem chưa?",
+        "1 mục không qua validator"
+      ],
+      "expectation": "decision/email: gói B (confirmed, owner=None, due=None, conditions=['nếu pháp chế duyệt'])",
+      "actual": "decision/lưu trữ: Chốt chọn gói B nếu pháp chế duyệt điều khoản lưu dữ liệu. (confirmed, owner=None, due=None); issue/hợp đồng pháp chế: Hợp đồng B đã được bên pháp chế xem chưa? (unresolved, owner=None, due=None)",
+      "lesson": "Điều kiện là một phần của quyết định; không được biến chọn có điều kiện thành quyền triển khai ngay.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 1,
+        "decision_fn": 1,
+        "intermediate_promoted": 0,
+        "intermediate_total": 2,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "06_ambiguous_ok",
+      "title": "Một câu ok có thể chỉ là đã nghe",
+      "group": "indirect",
+      "input_format": "named",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai unresolved: thanh toán / ví điện tử",
+        "Mục ngoài kỳ vọng: decision / thanh toán / Phần thanh toán hiện tại vẫn chạy như cũ.",
+        "Mục ngoài kỳ vọng: issue / ví điện tử / Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác.",
+        "Thiếu diễn biến T13"
+      ],
+      "expectation": "unresolved/thanh toán: ví điện tử (unresolved, owner=None, due=None, conditions=[])",
+      "actual": "decision/thanh toán: Phần thanh toán hiện tại vẫn chạy như cũ. (confirmed, owner=None, due=None); issue/ví điện tử: Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác. (unresolved, owner=None, due=None)",
+      "lesson": "Ok có thể là tín hiệu nghe được, không phải đồng thuận; lời cuối xác nhận đề xuất chưa chốt.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 1,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 1,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "07_let_me_check",
+      "title": "Để em xem lỗi này chưa thành lời nhận sửa",
+      "group": "indirect",
+      "input_format": "named",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai issue: đăng nhập / chưa tái hiện",
+        "Thiếu/sai unresolved: đăng nhập / xem lỗi",
+        "Mục ngoài kỳ vọng: issue / báo cáo lỗi / Có khách báo đăng nhập hai lần mới vào được, nhưng chưa xác định nguyên nhân cụ thể."
+      ],
+      "expectation": "issue/đăng nhập: chưa tái hiện (needs_confirmation, owner=None, due=None, conditions=[]); unresolved/đăng nhập: xem lỗi (needs_confirmation, owner=None, due=None, conditions=[])",
+      "actual": "issue/báo cáo lỗi: Có khách báo đăng nhập hai lần mới vào được, nhưng chưa xác định nguyên nhân cụ thể. (unresolved, owner=None, due=None)",
+      "lesson": "Không biến ý định xem xét thành cam kết sửa; cần giữ sự mơ hồ để PM xác nhận.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 0,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "08_self_commit_label",
+      "title": "Có cam kết rõ nhưng chỉ có nhãn người nói",
+      "group": "indirect",
+      "input_format": "labels",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai action: giỏ hàng / xem lỗi",
+        "1 mục không qua validator"
+      ],
+      "expectation": "action/giỏ hàng: xem lỗi (needs_confirmation, owner=None, due=chiều nay, conditions=[])",
+      "actual": "Không có mục",
+      "lesson": "Cam kết và hạn có thật; nhãn người nói chưa phải tên người nhận việc đã xác minh.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 0,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "11_unresolved_budget",
+      "title": "Thiếu báo giá nên chưa chọn phương án",
+      "group": "unresolved",
+      "input_format": "named",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "hạ tầng: status kỳ vọng 'unresolved', thực tế 'needs_confirmation'"
+      ],
+      "expectation": "unresolved/hạ tầng: hoãn lựa chọn (unresolved, owner=None, due=None, conditions=[])",
+      "actual": "unresolved/hạ tầng: Chưa chốt phương án hạ tầng; hoãn lựa chọn đến khi đủ báo giá. (needs_confirmation, owner=None, due=None)",
+      "lesson": "Thiếu dữ liệu để chọn không được biến thành quyết định hoặc việc chuyển dữ liệu.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 2,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "12_reopen_confirmed",
+      "title": "Mở lại quyết định đã chốt vì thông tin mới",
+      "group": "unresolved",
+      "input_format": "named",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai unresolved: phát hành / hoãn bản 2.1",
+        "Mục ngoài kỳ vọng: decision / phát hành / Chưa chốt lịch phát hành bản 2.1; hoãn để đánh giá lỗi hoàn tiền.",
+        "Mục ngoài kỳ vọng: issue / lỗi hoàn tiền / Lỗi hoàn tiền tái hiện được ở hai giao dịch liên tiếp, số tiền hoàn bị ghi hai lần."
+      ],
+      "expectation": "unresolved/phát hành: hoãn bản 2.1 (unresolved, owner=None, due=None, conditions=[])",
+      "actual": "decision/phát hành: Chưa chốt lịch phát hành bản 2.1; hoãn để đánh giá lỗi hoàn tiền. (needs_confirmation, owner=None, due=None); issue/lỗi hoàn tiền: Lỗi hoàn tiền tái hiện được ở hai giao dịch liên tiếp, số tiền hoàn bị ghi hai lần. (unresolved, owner=None, due=None)",
+      "lesson": "Lời hoãn sau cùng làm lần chốt trước hết hiệu lực; không tự biến lịch cũ thành hạn sửa lỗi.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 1,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "13_speakerless_pending",
+      "title": "Transcript không nhãn kết thúc mà chưa chọn",
+      "group": "unresolved",
+      "input_format": "plain",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai unresolved: xuất báo cáo / chưa thống nhất",
+        "Mục ngoài kỳ vọng: unresolved / cách xuất báo cáo / Hôm nay chưa thống nhất cách xuất báo cáo, mình giữ cả hai lựa chọn để hỏi khách."
+      ],
+      "expectation": "unresolved/xuất báo cáo: chưa thống nhất (unresolved, owner=None, due=None, conditions=[])",
+      "actual": "unresolved/cách xuất báo cáo: Hôm nay chưa thống nhất cách xuất báo cáo, mình giữ cả hai lựa chọn để hỏi khách. (needs_confirmation, owner=None, due=None)",
+      "lesson": "Dữ liệu không có nhãn người nói vẫn đủ để nhận ra chưa có kết luận; cần báo lỗi parser như một thất bại hỗ trợ input.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 1,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "16_clear_decision",
+      "title": "Chốt lịch phát hành sau khi xác nhận đủ điều kiện",
+      "group": "clear",
+      "input_format": "named",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai decision: phát hành / bản 2.1",
+        "1 mục không qua validator"
+      ],
+      "expectation": "decision/phát hành: bản 2.1 (confirmed, owner=None, due=None, conditions=[])",
+      "actual": "Không có mục",
+      "lesson": "Tình huống tường minh vẫn cần có trong suite để kiểm tra kết luận còn hiệu lực khi cuộc họp kết thúc.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 1,
+        "intermediate_promoted": 0,
+        "intermediate_total": 0,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "17_clear_assignment",
+      "title": "Quyết định và công việc thiếu một trường được tách riêng",
+      "group": "clear",
+      "input_format": "named",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai request_feedback: nhãn biểu đồ / chữ quá nhỏ",
+        "Thiếu/sai action: tài liệu / cập nhật tài liệu",
+        "bảo mật: due kỳ vọng 'thứ Hai', thực tế None",
+        "Thiếu/sai issue: đăng nhập / chưa có quyền sandbox",
+        "Thiếu/sai unresolved: phân quyền / cách cấp quyền",
+        "Mục ngoài kỳ vọng: action / tài liệu / Cần hướng dẫn dùng bố cục mới.",
+        "Mục ngoài kỳ vọng: issue / luồng thử đăng nhập / Chưa có quyền sandbox để thử luồng đăng nhập của khách.",
+        "Mục ngoài kỳ vọng: issue / phân quyền / Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp."
+      ],
+      "expectation": "decision/báo cáo: biểu đồ đường (confirmed, owner=None, due=None, conditions=[]); request_feedback/nhãn biểu đồ: chữ quá nhỏ (needs_confirmation, owner=None, due=None, conditions=[]); action/tài liệu: cập nhật tài liệu (confirmed, owner=Lan, due=None, conditions=[]); action/bảo mật: rà soát quyền truy cập (needs_confirmation, owner=None, due=thứ Hai, conditions=[]); issue/đăng nhập: chưa có quyền sandbox (needs_confirmation, owner=None, due=None, conditions=[]); unresolved/phân quyền: cách cấp quyền (unresolved, owner=None, due=None, conditions=[])",
+      "actual": "decision/báo cáo: Chốt dùng biểu đồ đường trên màn hình báo cáo. (confirmed, owner=None, due=None); action/tài liệu: Cần hướng dẫn dùng bố cục mới. (needs_confirmation, owner=Lan, due=None); action/bảo mật: Cần rà soát quyền truy cập trước thứ Hai. (needs_confirmation, owner=None, due=None); issue/luồng thử đăng nhập: Chưa có quyền sandbox để thử luồng đăng nhập của khách. (unresolved, owner=None, due=None); issue/phân quyền: Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp. (unresolved, owner=None, due=None)",
+      "lesson": "Thiếu hạn và thiếu người là hai trường hợp khác nhau; giữ null thay vì chuyển thông tin từ việc bên cạnh.",
+      "metrics": {
+        "decision_tp": 1,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 0,
+        "invented_owner_due": 1
+      }
+    },
+    {
+      "id": "18_anonymous_assignment",
+      "title": "Cam kết đã rõ, danh tính người nhận chưa rõ",
+      "group": "clear",
+      "input_format": "labels",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai action: kiểm thử / kiểm thử hồi quy",
+        "1 mục không qua validator"
+      ],
+      "expectation": "action/kiểm thử: kiểm thử hồi quy (needs_confirmation, owner=None, due=thứ Sáu, conditions=[])",
+      "actual": "Không có mục",
+      "lesson": "Không đồng nhất nhãn diarization với tên thật; có thể giữ evidence nhưng owner cần để null.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 0,
+        "invented_owner_due": 0
+      }
+    }
+  ],
+  "groups": {
+    "change": {
+      "total": 3,
+      "passed": 1
+    },
+    "clear": {
+      "total": 3,
+      "passed": 0
+    },
+    "indirect": {
+      "total": 3,
+      "passed": 0
+    },
+    "unresolved": {
+      "total": 3,
+      "passed": 0
+    }
+  },
+  "input_formats": {
+    "labels": {
+      "total": 3,
+      "passed": 0
+    },
+    "named": {
+      "total": 8,
+      "passed": 1
+    },
+    "plain": {
+      "total": 1,
+      "passed": 0
+    }
+  }
+}

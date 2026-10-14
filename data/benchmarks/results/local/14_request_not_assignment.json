@@ -5,15 +5,156 @@
     "model": null,
     "transcript_sha256": "086b2c701426dd5ca362deebdcb6ef7977fbb7b398ea85673edd7de8a906d260",
     "automated": true,
-    "semantic_verification": false
+    "semantic_verification": false,
+    "verification_method": "literal_rules",
+    "approval_required": true
   },
-  "turns": [],
-  "topics": [],
-  "items": [],
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Phản hồi từ khách sáng nay có một yêu cầu mới."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Khách muốn có bộ lọc theo tháng trên màn hình báo cáo."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Họ muốn lọc theo ngày tạo hay theo ngày giao dịch?"
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em chưa thấy họ nói rõ hai trường đó."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Hai cách lọc trả ra số khác nhau ở giao dịch treo."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Khách còn nói các nhãn trên biểu đồ nhỏ quá, đọc trên điện thoại khó."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Phần nhãn thì em hiểu vấn đề, còn bộ lọc cần hỏi thêm."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Hiện chưa có người nhận triển khai bộ lọc, đúng không?"
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Đúng, chỉ có yêu cầu từ khách được chuyển vào cuộc họp."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em chưa hứa thời điểm giao chức năng này."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Đừng dùng ngày khách gửi yêu cầu làm deadline của nhóm."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Mình chưa thống nhất dùng trường thời gian nào để lọc."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "API chưa đổi theo yêu cầu này."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nếu khách muốn theo ngày giao dịch thì phải nói rõ cách xử lý các giao dịch đang treo."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em hiểu, hiện chưa đủ thông tin để hứa một cách lọc cụ thể."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Kết luận hôm nay là yêu cầu cần làm rõ trước khi giao việc."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "chưa xác định chủ đề",
+      "events": [
+        {
+          "turn_id": "T1",
+          "kind": "request_feedback",
+          "quote": "Phản hồi từ khách sáng nay có một yêu cầu mới."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "chưa xác định chủ đề",
+      "type": "request_feedback",
+      "status": "needs_confirmation",
+      "content": "Phản hồi từ khách sáng nay có một yêu cầu mới.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T1",
+          "quote": "Phản hồi từ khách sáng nay có một yêu cầu mới."
+        }
+      ],
+      "reason": "Có yêu cầu/phản hồi; chưa tự chuyển thành công việc hoặc quyết định.",
+      "history": []
+    }
+  ],
   "review_queue": [],
-  "error": {
-    "stage": "input",
-    "type": "ValueError",
-    "message": "Dòng 2: cần định dạng Người nói: nội dung."
-  }
+  "semantic_checks": [],
+  "run_seconds": 0.001
 }

@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "c16ceb0cac3af37e9e0dc76e86104f11770de321ce12719d43c874dbba6884a2",
+    "automated": true,
+    "semantic_verification": true,
+    "verification_method": "llm_judgment",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Môi trường thử của đối tác vẫn chặn địa chỉ mạng của mình."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Họ đã nhận yêu cầu mở quyền từ tuần trước chưa?"
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Họ nhận rồi nhưng chưa xác nhận lúc nào hoàn tất."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Vậy nhóm mình chưa chạy được luồng tích hợp từ đầu đến cuối."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Phần tích hợp có người nhận xử lý khi có quyền không?"
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Nếu đối tác mở quyền sandbox thì em mới nhận kiểm tra luồng hoàn tiền."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Em chưa cam kết bắt đầu trước khi quyền được mở, đúng không?"
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Đúng, hiện em không có cách chạy thử trên môi trường của họ."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Mình cũng chưa có ngày mở quyền để suy ra hạn kiểm tra."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Không nên ghi thứ Sáu chỉ vì đó là lịch demo dự kiến."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Vướng mắc là đối tác chưa mở quyền sandbox cho nhóm."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Cần giữ điều kiện của lời nhận việc trong bản ghi."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Nếu quyền không được mở thì mình phải bàn lại cách kiểm tra."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em ghi công việc ở trạng thái cần xác nhận, chưa có deadline."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Lỗi này thuộc quyền truy cập, chưa phải lỗi của luồng hoàn tiền."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Đúng, hôm nay chưa có bằng chứng để kết luận luồng đó hỏng."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "lịch demo",
+      "events": [
+        {
+          "turn_id": "T10",
+          "kind": "change",
+          "quote": "Không nên ghi thứ Sáu chỉ vì đó là lịch demo dự kiến."
+        },
+        {
+          "turn_id": "T12",
+          "kind": "support",
+          "quote": "Cần giữ điều kiện của lời nhận việc trong bản ghi."
+        }
+      ]
+    },
+    {
+      "topic": "vướng mắc",
+      "events": [
+        {
+          "turn_id": "T11",
+          "kind": "issue",
+          "quote": "Vướng mắc là đối tác chưa mở quyền sandbox cho nhóm."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "support",
+          "quote": "Nếu quyền không được mở thì mình phải bàn lại cách kiểm tra."
+        }
+      ]
+    },
+    {
+      "topic": "luồng tích hợp",
+      "events": [
+        {
+          "turn_id": "T4",
+          "kind": "issue",
+          "quote": "Vậy nhóm mình chưa chạy được luồng tích hợp từ đầu đến cuối."
+        },
+        {
+          "turn_id": "T5",
+          "kind": "support",
+          "quote": "Phần tích hợp có người nhận xử lý khi có quyền không?"
+        },
+        {
+          "turn_id": "T6",
+          "kind": "support",
+          "quote": "Nếu đối tác mở quyền sandbox thì em mới nhận kiểm tra luồng hoàn tiền."
+        },
+        {
+          "turn_id": "T7",
+          "kind": "support",
+          "quote": "Em chưa cam kết bắt đầu trước khi quyền được mở, đúng không?"
+        },
+        {
+          "turn_id": "T8",
+          "kind": "support",
+          "quote": "Đúng, hiện em không có cách chạy thử trên môi trường của họ."
+        }
+      ]
+    },
+    {
+      "topic": "quyền truy cập",
+      "events": [
+        {
+          "turn_id": "T15",
+          "kind": "issue",
+          "quote": "Lỗi này thuộc quyền truy cập, chưa phải lỗi của luồng hoàn tiền."
+        },
+        {
+          "turn_id": "T16",
+          "kind": "support",
+          "quote": "Đúng, hôm nay chưa có bằng chứng để kết luận luồng đó hỏng."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "vướng mắc",
+      "type": "issue",
+      "status": "unresolved",
+      "content": "Đối tác chưa mở quyền sandbox cho nhóm, dẫn đến việc không thể chạy luồng tích hợp từ đầu đến cuối.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T11",
+          "quote": "Vướng mắc là đối tác chưa mở quyền sandbox cho nhóm."
+        },
+        {
+          "turn_id": "T13",
+          "quote": "Nếu quyền không được mở thì mình phải bàn lại cách kiểm tra."
+        }
+      ],
+      "reason": "Đối tác chưa mở quyền sandbox, không có cách kiểm tra luồng hoàn tiền.",
+      "history": [
+        {
+          "turn_id": "T4",
+          "kind": "issue",
+          "quote": "Vậy nhóm mình chưa chạy được luồng tích hợp từ đầu đến cuối."
+        },
+        {
+          "turn_id": "T5",
+          "kind": "support",
+          "quote": "Phần tích hợp có người nhận xử lý khi có quyền không?"
+        },
+        {
+          "turn_id": "T6",
+          "kind": "support",
+          "quote": "Nếu đối tác mở quyền sandbox thì em mới nhận kiểm tra luồng hoàn tiền."
+        },
+        {
+          "turn_id": "T7",
+          "kind": "support",
+          "quote": "Em chưa cam kết bắt đầu trước khi quyền được mở, đúng không?"
+        },
+        {
+          "turn_id": "T8",
+          "kind": "support",
+          "quote": "Đúng, hiện em không có cách chạy thử trên môi trường của họ."
+        }
+      ]
+    },
+    {
+      "id": "I2",
+      "topic": "luồng tích hợp",
+      "type": "issue",
+      "status": "unresolved",
+      "content": "Nhóm chưa chạy được luồng tích hợp từ đầu đến cuối.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T4",
+          "quote": "Vậy nhóm mình chưa chạy được luồng tích hợp từ đầu đến cuối."
+        },
+        {
+          "turn_id": "T5",
+          "quote": "Phần tích hợp có người nhận xử lý khi có quyền không?"
+        },
+        {
+          "turn_id": "T6",
+          "quote": "Nếu đối tác mở quyền sandbox thì em mới nhận kiểm tra luồng hoàn tiền."
+        },
+        {
+          "turn_id": "T7",
+          "quote": "Em chưa cam kết bắt đầu trước khi quyền được mở, đúng không?"
+        },
+        {
+          "turn_id": "T8",
+          "quote": "Đúng, hiện em không có cách chạy thử trên môi trường của họ."
+        }
+      ],
+      "reason": "Đối tác chưa mở quyền sandbox, không có cách kiểm tra luồng hoàn tiền.",
+      "history": [
+        {
+          "turn_id": "T4",
+          "kind": "issue",
+          "quote": "Vậy nhóm mình chưa chạy được luồng tích hợp từ đầu đến cuối."
+        },
+        {
+          "turn_id": "T5",
+          "kind": "support",
+          "quote": "Phần tích hợp có người nhận xử lý khi có quyền không?"
+        },
+        {
+          "turn_id": "T6",
+          "kind": "support",
+          "quote": "Nếu đối tác mở quyền sandbox thì em mới nhận kiểm tra luồng hoàn tiền."
+        },
+        {
+          "turn_id": "T7",
+          "kind": "support",
+          "quote": "Em chưa cam kết bắt đầu trước khi quyền được mở, đúng không?"
+        },
+        {
+          "turn_id": "T8",
+          "kind": "support",
+          "quote": "Đúng, hiện em không có cách chạy thử trên môi trường của họ."
+        }
+      ]
+    },
+    {
+      "id": "I3",
+      "topic": "quyền truy cập",
+      "type": "issue",
+      "status": "confirmed",
+      "content": "Lỗi này thuộc quyền truy cập, chưa phải lỗi của luồng hoàn tiền.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T15",
+          "quote": "Lỗi này thuộc quyền truy cập, chưa phải lỗi của luồng hoàn tiền."
+        },
+        {
+          "turn_id": "T16",
+          "quote": "Đúng, hôm nay chưa có bằng chứng để kết luận luồng đó hỏng."
+        }
+      ],
+      "reason": "Hôm nay chưa có bằng chứng để kết luận luồng đó hỏng.",
+      "history": [
+        {
+          "turn_id": "T15",
+          "kind": "issue",
+          "quote": "Lỗi này thuộc quyền truy cập, chưa phải lỗi của luồng hoàn tiền."
+        },
+        {
+          "turn_id": "T16",
+          "kind": "support",
+          "quote": "Đúng, hôm nay chưa có bằng chứng để kết luận luồng đó hỏng."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [
+    {
+      "item_id": "I1",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Đối tác chưa mở quyền sandbox, không có cách kiểm tra luồng hoàn tiền. Các điều kiện và chủ đề đều được giữ nguyên trong lịch trình công việc hiện tại của nhóm. Không có cam kết bắt đầu trước khi quyền được mở, nên trạng thái công việc vẫn là cần xác nhận (unconfirmed). Owner/due không được ghi rõ nhưng không ảnh hưởng đến quyết định vì đây là công việc chung chưa phân công cụ thể. Hạn thời gian không được đề cập nên để null là phù hợp trong trường hợp này. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc.",
+      "evidence": [
+        {
+          "turn_id": "T11",
+          "quote": "Vướng mắc là đối tác chưa mở quyền sandbox cho nhóm."
+        },
+        {
+          "turn_id": "T13",
+          "quote": "Nếu quyền không được mở thì mình phải bàn lại cách kiểm tra."
+        }
+      ]
+    },
+    {
+      "item_id": "I2",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Đối tác chưa mở quyền sandbox, không có cách kiểm tra luồng hoàn tiền. Các điều kiện và chủ đề đều được giữ nguyên trong lịch trình công việc hiện tại của nhóm. Không có cam kết bắt đầu trước khi quyền được mở, nên trạng thái công việc vẫn là cần xác nhận (unconfirmed). Owner/due không được ghi rõ nhưng không ảnh hưởng đến quyết định vì đây là công việc chung chưa phân công cụ thể. Hạn thời gian không được đề cập nên để null là phù hợp trong trường hợp này. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc.",
+      "evidence": [
+        {
+          "turn_id": "T4",
+          "quote": "Vậy nhóm mình chưa chạy được luồng tích hợp từ đầu đến cuối."
+        },
+        {
+          "turn_id": "T5",
+          "quote": "Phần tích hợp có người nhận xử lý khi có quyền không?"
+        },
+        {
+          "turn_id": "T6",
+          "quote": "Nếu đối tác mở quyền sandbox thì em mới nhận kiểm tra luồng hoàn tiền."
+        },
+        {
+          "turn_id": "T7",
+          "quote": "Em chưa cam kết bắt đầu trước khi quyền được mở, đúng không?"
+        },
+        {
+          "turn_id": "T8",
+          "quote": "Đúng, hiện em không có cách chạy thử trên môi trường của họ."
+        }
+      ]
+    },
+    {
+      "item_id": "I3",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Hôm nay chưa có bằng chứng để kết luận luồng đó hỏng. Các điều kiện và chủ đề đều được giữ nguyên trong lịch trình công việc hiện tại của nhóm. Không có cam kết bắt đầu trước khi quyền được mở, nên trạng thái công việc vẫn là cần xác nhận (unconfirmed). Owner/due không được ghi rõ nhưng không ảnh hưởng đến quyết định vì đây là công việc chung chưa phân công cụ thể. Hạn thời gian không được đề cập nên để null là phù hợp trong trường hợp này. Evidence đầy đủ và liên quan đến chủ đề vướng mắc của nhóm, không mâu thuẫn với nội dung khác trong transcript. Các cam kết và điều kiện đều được giữ nguyên từ khi nhận việc cho đến hiện tại, không có thay đổi đáng kể nào. Không có sai lệch về ngữ cảnh hoặc thông tin cần thiết để xác định tình trạng công việc.",
+      "evidence": [
+        {
+          "turn_id": "T15",
+          "quote": "Lỗi này thuộc quyền truy cập, chưa phải lỗi của luồng hoàn tiền."
+        },
+        {
+          "turn_id": "T16",
+          "quote": "Đúng, hôm nay chưa có bằng chứng để kết luận luồng đó hỏng."
+        }
+      ]
+    }
+  ],
+  "run_seconds": 264.44,
+  "postvalidation": {
+    "kind": "literal_only_no_new_inference",
+    "at": "2026-10-14T10:09:36.815812+00:00",
+    "source_canonical_sha256": "9b177362a43991f11a41092fcde2bc4defe5f7e2c2d54f2bfb5a87154b31d692",
+    "core_hashes": {
+      "src/meeting_trace/meeting/core.py": "82a9558034e9f1cd9fda0242baa25b5e067a0a3f36313dabf4e7146dd25f875b",
+      "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+      "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+      "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+      "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3"
+    }
+  }
+}

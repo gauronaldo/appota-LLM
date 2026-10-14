@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "a8826e769c6f934dc3a64100f00b96bcccac8c21de616812d3896c50b0f139c4",
+    "automated": true,
+    "semantic_verification": true,
+    "verification_method": "llm_judgment",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Màn hình báo cáo trên điện thoại đang có hai cột, khách phải kéo ngang."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Mình chuyển sang một cột cho đợt này được không? Dễ đọc hơn."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Dữ liệu vẫn giữ đủ, chỉ là đổi cách xếp các khối đúng không?"
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Đúng, không bỏ bớt biểu đồ hoặc bộ lọc."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Nếu đổi như vậy có phải sửa API không?"
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Không, chỉ đổi phần trình bày."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Anh đồng ý dùng một cột cho màn hình báo cáo ở đợt này."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Phía hỗ trợ cũng muốn giữ bộ lọc trên cùng, một cột sẽ rõ hơn."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em đồng ý phương án một cột, không cần giữ hai cột nữa."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Có ai còn vướng về cách trình bày đó không?"
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Em không có ý kiến khác."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Phía API không bị ảnh hưởng."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Vậy cứ theo một cột cho màn hình báo cáo ở đợt này nhé."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Bản hướng dẫn khách sẽ dùng bố cục đó."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Em hiểu đây là phương án chung của nhóm, không chỉ là đề xuất ban đầu."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Đúng, mình chuyển sang nội dung tiếp theo."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "màn hình báo cáo",
+      "events": [
+        {
+          "turn_id": "T7",
+          "kind": "change",
+          "quote": "Anh đồng ý dùng một cột cho màn hình báo cáo ở đợt này."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "finalize",
+          "quote": "Vậy cứ theo một cột cho màn hình báo cáo ở đợt này nhé."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "màn hình báo cáo",
+      "type": "decision",
+      "status": "confirmed",
+      "content": "Màn hình báo cáo sẽ sử dụng một cột thay vì hai cột.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T7",
+          "quote": "Anh đồng ý dùng một cột cho màn hình báo cáo ở đợt này."
+        },
+        {
+          "turn_id": "T13",
+          "quote": "Vậy cứ theo một cột cho màn hình báo cáo ở đợt này nhé."
+        }
+      ],
+      "reason": "Đội đã đồng ý và xác nhận sử dụng một cột cho màn hình báo cáo trong đợt này.",
+      "history": [
+        {
+          "turn_id": "T2",
+          "kind": "proposal",
+          "quote": "Mình chuyển sang một cột cho đợt này được không? Dễ đọc hơn."
+        },
+        {
+          "turn_id": "T7",
+          "kind": "change",
+          "quote": "Anh đồng ý dùng một cột cho màn hình báo cáo ở đợt này."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "finalize",
+          "quote": "Vậy cứ theo một cột cho màn hình báo cáo ở đợt này nhé."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [
+    {
+      "item_id": "I1",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Đội đã đồng ý và xác nhận sử dụng một cột cho màn hình báo cáo trong đợt này, không có điều kiện thay đổi hoặc hạn chế nào được đề cập. Owner và due đều là null vì không có người cụ thể được giao công việc. Content chính xác phản ánh quyết định cuối cùng của nhóm về bố cục màn hình báo cáo trong đợt này. Không có ngữ cảnh thiếu sót hay mâu thuẫn với nội dung khác trong transcript.",
+      "evidence": [
+        {
+          "turn_id": "T7",
+          "quote": "Anh đồng ý dùng một cột cho màn hình báo cáo ở đợt này."
+        },
+        {
+          "turn_id": "T13",
+          "quote": "Vậy cứ theo một cột cho màn hình báo cáo ở đợt này nhé."
+        }
+      ]
+    }
+  ],
+  "run_seconds": 70.833
+}

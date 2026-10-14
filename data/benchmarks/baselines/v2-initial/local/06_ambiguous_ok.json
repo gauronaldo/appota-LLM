@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "local",
+    "model": null,
+    "transcript_sha256": "1ddb1dde0b17dc3293b7450307702dd6d46c3e3f7af11ee88fcd4115f563f01d",
+    "automated": true,
+    "semantic_verification": false
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Minh",
+      "text": "Về thanh toán, bản demo còn dùng chuyển khoản thủ công."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Huy",
+      "text": "Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Lan",
+      "text": "Ok, anh nói tiếp đi."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Huy",
+      "text": "Luồng tích hợp cần đổi cả màn hình xác nhận."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Mai",
+      "text": "Bên đối tác có gửi tài liệu sandbox chưa?"
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Huy",
+      "text": "Mới gửi link đăng ký, anh chưa có tài khoản chạy thử."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Lan",
+      "text": "Để em xem đã, màn hình hiện tại còn lỗi căn lề."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Minh",
+      "text": "Câu ok lúc nãy là em đồng ý triển khai luôn à?"
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Lan",
+      "text": "Em chỉ nói là nghe được, chưa xem đủ khối lượng."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Mai",
+      "text": "Nếu vậy mình chưa biết phần này có kịp cùng đợt thử không."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Huy",
+      "text": "Anh cũng chưa có số giờ ước tính chính xác."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Minh",
+      "text": "Mình đang gần hết giờ, hôm nay không lấy im lặng làm đồng ý nhé."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Minh",
+      "text": "Chưa chốt chuyện thêm ví điện tử ở đợt này."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Lan",
+      "text": "Em hiểu, không coi đó là việc đã được giao cho em."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Mai",
+      "text": "Bản ghi sẽ giữ nó ở phần đang bàn."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Huy",
+      "text": "Đúng, hiện mới là đề xuất."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": "Minh",
+      "text": "Còn phần thanh toán hiện tại vẫn chạy như cũ."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "thanh toán",
+      "events": [
+        {
+          "turn_id": "T2",
+          "kind": "proposal",
+          "quote": "Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác."
+        },
+        {
+          "turn_id": "T8",
+          "kind": "support",
+          "quote": "Câu ok lúc nãy là em đồng ý triển khai luôn à?"
+        },
+        {
+          "turn_id": "T12",
+          "kind": "support",
+          "quote": "Mình đang gần hết giờ, hôm nay không lấy im lặng làm đồng ý nhé."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "defer",
+          "quote": "Chưa chốt chuyện thêm ví điện tử ở đợt này."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "thanh toán",
+      "type": "unresolved",
+      "status": "unresolved",
+      "content": "Chưa chốt chuyện thêm ví điện tử ở đợt này.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T13",
+          "quote": "Chưa chốt chuyện thêm ví điện tử ở đợt này."
+        }
+      ],
+      "reason": "Không có kết luận tường minh cuối cùng hoặc đã hoãn/mở lại.",
+      "history": [
+        {
+          "turn_id": "T2",
+          "kind": "proposal",
+          "quote": "Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "defer",
+          "quote": "Chưa chốt chuyện thêm ví điện tử ở đợt này."
+        }
+      ]
+    }
+  ],
+  "review_queue": []
+}

@@ -5,109 +5,128 @@
     "model": null,
     "transcript_sha256": "3b5031acdbe08c80d4b2e96223308efc607d3a22f48bb5081e1c3936d5023a6c",
     "automated": true,
-    "semantic_verification": false
+    "semantic_verification": false,
+    "verification_method": "literal_rules",
+    "approval_required": true
   },
   "turns": [
     {
       "id": "T1",
       "line": 1,
       "speaker": "Minh",
+      "speaker_label": "Minh",
       "text": "Về phát hành, mình còn phải xác nhận việc hoàn tiền trước khi quyết lịch."
     },
     {
       "id": "T2",
       "line": 2,
       "speaker": "Lan",
+      "speaker_label": "Lan",
       "text": "Bản sửa đã qua kiểm thử hồi quy sáng nay."
     },
     {
       "id": "T3",
       "line": 3,
       "speaker": "Huy",
+      "speaker_label": "Huy",
       "text": "Anh thử cả hoàn một phần lẫn hoàn toàn bộ, số tiền đều khớp."
     },
     {
       "id": "T4",
       "line": 4,
       "speaker": "Mai",
+      "speaker_label": "Mai",
       "text": "Nhóm hỗ trợ đã có hướng dẫn trả lời khách khi họ hỏi về trạng thái mới."
     },
     {
       "id": "T5",
       "line": 5,
       "speaker": "Minh",
+      "speaker_label": "Minh",
       "text": "Còn vấn đề nào đang chặn việc phát hành không?"
     },
     {
       "id": "T6",
       "line": 6,
       "speaker": "Lan",
+      "speaker_label": "Lan",
       "text": "Không còn lỗi chặn, chỉ có một chỉnh sửa chữ không ảnh hưởng luồng."
     },
     {
       "id": "T7",
       "line": 7,
       "speaker": "Huy",
+      "speaker_label": "Huy",
       "text": "Chỉnh sửa chữ đó đã nằm trong bản 2.1 rồi."
     },
     {
       "id": "T8",
       "line": 8,
       "speaker": "Mai",
+      "speaker_label": "Mai",
       "text": "Lịch bên khách cho phép cập nhật đầu tuần."
     },
     {
       "id": "T9",
       "line": 9,
       "speaker": "Minh",
+      "speaker_label": "Minh",
       "text": "Nghĩa là không cần điều kiện còn chờ từ phía họ nữa."
     },
     {
       "id": "T10",
       "line": 10,
       "speaker": "Lan",
+      "speaker_label": "Lan",
       "text": "Đúng, họ đã xác nhận trong email hôm qua."
     },
     {
       "id": "T11",
       "line": 11,
       "speaker": "Minh",
+      "speaker_label": "Minh",
       "text": "Về phát hành, chốt đưa bản 2.1 lên vào thứ Hai."
     },
     {
       "id": "T12",
       "line": 12,
       "speaker": "Mai",
+      "speaker_label": "Mai",
       "text": "Em ghi lịch đó là quyết định cuối của cuộc họp."
     },
     {
       "id": "T13",
       "line": 13,
       "speaker": "Huy",
+      "speaker_label": "Huy",
       "text": "Các kiểm tra vừa nói đều đã hoàn tất, không phải việc giao mới."
     },
     {
       "id": "T14",
       "line": 14,
       "speaker": "Lan",
+      "speaker_label": "Lan",
       "text": "Mình dùng đúng bản đã thử hôm nay, không thêm thay đổi ngoài bản đó."
     },
     {
       "id": "T15",
       "line": 15,
       "speaker": "Minh",
+      "speaker_label": "Minh",
       "text": "Nếu có thông tin mới thì cần mở lại quyết định, không tự bỏ qua."
     },
     {
       "id": "T16",
       "line": 16,
       "speaker": "Mai",
+      "speaker_label": "Mai",
       "text": "Hiện chưa có thông tin mới để thay lịch."
     },
     {
       "id": "T17",
       "line": 17,
       "speaker": "Minh",
+      "speaker_label": "Minh",
       "text": "Mình kết thúc phần phát hành ở đây."
     }
   ],
@@ -148,5 +167,7 @@
       ]
     }
   ],
-  "review_queue": []
+  "review_queue": [],
+  "semantic_checks": [],
+  "run_seconds": 0.002
 }

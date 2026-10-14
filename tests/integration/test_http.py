@@ -51,7 +51,7 @@ class HttpTests(unittest.TestCase):
         self.assertEqual({r['type'] for r in result['items']}, {'decision','action','issue','request_feedback','unresolved'})
 
     def test_bad_transcript_returns_error_instead_of_result(self):
-        status, body, _ = self.request('/api/extract', {'transcript':'Không có speaker'})
+        status, body, _ = self.request('/api/extract', {'transcript':''})
         self.assertEqual(status, 400)
         self.assertIn('error', json.loads(body))
         self.assertNotIn('items', json.loads(body))
@@ -64,10 +64,26 @@ class HttpTests(unittest.TestCase):
         status, _, _ = self.request('/api/extract', {'transcript':'A: chốt B.'}, {'Origin':'https://unrelated.example'})
         self.assertEqual(status, 403)
 
+    def test_export_gate_enforced_on_server_not_browser_flag(self):
+        _, body, _ = self.request('/api/extract', {'transcript':'Lan: Về kiểm thử, em nhận làm kiểm thử.'})
+        session = json.loads(body)
+        payload=dict(session_id=session['session_id'], revision=session['revision'], approved=True, items=[])
+        status, _, _=self.request('/api/export',payload)
+        self.assertEqual(status,400)
+        status,body,_=self.request('/api/review',dict(session_id=session['session_id'],revision=0,
+            review_key=session['items'][0]['review_key'],action='confirm'))
+        self.assertEqual(status,200)
+        current=json.loads(body)
+        status,body,_=self.request('/api/export',dict(session_id=current['session_id'],revision=current['revision']))
+        self.assertEqual(status,200)
+        self.assertEqual(json.loads(body)['items'][0]['human_review']['state'],'confirmed')
+
     def test_edit_validation_rejects_unsupported_deadline(self):
         raw = 'Lan: Về kiểm thử, em nhận làm kiểm thử trước thứ Sáu.'
         _, body, _ = self.request('/api/extract', {'transcript':raw})
         item = json.loads(body)['items'][0]
+        item.pop('human_review')
+        item.pop('review_key')
         item['due'] = '20/12/2030'
         status, body, _ = self.request('/api/validate', {'transcript':raw, 'items':[item]})
         result = json.loads(body)

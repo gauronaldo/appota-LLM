@@ -1,0 +1,15 @@
+{
+  "frozen_at": "2026-10-14T10:08:19.163195+00:00",
+  "hashes": {
+    "src/meeting_trace/meeting/core.py": "82a9558034e9f1cd9fda0242baa25b5e067a0a3f36313dabf4e7146dd25f875b",
+    "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+    "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+    "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+    "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3"
+  },
+  "prompt_version": "2.1",
+  "evaluation_kind": "recheck_observed_v2",
+  "initial_baseline": "baselines/v2-initial",
+  "live_inference_freeze": "baselines/qwen-v2-live/freeze.json",
+  "postvalidation": "pronoun_guard_and_verification_metadata"
+}

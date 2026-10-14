@@ -5,7 +5,7 @@ import unittest
 from unittest.mock import patch
 
 from meeting_trace.meeting.core import extract, parse_transcript, validate_items
-from meeting_trace.meeting.llm import call_model, llm_extract
+from meeting_trace.meeting.llm import call_model, llm_extract, source_quotes
 from meeting_trace.meeting.schema import STAGE_TWO
 
 
@@ -81,10 +81,43 @@ class SafetyTests(unittest.TestCase):
         self.assertIn('URL: /v1', turns[0]['text'])
 
     def test_bad_and_oversized_input_rejected(self):
-        for raw in ['', 'Không có người nói', 'Lan:', 'A: ' + 'x'*24001, '\n'.join(['A: x']*301)]:
+        for raw in ['', 'Lan:', 'A: ' + 'x'*24001, '\n'.join(['A: x']*301)]:
             with self.subTest(raw=raw[:30]):
                 with self.assertRaises(ValueError):
                     parse_transcript(raw)
+
+    def test_plain_mixed_and_anonymous_keep_unknown_identity(self):
+        turns = parse_transcript('Em nhận làm kiểm thử.\nLan: Chốt B.\nNgười nói 2: Em nhận sửa lỗi.')
+        self.assertEqual([t['speaker'] for t in turns], [None, 'Lan', None])
+        self.assertEqual(turns[2]['speaker_label'], 'Người nói 2')
+        result = extract('Người nói 2: Về kiểm thử, em nhận làm kiểm thử trước thứ Sáu.')
+        self.assertEqual((result['items'][0]['owner'], result['items'][0]['status']), (None, 'needs_confirmation'))
+
+    def test_sentence_colon_and_url_do_not_invent_speaker(self):
+        for raw in ['Vấn đề: chưa mở quyền sandbox.', 'https://example.test/x', 'Chốt phương án: B.']:
+            turn = parse_transcript(raw)[0]
+            self.assertIsNone(turn['speaker'])
+            self.assertEqual(turn['text'], raw)
+
+    def test_model_references_copy_exact_source_without_generating_quotes(self):
+        turns = parse_transcript('Em nhận làm kiểm thử trước thứ Sáu.\nLan: Chốt B nếu pháp chế duyệt.')
+        references = [dict(turn_id='T2'), dict(turn_id='T1',kind='assign')]
+        quotes = source_quotes(references, turns)
+        self.assertEqual([q['quote'] for q in quotes],[turns[1]['text'],turns[0]['text']])
+        with self.assertRaises(ValueError): source_quotes([dict(turn_id='T404')], turns)
+
+    def test_pronoun_in_unnamed_utterance_is_not_an_owner_name(self):
+        result=extract('Về kiểm thử, Em nhận làm kiểm thử trước thứ Sáu.')
+        item=copy.deepcopy(result['items'][0])
+        item.update(owner='Em',status='confirmed')
+        self.assertEqual(validate_items([item],result['turns'])[0],[])
+
+    def test_no_candidates_does_not_claim_semantic_model_was_called(self):
+        with patch('meeting_trace.meeting.llm.llm_extract',return_value=([],[],'test-model')):
+            with patch('meeting_trace.meeting.llm.provider_call') as network:
+                result=extract('Chưa có thông tin để ghi nhận.','ollama')
+                self.assertFalse(result['metadata']['semantic_verification'])
+                network.assert_not_called()
 
     def test_no_key_means_no_network_and_no_fake_llm_result(self):
         with patch.dict(os.environ, {}, clear=True), patch('urllib.request.urlopen') as network:

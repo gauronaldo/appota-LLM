@@ -1,0 +1,13 @@
+{
+  "frozen_at": "2026-10-14T09:36:13.110964+00:00",
+  "hashes": {
+    "src/meeting_trace/meeting/core.py": "b4f0fa6cdbf414bfb18f363c7ae62f86fab7050cfe1e504485053441651ca640",
+    "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+    "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+    "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+    "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3"
+  },
+  "prompt_version": "2.1",
+  "evaluation_kind": "recheck_observed_v2",
+  "initial_baseline": "baselines/v2-initial"
+}

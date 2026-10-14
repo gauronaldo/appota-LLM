@@ -1,0 +1,220 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "a3f4b0130f031851943214ca44f72bc9a32bf8bb37097dee5cc070f09941236a",
+    "automated": true,
+    "semantic_verification": true,
+    "verification_method": "llm_judgment",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Báo cáo cho khách cần dùng số liệu đã đối soát, không dùng bản xuất chiều qua."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Phần giao dịch hoàn tiền đã được kiểm tra chưa?"
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Đã kiểm tra xong trong bảng chung, còn thiếu phần ghi chú về giao dịch treo."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Ghi chú đó đã có ở trang cuối, chỉ cần đưa cùng báo cáo."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Khách muốn nhận trước cuối tuần vì họ phải họp nội bộ."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nếu gửi báo cáo thiếu phần treo thì họ sẽ hiểu nhầm số dư."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Mình thống nhất giữ cả phần ghi chú, không cắt cho ngắn."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Lan đang phụ trách liên hệ với khách, người gửi báo cáo vẫn là Lan."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Lan gửi báo cáo trước thứ Sáu."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Trong file nhớ có bản số liệu và phần ghi chú, nhưng không cần gửi log kỹ thuật."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Đây là việc đã được giao, không phải đề nghị tìm người làm."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Có cần gửi thêm biểu đồ để khách xem nhanh không?"
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Lần này họ chỉ yêu cầu file số liệu và phần ghi chú, chưa cần biểu đồ."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Bản đã đối soát đang nằm ở thư mục chung, đừng dùng bản cũ trong email tuần trước."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Địa chỉ người nhận vẫn dùng danh sách ở luồng trao đổi hiện tại."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Mình kết thúc phần trao đổi về báo cáo ở đây."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "báo cáo",
+      "events": [
+        {
+          "turn_id": "T1",
+          "kind": "change",
+          "quote": "Báo cáo cho khách cần dùng số liệu đã đối soát, không dùng bản xuất chiều qua."
+        },
+        {
+          "turn_id": "T7",
+          "kind": "change",
+          "quote": "Mình thống nhất giữ cả phần ghi chú, không cắt cho ngắn."
+        },
+        {
+          "turn_id": "T9",
+          "kind": "assign",
+          "quote": "Lan gửi báo cáo trước thứ Sáu."
+        },
+        {
+          "turn_id": "T10",
+          "kind": "support",
+          "quote": "Trong file nhớ có bản số liệu và phần ghi chú, nhưng không cần gửi log kỹ thuật."
+        },
+        {
+          "turn_id": "T15",
+          "kind": "support",
+          "quote": "Địa chỉ người nhận vẫn dùng danh sách ở luồng trao đổi hiện tại."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "báo cáo",
+      "type": "action",
+      "status": "confirmed",
+      "content": "Lan gửi báo cáo cho khách trước thứ Sáu, bao gồm bản số liệu đã đối soát và phần ghi chú về giao dịch treo.",
+      "owner": "Lan",
+      "due": "trước thứ Sáu",
+      "evidence": [
+        {
+          "turn_id": "T7",
+          "quote": "Mình thống nhất giữ cả phần ghi chú, không cắt cho ngắn."
+        },
+        {
+          "turn_id": "T9",
+          "quote": "Lan gửi báo cáo trước thứ Sáu."
+        }
+      ],
+      "reason": "Đồng ý giữ cả phần ghi chú và sử dụng bản số liệu đã đối soát, Lan là người phụ trách gửi báo cáo.",
+      "history": [
+        {
+          "turn_id": "T1",
+          "kind": "change",
+          "quote": "Báo cáo cho khách cần dùng số liệu đã đối soát, không dùng bản xuất chiều qua."
+        },
+        {
+          "turn_id": "T7",
+          "kind": "change",
+          "quote": "Mình thống nhất giữ cả phần ghi chú, không cắt cho ngắn."
+        },
+        {
+          "turn_id": "T9",
+          "kind": "assign",
+          "quote": "Lan gửi báo cáo trước thứ Sáu."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [
+    {
+      "item_id": "I1",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Đồng ý giữ cả phần ghi chú và sử dụng bản số liệu đã đối soát, Lan là người phụ trách gửi báo cáo. Các điều kiện và chủ đề đều được duy trì và bằng chứng đầy đủ trong transcript từ T7 đến T9 hỗ trợ quyết định này. Không có sai lệch về thời hạn hoặc nội dung công việc cần thực hiện.",
+      "evidence": [
+        {
+          "turn_id": "T7",
+          "quote": "Mình thống nhất giữ cả phần ghi chú, không cắt cho ngắn."
+        },
+        {
+          "turn_id": "T9",
+          "quote": "Lan gửi báo cáo trước thứ Sáu."
+        }
+      ]
+    }
+  ],
+  "run_seconds": 74.047
+}

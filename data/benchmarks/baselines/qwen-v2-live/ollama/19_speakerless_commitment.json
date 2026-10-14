@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "cc64f6908592f1a03afeb634e99d7d40abe812dcf1b28b4b8ad16f4c7a8145cd",
+    "automated": true,
+    "semantic_verification": true,
+    "verification_method": "llm_judgment",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Bản hướng dẫn hiện vẫn có ảnh của giao diện cũ."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Khách dùng ảnh đó để tìm nút nên dễ bấm nhầm chỗ."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Phần nội dung chữ đã đúng, chỉ cần thay ảnh ở ba bước."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Ai có thể làm phần đó trước khi gửi cho khách?"
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Em nhận thay ảnh hướng dẫn trước ngày mai."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Có cần viết lại toàn bộ tài liệu không?"
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Không, chỉ thay ba ảnh rồi kiểm tra lại thứ tự bước."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Người nhận việc có quyền mở tài liệu chung rồi."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Ảnh mới cần chụp ở màn hình điện thoại hay máy tính?"
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Khách đang dùng máy tính, lần này mình chụp màn hình máy tính."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Vậy ảnh ở phần đăng nhập cũng dùng máy tính cho nhất quán nhé."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Đúng, chỉ thay ảnh thôi, không đổi những hướng dẫn đã được khách kiểm tra."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nếu có một bước không khớp giao diện thì đánh dấu để mình xem lại."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Không có quyết định sản phẩm mới trong phần trao đổi này."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Mình kết thúc ở đây, tài liệu mới vẫn lưu cùng thư mục với bản hiện tại."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "hướng dẫn",
+      "events": [
+        {
+          "turn_id": "T5",
+          "kind": "change",
+          "quote": "Em nhận thay ảnh hướng dẫn trước ngày mai."
+        },
+        {
+          "turn_id": "T7",
+          "kind": "change",
+          "quote": "Không, chỉ thay ba ảnh rồi kiểm tra lại thứ tự bước."
+        },
+        {
+          "turn_id": "T10",
+          "kind": "change",
+          "quote": "Khách đang dùng máy tính, lần này mình chụp màn hình máy tính."
+        }
+      ]
+    }
+  ],
+  "items": [],
+  "review_queue": [
+    {
+      "item": {
+        "id": "I1",
+        "topic": "hướng dẫn",
+        "type": "action",
+        "status": "confirmed",
+        "content": "Thay ảnh hướng dẫn cho ba bước.",
+        "owner": "Speaker null (T5)",
+        "due": "ngày mai",
+        "evidence": [
+          {
+            "turn_id": "T5",
+            "quote": "Em nhận thay ảnh hướng dẫn trước ngày mai."
+          },
+          {
+            "turn_id": "T7",
+            "quote": "Không, chỉ thay ba ảnh rồi kiểm tra lại thứ tự bước."
+          }
+        ],
+        "reason": "Người nhận đã đồng ý và xác định chỉ thay ảnh mà không viết lại toàn bộ tài liệu.",
+        "history": [
+          {
+            "turn_id": "T5",
+            "kind": "change",
+            "quote": "Em nhận thay ảnh hướng dẫn trước ngày mai."
+          },
+          {
+            "turn_id": "T7",
+            "kind": "change",
+            "quote": "Không, chỉ thay ba ảnh rồi kiểm tra lại thứ tự bước."
+          }
+        ]
+      },
+      "errors": [
+        "Người phụ trách thiếu bằng chứng giao việc hoặc tự nhận việc"
+      ]
+    }
+  ],
+  "semantic_checks": [],
+  "run_seconds": 21.445
+}

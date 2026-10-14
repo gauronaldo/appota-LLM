@@ -8,6 +8,7 @@ import json
 import sys
 from datetime import datetime, timezone
 import os
+import time
 
 from ..config import PATHS
 from ..meeting.core import extract, parse_transcript
@@ -17,7 +18,8 @@ from .reporting import render_tests
 
 ROOT = PATHS.root
 FROZEN = ['src/meeting_trace/meeting/core.py', 'src/meeting_trace/meeting/schema.py',
-          'src/meeting_trace/meeting/prompts.py', 'src/meeting_trace/meeting/llm.py']
+          'src/meeting_trace/meeting/prompts.py', 'src/meeting_trace/meeting/llm.py',
+          'src/meeting_trace/meeting/review.py']
 
 
 def hashes():
@@ -39,12 +41,21 @@ def benchmark_extract(raw, engine='local', model=None):
                     automated=True, semantic_verification=False),
                     turns=[], topics=[], items=[], review_queue=[],
                     error=dict(stage='input', type=type(error).__name__, message=str(error)))
-    return extract(raw, engine, model)
+    try:
+        return extract(raw, engine, model)
+    except (ValueError, OSError) as error:
+        if engine == 'local':
+            raise
+        return dict(schema_version='1.0', metadata=dict(engine=engine, model=model,
+                    transcript_sha256=hashlib.sha256(raw.encode('utf-8')).hexdigest(),
+                    automated=True, semantic_verification=False),
+                    turns=parse_transcript(raw), topics=[], items=[], review_queue=[],
+                    error=dict(stage='pipeline', type=type(error).__name__, message=str(error)))
 
 
 def verify_freeze():
     """Check original bytes after path-only migration; never replace the old freeze."""
-    freeze_path = PATHS.benchmarks / 'freeze.json'
+    freeze_path = PATHS.benchmarks / 'freeze-v2.json'
     if not freeze_path.exists():
         raise ValueError('Chưa có freeze trước lượt chạy kín.')
     frozen = json.loads(freeze_path.read_text(encoding='utf-8'))['hashes']
@@ -52,7 +63,7 @@ def verify_freeze():
     mapping = json.loads(mapping_path.read_text(encoding='utf-8')) if mapping_path.exists() else {}
     migrated = {mapping.get(path, path): sha for path, sha in frozen.items()}
     if migrated != hashes():
-        raise ValueError('Các file lõi đã thay đổi sau freeze; không dùng lại tập kín cũ.')
+        raise ValueError('Các file lõi đã thay đổi sau freeze; cần tạo revision mới, giữ baseline cũ.')
 
 
 def main():
@@ -60,21 +71,24 @@ def main():
         sys.stdout.reconfigure(encoding='utf-8')
         sys.stderr.reconfigure(encoding='utf-8')
     parser = argparse.ArgumentParser()
-    parser.add_argument('--engine', choices=['local', 'openai'], default='local')
+    parser.add_argument('--engine', choices=['local', 'openai', 'ollama'], default='local')
     parser.add_argument('--model')
     parser.add_argument('--split', choices=['dev', 'holdout'], default='dev')
     parser.add_argument('--freeze', action='store_true')
     parser.add_argument('--verify-only', action='store_true',
                         help='So với kết quả đã lưu; không ghi đè báo cáo hoặc timestamp lịch sử.')
     args = parser.parse_args()
+    if args.engine == 'ollama':
+        from ..meeting.llm import resolve_model
+        args.model = resolve_model('ollama', args.model)
     if args.engine == 'openai' and (not os.environ.get('OPENAI_API_KEY') or not (args.model or os.environ.get('OPENAI_MODEL'))):
         parser.exit(1, 'Chưa cấu hình API key/model; không tạo báo cáo LLM giả.\n')
-    freeze_path = PATHS.benchmarks / 'freeze.json'
+    freeze_path = PATHS.benchmarks / 'freeze-v2.json'
     if args.freeze:
         if freeze_path.exists():
             parser.exit(1, 'Freeze đã tồn tại; không ghi đè lịch sử tập kín.\n')
         dump(freeze_path, dict(frozen_at=datetime.now(timezone.utc).isoformat(), hashes=hashes(), prompt_version=VERSION))
-        print('Frozen core and prompts before holdout evaluation.')
+        print('Frozen revision before v2 re-evaluation (previously observed dataset).')
         return
     if args.split == 'holdout':
         try:
@@ -95,6 +109,8 @@ def main():
             parser.exit(1, f'Transcript đã bị thay đổi: {row["id"]}\n')
         if row['split'] != args.split:
             continue
+        started = time.perf_counter()
+        print(f'Running {args.engine}: {row["id"]}', flush=True)
         try:
             result = benchmark_extract(transcript, args.engine, args.model)
         except (ValueError, OSError) as error:
@@ -103,9 +119,12 @@ def main():
         if args.verify_only:
             if not result_path.exists():
                 parser.exit(1, f'Chưa có kết quả để đối chiếu: {row["id"]}\n')
-            if result != json.loads(result_path.read_text(encoding='utf-8')):
+            saved = json.loads(result_path.read_text(encoding='utf-8'))
+            saved.pop('run_seconds', None)
+            if result != saved:
                 parser.exit(1, f'Kết quả sau restructure khác baseline: {row["id"]}\n')
         else:
+            result['run_seconds'] = round(time.perf_counter() - started, 3)
             dump(result_path, result)
         expected = json.loads(expected_path.read_text(encoding='utf-8'))
         cases.append(score(result, expected))
@@ -118,7 +137,8 @@ def main():
     report = dict(dataset_version=','.join(sorted(versions)), engine=args.engine,
                   model=(args.model or os.environ.get('OPENAI_MODEL')) if args.engine != 'local' else None,
                   prompt_version=VERSION, split=args.split, run_at=datetime.now(timezone.utc).isoformat(),
-                  core_hashes=hashes(), total=len(cases), passed=sum(c['passed'] for c in cases),
+                  core_hashes=hashes(), evaluation_kind='recheck_observed_v2',
+                  total=len(cases), passed=sum(c['passed'] for c in cases),
                   metrics=metrics, cases=cases,
                   groups={group: dict(total=sum(c['group']==group for c in cases),
                                       passed=sum(c['group']==group and c['passed'] for c in cases))

@@ -23,12 +23,23 @@ def parse_transcript(raw):
     for line_number, line in enumerate(raw.splitlines(), 1):
         if not line.strip():
             continue
-        speaker, sep, content = line.partition(':')
-        if not sep or not speaker.strip() or not content.strip() or len(speaker.strip()) > 80:
-            raise ValueError(f'Dòng {line_number}: cần định dạng Người nói: nội dung.')
+        line = unicodedata.normalize('NFC', line.strip())
+        prefix, sep, rest = line.partition(':')
+        # A short capitalized name/diarization label is optional. Sentence colons
+        # and URL schemes stay in the utterance, never become invented people.
+        label = None
+        words = prefix.split()
+        is_name = 1 <= len(words) <= 4 and all(w.isalpha() and w[0].isupper() for w in words)
+        is_label = bool(re.fullmatch(r'(?:người nói|speaker|s)\s*\d+|unknown|ẩn danh', prefix, re.I))
+        if sep and (is_label or is_name) and prefix.casefold() not in ('url', 'api', 'http', 'https', 'chốt'):
+            label = prefix
+            if not rest.strip():
+                raise ValueError(f'Dòng {line_number}: nhãn người nói có nội dung trống.')
+        content = rest.strip() if label else line
+        anonymous = bool(label and re.fullmatch(r'(?:người nói|speaker|s)\s*\d+|unknown|ẩn danh', label, re.I))
+        speaker = label if label and not anonymous else None
         turns.append(dict(id=f'T{len(turns)+1}', line=line_number,
-                          speaker=unicodedata.normalize('NFC', speaker.strip()),
-                          text=unicodedata.normalize('NFC', content.strip())))
+                          speaker=speaker, speaker_label=label, text=content))
     if not turns:
         raise ValueError('Transcript không có lượt nói.')
     if len(turns) > MAX_TURNS:
@@ -64,7 +75,7 @@ def validate_topics(topics, turns):
         raise ValueError('Bước 1 có evidence không hợp lệ: ' + '; '.join(errors[:3]))
 
 
-def validate_items(items, turns):
+def validate_items(items, turns, semantic_checked=False):
     """Quarantine, don't erase, invalid candidates. This is NOT entailment checking."""
     lookup = {t['id']: t for t in turns}
     accepted, review, used = [], [], set()
@@ -86,10 +97,15 @@ def validate_items(items, turns):
                 errors.append('Chỉ công việc được có người nhận hoặc hạn')
             if row['type'] == 'action':
                 if row['owner'] is not None:
+                    known = {turn['speaker'] for turn in turns if turn['speaker']}
                     supported = any(
                         (lookup.get(ev['turn_id'], {}).get('speaker') == row['owner'] and SELF_ASSIGN.search(ev['quote']))
-                        or re.search(r'\bgiao\s+' + re.escape(row['owner']) + r'\s+', ev['quote'], re.I)
+                        or re.search(r'(?<!\w)' + re.escape(row['owner']) + r'(?!\w)', ev['quote'], re.I)
                         for ev in row['evidence'])
+                    if re.fullmatch(r'(?:người nói|speaker|s)\s*\d+|unknown|ẩn danh', row['owner'], re.I):
+                        supported = False
+                    if row['owner'].casefold() in ('em', 'anh', 'chị', 'tôi', 'mình', 'bạn', 'chúng tôi') and row['owner'] not in known:
+                        supported = False
                     if not supported:
                         errors.append('Người phụ trách thiếu bằng chứng giao việc hoặc tự nhận việc')
                 if row['due'] is not None and (not row['due'].strip() or not any(
@@ -97,7 +113,7 @@ def validate_items(items, turns):
                     errors.append('Hạn không xuất hiện nguyên văn trong evidence')
                 if row['status'] == 'confirmed' and row['owner'] is None:
                     errors.append('Công việc đã xác định cần người nhận; thiếu người thì cần xác nhận')
-            if row['type'] == 'decision' and row['status'] == 'confirmed':
+            if not semantic_checked and row['type'] == 'decision' and row['status'] == 'confirmed':
                 explicit = any(FINAL.search(body_of(ev['quote'])) for ev in row['evidence'])
                 agreeing = {lookup.get(ev['turn_id'], {}).get('speaker') for ev in row['evidence']
                             if re.search(r'\bđồng ý\b', ev['quote'], re.I)} - {None}
@@ -196,6 +212,27 @@ def local_stage_two(topics, turns):
     return items
 
 
+def check_candidates(candidates, turns, engine='local', model=None):
+    """Literal validation followed by a separate model review, never gold labels."""
+    items, review = validate_items(candidates, turns, semantic_checked=engine != 'local')
+    verification = []
+    if engine != 'local' and items:
+        from .llm import verify_semantics
+        items, semantic_review, verification = verify_semantics(items, turns, engine, model)
+        review.extend(semantic_review)
+    elif engine == 'local':
+        # Local rules cannot certify paraphrases/entailment. Only unchanged
+        # source utterances pass this narrow guard; manual rephrasing is blocked.
+        kept = []
+        for item in items:
+            if any(item['content'] == body_of(ev['quote']) for ev in item['evidence']):
+                kept.append(item)
+            else:
+                review.append(dict(item=item, errors=['Local không kiểm chứng được nội dung sửa; dùng LLM để kiểm tra ý nghĩa.']))
+        items = kept
+    return items, review, verification
+
+
 def extract(raw, engine='local', model=None):
     turns = parse_transcript(raw)
     if engine == 'local':
@@ -203,13 +240,16 @@ def extract(raw, engine='local', model=None):
         validate_topics(topics, turns)
         candidates = local_stage_two(topics, turns)
         meta_model = None
-    elif engine == 'openai':
+    elif engine in ('openai', 'ollama'):
         from .llm import llm_extract
-        topics, candidates, meta_model = llm_extract(turns, model=model)
+        topics, candidates, meta_model = llm_extract(turns, model=model, engine=engine)
     else:
         raise ValueError('Bộ trích xuất không hợp lệ.')
-    items, review = validate_items(candidates, turns)
+    items, review, verification = check_candidates(candidates, turns, engine, meta_model)
     return dict(schema_version='1.0', metadata=dict(engine=engine, model=meta_model,
                 transcript_sha256=hashlib.sha256(raw.encode('utf-8')).hexdigest(),
-                automated=True, semantic_verification=False),
-                turns=turns, topics=topics, items=items, review_queue=review)
+                automated=True, semantic_verification=bool(verification),
+                verification_method='llm_judgment' if verification else 'literal_rules',
+                approval_required=True),
+                turns=turns, topics=topics, items=items, review_queue=review,
+                semantic_checks=verification)

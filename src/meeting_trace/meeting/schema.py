@@ -20,6 +20,22 @@ ITEM = obj(dict(id=STR, topic=STR, type=dict(type='string', enum=TYPES),
                 due=NULL_STR, evidence=dict(type='array', items=EVIDENCE), reason=STR,
                 history=dict(type='array', items=EVENT)))
 STAGE_TWO = obj(dict(items=dict(type='array', items=ITEM)))
+VERDICT = dict(type='string', enum=['pass', 'fail', 'uncertain'])
+CHECK_FIELDS = ['supported', 'topic_correct', 'current', 'conditions_preserved', 'assignment_supported']
+SEMANTIC_CHECK = obj(dict(item_id=STR, **{key: VERDICT for key in CHECK_FIELDS},
+                          reason=STR, evidence=dict(type='array', items=EVIDENCE)))
+SEMANTIC = obj(dict(checks=dict(type='array', items=SEMANTIC_CHECK)))
+# Models select references; application code copies the source quote exactly.
+# Public output retains the original evidence schema.
+REFERENCE = obj(dict(turn_id=STR))
+MODEL_EVENT = obj(dict(turn_id=STR, kind=dict(type='string', enum=KINDS)))
+MODEL_STAGE_ONE = obj(dict(topics=dict(type='array', items=obj(dict(
+    topic=STR, events=dict(type='array', items=MODEL_EVENT))))))
+MODEL_ITEM = obj({**ITEM['properties'], 'evidence':dict(type='array',items=REFERENCE),
+                  'history':dict(type='array',items=MODEL_EVENT)})
+MODEL_STAGE_TWO = obj(dict(items=dict(type='array',items=MODEL_ITEM)))
+MODEL_SEMANTIC = obj(dict(checks=dict(type='array',items=obj({
+    **SEMANTIC_CHECK['properties'], 'evidence':dict(type='array',items=REFERENCE)}))))
 
 
 def schema_errors(value, schema, path='$'):

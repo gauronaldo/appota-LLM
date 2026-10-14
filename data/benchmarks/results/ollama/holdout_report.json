@@ -1,0 +1,262 @@
+{
+  "dataset_version": "2.0",
+  "engine": "ollama",
+  "model": "qwen2.5:7b",
+  "prompt_version": "2.1",
+  "split": "holdout",
+  "run_at": "2026-10-14T10:05:38.706292+00:00",
+  "core_hashes": {
+    "src/meeting_trace/meeting/core.py": "b4f0fa6cdbf414bfb18f363c7ae62f86fab7050cfe1e504485053441651ca640",
+    "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+    "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+    "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+    "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3"
+  },
+  "evaluation_kind": "recheck_observed_v2",
+  "total": 8,
+  "passed": 0,
+  "metrics": {
+    "decision_tp": 1,
+    "decision_fp": 1,
+    "decision_fn": 2,
+    "intermediate_promoted": 0,
+    "intermediate_total": 6,
+    "invented_owner_due": 3,
+    "decision_precision": 0.5,
+    "decision_recall": 0.3333,
+    "intermediate_promotion_rate": 0.0
+  },
+  "cases": [
+    {
+      "id": "04_interleaved",
+      "title": "Quay lại chuyện lưu trữ sau khi bàn lịch demo",
+      "group": "change",
+      "input_format": "named",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai unresolved: lịch demo / chiều thứ Tư",
+        "Mục ngoài kỳ vọng: issue / lịch demo / Lịch demo sẽ được xác định sau khi hỏi khách hàng."
+      ],
+      "expectation": "decision/lưu trữ: phương án B (confirmed, owner=None, due=None, conditions=[]); unresolved/lịch demo: chiều thứ Tư (unresolved, owner=None, due=None, conditions=[])",
+      "actual": "decision/lưu trữ: Chốt dùng phương án B cho phần lưu trữ. (confirmed, owner=None, due=None); issue/lịch demo: Lịch demo sẽ được xác định sau khi hỏi khách hàng. (unresolved, owner=None, due=None)",
+      "lesson": "Đại từ và tham chiếu quay lại chủ đề có thể làm local gắn câu chốt đúng chữ vào sai chủ đề.",
+      "metrics": {
+        "decision_tp": 1,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 3,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "05_unnamed_reversal",
+      "title": "Đổi cổng thanh toán trong transcript không có người nói",
+      "group": "change",
+      "input_format": "plain",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Pipeline không xử lý được input: Ollama chưa hoàn tất hoặc output bị cắt ngắn.",
+        "Thiếu/sai decision: thanh toán / cổng B"
+      ],
+      "expectation": "decision/thanh toán: cổng B (confirmed, owner=None, due=None, conditions=[])",
+      "actual": "Lỗi pipeline: Ollama chưa hoàn tất hoặc output bị cắt ngắn.",
+      "lesson": "Transcript vẫn có kết luận rõ dù thiếu người nói; parser hiện tại phải được đánh giá là chưa hỗ trợ, không biến lỗi input thành kết quả trống đạt.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 1,
+        "intermediate_promoted": 0,
+        "intermediate_total": 2,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "09_named_assignee_no_speaker",
+      "title": "Người nhận được nêu trong nội dung, không biết ai nói",
+      "group": "indirect",
+      "input_format": "plain",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "báo cáo: due kỳ vọng 'thứ Sáu', thực tế 'trước thứ Sáu'"
+      ],
+      "expectation": "action/báo cáo: gửi báo cáo (confirmed, owner=Lan, due=thứ Sáu, conditions=[])",
+      "actual": "action/báo cáo: Lan gửi báo cáo cho khách trước thứ Sáu, bao gồm bản số liệu đã đối soát và phần ghi chú về giao dịch treo. (confirmed, owner=Lan, due=trước thứ Sáu)",
+      "lesson": "Không cần biết người phát biểu để nhận ra tên người được giao việc được nói rõ trong nội dung.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 0,
+        "invented_owner_due": 1
+      }
+    },
+    {
+      "id": "10_indirect_consensus",
+      "title": "Thống nhất qua nhiều lượt mà không nói từ chốt",
+      "group": "indirect",
+      "input_format": "named",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai decision: báo cáo / một cột",
+        "Mục ngoài kỳ vọng: decision / màn hình báo cáo / Màn hình báo cáo sẽ sử dụng một cột thay vì hai cột."
+      ],
+      "expectation": "decision/báo cáo: một cột (confirmed, owner=None, due=None, conditions=[])",
+      "actual": "decision/màn hình báo cáo: Màn hình báo cáo sẽ sử dụng một cột thay vì hai cột. (confirmed, owner=None, due=None)",
+      "lesson": "Đồng thuận có thể được thể hiện bằng nhiều lượt và lời kết luận gián tiếp, không chỉ từ khóa chốt.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 1,
+        "decision_fn": 1,
+        "intermediate_promoted": 0,
+        "intermediate_total": 1,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "14_request_not_assignment",
+      "title": "Yêu cầu của khách không tự thành việc đã giao",
+      "group": "unresolved",
+      "input_format": "mixed",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai request_feedback: báo cáo / bộ lọc theo tháng",
+        "Thiếu/sai unresolved: báo cáo / chưa thống nhất",
+        "Mục ngoài kỳ vọng: issue / bộ lọc theo thời gian / Yêu cầu từ khách cần làm rõ trước khi giao việc."
+      ],
+      "expectation": "request_feedback/báo cáo: bộ lọc theo tháng (needs_confirmation, owner=None, due=None, conditions=[]); unresolved/báo cáo: chưa thống nhất (unresolved, owner=None, due=None, conditions=[])",
+      "actual": "issue/bộ lọc theo thời gian: Yêu cầu từ khách cần làm rõ trước khi giao việc. (unresolved, owner=None, due=None)",
+      "lesson": "Dữ liệu có và thiếu nhãn xen kẽ phải được đưa vào test; yêu cầu không tự tạo owner hoặc deadline.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 0,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "15_conditional_task",
+      "title": "Lời nhận việc còn phụ thuộc quyền truy cập",
+      "group": "unresolved",
+      "input_format": "named",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai action: hoàn tiền / kiểm tra luồng hoàn tiền",
+        "Thiếu/sai issue: sandbox / chưa mở quyền sandbox",
+        "Mục ngoài kỳ vọng: issue / vướng mắc / Đối tác chưa mở quyền sandbox cho nhóm, dẫn đến việc không thể chạy luồng tích hợp từ đầu đến cuối.",
+        "Mục ngoài kỳ vọng: issue / luồng tích hợp / Nhóm chưa chạy được luồng tích hợp từ đầu đến cuối.",
+        "Mục ngoài kỳ vọng: issue / quyền truy cập / Lỗi này thuộc quyền truy cập, chưa phải lỗi của luồng hoàn tiền."
+      ],
+      "expectation": "action/hoàn tiền: kiểm tra luồng hoàn tiền (needs_confirmation, owner=Lan, due=None, conditions=['Nếu đối tác mở quyền sandbox']); issue/sandbox: chưa mở quyền sandbox (needs_confirmation, owner=None, due=None, conditions=[])",
+      "actual": "issue/vướng mắc: Đối tác chưa mở quyền sandbox cho nhóm, dẫn đến việc không thể chạy luồng tích hợp từ đầu đến cuối. (unresolved, owner=None, due=None); issue/luồng tích hợp: Nhóm chưa chạy được luồng tích hợp từ đầu đến cuối. (unresolved, owner=None, due=None); issue/quyền truy cập: Lỗi này thuộc quyền truy cập, chưa phải lỗi của luồng hoàn tiền. (confirmed, owner=None, due=None)",
+      "lesson": "Lời nhận việc có điều kiện không được nâng thành cam kết vô điều kiện hoặc tự thêm hạn từ lịch demo.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 0,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "19_speakerless_commitment",
+      "title": "Có việc và hạn, không có dữ liệu xác định người nhận",
+      "group": "clear",
+      "input_format": "plain",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai action: hướng dẫn / thay ảnh hướng dẫn",
+        "1 mục không qua validator"
+      ],
+      "expectation": "action/hướng dẫn: thay ảnh hướng dẫn (needs_confirmation, owner=None, due=ngày mai, conditions=[])",
+      "actual": "Không có mục",
+      "lesson": "Một lời tự nhận rõ không cho phép bịa danh tính khi transcript không có người nói.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 0,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "20_explicit_name_in_content",
+      "title": "Người nói Huy giao việc cho Mai",
+      "group": "clear",
+      "input_format": "named",
+      "dataset_version": "2.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai action: báo cáo / gửi báo cáo",
+        "Mục ngoài kỳ vọng: action / báo cáo tháng / Mai gửi báo cáo đã đối soát trước thứ Sáu."
+      ],
+      "expectation": "action/báo cáo: gửi báo cáo (confirmed, owner=Mai, due=thứ Sáu, conditions=[])",
+      "actual": "action/báo cáo tháng: Mai gửi báo cáo đã đối soát trước thứ Sáu. (confirmed, owner=Mai, due=thứ Sáu)",
+      "lesson": "Tên người nhận ở trong nội dung có thể khác người nói; không dùng vị trí đầu dòng để suy ra owner.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 0,
+        "invented_owner_due": 2
+      }
+    }
+  ],
+  "groups": {
+    "change": {
+      "total": 2,
+      "passed": 0
+    },
+    "clear": {
+      "total": 2,
+      "passed": 0
+    },
+    "indirect": {
+      "total": 2,
+      "passed": 0
+    },
+    "unresolved": {
+      "total": 2,
+      "passed": 0
+    }
+  },
+  "input_formats": {
+    "mixed": {
+      "total": 1,
+      "passed": 0
+    },
+    "named": {
+      "total": 4,
+      "passed": 0
+    },
+    "plain": {
+      "total": 3,
+      "passed": 0
+    }
+  },
+  "postvalidation": {
+    "kind": "literal_only_no_new_inference",
+    "at": "2026-10-14T10:09:36.844733+00:00",
+    "core_hashes": {
+      "src/meeting_trace/meeting/core.py": "82a9558034e9f1cd9fda0242baa25b5e067a0a3f36313dabf4e7146dd25f875b",
+      "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+      "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+      "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+      "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3"
+    },
+    "source": "data/benchmarks/baselines/qwen-v2-live/ollama"
+  }
+}

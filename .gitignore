@@ -245,3 +245,5 @@ docs/PROJECT_WALKTHROUGH.md
 docs/reports/MISSION1_ALIGNMENT.md
 docs/reports/VERIFICATION.md
 docs/assets/
+# Presentation/report working documents remain local after remote docs cleanup.
+docs/

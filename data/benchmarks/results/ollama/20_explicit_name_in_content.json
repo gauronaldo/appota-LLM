@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "1ca963fa1659744d4cec2c7d55247e4bc9046d7948cc03f241de63ea33a246d8",
+    "automated": true,
+    "semantic_verification": true,
+    "verification_method": "llm_judgment",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Báo cáo tháng này đã được đối soát xong trong bảng chung."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Có cần hỏi lại khách về định dạng không?"
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Không, họ xác nhận dùng file CSV như tháng trước."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Như vậy chỉ còn người gửi bản cuối, không phải xây chức năng mới."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Ai đang giữ luồng email với khách?"
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em đang giữ luồng đó và có đủ người nhận."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Phần ghi chú giao dịch treo đã có ở trang cuối báo cáo."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em thấy rồi, không cần thêm một bảng nữa."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Mai gửi báo cáo đã đối soát trước thứ Sáu nhé."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em xác nhận phần việc đó, gửi đúng bản đang nằm trong bảng chung."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Mai có cần đính kèm bảng chú giải mã giao dịch không?"
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Có, bảng đó đã nằm trong bản cuối, mình không tạo thêm một bản khác."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Không có yêu cầu làm lại phần đối soát."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Thời hạn trong câu là thứ Sáu, em đã rõ."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Phần này không còn câu hỏi nào cần chốt."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Mình kết thúc cuộc họp nhé."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "báo cáo tháng",
+      "events": [
+        {
+          "turn_id": "T10",
+          "kind": "change",
+          "quote": "Em xác nhận phần việc đó, gửi đúng bản đang nằm trong bảng chung."
+        },
+        {
+          "turn_id": "T9",
+          "kind": "assign",
+          "quote": "Mai gửi báo cáo đã đối soát trước thứ Sáu nhé."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "báo cáo tháng",
+      "type": "action",
+      "status": "confirmed",
+      "content": "Mai gửi báo cáo đã đối soát trước thứ Sáu.",
+      "owner": "Mai",
+      "due": "thứ Sáu",
+      "evidence": [
+        {
+          "turn_id": "T9",
+          "quote": "Mai gửi báo cáo đã đối soát trước thứ Sáu nhé."
+        },
+        {
+          "turn_id": "T10",
+          "quote": "Em xác nhận phần việc đó, gửi đúng bản đang nằm trong bảng chung."
+        }
+      ],
+      "reason": "Huy, Minh và Lan đồng ý Mai gửi báo cáo đã đối soát trước thứ Sáu.",
+      "history": [
+        {
+          "turn_id": "T9",
+          "kind": "assign",
+          "quote": "Mai gửi báo cáo đã đối soát trước thứ Sáu nhé."
+        },
+        {
+          "turn_id": "T10",
+          "kind": "change",
+          "quote": "Em xác nhận phần việc đó, gửi đúng bản đang nằm trong bảng chung."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [
+    {
+      "item_id": "I1",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Huy, Minh và Lan đồng ý Mai gửi báo cáo đã đối soát trước thứ Sáu. Các thông tin về người nhận (Mai), hạn mức (thứ Sáu) và nội dung công việc đều được giữ nguyên trong quá trình thảo luận và xác nhận lại bởi các thành viên khác nhau của cuộc họp, do đó quyết định này là hợp lệ và không có sai lệch nào cần lưu ý. Các bằng chứng từ T9 và T10 hỗ trợ đầy đủ yêu cầu này.",
+      "evidence": [
+        {
+          "turn_id": "T9",
+          "quote": "Mai gửi báo cáo đã đối soát trước thứ Sáu nhé."
+        },
+        {
+          "turn_id": "T10",
+          "quote": "Em xác nhận phần việc đó, gửi đúng bản đang nằm trong bảng chung."
+        }
+      ]
+    }
+  ],
+  "run_seconds": 58.377,
+  "postvalidation": {
+    "kind": "literal_only_no_new_inference",
+    "at": "2026-10-14T10:09:36.837688+00:00",
+    "source_canonical_sha256": "a2d465d972cc1e70db6489366a7fe0c1b18b3517b31a3a56dc9616983a0d9575",
+    "core_hashes": {
+      "src/meeting_trace/meeting/core.py": "82a9558034e9f1cd9fda0242baa25b5e067a0a3f36313dabf4e7146dd25f875b",
+      "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+      "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+      "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+      "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3"
+    }
+  }
+}

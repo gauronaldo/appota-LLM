@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "cd8be0f15490adaaad6e8ff57fba5498d4caacb7d1a9dfd210b5f74547c616c6",
+    "automated": true,
+    "semantic_verification": false,
+    "verification_method": "literal_rules",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Về kiểm thử, lỗi hiển thị giá đã được sửa trong bản mới."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Em đã xem bản sửa, cần chạy lại ba loại khuyến mãi."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": null,
+      "speaker_label": "Người nói 3",
+      "text": "Có thể kiểm tra bằng bộ dữ liệu mẫu đang dùng không?"
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Có, không cần xin dữ liệu thật của khách."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Ai có thể nhận phần hồi quy này?"
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Em nhận làm kiểm thử hồi quy trước thứ Sáu."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": null,
+      "speaker_label": "Người nói 3",
+      "text": "Em nghe rõ nội dung và hạn rồi."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Ba loại khuyến mãi là giảm phần trăm, giảm tiền và mua theo bộ đúng không?"
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Đúng, mỗi loại cần thử cả lúc thêm và xóa sản phẩm."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": null,
+      "speaker_label": "Người nói 3",
+      "text": "Dữ liệu mẫu đã có sẵn đủ ba loại, không cần tạo đơn hàng thật."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Kết quả để trong bảng thử hiện tại để mình so với đợt trước."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Em đã thấy bảng đó, hạn em vừa nói là thứ Sáu."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": null,
+      "speaker_label": "Người nói 3",
+      "text": "Phần sửa code đã hoàn tất nên không đưa thành việc mới nữa."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Nếu có lỗi khác ngoài phạm vi này thì ghi riêng, đừng trộn vào kết quả hồi quy."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Không có thay đổi gì khác ở phần này."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "kiểm thử",
+      "events": [
+        {
+          "turn_id": "T5",
+          "kind": "change",
+          "quote": "Ai có thể nhận phần hồi quy này?"
+        },
+        {
+          "turn_id": "T6",
+          "kind": "assign",
+          "quote": "Em nhận làm kiểm thử hồi quy trước thứ Sáu."
+        },
+        {
+          "turn_id": "T14",
+          "kind": "support",
+          "quote": "Nếu có lỗi khác ngoài phạm vi này thì ghi riêng, đừng trộn vào kết quả hồi quy."
+        }
+      ]
+    }
+  ],
+  "items": [],
+  "review_queue": [
+    {
+      "item": {
+        "id": "I1",
+        "topic": "kiểm thử",
+        "type": "action",
+        "status": "confirmed",
+        "content": "Kiểm thử ba loại khuyến mãi: giảm phần trăm, giảm tiền và mua theo bộ. Mỗi loại cần thử cả lúc thêm và xóa sản phẩm.",
+        "owner": "Người nói 2",
+        "due": "trước thứ Sáu",
+        "evidence": [
+          {
+            "turn_id": "T6",
+            "quote": "Em nhận làm kiểm thử hồi quy trước thứ Sáu."
+          },
+          {
+            "turn_id": "T9",
+            "quote": "Đúng, mỗi loại cần thử cả lúc thêm và xóa sản phẩm."
+          }
+        ],
+        "reason": "Lời nhận của người nói 2 và xác nhận của người nói 3 về việc kiểm thử ba loại khuyến mãi.",
+        "history": [
+          {
+            "turn_id": "T5",
+            "kind": "change",
+            "quote": "Ai có thể nhận phần hồi quy này?"
+          },
+          {
+            "turn_id": "T6",
+            "kind": "assign",
+            "quote": "Em nhận làm kiểm thử hồi quy trước thứ Sáu."
+          },
+          {
+            "turn_id": "T14",
+            "kind": "support",
+            "quote": "Nếu có lỗi khác ngoài phạm vi này thì ghi riêng, đừng trộn vào kết quả hồi quy."
+          }
+        ]
+      },
+      "errors": [
+        "Người phụ trách thiếu bằng chứng giao việc hoặc tự nhận việc"
+      ]
+    }
+  ],
+  "semantic_checks": [],
+  "run_seconds": 9.076,
+  "postvalidation": {
+    "kind": "literal_only_no_new_inference",
+    "at": "2026-10-14T10:09:36.827874+00:00",
+    "source_canonical_sha256": "859db054e17d7a3e5ea90ecebb91f761b454763dc2e41cc813ea2f0b02b8af91",
+    "core_hashes": {
+      "src/meeting_trace/meeting/core.py": "82a9558034e9f1cd9fda0242baa25b5e067a0a3f36313dabf4e7146dd25f875b",
+      "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+      "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+      "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+      "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3"
+    }
+  }
+}

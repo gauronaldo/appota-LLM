@@ -1,0 +1,254 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "2b59e7aad962ee27154e03bc474ee2529b873bad765a8ab5496996da8dbd9cc8",
+    "automated": true,
+    "semantic_verification": true,
+    "verification_method": "llm_judgment",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về hạ tầng, mình có hai lựa chọn nâng dung lượng tháng tới."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Đề xuất nâng gói hiện tại lên phương án A. Ít phải chuyển dữ liệu."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Gói đó tăng giá bao nhiêu sau khi hết thời gian ưu đãi?"
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Anh mới có giá tháng đầu, chưa có giá duy trì."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Phía tài chính cần con số theo quý, giá tháng đầu chưa dùng được."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Đề xuất cân nhắc phương án B, giữ gói và tách dữ liệu cũ sang kho rẻ hơn."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "B sẽ thêm thao tác khôi phục nếu khách hỏi giao dịch cũ."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Khách hiện vẫn hỏi lại dữ liệu khoảng ba tháng trước."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Vậy cũng chưa biết B có phù hợp cho họ không."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Em chưa muốn chọn chỉ vì nhìn giá thuê thấp hơn."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Cần đủ hai báo giá và phần chi phí chuyển dữ liệu."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Mình không có những con số đó trong cuộc họp hôm nay."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Chưa chốt phương án hạ tầng; hoãn lựa chọn đến khi đủ báo giá."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em giữ cả A và B ở phần đang xem xét."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Không có việc chuyển dữ liệu được giao từ cuộc họp này."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Đúng, hiện mới đánh giá phương án."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Khi có đủ số liệu mình quay lại, không coi A là mặc định."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "hạ tầng",
+      "events": [
+        {
+          "turn_id": "T13",
+          "kind": "change",
+          "quote": "Chưa chốt phương án hạ tầng; hoãn lựa chọn đến khi đủ báo giá."
+        },
+        {
+          "turn_id": "T14",
+          "kind": "support",
+          "quote": "Em giữ cả A và B ở phần đang xem xét."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "hạ tầng",
+      "type": "unresolved",
+      "status": "needs_confirmation",
+      "content": "Chưa chốt phương án hạ tầng; hoãn lựa chọn đến khi đủ báo giá.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T13",
+          "quote": "Chưa chốt phương án hạ tầng; hoãn lựa chọn đến khi đủ báo giá."
+        }
+      ],
+      "reason": "Phương án chưa được chốt do thiếu thông tin về chi phí và tác động của các phương án.",
+      "history": [
+        {
+          "turn_id": "T1",
+          "kind": "proposal",
+          "quote": "Về hạ tầng, mình có hai lựa chọn nâng dung lượng tháng tới."
+        },
+        {
+          "turn_id": "T2",
+          "kind": "support",
+          "quote": "Đề xuất nâng gói hiện tại lên phương án A. Ít phải chuyển dữ liệu."
+        },
+        {
+          "turn_id": "T3",
+          "kind": "request_feedback",
+          "quote": "Gói đó tăng giá bao nhiêu sau khi hết thời gian ưu đãi?"
+        },
+        {
+          "turn_id": "T4",
+          "kind": "request_feedback",
+          "quote": "Anh mới có giá tháng đầu, chưa có giá duy trì."
+        },
+        {
+          "turn_id": "T5",
+          "kind": "request_feedback",
+          "quote": "Phía tài chính cần con số theo quý, giá tháng đầu chưa dùng được."
+        },
+        {
+          "turn_id": "T6",
+          "kind": "proposal",
+          "quote": "Đề xuất cân nhắc phương án B, giữ gói và tách dữ liệu cũ sang kho rẻ hơn."
+        },
+        {
+          "turn_id": "T7",
+          "kind": "support",
+          "quote": "B sẽ thêm thao tác khôi phục nếu khách hỏi giao dịch cũ."
+        },
+        {
+          "turn_id": "T8",
+          "kind": "support",
+          "quote": "Khách hiện vẫn hỏi lại dữ liệu khoảng ba tháng trước."
+        },
+        {
+          "turn_id": "T9",
+          "kind": "support",
+          "quote": "Vậy cũng chưa biết B có phù hợp cho họ không."
+        },
+        {
+          "turn_id": "T10",
+          "kind": "support",
+          "quote": "Em chưa muốn chọn chỉ vì nhìn giá thuê thấp hơn."
+        },
+        {
+          "turn_id": "T11",
+          "kind": "request_feedback",
+          "quote": "Cần đủ hai báo giá và phần chi phí chuyển dữ liệu."
+        },
+        {
+          "turn_id": "T12",
+          "kind": "support",
+          "quote": "Mình không có những con số đó trong cuộc họp hôm nay."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "change",
+          "quote": "Chưa chốt phương án hạ tầng; hoãn lựa chọn đến khi đủ báo giá."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [
+    {
+      "item_id": "I1",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Phương án hạ tầng chưa được chốt do thiếu thông tin về chi phí và tác động của các phương án. Các ý kiến trong cuộc họp đều phản ánh tình trạng này, và quyết định hoãn lựa chọn đến khi có đủ số liệu là phù hợp với nội dung thảo luận hiện tại. Không có sai lệch nào so với yêu cầu đánh giá.",
+      "evidence": [
+        {
+          "turn_id": "T13",
+          "quote": "Chưa chốt phương án hạ tầng; hoãn lựa chọn đến khi đủ báo giá."
+        }
+      ]
+    }
+  ],
+  "run_seconds": 44.075
+}

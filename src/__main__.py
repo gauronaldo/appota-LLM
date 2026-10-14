@@ -9,13 +9,15 @@ COMMANDS = {
     'evaluate': 'meeting_trace.evaluation.runner',
     'test': 'meeting_trace.tools.test_runner',
     'package': 'meeting_trace.tools.package',
+    'verify-probes': 'meeting_trace.tools.verify_probes',
+    'revalidate': 'meeting_trace.evaluation.revalidate',
 }
 
 
 def main():
     parser = argparse.ArgumentParser(
         description='Meeting Trace source commands. Default: serve.',
-        usage='python src [serve|extract|evaluate|test|package] [options]')
+        usage='python src [serve|extract|evaluate|test|package|verify-probes|revalidate] [options]')
     args = sys.argv[1:]
     if args and args[0] in ('-h', '--help'):
         parser.print_help()
