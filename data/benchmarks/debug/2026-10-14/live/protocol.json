@@ -1,0 +1,61 @@
+{
+  "at": "2026-10-14T11:32:16.959681+00:00",
+  "model": "qwen2.5:7b",
+  "plan": [
+    {
+      "id": "L01_topic_control",
+      "kind": "stage_two",
+      "case": "03_switch_condition",
+      "intervention": "saved topics unchanged"
+    },
+    {
+      "id": "L02_topic_rename",
+      "kind": "stage_two",
+      "case": "03_switch_condition",
+      "intervention": "ONLY first topic name changed from lưu trữ to email; no event or transcript changes"
+    },
+    {
+      "id": "L03_contract_control",
+      "kind": "baseline",
+      "case": "17_clear_assignment",
+      "intervention": "existing B prompt"
+    },
+    {
+      "id": "L04_contract_defined",
+      "kind": "baseline",
+      "case": "17_clear_assignment",
+      "intervention": "same B prompt + explicit general status/workflow contract"
+    },
+    {
+      "id": "L05_truncation_trace",
+      "kind": "pipeline",
+      "case": "05_unnamed_reversal",
+      "intervention": "unchanged production pipeline, record every API stage"
+    },
+    {
+      "id": "L06_clear_self_commit",
+      "kind": "micro",
+      "case": null,
+      "intervention": "single explicit known-speaker commitment, existing B/schema/guard"
+    }
+  ],
+  "hashes": {
+    "src/meeting_trace/meeting/core.py": "82a9558034e9f1cd9fda0242baa25b5e067a0a3f36313dabf4e7146dd25f875b",
+    "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+    "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+    "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+    "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3",
+    "src/meeting_trace/meeting/baseline.py": "caf1c1320e1cf87b0cbf376e21d8834dd974d42f5db987d31faaa1e6f157cdd0",
+    "src/meeting_trace/evaluation/comparison.py": "88d2b4ca0a7c0480f05b19b7652adfeeb205512be5eed8d33e79e3ea9513c20b",
+    "src/meeting_trace/evaluation/scoring.py": "6febcece4e51b30b327d3032b50435ebbda8f1572fdf387d88259be24531657d",
+    "src/meeting_trace/evaluation/debug_live.py": "04e3f45d0459148754a1226dd5840628ff672ef7a64c25754c6b4838dbde4453"
+  },
+  "purpose": "diagnosis on already observed v2; no new holdout or quality claim",
+  "no_retry": true,
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 4000
+  }
+}

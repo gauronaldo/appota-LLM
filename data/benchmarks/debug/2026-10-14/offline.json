@@ -1,0 +1,3561 @@
+{
+  "kind": "offline_layer_diagnosis_not_new_benchmark",
+  "gold_oracle_not_model": true,
+  "relaxation_not_quality_score": true,
+  "reference_presence_proxy_not_semantics": true,
+  "summary": {
+    "v2": {
+      "total": 20,
+      "parser_text_preserved": 20,
+      "oracle_guard_blocked_cases": [
+        "15_conditional_task"
+      ],
+      "gold_issue_request_status_cases": [
+        "07_let_me_check",
+        "14_request_not_assignment",
+        "15_conditional_task",
+        "17_clear_assignment"
+      ],
+      "arms": {
+        "baseline_b": {
+          "strict": 0,
+          "single_field_ablation_passed": {
+            "topic": 5,
+            "content_phrase": 0,
+            "conditions": 0,
+            "status": 0,
+            "owner": 0,
+            "due": 0,
+            "evidence": 0,
+            "history": 0,
+            "extras": 0,
+            "queue": 0
+          },
+          "candidates": 31,
+          "accepted": 21,
+          "literal_blocked": 10,
+          "verifier_rejected": 0,
+          "verifier_all_pass": 0,
+          "errors": 0
+        },
+        "pipeline": {
+          "strict": 1,
+          "single_field_ablation_passed": {
+            "topic": 3,
+            "content_phrase": 1,
+            "conditions": 1,
+            "status": 2,
+            "owner": 1,
+            "due": 2,
+            "evidence": 1,
+            "history": 1,
+            "extras": 1,
+            "queue": 1
+          },
+          "candidates": 30,
+          "accepted": 24,
+          "literal_blocked": 6,
+          "verifier_rejected": 0,
+          "verifier_all_pass": 24,
+          "errors": 1
+        }
+      }
+    },
+    "holdout-v3": {
+      "total": 6,
+      "parser_text_preserved": 6,
+      "oracle_guard_blocked_cases": [
+        "H05_webhook_limit"
+      ],
+      "gold_issue_request_status_cases": [
+        "H02_conditional_export",
+        "H03_reopened_backup",
+        "H04_discount_request",
+        "H06_unsettled_rota"
+      ],
+      "arms": {
+        "baseline_b": {
+          "strict": 0,
+          "single_field_ablation_passed": {
+            "topic": 0,
+            "content_phrase": 0,
+            "conditions": 0,
+            "status": 0,
+            "owner": 0,
+            "due": 0,
+            "evidence": 0,
+            "history": 0,
+            "extras": 0,
+            "queue": 0
+          },
+          "candidates": 7,
+          "accepted": 7,
+          "literal_blocked": 0,
+          "verifier_rejected": 0,
+          "verifier_all_pass": 0,
+          "errors": 0
+        },
+        "pipeline": {
+          "strict": 0,
+          "single_field_ablation_passed": {
+            "topic": 0,
+            "content_phrase": 0,
+            "conditions": 0,
+            "status": 0,
+            "owner": 0,
+            "due": 0,
+            "evidence": 0,
+            "history": 0,
+            "extras": 0,
+            "queue": 0
+          },
+          "candidates": 9,
+          "accepted": 8,
+          "literal_blocked": 1,
+          "verifier_rejected": 0,
+          "verifier_all_pass": 8,
+          "errors": 0
+        }
+      }
+    }
+  },
+  "cases": [
+    {
+      "suite": "v2",
+      "id": "01_change_ab",
+      "turns": 21,
+      "parser_preserves_text": true,
+      "gold_items": 2,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "01_change_ab",
+        "title": "Bỏ máy chủ riêng, chọn dịch vụ quản lý",
+        "group": "change",
+        "input_format": "named",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "decision/lưu trữ: phương án B (confirmed, owner=None, due=None, conditions=[]); action/triển khai: bản cấu hình (confirmed, owner=Lan, due=thứ Sáu, conditions=[])",
+        "actual": "decision/lưu trữ: Chốt dùng phương án B cho bản thử. Chưa mua máy chủ riêng ở đợt này. (confirmed, owner=None, due=None); action/triển khai: Em nhận làm bản cấu hình trước thứ Sáu. (confirmed, owner=Lan, due=thứ Sáu)",
+        "lesson": "Giữ B là quyết định cuối; hội thoại không cần nhắc lại tên chủ đề ở mọi lượt.",
+        "metrics": {
+          "decision_tp": 1,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 2,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "be4f99bdc1f5829d213928559ea6359db0a8209d7cc26fc68a2c57878905ce75",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 2,
+          "accepted": 1,
+          "literal_blocked": [
+            {
+              "item": {
+                "id": "T15",
+                "topic": "Cấu hình cho bản thử",
+                "type": "action",
+                "status": "confirmed",
+                "content": "Lan nhận làm bản cấu hình trước thứ Sáu.",
+                "owner": null,
+                "due": null,
+                "evidence": [
+                  {
+                    "turn_id": "T15",
+                    "quote": "Về triển khai, phần cấu hình ai nhận được?"
+                  },
+                  {
+                    "turn_id": "T16",
+                    "quote": "Em nhận làm bản cấu hình trước thứ Sáu."
+                  }
+                ],
+                "reason": "Lan đã đồng ý và xác nhận sẽ thực hiện công việc này.",
+                "history": []
+              },
+              "errors": [
+                "Công việc đã xác định cần người nhận; thiếu người thì cần xác nhận"
+              ]
+            }
+          ],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "9e6a7a696aa6753dd6642b83513bb14ce3d3cbb011b7e832ec4e26ba1872586e",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 0,
+          "literal_blocked": [
+            {
+              "item": {
+                "id": "I1",
+                "topic": "lưu trữ",
+                "type": "decision",
+                "status": "confirmed",
+                "content": "Chốt dùng phương án B cho bản thử. Chưa mua máy chủ riêng ở đợt này.",
+                "owner": "Lan",
+                "due": null,
+                "evidence": [
+                  {
+                    "turn_id": "T13",
+                    "quote": "Chốt dùng phương án B cho bản thử. Chưa mua máy chủ riêng ở đợt này."
+                  },
+                  {
+                    "turn_id": "T8",
+                    "quote": "Đề xuất dùng phương án B, dịch vụ quản lý sẵn. Chi phí bản thử thấp hơn."
+                  },
+                  {
+                    "turn_id": "T12",
+                    "quote": "Anh đồng ý với lý do đó."
+                  },
+                  {
+                    "turn_id": "T10",
+                    "quote": "Có, định dạng xuất vẫn là CSV. Anh đã kiểm tra phần đó."
+                  },
+                  {
+                    "turn_id": "T11",
+                    "quote": "Vậy B hợp với giai đoạn thử hơn, sau này đủ số liệu hãy tính máy chủ riêng."
+                  }
+                ],
+                "reason": "Đề xuất B có chi phí thấp hơn và phù hợp với giai đoạn thử, sau này sẽ xem xét mua máy chủ riêng khi đủ số liệu.",
+                "history": [
+                  {
+                    "turn_id": "T8",
+                    "kind": "proposal",
+                    "quote": "Đề xuất dùng phương án B, dịch vụ quản lý sẵn. Chi phí bản thử thấp hơn."
+                  },
+                  {
+                    "turn_id": "T10",
+                    "kind": "support",
+                    "quote": "Có, định dạng xuất vẫn là CSV. Anh đã kiểm tra phần đó."
+                  },
+                  {
+                    "turn_id": "T11",
+                    "kind": "support",
+                    "quote": "Vậy B hợp với giai đoạn thử hơn, sau này đủ số liệu hãy tính máy chủ riêng."
+                  },
+                  {
+                    "turn_id": "T12",
+                    "kind": "support",
+                    "quote": "Anh đồng ý với lý do đó."
+                  },
+                  {
+                    "turn_id": "T13",
+                    "kind": "change",
+                    "quote": "Chốt dùng phương án B cho bản thử. Chưa mua máy chủ riêng ở đợt này."
+                  }
+                ]
+              },
+              "errors": [
+                "Chỉ công việc được có người nhận hoặc hạn"
+              ]
+            }
+          ],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [
+            "lưu trữ"
+          ],
+          "expected_evidence_not_in_stage_one": [
+            "T16"
+          ],
+          "expected_evidence_not_in_any_candidate": [
+            "T16"
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "02_change_aba",
+      "turns": 19,
+      "parser_preserves_text": true,
+      "gold_items": 1,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "02_change_aba",
+        "title": "Lịch demo đổi sang chiều rồi quay lại buổi sáng",
+        "group": "change",
+        "input_format": "named",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "decision/lịch demo: phương án A (confirmed, owner=None, due=None, conditions=[])",
+        "actual": "decision/lịch demo: Về lịch demo, chốt quay về phương án A, sáng thứ Năm. (confirmed, owner=None, due=None)",
+        "lesson": "Một lần chốt giữa cuộc họp có thể bị thay; phải theo dõi lần quay lại A.",
+        "metrics": {
+          "decision_tp": 1,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 2,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "a785f7b06bb17fd8791e85a2d4aab991f57e15db6148d0493f42a3df0773b6b0",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [
+            "T15"
+          ],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "2a1734fb7debda9eacfbe74f719f3aa6efb5fcb1e5e8e7852408f7ca120d82ff",
+          "strict_pass": true,
+          "ablations": {
+            "topic": true,
+            "content_phrase": true,
+            "conditions": true,
+            "status": true,
+            "owner": true,
+            "due": true,
+            "evidence": true,
+            "history": true,
+            "extras": true,
+            "queue": true
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1"
+          ],
+          "stage_one_topics": [
+            "lịch demo"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "03_switch_condition",
+      "turns": 17,
+      "parser_preserves_text": true,
+      "gold_items": 1,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "03_switch_condition",
+        "title": "Đổi nhà cung cấp nhưng giữ điều kiện phê duyệt",
+        "group": "change",
+        "input_format": "labels",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "decision/email: gói B (confirmed, owner=None, due=None, conditions=['nếu pháp chế duyệt'])",
+        "actual": "decision/email: Chốt chọn gói B nếu pháp chế duyệt điều khoản lưu dữ liệu. (confirmed, owner=None, due=None)",
+        "lesson": "Điều kiện là một phần của quyết định; không được biến chọn có điều kiện thành quyền triển khai ngay.",
+        "metrics": {
+          "decision_tp": 1,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 2,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "3d21ef73f331babe5ecb79571966cea8ded2b27683df8b875ce20dd1e7aa5283",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "897d004bdec3a0708604beaf0be2af310109f7efeac09ccc59d177de2f8c9efe",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 3,
+          "accepted": 2,
+          "literal_blocked": [
+            {
+              "item": {
+                "id": "I3",
+                "topic": "thời gian ký hợp đồng",
+                "type": "action",
+                "status": "confirmed",
+                "content": "Mình dừng ở đây, chưa ký trong hôm nay.",
+                "owner": null,
+                "due": null,
+                "evidence": [
+                  {
+                    "turn_id": "T17",
+                    "quote": "Mình dừng ở đây, chưa ký trong hôm nay."
+                  }
+                ],
+                "reason": "Đồng ý tạm dừng việc ký hợp đồng cho đến ngày mai.",
+                "history": [
+                  {
+                    "turn_id": "T17",
+                    "kind": "change",
+                    "quote": "Mình dừng ở đây, chưa ký trong hôm nay."
+                  }
+                ]
+              },
+              "errors": [
+                "Công việc đã xác định cần người nhận; thiếu người thì cần xác nhận"
+              ]
+            }
+          ],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1",
+            "I2"
+          ],
+          "stage_one_topics": [
+            "lưu trữ",
+            "hợp đồng pháp chế",
+            "thời gian ký hợp đồng"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "04_interleaved",
+      "turns": 19,
+      "parser_preserves_text": true,
+      "gold_items": 2,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "04_interleaved",
+        "title": "Quay lại chuyện lưu trữ sau khi bàn lịch demo",
+        "group": "change",
+        "input_format": "named",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "decision/lưu trữ: phương án B (confirmed, owner=None, due=None, conditions=[]); unresolved/lịch demo: chiều thứ Tư (unresolved, owner=None, due=None, conditions=[])",
+        "actual": "decision/lưu trữ: Chốt dùng phương án B cho phần đó. (confirmed, owner=None, due=None); unresolved/lịch demo: Về lịch demo, hay mình chuyển sang chiều thứ Tư cho họ tiện? (unresolved, owner=None, due=None)",
+        "lesson": "Đại từ và tham chiếu quay lại chủ đề có thể làm local gắn câu chốt đúng chữ vào sai chủ đề.",
+        "metrics": {
+          "decision_tp": 1,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 3,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "f7565915acbaf11b4868ce0a426aa84ac9efc637bb0537c03a6bdc02ac4d3e4c",
+          "strict_pass": false,
+          "ablations": {
+            "topic": true,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 2,
+          "accepted": 2,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "7c0dada57bbd8b607792a40666027cc6e33f1d59eb5156ca68ceca9d6976208b",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 2,
+          "accepted": 2,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1",
+            "I2"
+          ],
+          "stage_one_topics": [
+            "lưu trữ",
+            "lịch demo"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "05_unnamed_reversal",
+      "turns": 17,
+      "parser_preserves_text": true,
+      "gold_items": 1,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "05_unnamed_reversal",
+        "title": "Đổi cổng thanh toán trong transcript không có người nói",
+        "group": "change",
+        "input_format": "plain",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "decision/thanh toán: cổng B (confirmed, owner=None, due=None, conditions=[])",
+        "actual": "decision/thanh toán: Chốt chuyển sang cổng B cho đợt thử tiếp theo. (confirmed, owner=None, due=None)",
+        "lesson": "Transcript vẫn có kết luận rõ dù thiếu người nói; parser hiện tại phải được đánh giá là chưa hỗ trợ, không biến lỗi input thành kết quả trống đạt.",
+        "metrics": {
+          "decision_tp": 1,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 2,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "7207e81603626e17e0ff4e8583c2a0d439e03d29b6b71f6e309fc4c1eece45e0",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 3,
+          "accepted": 2,
+          "literal_blocked": [
+            {
+              "item": {
+                "id": "T15",
+                "topic": "保留在用的支付网关",
+                "type": "action",
+                "status": "confirmed",
+                "content": "Cổng A vẫn giữ cho giao dịch cũ, không xóa lịch sử.",
+                "owner": null,
+                "due": null,
+                "evidence": [
+                  {
+                    "turn_id": "T15",
+                    "quote": "Cổng A vẫn giữ cho giao dịch cũ, không xóa lịch sử."
+                  }
+                ],
+                "reason": "根据讨论内容确认了保留旧支付网关的行动。",
+                "history": [
+                  {
+                    "turn_id": "T15",
+                    "kind": "proposal",
+                    "quote": "Cổng A vẫn giữ cho giao dịch cũ, không xóa lịch sử."
+                  }
+                ]
+              },
+              "errors": [
+                "Công việc đã xác định cần người nhận; thiếu người thì cần xác nhận"
+              ]
+            }
+          ],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "f2754989f9ee604eb937ee865b97a7fda5b1505616e424d80991f811f982aeb6",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 0,
+          "accepted": 0,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [
+            "T14"
+          ],
+          "error": {
+            "stage": "pipeline",
+            "type": "ValueError",
+            "message": "Ollama chưa hoàn tất hoặc output bị cắt ngắn."
+          }
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "06_ambiguous_ok",
+      "turns": 17,
+      "parser_preserves_text": true,
+      "gold_items": 1,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "06_ambiguous_ok",
+        "title": "Một câu ok có thể chỉ là đã nghe",
+        "group": "indirect",
+        "input_format": "named",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "unresolved/thanh toán: ví điện tử (unresolved, owner=None, due=None, conditions=[])",
+        "actual": "unresolved/thanh toán: Chưa chốt chuyện thêm ví điện tử ở đợt này. (unresolved, owner=None, due=None)",
+        "lesson": "Ok có thể là tín hiệu nghe được, không phải đồng thuận; lời cuối xác nhận đề xuất chưa chốt.",
+        "metrics": {
+          "decision_tp": 0,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 1,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "84b60de0bdbdf61946be3ca74625e18b4f90b0535c0e986d8e112a38fdb76bd5",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 2,
+          "accepted": 0,
+          "literal_blocked": [
+            {
+              "item": {
+                "id": "T1",
+                "topic": "Thanh toán",
+                "type": "unresolved",
+                "status": "unresolved",
+                "content": "Bản demo còn dùng chuyển khoản thủ công.",
+                "owner": null,
+                "due": null,
+                "evidence": [],
+                "reason": "",
+                "history": [
+                  {
+                    "turn_id": "T17",
+                    "kind": "finalize",
+                    "quote": "Còn phần thanh toán hiện tại vẫn chạy như cũ."
+                  }
+                ]
+              },
+              "errors": [
+                "reason đang trống",
+                "Không có evidence"
+              ]
+            },
+            {
+              "item": {
+                "id": "T2",
+                "topic": "Thanh toán - ví điện tử",
+                "type": "issue",
+                "status": "unresolved",
+                "content": "Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác.",
+                "owner": null,
+                "due": null,
+                "evidence": [],
+                "reason": "",
+                "history": [
+                  {
+                    "turn_id": "T2",
+                    "kind": "proposal",
+                    "quote": "Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác."
+                  },
+                  {
+                    "turn_id": "T13",
+                    "kind": "request_feedback",
+                    "quote": "Chưa chốt chuyện thêm ví điện tử ở đợt này."
+                  }
+                ]
+              },
+              "errors": [
+                "reason đang trống",
+                "Không có evidence"
+              ]
+            }
+          ],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [
+            "T13"
+          ],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "15f521c0609b864700bc65516c5a6becbe96f485b2e95ee92f0607746bbd70df",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 2,
+          "accepted": 2,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1",
+            "I2"
+          ],
+          "stage_one_topics": [
+            "thanh toán",
+            "ví điện tử"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [
+            "T13"
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "07_let_me_check",
+      "turns": 17,
+      "parser_preserves_text": true,
+      "gold_items": 2,
+      "gold_source_observations": [
+        {
+          "kind": "status_policy_not_defined_for_this_type_in_prompt",
+          "type": "issue",
+          "status": "needs_confirmation"
+        }
+      ],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "07_let_me_check",
+        "title": "Để em xem lỗi này chưa thành lời nhận sửa",
+        "group": "indirect",
+        "input_format": "named",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "issue/đăng nhập: chưa tái hiện (needs_confirmation, owner=None, due=None, conditions=[]); unresolved/đăng nhập: xem lỗi (needs_confirmation, owner=None, due=None, conditions=[])",
+        "actual": "issue/đăng nhập: Vướng mắc là chưa tái hiện được lỗi đăng nhập trên môi trường thử. (needs_confirmation, owner=None, due=None); unresolved/đăng nhập: Để em xem lỗi này đã. (needs_confirmation, owner=None, due=None)",
+        "lesson": "Không biến ý định xem xét thành cam kết sửa; cần giữ sự mơ hồ để PM xác nhận.",
+        "metrics": {
+          "decision_tp": 0,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 0,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "2626043277a6ca2c6aea766ed12ee96338183925a09e422ca8ae8ebccbf9499d",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [
+            "T4"
+          ],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "119aacd9705d4abadcdab85e22ee9f3401d61adfc5b6ac8e41f90caf6ed70cad",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1"
+          ],
+          "stage_one_topics": [
+            "báo cáo lỗi"
+          ],
+          "expected_evidence_not_in_stage_one": [
+            "T4"
+          ],
+          "expected_evidence_not_in_any_candidate": [
+            "T4"
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "08_self_commit_label",
+      "turns": 16,
+      "parser_preserves_text": true,
+      "gold_items": 1,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "08_self_commit_label",
+        "title": "Có cam kết rõ nhưng chỉ có nhãn người nói",
+        "group": "indirect",
+        "input_format": "labels",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "action/giỏ hàng: xem lỗi (needs_confirmation, owner=None, due=chiều nay, conditions=[])",
+        "actual": "action/giỏ hàng: Để em xem lỗi này và báo lại chiều nay. (needs_confirmation, owner=None, due=chiều nay)",
+        "lesson": "Cam kết và hạn có thật; nhãn người nói chưa phải tên người nhận việc đã xác minh.",
+        "metrics": {
+          "decision_tp": 0,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 0,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "19604853b0068f2782f0c6cafbb191fd67fe6f56762ab2d12b4a52e7523906b3",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "969a342e8150b27d111186ed9049f3bf6e6d00bdce5c2b984f7a94f17c44857d",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 0,
+          "literal_blocked": [
+            {
+              "item": {
+                "id": "I1",
+                "topic": "lỗi giỏ hàng",
+                "type": "action",
+                "status": "confirmed",
+                "content": "Để em xem lỗi này và báo lại chiều nay.",
+                "owner": null,
+                "due": null,
+                "evidence": [
+                  {
+                    "turn_id": "T8",
+                    "quote": "Để em xem lỗi này và báo lại chiều nay."
+                  }
+                ],
+                "reason": "Người nói 2 sẽ xác định nguyên nhân của vấn đề và báo cáo kết quả trong buổi chiều cùng ngày.",
+                "history": [
+                  {
+                    "turn_id": "T8",
+                    "kind": "change",
+                    "quote": "Để em xem lỗi này và báo lại chiều nay."
+                  },
+                  {
+                    "turn_id": "T15",
+                    "kind": "change",
+                    "quote": "Được, hôm nay mình chỉ xử lý trường hợp trong video, chưa mở rộng sang mọi loại giỏ hàng."
+                  }
+                ]
+              },
+              "errors": [
+                "Công việc đã xác định cần người nhận; thiếu người thì cần xác nhận"
+              ]
+            }
+          ],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [
+            "lỗi giỏ hàng"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "09_named_assignee_no_speaker",
+      "turns": 16,
+      "parser_preserves_text": true,
+      "gold_items": 1,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "09_named_assignee_no_speaker",
+        "title": "Người nhận được nêu trong nội dung, không biết ai nói",
+        "group": "indirect",
+        "input_format": "plain",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "action/báo cáo: gửi báo cáo (confirmed, owner=Lan, due=thứ Sáu, conditions=[])",
+        "actual": "action/báo cáo: Lan gửi báo cáo trước thứ Sáu. (confirmed, owner=Lan, due=thứ Sáu)",
+        "lesson": "Không cần biết người phát biểu để nhận ra tên người được giao việc được nói rõ trong nội dung.",
+        "metrics": {
+          "decision_tp": 0,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 0,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "b7eaeed7027db091a0acdd191cb5af98dd1286d2e5e1b5df120bdcd937db2480",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 0,
+          "literal_blocked": [
+            {
+              "item": {
+                "id": "I1",
+                "topic": "Báo cáo cho khách",
+                "type": "action",
+                "status": "confirmed",
+                "content": "Lan gửi báo cáo trước thứ Sáu, bao gồm bản số liệu và phần ghi chú.",
+                "owner": "Lan",
+                "due": null,
+                "evidence": [
+                  {
+                    "turn_id": "T7",
+                    "quote": "Mình thống nhất giữ cả phần ghi chú, không cắt cho ngắn."
+                  },
+                  {
+                    "turn_id": "T8",
+                    "quote": "Lan đang phụ trách liên hệ với khách, người gửi báo cáo vẫn là Lan."
+                  },
+                  {
+                    "turn_id": "T9",
+                    "quote": "Lan gửi báo cáo trước thứ Sáu."
+                  }
+                ],
+                "reason": "",
+                "history": [
+                  {
+                    "turn_id": "T1",
+                    "kind": "proposal",
+                    "quote": "Báo cáo cho khách cần dùng số liệu đã đối soát, không dùng bản xuất chiều qua."
+                  },
+                  {
+                    "turn_id": "T2",
+                    "kind": "issue",
+                    "quote": "Phần giao dịch hoàn tiền đã được kiểm tra chưa?"
+                  },
+                  {
+                    "turn_id": "T3",
+                    "kind": "issue",
+                    "quote": "Đã kiểm tra xong trong bảng chung, còn thiếu phần ghi chú về giao dịch treo."
+                  },
+                  {
+                    "turn_id": "T4",
+                    "kind": "proposal",
+                    "quote": "Ghi chú đó đã có ở trang cuối, chỉ cần đưa cùng báo cáo."
+                  },
+                  {
+                    "turn_id": "T5",
+                    "kind": "request_feedback",
+                    "quote": "Khách muốn nhận trước cuối tuần vì họ phải họp nội bộ."
+                  },
+                  {
+                    "turn_id": "T6",
+                    "kind": "issue",
+                    "quote": "Nếu gửi báo cáo thiếu phần treo thì họ sẽ hiểu nhầm số dư."
+                  },
+                  {
+                    "turn_id": "T7",
+                    "kind": "proposal",
+                    "quote": "Mình thống nhất giữ cả phần ghi chú, không cắt cho ngắn."
+                  }
+                ]
+              },
+              "errors": [
+                "reason đang trống"
+              ]
+            }
+          ],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "c1f94811fb16462e0216735ee50f634bc3eead6f7725e9265f1cefbd2a7b8cd1",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": true,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1"
+          ],
+          "stage_one_topics": [
+            "báo cáo"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "10_indirect_consensus",
+      "turns": 16,
+      "parser_preserves_text": true,
+      "gold_items": 1,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "10_indirect_consensus",
+        "title": "Thống nhất qua nhiều lượt mà không nói từ chốt",
+        "group": "indirect",
+        "input_format": "named",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "decision/báo cáo: một cột (confirmed, owner=None, due=None, conditions=[])",
+        "actual": "decision/báo cáo: Vậy cứ theo một cột cho màn hình báo cáo ở đợt này nhé. (confirmed, owner=None, due=None)",
+        "lesson": "Đồng thuận có thể được thể hiện bằng nhiều lượt và lời kết luận gián tiếp, không chỉ từ khóa chốt.",
+        "metrics": {
+          "decision_tp": 1,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 1,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "7c5fe14c1c5b1b190f2f62e3961cb0ee8f39666a16f9ee23ccb0f7bbbf77daa1",
+          "strict_pass": false,
+          "ablations": {
+            "topic": true,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "18a12d8c49109fd895402eccf09d881dd5787f04eea14011c7125137092f2969",
+          "strict_pass": false,
+          "ablations": {
+            "topic": true,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1"
+          ],
+          "stage_one_topics": [
+            "màn hình báo cáo"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "11_unresolved_budget",
+      "turns": 17,
+      "parser_preserves_text": true,
+      "gold_items": 1,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "11_unresolved_budget",
+        "title": "Thiếu báo giá nên chưa chọn phương án",
+        "group": "unresolved",
+        "input_format": "named",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "unresolved/hạ tầng: hoãn lựa chọn (unresolved, owner=None, due=None, conditions=[])",
+        "actual": "unresolved/hạ tầng: Chưa chốt phương án hạ tầng; hoãn lựa chọn đến khi đủ báo giá. (unresolved, owner=None, due=None)",
+        "lesson": "Thiếu dữ liệu để chọn không được biến thành quyết định hoặc việc chuyển dữ liệu.",
+        "metrics": {
+          "decision_tp": 0,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 2,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "312092a5eab60ed97b3cf42b1da1ce799a21aafe03769c61e4573969c79493df",
+          "strict_pass": false,
+          "ablations": {
+            "topic": true,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "7602d52589ee2ecee55d223f14fe7fe179aa9c2da13678f53dfdde3cd15f99ef",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": true,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1"
+          ],
+          "stage_one_topics": [
+            "hạ tầng"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "12_reopen_confirmed",
+      "turns": 16,
+      "parser_preserves_text": true,
+      "gold_items": 1,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "12_reopen_confirmed",
+        "title": "Mở lại quyết định đã chốt vì thông tin mới",
+        "group": "unresolved",
+        "input_format": "named",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "unresolved/phát hành: hoãn bản 2.1 (unresolved, owner=None, due=None, conditions=[])",
+        "actual": "unresolved/phát hành: Chưa chốt lịch phát hành nữa; hoãn bản 2.1 để đánh giá lỗi hoàn tiền. (unresolved, owner=None, due=None)",
+        "lesson": "Lời hoãn sau cùng làm lần chốt trước hết hiệu lực; không tự biến lịch cũ thành hạn sửa lỗi.",
+        "metrics": {
+          "decision_tp": 0,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 1,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "2bb39e7fa98257fda66c46120132bfa9ff488da9c9c64070c220403aa9aa2924",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 2,
+          "accepted": 1,
+          "literal_blocked": [
+            {
+              "item": {
+                "id": "T3",
+                "topic": "Phát hành bản 2.1",
+                "type": "unresolved",
+                "status": "confirmed",
+                "content": "Chốt phát hành bản 2.1 vào thứ Hai.",
+                "owner": null,
+                "due": null,
+                "evidence": [
+                  {
+                    "turn_id": "T3",
+                    "quote": "Chốt phát hành bản 2.1 vào thứ Hai."
+                  },
+                  {
+                    "turn_id": "T8",
+                    "quote": "Như vậy thông tin lúc chốt vừa rồi không còn đầy đủ."
+                  },
+                  {
+                    "turn_id": "T10",
+                    "quote": "Đừng lấy lịch thứ Hai làm deadline sửa nếu chưa có người nhận."
+                  },
+                  {
+                    "turn_id": "T12",
+                    "quote": "Chưa chốt lịch phát hành nữa; hoãn bản 2.1 để đánh giá lỗi hoàn tiền."
+                  }
+                ],
+                "reason": "Lỗi hoàn tiền chưa được giải quyết.",
+                "history": [
+                  {
+                    "turn_id": "T3",
+                    "kind": "change",
+                    "quote": "Chốt phát hành bản 2.1 vào thứ Hai."
+                  },
+                  {
+                    "turn_id": "T8",
+                    "kind": "request_feedback",
+                    "quote": "Như vậy thông tin lúc chốt vừa rồi không còn đầy đủ."
+                  },
+                  {
+                    "turn_id": "T10",
+                    "kind": "request_feedback",
+                    "quote": "Đừng lấy lịch thứ Hai làm deadline sửa nếu chưa có người nhận."
+                  },
+                  {
+                    "turn_id": "T12",
+                    "kind": "change",
+                    "quote": "Chưa chốt lịch phát hành nữa; hoãn bản 2.1 để đánh giá lỗi hoàn tiền."
+                  }
+                ]
+              },
+              "errors": [
+                "Nội dung chưa chốt không thể có trạng thái đã xác định"
+              ]
+            }
+          ],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "bbd850618ab9d00260671150499865325ba09195206293f8ba868aae85de63a0",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 2,
+          "accepted": 2,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1",
+            "I2"
+          ],
+          "stage_one_topics": [
+            "phát hành",
+            "lỗi hoàn tiền"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "13_speakerless_pending",
+      "turns": 16,
+      "parser_preserves_text": true,
+      "gold_items": 1,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "13_speakerless_pending",
+        "title": "Transcript không nhãn kết thúc mà chưa chọn",
+        "group": "unresolved",
+        "input_format": "plain",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "unresolved/xuất báo cáo: chưa thống nhất (unresolved, owner=None, due=None, conditions=[])",
+        "actual": "unresolved/xuất báo cáo: Hôm nay chưa thống nhất cách xuất báo cáo, mình giữ cả hai lựa chọn để hỏi khách. (unresolved, owner=None, due=None)",
+        "lesson": "Dữ liệu không có nhãn người nói vẫn đủ để nhận ra chưa có kết luận; cần báo lỗi parser như một thất bại hỗ trợ input.",
+        "metrics": {
+          "decision_tp": 0,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 1,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "eff4162e49086a92856c0ebb63335e5ad218faff10ce1193e2b3594f92b34ba4",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "29a4dc21aba333122f31702630fd9443d640843e306e7298b6ac7fffa16e0df2",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1"
+          ],
+          "stage_one_topics": [
+            "cách xuất báo cáo"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "14_request_not_assignment",
+      "turns": 16,
+      "parser_preserves_text": true,
+      "gold_items": 2,
+      "gold_source_observations": [
+        {
+          "kind": "status_policy_not_defined_for_this_type_in_prompt",
+          "type": "request_feedback",
+          "status": "needs_confirmation"
+        }
+      ],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "14_request_not_assignment",
+        "title": "Yêu cầu của khách không tự thành việc đã giao",
+        "group": "unresolved",
+        "input_format": "mixed",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "request_feedback/báo cáo: bộ lọc theo tháng (needs_confirmation, owner=None, due=None, conditions=[]); unresolved/báo cáo: chưa thống nhất (unresolved, owner=None, due=None, conditions=[])",
+        "actual": "request_feedback/báo cáo: Khách muốn có bộ lọc theo tháng trên màn hình báo cáo. (needs_confirmation, owner=None, due=None); unresolved/báo cáo: Mình chưa thống nhất dùng trường thời gian nào để lọc. (unresolved, owner=None, due=None)",
+        "lesson": "Dữ liệu có và thiếu nhãn xen kẽ phải được đưa vào test; yêu cầu không tự tạo owner hoặc deadline.",
+        "metrics": {
+          "decision_tp": 0,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 0,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "56e248526302a97004f1a4cf93bbb7d02eec2fa5183f5f948838b36bcd0fc821",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 0,
+          "literal_blocked": [
+            {
+              "item": {
+                "id": "T1",
+                "topic": "Yêu cầu mới từ khách hàng",
+                "type": "issue",
+                "status": "unresolved",
+                "content": "Khách hàng muốn có bộ lọc theo tháng trên màn hình báo cáo.",
+                "owner": null,
+                "due": null,
+                "evidence": [],
+                "reason": "",
+                "history": [
+                  {
+                    "turn_id": "T1",
+                    "kind": "proposal",
+                    "quote": "Phản hồi từ khách sáng nay có một yêu cầu mới."
+                  },
+                  {
+                    "turn_id": "T2",
+                    "kind": "proposal",
+                    "quote": "Khách muốn có bộ lọc theo tháng trên màn hình báo cáo."
+                  },
+                  {
+                    "turn_id": "T3",
+                    "kind": "request_feedback",
+                    "quote": "Họ muốn lọc theo ngày tạo hay theo ngày giao dịch?"
+                  },
+                  {
+                    "turn_id": "T4",
+                    "kind": "request_feedback",
+                    "quote": "Em chưa thấy họ nói rõ hai trường đó."
+                  },
+                  {
+                    "turn_id": "T5",
+                    "kind": "issue",
+                    "quote": "Hai cách lọc trả ra số khác nhau ở giao dịch treo."
+                  },
+                  {
+                    "turn_id": "T6",
+                    "kind": "proposal",
+                    "quote": "Khách còn nói các nhãn trên biểu đồ nhỏ quá, đọc trên điện thoại khó."
+                  },
+                  {
+                    "turn_id": "T7",
+                    "kind": "proposal",
+                    "quote": "Phần nhãn thì em hiểu vấn đề, còn bộ lọc cần hỏi thêm."
+                  },
+                  {
+                    "turn_id": "T8",
+                    "kind": "request_feedback",
+                    "quote": "Hiện chưa có người nhận triển khai bộ lọc, đúng không?"
+                  },
+                  {
+                    "turn_id": "T9",
+                    "kind": "request_feedback",
+                    "quote": "Đúng, chỉ có yêu cầu từ khách được chuyển vào cuộc họp."
+                  },
+                  {
+                    "turn_id": "T10",
+                    "kind": "issue",
+                    "quote": "Em chưa hứa thời điểm giao chức năng này."
+                  },
+                  {
+                    "turn_id": "T11",
+                    "kind": "request_feedback",
+                    "quote": "Đừng dùng ngày khách gửi yêu cầu làm deadline của nhóm."
+                  },
+                  {
+                    "turn_id": "T12",
+                    "kind": "issue",
+                    "quote": "Mình chưa thống nhất dùng trường thời gian nào để lọc."
+                  },
+                  {
+                    "turn_id": "T13",
+                    "kind": "issue",
+                    "quote": "API chưa đổi theo yêu cầu này."
+                  },
+                  {
+                    "turn_id": "T14",
+                    "kind": "issue",
+                    "quote": "Nếu khách muốn theo ngày giao dịch thì phải nói rõ cách xử lý các giao dịch đang treo."
+                  },
+                  {
+                    "turn_id": "T15",
+                    "kind": "issue",
+                    "quote": "Em hiểu, hiện chưa đủ thông tin để hứa một cách lọc cụ thể."
+                  },
+                  {
+                    "turn_id": "T16",
+                    "kind": "request_feedback",
+                    "quote": "Kết luận hôm nay là yêu cầu cần làm rõ trước khi giao việc."
+                  }
+                ]
+              },
+              "errors": [
+                "reason đang trống",
+                "Không có evidence"
+              ]
+            }
+          ],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [
+            "T12",
+            "T2"
+          ],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "d5ab0f209cb07333472764fc75a9683c87c0bcab6869d3e90cef5f185adf10f3",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1"
+          ],
+          "stage_one_topics": [
+            "bộ lọc theo thời gian",
+            "thời gian lọc",
+            "thời gian lọc",
+            "thời gian lọc"
+          ],
+          "expected_evidence_not_in_stage_one": [
+            "T2"
+          ],
+          "expected_evidence_not_in_any_candidate": [
+            "T2"
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "15_conditional_task",
+      "turns": 16,
+      "parser_preserves_text": true,
+      "gold_items": 2,
+      "gold_source_observations": [
+        {
+          "kind": "status_policy_not_defined_for_this_type_in_prompt",
+          "type": "issue",
+          "status": "needs_confirmation"
+        }
+      ],
+      "oracle_guard_blocked": [
+        {
+          "item": {
+            "id": "O1",
+            "topic": "hoàn tiền",
+            "type": "action",
+            "status": "needs_confirmation",
+            "content": "Nếu đối tác mở quyền sandbox thì em mới nhận kiểm tra luồng hoàn tiền.",
+            "owner": "Lan",
+            "due": null,
+            "evidence": [
+              {
+                "turn_id": "T6",
+                "quote": "Nếu đối tác mở quyền sandbox thì em mới nhận kiểm tra luồng hoàn tiền."
+              }
+            ],
+            "reason": "Diagnostic oracle: fields from frozen label, content from source; not a model prediction.",
+            "history": []
+          },
+          "errors": [
+            "Người phụ trách thiếu bằng chứng giao việc hoặc tự nhận việc"
+          ]
+        }
+      ],
+      "oracle_strict_score": {
+        "id": "15_conditional_task",
+        "title": "Lời nhận việc còn phụ thuộc quyền truy cập",
+        "group": "unresolved",
+        "input_format": "named",
+        "dataset_version": "2.0",
+        "passed": false,
+        "errors": [
+          "Thiếu/sai action: hoàn tiền / kiểm tra luồng hoàn tiền",
+          "1 mục không qua validator"
+        ],
+        "expectation": "action/hoàn tiền: kiểm tra luồng hoàn tiền (needs_confirmation, owner=Lan, due=None, conditions=['Nếu đối tác mở quyền sandbox']); issue/sandbox: chưa mở quyền sandbox (needs_confirmation, owner=None, due=None, conditions=[])",
+        "actual": "issue/sandbox: Vướng mắc là đối tác chưa mở quyền sandbox cho nhóm. (needs_confirmation, owner=None, due=None)",
+        "lesson": "Lời nhận việc có điều kiện không được nâng thành cam kết vô điều kiện hoặc tự thêm hạn từ lịch demo.",
+        "metrics": {
+          "decision_tp": 0,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 0,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "6eb9dd610f7a32578703dedf03ab31d139a5fe01edd034e35a369e486c1b6e17",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 2,
+          "accepted": 2,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [
+            "T6"
+          ],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "1338a13c981ea209365abecb06f950e18c1565d7450283c0f48c2be1d1080ea4",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 3,
+          "accepted": 3,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1",
+            "I2",
+            "I3"
+          ],
+          "stage_one_topics": [
+            "lịch demo",
+            "vướng mắc",
+            "luồng tích hợp",
+            "quyền truy cập"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "16_clear_decision",
+      "turns": 17,
+      "parser_preserves_text": true,
+      "gold_items": 1,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "16_clear_decision",
+        "title": "Chốt lịch phát hành sau khi xác nhận đủ điều kiện",
+        "group": "clear",
+        "input_format": "named",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "decision/phát hành: bản 2.1 (confirmed, owner=None, due=None, conditions=[])",
+        "actual": "decision/phát hành: Về phát hành, chốt đưa bản 2.1 lên vào thứ Hai. (confirmed, owner=None, due=None)",
+        "lesson": "Tình huống tường minh vẫn cần có trong suite để kiểm tra kết luận còn hiệu lực khi cuộc họp kết thúc.",
+        "metrics": {
+          "decision_tp": 1,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 0,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "57a4866ac0e1bc96b45d0b5d36228e6f9727f824b84134f6f20b327e9270319e",
+          "strict_pass": false,
+          "ablations": {
+            "topic": true,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "c039b8f33c0f9b9a37fb9b41a1e9502301fe2fe9d1d7ed004783cbaa0e505451",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 0,
+          "literal_blocked": [
+            {
+              "item": {
+                "id": "I1",
+                "topic": "phát hành",
+                "type": "decision",
+                "status": "confirmed",
+                "content": "Chốt đưa bản 2.1 lên vào thứ Hai.",
+                "owner": null,
+                "due": "thứ Hai",
+                "evidence": [
+                  {
+                    "turn_id": "T11",
+                    "quote": "Về phát hành, chốt đưa bản 2.1 lên vào thứ Hai."
+                  },
+                  {
+                    "turn_id": "T8",
+                    "quote": "Lịch bên khách cho phép cập nhật đầu tuần."
+                  },
+                  {
+                    "turn_id": "T9",
+                    "quote": "Nghĩa là không cần điều kiện còn chờ từ phía họ nữa."
+                  },
+                  {
+                    "turn_id": "T10",
+                    "quote": "Đúng, họ đã xác nhận trong email hôm qua."
+                  },
+                  {
+                    "turn_id": "T12",
+                    "quote": "Em ghi lịch đó là quyết định cuối của cuộc họp."
+                  }
+                ],
+                "reason": "Lịch bên khách cho phép cập nhật đầu tuần và họ đã xác nhận trong email hôm qua.",
+                "history": [
+                  {
+                    "turn_id": "T8",
+                    "kind": "support",
+                    "quote": "Lịch bên khách cho phép cập nhật đầu tuần."
+                  },
+                  {
+                    "turn_id": "T9",
+                    "kind": "support",
+                    "quote": "Nghĩa là không cần điều kiện còn chờ từ phía họ nữa."
+                  },
+                  {
+                    "turn_id": "T10",
+                    "kind": "support",
+                    "quote": "Đúng, họ đã xác nhận trong email hôm qua."
+                  },
+                  {
+                    "turn_id": "T11",
+                    "kind": "change",
+                    "quote": "Về phát hành, chốt đưa bản 2.1 lên vào thứ Hai."
+                  },
+                  {
+                    "turn_id": "T12",
+                    "kind": "change",
+                    "quote": "Em ghi lịch đó là quyết định cuối của cuộc họp."
+                  }
+                ]
+              },
+              "errors": [
+                "Chỉ công việc được có người nhận hoặc hạn"
+              ]
+            }
+          ],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [
+            "phát hành"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "17_clear_assignment",
+      "turns": 24,
+      "parser_preserves_text": true,
+      "gold_items": 6,
+      "gold_source_observations": [
+        {
+          "kind": "status_policy_not_defined_for_this_type_in_prompt",
+          "type": "request_feedback",
+          "status": "needs_confirmation"
+        },
+        {
+          "kind": "status_policy_not_defined_for_this_type_in_prompt",
+          "type": "issue",
+          "status": "needs_confirmation"
+        }
+      ],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "17_clear_assignment",
+        "title": "Quyết định và công việc thiếu một trường được tách riêng",
+        "group": "clear",
+        "input_format": "named",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "decision/báo cáo: biểu đồ đường (confirmed, owner=None, due=None, conditions=[]); request_feedback/nhãn biểu đồ: chữ quá nhỏ (needs_confirmation, owner=None, due=None, conditions=[]); action/tài liệu: cập nhật tài liệu (confirmed, owner=Lan, due=None, conditions=[]); action/bảo mật: rà soát quyền truy cập (needs_confirmation, owner=None, due=thứ Hai, conditions=[]); issue/đăng nhập: chưa có quyền sandbox (needs_confirmation, owner=None, due=None, conditions=[]); unresolved/phân quyền: cách cấp quyền (unresolved, owner=None, due=None, conditions=[])",
+        "actual": "decision/báo cáo: Chốt dùng biểu đồ đường trên màn hình báo cáo. (confirmed, owner=None, due=None); request_feedback/nhãn biểu đồ: Về nhãn biểu đồ, phản hồi của khách là chữ quá nhỏ khi xem trên điện thoại. (needs_confirmation, owner=None, due=None); action/tài liệu: Em nhận cập nhật tài liệu sử dụng. (confirmed, owner=Lan, due=None); action/bảo mật: Cần làm rà soát quyền truy cập trước thứ Hai. (needs_confirmation, owner=None, due=thứ Hai); issue/đăng nhập: Vướng mắc là chưa có quyền sandbox để thử luồng đăng nhập của khách. (needs_confirmation, owner=None, due=None); unresolved/phân quyền: Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp. (unresolved, owner=None, due=None)",
+        "lesson": "Thiếu hạn và thiếu người là hai trường hợp khác nhau; giữ null thay vì chuyển thông tin từ việc bên cạnh.",
+        "metrics": {
+          "decision_tp": 1,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 0,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "4752e4615d58e2bc6cfee8f965e1b455362dd45dc0dd73ba6e70b26c229c8320",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 5,
+          "accepted": 4,
+          "literal_blocked": [
+            {
+              "item": {
+                "id": "T9",
+                "topic": "Cập nhật tài liệu sử dụng",
+                "type": "action",
+                "status": "confirmed",
+                "content": "Lan cập nhật tài liệu sử dụng.",
+                "owner": null,
+                "due": null,
+                "evidence": [
+                  {
+                    "turn_id": "T8",
+                    "quote": "Về tài liệu, mình cần hướng dẫn dùng bố cục mới."
+                  },
+                  {
+                    "turn_id": "T9",
+                    "quote": "Em nhận cập nhật tài liệu sử dụng."
+                  }
+                ],
+                "reason": "Nhu cầu hướng dẫn bố cục mới.",
+                "history": []
+              },
+              "errors": [
+                "Công việc đã xác định cần người nhận; thiếu người thì cần xác nhận"
+              ]
+            }
+          ],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "d67663b4c7e78a6e6619dd6914931e5ef9a948f818c8376ea6c739845694ea4f",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 5,
+          "accepted": 5,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1",
+            "I2",
+            "I3",
+            "I4",
+            "I5"
+          ],
+          "stage_one_topics": [
+            "báo cáo",
+            "tài liệu",
+            "bảo mật",
+            "luồng thử đăng nhập",
+            "phân quyền"
+          ],
+          "expected_evidence_not_in_stage_one": [
+            "T7"
+          ],
+          "expected_evidence_not_in_any_candidate": [
+            "T7"
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "18_anonymous_assignment",
+      "turns": 15,
+      "parser_preserves_text": true,
+      "gold_items": 1,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "18_anonymous_assignment",
+        "title": "Cam kết đã rõ, danh tính người nhận chưa rõ",
+        "group": "clear",
+        "input_format": "labels",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "action/kiểm thử: kiểm thử hồi quy (needs_confirmation, owner=None, due=thứ Sáu, conditions=[])",
+        "actual": "action/kiểm thử: Em nhận làm kiểm thử hồi quy trước thứ Sáu. (needs_confirmation, owner=None, due=thứ Sáu)",
+        "lesson": "Không đồng nhất nhãn diarization với tên thật; có thể giữ evidence nhưng owner cần để null.",
+        "metrics": {
+          "decision_tp": 0,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 0,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "4d50124b8b352d804b309d173c233b3313a3466dc676b4af68baad09c485b652",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 0,
+          "literal_blocked": [
+            {
+              "item": {
+                "id": "T6",
+                "topic": "Kiểm thử hồi quy",
+                "type": "action",
+                "status": "confirmed",
+                "content": "Người nói 2 nhận làm kiểm thử hồi quy trước thứ Sáu.",
+                "owner": "Người nói 2",
+                "due": "thứ Sáu",
+                "evidence": [
+                  {
+                    "turn_id": "T6",
+                    "quote": "Em nhận làm kiểm thử hồi quy trước thứ Sáu."
+                  },
+                  {
+                    "turn_id": "T7",
+                    "quote": "Em nghe rõ nội dung và hạn rồi."
+                  }
+                ],
+                "reason": "明确分配了任务和截止日期。",
+                "history": []
+              },
+              "errors": [
+                "Người phụ trách thiếu bằng chứng giao việc hoặc tự nhận việc"
+              ]
+            }
+          ],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "9986fed3ffbfa20197ea10739e52fda5d4ca7921b9e06fecae0fb64e5d769fbb",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 0,
+          "literal_blocked": [
+            {
+              "item": {
+                "id": "I1",
+                "topic": "kiểm thử",
+                "type": "action",
+                "status": "confirmed",
+                "content": "Kiểm thử ba loại khuyến mãi: giảm phần trăm, giảm tiền và mua theo bộ. Mỗi loại cần thử cả lúc thêm và xóa sản phẩm.",
+                "owner": "Người nói 2",
+                "due": "trước thứ Sáu",
+                "evidence": [
+                  {
+                    "turn_id": "T6",
+                    "quote": "Em nhận làm kiểm thử hồi quy trước thứ Sáu."
+                  },
+                  {
+                    "turn_id": "T9",
+                    "quote": "Đúng, mỗi loại cần thử cả lúc thêm và xóa sản phẩm."
+                  }
+                ],
+                "reason": "Lời nhận của người nói 2 và xác nhận của người nói 3 về việc kiểm thử ba loại khuyến mãi.",
+                "history": [
+                  {
+                    "turn_id": "T5",
+                    "kind": "change",
+                    "quote": "Ai có thể nhận phần hồi quy này?"
+                  },
+                  {
+                    "turn_id": "T6",
+                    "kind": "assign",
+                    "quote": "Em nhận làm kiểm thử hồi quy trước thứ Sáu."
+                  },
+                  {
+                    "turn_id": "T14",
+                    "kind": "support",
+                    "quote": "Nếu có lỗi khác ngoài phạm vi này thì ghi riêng, đừng trộn vào kết quả hồi quy."
+                  }
+                ]
+              },
+              "errors": [
+                "Người phụ trách thiếu bằng chứng giao việc hoặc tự nhận việc"
+              ]
+            }
+          ],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [
+            "kiểm thử"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "19_speakerless_commitment",
+      "turns": 15,
+      "parser_preserves_text": true,
+      "gold_items": 1,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "19_speakerless_commitment",
+        "title": "Có việc và hạn, không có dữ liệu xác định người nhận",
+        "group": "clear",
+        "input_format": "plain",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "action/hướng dẫn: thay ảnh hướng dẫn (needs_confirmation, owner=None, due=ngày mai, conditions=[])",
+        "actual": "action/hướng dẫn: Em nhận thay ảnh hướng dẫn trước ngày mai. (needs_confirmation, owner=None, due=ngày mai)",
+        "lesson": "Một lời tự nhận rõ không cho phép bịa danh tính khi transcript không có người nói.",
+        "metrics": {
+          "decision_tp": 0,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 0,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "7570f3d6dec18f9cfaf9caa4414a079f166ff0430042d704271267e429be6280",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 0,
+          "literal_blocked": [
+            {
+              "item": {
+                "id": "T4",
+                "topic": "Thay ảnh hướng dẫn",
+                "type": "action",
+                "status": "confirmed",
+                "content": "Người nhận việc thay ba ảnh hướng dẫn và kiểm tra lại thứ tự bước trước ngày mai.",
+                "owner": null,
+                "due": "trước ngày mai",
+                "evidence": [
+                  {
+                    "turn_id": "T4",
+                    "quote": "Ai có thể làm phần đó trước khi gửi cho khách?"
+                  },
+                  {
+                    "turn_id": "T5",
+                    "quote": "Em nhận thay ảnh hướng dẫn trước ngày mai."
+                  }
+                ],
+                "reason": "Người nhận việc đã xác nhận và có thời hạn cụ thể.",
+                "history": [
+                  {
+                    "turn_id": "T4",
+                    "kind": "proposal",
+                    "quote": "Ai có thể làm phần đó trước khi gửi cho khách?"
+                  },
+                  {
+                    "turn_id": "T5",
+                    "kind": "assign",
+                    "quote": "Em nhận thay ảnh hướng dẫn trước ngày mai."
+                  }
+                ]
+              },
+              "errors": [
+                "Công việc đã xác định cần người nhận; thiếu người thì cần xác nhận"
+              ]
+            }
+          ],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "6173c3a1b21475a28a725f16fbec5f113eb8f6f3aeb0dd0639de01395d1bd891",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 0,
+          "literal_blocked": [
+            {
+              "item": {
+                "id": "I1",
+                "topic": "hướng dẫn",
+                "type": "action",
+                "status": "confirmed",
+                "content": "Thay ảnh hướng dẫn cho ba bước.",
+                "owner": "Speaker null (T5)",
+                "due": "ngày mai",
+                "evidence": [
+                  {
+                    "turn_id": "T5",
+                    "quote": "Em nhận thay ảnh hướng dẫn trước ngày mai."
+                  },
+                  {
+                    "turn_id": "T7",
+                    "quote": "Không, chỉ thay ba ảnh rồi kiểm tra lại thứ tự bước."
+                  }
+                ],
+                "reason": "Người nhận đã đồng ý và xác định chỉ thay ảnh mà không viết lại toàn bộ tài liệu.",
+                "history": [
+                  {
+                    "turn_id": "T5",
+                    "kind": "change",
+                    "quote": "Em nhận thay ảnh hướng dẫn trước ngày mai."
+                  },
+                  {
+                    "turn_id": "T7",
+                    "kind": "change",
+                    "quote": "Không, chỉ thay ba ảnh rồi kiểm tra lại thứ tự bước."
+                  }
+                ]
+              },
+              "errors": [
+                "Người phụ trách thiếu bằng chứng giao việc hoặc tự nhận việc"
+              ]
+            }
+          ],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [
+            "hướng dẫn"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "v2",
+      "id": "20_explicit_name_in_content",
+      "turns": 16,
+      "parser_preserves_text": true,
+      "gold_items": 1,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "20_explicit_name_in_content",
+        "title": "Người nói Huy giao việc cho Mai",
+        "group": "clear",
+        "input_format": "named",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "action/báo cáo: gửi báo cáo (confirmed, owner=Mai, due=thứ Sáu, conditions=[])",
+        "actual": "action/báo cáo: Mai gửi báo cáo đã đối soát trước thứ Sáu nhé. (confirmed, owner=Mai, due=thứ Sáu)",
+        "lesson": "Tên người nhận ở trong nội dung có thể khác người nói; không dùng vị trí đầu dòng để suy ra owner.",
+        "metrics": {
+          "decision_tp": 0,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 0,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "4191a410187b4170255d668b9d546dd582fc828f374d852336979a94193cc9fe",
+          "strict_pass": false,
+          "ablations": {
+            "topic": true,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "025e720d0b75d5acb8c3c57b454ecd8445d9233b6a63e4574a2d99967897485b",
+          "strict_pass": false,
+          "ablations": {
+            "topic": true,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1"
+          ],
+          "stage_one_topics": [
+            "báo cáo tháng"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "holdout-v3",
+      "id": "H01_reminders",
+      "turns": 18,
+      "parser_preserves_text": true,
+      "gold_items": 1,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "H01_reminders",
+        "title": "Đổi kênh nhắc lịch sau khi kiểm tra chi phí",
+        "group": "change",
+        "input_format": "named",
+        "dataset_version": "3.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "decision/nhắc lịch: thông báo trong ứng dụng (confirmed, owner=None, due=None, conditions=['chỉ cho lịch đã xác nhận'])",
+        "actual": "decision/nhắc lịch: Chốt dùng thông báo trong ứng dụng, chỉ cho lịch đã xác nhận. SMS không dùng ở tuần thử này. (confirmed, owner=None, due=None)",
+        "lesson": "Giữ kênh cuối và phạm vi lịch đã xác nhận; không tự tạo cơ chế SMS dự phòng.",
+        "metrics": {
+          "decision_tp": 1,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 1,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "f40f9d549e573bc47fc7e66107821d94e9c07f54a682126d8fc5caffd2975b01",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "9acf32b5b03377d1b2336bca8a21a63ede9ce387a12bb05987ff875238e46fb3",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1"
+          ],
+          "stage_one_topics": [
+            "lịch demo"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "holdout-v3",
+      "id": "H02_conditional_export",
+      "turns": 18,
+      "parser_preserves_text": true,
+      "gold_items": 3,
+      "gold_source_observations": [
+        {
+          "kind": "status_policy_not_defined_for_this_type_in_prompt",
+          "type": "request_feedback",
+          "status": "needs_confirmation"
+        },
+        {
+          "kind": "status_policy_not_defined_for_this_type_in_prompt",
+          "type": "issue",
+          "status": "needs_confirmation"
+        }
+      ],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "H02_conditional_export",
+        "title": "Giao việc bằng tên trong transcript không có người nói",
+        "group": "clear",
+        "input_format": "plain",
+        "dataset_version": "3.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "request_feedback/xuất dữ liệu: CSV đã mã hóa (needs_confirmation, owner=None, due=None, conditions=[]); issue/pháp chế: chưa xác nhận (needs_confirmation, owner=None, due=None, conditions=[]); action/xuất dữ liệu: CSV đã mã hóa (needs_confirmation, owner=Ngọc, due=thứ Năm, conditions=['sau khi pháp chế xác nhận'])",
+        "actual": "request_feedback/xuất dữ liệu: Phản hồi của đối tác là họ cần CSV đã mã hóa, không nhận file mở trực tiếp. (needs_confirmation, owner=None, due=None); issue/pháp chế: Vướng mắc là pháp chế chưa xác nhận quyền xuất bản danh sách. (needs_confirmation, owner=None, due=None); action/xuất dữ liệu: Ngọc xuất bản CSV đã mã hóa sau khi pháp chế xác nhận, hạn trước thứ Năm. (needs_confirmation, owner=Ngọc, due=thứ Năm)",
+        "lesson": "Tên người nhận đến từ nội dung giao việc; cam kết phụ thuộc pháp chế chưa thể coi là công việc vô điều kiện.",
+        "metrics": {
+          "decision_tp": 0,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 0,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "f983aeb4dfc31b22fc24bbc11d808e0a7ac3d0c0fa90197223de00accfe9e906",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [
+            "T4",
+            "T6"
+          ],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "d25176d42cf6e4ca80aaaf704566c8dcc0e9953e72a7fab8b8ef7970fb08d35b",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 3,
+          "accepted": 3,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1",
+            "I2",
+            "I3"
+          ],
+          "stage_one_topics": [
+            "danh sách khách",
+            "pháp chế",
+            "hạn giao"
+          ],
+          "expected_evidence_not_in_stage_one": [
+            "T4"
+          ],
+          "expected_evidence_not_in_any_candidate": [
+            "T4"
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "holdout-v3",
+      "id": "H03_reopened_backup",
+      "turns": 18,
+      "parser_preserves_text": true,
+      "gold_items": 2,
+      "gold_source_observations": [
+        {
+          "kind": "status_policy_not_defined_for_this_type_in_prompt",
+          "type": "issue",
+          "status": "needs_confirmation"
+        }
+      ],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "H03_reopened_backup",
+        "title": "Quyết định sao lưu được mở lại vì dung lượng",
+        "group": "unresolved",
+        "input_format": "labels",
+        "dataset_version": "3.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "unresolved/sao lưu: chưa chốt số ngày giữ bản sao (unresolved, owner=None, due=None, conditions=[]); issue/dung lượng: chưa có số liệu dung lượng (needs_confirmation, owner=None, due=None, conditions=[])",
+        "actual": "unresolved/sao lưu: Hôm nay chưa chốt số ngày giữ bản sao, cả bảy, mười bốn và ba mươi ngày đều chưa được chọn. (unresolved, owner=None, due=None); issue/dung lượng: Vướng mắc là chưa có số liệu dung lượng của bản sao hằng ngày. (needs_confirmation, owner=None, due=None)",
+        "lesson": "Không giữ quyết định đã hủy; một phương án thay thế được nhắc đến chưa trở thành lựa chọn cuối.",
+        "metrics": {
+          "decision_tp": 0,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 2,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "291becd5c1b5591583ad10315fda41af9ea4b3b2efa633017d47a239a4fcfcc0",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [
+            "T11"
+          ],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "90e7ddd0f26c05e6bb683f98604fe5ed2cb870f3a98e55b27379947475c746f9",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1"
+          ],
+          "stage_one_topics": [
+            "lưu trữ"
+          ],
+          "expected_evidence_not_in_stage_one": [
+            "T11",
+            "T16"
+          ],
+          "expected_evidence_not_in_any_candidate": [
+            "T11"
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "holdout-v3",
+      "id": "H04_discount_request",
+      "turns": 18,
+      "parser_preserves_text": true,
+      "gold_items": 3,
+      "gold_source_observations": [
+        {
+          "kind": "status_policy_not_defined_for_this_type_in_prompt",
+          "type": "request_feedback",
+          "status": "needs_confirmation"
+        }
+      ],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "H04_discount_request",
+        "title": "Phản hồi kinh doanh và lời nhận việc có điều kiện",
+        "group": "indirect",
+        "input_format": "mixed",
+        "dataset_version": "3.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "request_feedback/hạn mức giảm giá: 20% (needs_confirmation, owner=None, due=None, conditions=[]); unresolved/hạn mức giảm giá: chưa chốt tăng hạn mức giảm giá (unresolved, owner=None, due=None, conditions=[]); action/hạn mức giảm giá: cập nhật bảng hạn mức giảm giá (needs_confirmation, owner=Huy, due=thứ Hai, conditions=['Nếu tài chính xác nhận'])",
+        "actual": "request_feedback/hạn mức giảm giá: Họ muốn tăng hạn mức giảm giá lên 20% cho đợt giới thiệu. (needs_confirmation, owner=None, due=None); unresolved/hạn mức giảm giá: Đúng, chưa chốt tăng hạn mức giảm giá trong buổi này. (unresolved, owner=None, due=None); action/hạn mức giảm giá: Nếu tài chính xác nhận, em nhận cập nhật bảng hạn mức giảm giá trước thứ Hai. (needs_confirmation, owner=Huy, due=thứ Hai)",
+        "lesson": "Yêu cầu của kinh doanh chưa là quyết định; việc được nhận có điều kiện phải giữ điều kiện và chưa tự chuyển thành vô điều kiện.",
+        "metrics": {
+          "decision_tp": 0,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 1,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "b2f0e1984cfacbf052dba4570561bfb58602a7327cbf4f8a6a90b9590ba4a125",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [
+            "T10",
+            "T11"
+          ],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "4d058802dcaf3c444f9776171d10280e0c9f7c62414c20d017c340b6ef958e87",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 0,
+          "literal_blocked": [
+            {
+              "item": {
+                "id": "I1",
+                "topic": "hạn mức giảm giá",
+                "type": "action",
+                "status": "confirmed",
+                "content": "Phần hạn mức giảm giá chưa chốt tăng trong buổi này.",
+                "owner": null,
+                "due": null,
+                "evidence": [
+                  {
+                    "turn_id": "T10",
+                    "quote": "Đúng, chưa chốt tăng hạn mức giảm giá trong buổi này."
+                  },
+                  {
+                    "turn_id": "T9",
+                    "quote": "Vậy hôm nay mình ghi phản hồi, còn số mới cần chờ tài chính."
+                  }
+                ],
+                "reason": "Lan và Huy đã xác nhận không chốt tăng hạn mức giảm giá trong buổi này, chỉ ghi phản hồi chờ tài chính xác nhận.",
+                "history": [
+                  {
+                    "turn_id": "T10",
+                    "kind": "change",
+                    "quote": "Đúng, chưa chốt tăng hạn mức giảm giá trong buổi này."
+                  },
+                  {
+                    "turn_id": "T9",
+                    "kind": "defer",
+                    "quote": "Vậy hôm nay mình ghi phản hồi, còn số mới cần chờ tài chính."
+                  }
+                ]
+              },
+              "errors": [
+                "Công việc đã xác định cần người nhận; thiếu người thì cần xác nhận"
+              ]
+            }
+          ],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [
+            "hạn mức giảm giá"
+          ],
+          "expected_evidence_not_in_stage_one": [
+            "T11",
+            "T2"
+          ],
+          "expected_evidence_not_in_any_candidate": [
+            "T11",
+            "T2"
+          ],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "holdout-v3",
+      "id": "H05_webhook_limit",
+      "turns": 18,
+      "parser_preserves_text": true,
+      "gold_items": 2,
+      "gold_source_observations": [],
+      "oracle_guard_blocked": [
+        {
+          "item": {
+            "id": "O2",
+            "topic": "kiểm tra webhook",
+            "type": "action",
+            "status": "confirmed",
+            "content": "Em sẽ gửi báo cáo kiểm tra webhook trước thứ Sáu.",
+            "owner": "Mai",
+            "due": "thứ Sáu",
+            "evidence": [
+              {
+                "turn_id": "T15",
+                "quote": "Em sẽ gửi báo cáo kiểm tra webhook trước thứ Sáu."
+              }
+            ],
+            "reason": "Diagnostic oracle: fields from frozen label, content from source; not a model prediction.",
+            "history": [
+              {
+                "turn_id": "T2",
+                "kind": "other",
+                "quote": "Có thể gửi lại liên tục cho đến khi nhận được phản hồi thành công."
+              },
+              {
+                "turn_id": "T6",
+                "kind": "other",
+                "quote": "Vậy gửi lại tối đa ba lần, cách nhau 30 giây được không?"
+              },
+              {
+                "turn_id": "T13",
+                "kind": "other",
+                "quote": "Chốt gửi lại tối đa ba lần, cách nhau 30 giây; sau đó vẫn lỗi thì giữ trạng thái thất bại."
+              }
+            ]
+          },
+          "errors": [
+            "Người phụ trách thiếu bằng chứng giao việc hoặc tự nhận việc"
+          ]
+        }
+      ],
+      "oracle_strict_score": {
+        "id": "H05_webhook_limit",
+        "title": "Chốt giới hạn webhook và người gửi báo cáo",
+        "group": "clear",
+        "input_format": "named",
+        "dataset_version": "3.0",
+        "passed": false,
+        "errors": [
+          "Thiếu/sai action: kiểm tra webhook / báo cáo kiểm tra webhook",
+          "1 mục không qua validator"
+        ],
+        "expectation": "decision/webhook: gửi lại (confirmed, owner=None, due=None, conditions=['tối đa ba lần', 'cách nhau 30 giây', 'trạng thái thất bại']); action/kiểm tra webhook: báo cáo kiểm tra webhook (confirmed, owner=Mai, due=thứ Sáu, conditions=[])",
+        "actual": "decision/webhook: Chốt gửi lại tối đa ba lần, cách nhau 30 giây; sau đó vẫn lỗi thì giữ trạng thái thất bại. (confirmed, owner=None, due=None)",
+        "lesson": "Giữ giới hạn số lần/khoảng cách và trạng thái sau thất bại; giao và nhận cùng một báo cáo là một công việc.",
+        "metrics": {
+          "decision_tp": 1,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 1,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "01053a4ceb660d524a4f61f890e6af6518bb9ee385dfe67f9857dcb418fef7c6",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 2,
+          "accepted": 2,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "172bc7a23d8c539295cdb2e51a08b27fb60a4ae353746e96ad8e26ba245ee6cb",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 2,
+          "accepted": 2,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1",
+            "I2"
+          ],
+          "stage_one_topics": [
+            "webhook"
+          ],
+          "expected_evidence_not_in_stage_one": [
+            "T15"
+          ],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    },
+    {
+      "suite": "holdout-v3",
+      "id": "H06_unsettled_rota",
+      "turns": 18,
+      "parser_preserves_text": true,
+      "gold_items": 2,
+      "gold_source_observations": [
+        {
+          "kind": "status_policy_not_defined_for_this_type_in_prompt",
+          "type": "issue",
+          "status": "needs_confirmation"
+        }
+      ],
+      "oracle_guard_blocked": [],
+      "oracle_strict_score": {
+        "id": "H06_unsettled_rota",
+        "title": "Ok và để em xem chưa tạo người phụ trách lịch trực",
+        "group": "indirect",
+        "input_format": "plain",
+        "dataset_version": "3.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "unresolved/lịch trực: chưa thống nhất lịch trực (unresolved, owner=None, due=None, conditions=[]); issue/lịch làm việc: chưa có lịch làm việc (needs_confirmation, owner=None, due=None, conditions=[])",
+        "actual": "unresolved/lịch trực: Hôm nay chưa thống nhất lịch trực; chưa giao ai chốt danh sách. (unresolved, owner=None, due=None); issue/lịch làm việc: Vướng mắc là chưa có lịch làm việc của nhóm hỗ trợ để kiểm tra ca trùng. (needs_confirmation, owner=None, due=None)",
+        "lesson": "Không biến ok/để em xem thành một công việc đã giao; giữ thiếu danh tính thay vì tạo người phụ trách.",
+        "metrics": {
+          "decision_tp": 0,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 2,
+          "invented_owner_due": 0
+        }
+      },
+      "arms": {
+        "baseline_b": {
+          "source_canonical_sha256": "b04af3373c98b26a3e8a4457398971dde3b39217d27d1b0b979f8e3e200beecf",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [],
+          "stage_one_topics": [],
+          "expected_evidence_not_in_stage_one": null,
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        },
+        "pipeline": {
+          "source_canonical_sha256": "4da563e7590e8a7b66e6916a0b12ecbb4188eb26b85248576a6adbc4edf0e985",
+          "strict_pass": false,
+          "ablations": {
+            "topic": false,
+            "content_phrase": false,
+            "conditions": false,
+            "status": false,
+            "owner": false,
+            "due": false,
+            "evidence": false,
+            "history": false,
+            "extras": false,
+            "queue": false
+          },
+          "candidates": 1,
+          "accepted": 1,
+          "literal_blocked": [],
+          "verifier_rejected_ids": [],
+          "verifier_all_pass_ids": [
+            "I1"
+          ],
+          "stage_one_topics": [
+            "lịch trực hỗ trợ"
+          ],
+          "expected_evidence_not_in_stage_one": [],
+          "expected_evidence_not_in_any_candidate": [],
+          "error": null
+        }
+      }
+    }
+  ],
+  "verifier_diagnostics": [
+    {
+      "suite": "v2",
+      "case": "02_change_aba",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 441,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "03_switch_condition",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 443,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "03_switch_condition",
+      "item_id": "I2",
+      "all_pass": true,
+      "reason_chars": 303,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "04_interleaved",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 1127,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "04_interleaved",
+      "item_id": "I2",
+      "all_pass": true,
+      "reason_chars": 787,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "06_ambiguous_ok",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 429,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "06_ambiguous_ok",
+      "item_id": "I2",
+      "all_pass": true,
+      "reason_chars": 387,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "07_let_me_check",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 281,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "09_named_assignee_no_speaker",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 282,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "10_indirect_consensus",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 383,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "11_unresolved_budget",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 289,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "12_reopen_confirmed",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 619,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "12_reopen_confirmed",
+      "item_id": "I2",
+      "all_pass": true,
+      "reason_chars": 468,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "13_speakerless_pending",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 698,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "14_request_not_assignment",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 391,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "15_conditional_task",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 5141,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "15_conditional_task",
+      "item_id": "I2",
+      "all_pass": true,
+      "reason_chars": 773,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "15_conditional_task",
+      "item_id": "I3",
+      "all_pass": true,
+      "reason_chars": 756,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "17_clear_assignment",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 976,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "17_clear_assignment",
+      "item_id": "I2",
+      "all_pass": true,
+      "reason_chars": 433,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "17_clear_assignment",
+      "item_id": "I3",
+      "all_pass": true,
+      "reason_chars": 377,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "17_clear_assignment",
+      "item_id": "I4",
+      "all_pass": true,
+      "reason_chars": 393,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "17_clear_assignment",
+      "item_id": "I5",
+      "all_pass": true,
+      "reason_chars": 405,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "v2",
+      "case": "20_explicit_name_in_content",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 368,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "holdout-v3",
+      "case": "H01_reminders",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 474,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "holdout-v3",
+      "case": "H02_conditional_export",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 1031,
+      "chinese": true,
+      "repeats_prompt": true
+    },
+    {
+      "suite": "holdout-v3",
+      "case": "H02_conditional_export",
+      "item_id": "I2",
+      "all_pass": true,
+      "reason_chars": 342,
+      "chinese": true,
+      "repeats_prompt": true
+    },
+    {
+      "suite": "holdout-v3",
+      "case": "H02_conditional_export",
+      "item_id": "I3",
+      "all_pass": true,
+      "reason_chars": 338,
+      "chinese": true,
+      "repeats_prompt": true
+    },
+    {
+      "suite": "holdout-v3",
+      "case": "H03_reopened_backup",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 2446,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "holdout-v3",
+      "case": "H05_webhook_limit",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 707,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "holdout-v3",
+      "case": "H05_webhook_limit",
+      "item_id": "I2",
+      "all_pass": true,
+      "reason_chars": 304,
+      "chinese": false,
+      "repeats_prompt": false
+    },
+    {
+      "suite": "holdout-v3",
+      "case": "H06_unsettled_rota",
+      "item_id": "I1",
+      "all_pass": true,
+      "reason_chars": 228,
+      "chinese": false,
+      "repeats_prompt": false
+    }
+  ]
+}

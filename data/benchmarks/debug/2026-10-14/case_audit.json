@@ -1,0 +1,188 @@
+{
+  "reviewer": "Codex/AI debugging; not independent",
+  "not_new_quality_score": true,
+  "cases": [
+    {
+      "id": "01_change_ab",
+      "input_judgement": "Hợp lý: B cuối và Lan nhận cấu hình đều rõ.",
+      "benchmark_concern": "Topic triển khai/cấu hình là alias; history yêu cầu đúng ID.",
+      "baseline_failure": "Owner/due null dù content có người/hạn; thiếu history chốt cuối.",
+      "pipeline_failure": "Bước 1 bỏ T16, đầu ra thiếu action; decision gắn owner nên guard chặn."
+    },
+    {
+      "id": "02_change_aba",
+      "input_judgement": "Hợp lý: đổi sáng → chiều → sáng có lần chốt cuối rõ.",
+      "benchmark_concern": "Cần evidence lần chốt cuối, không chỉ đúng chữ sáng.",
+      "baseline_failure": "Content trùng kết luận nhưng không dẫn T15; history dừng trước lần quay lại A.",
+      "pipeline_failure": "Đạt toàn case trong lượt lịch sử."
+    },
+    {
+      "id": "03_switch_condition",
+      "input_judgement": "Hợp lý: chọn B có điều kiện, pháp chế chưa duyệt.",
+      "benchmark_concern": "Gold chỉ một decision, không liệt kê blocker pháp chế có thật.",
+      "baseline_failure": "Ghi lựa chọn có điều kiện thành unresolved; quy ước decision có điều kiện cần rõ.",
+      "pipeline_failure": "Topic lưu trữ xuất hiện ở bước 1 và được bước 2 dùng lại; thêm action từ câu chưa ký."
+    },
+    {
+      "id": "04_interleaved",
+      "input_judgement": "Hợp lý: hai đối tượng đan xen, B đã chốt, lịch demo còn mở.",
+      "benchmark_concern": "Lịch trình bày/lịch demo cùng đối tượng; exact topic phạt alias.",
+      "baseline_failure": "Đúng hai nội dung chính, trượt topic.",
+      "pipeline_failure": "Lịch demo bị ghi issue và mất phương án chiều thứ Tư."
+    },
+    {
+      "id": "05_unnamed_reversal",
+      "input_judgement": "Hợp lý: không có nhãn nhưng chốt cổng B rõ.",
+      "benchmark_concern": "Gold không kiểm tra đầy đủ phạm vi chuyển đổi; lesson cũ còn nói parser chưa hỗ trợ.",
+      "baseline_failure": "Đúng B nhưng thêm action không phải việc mới; có nội dung tiếng Trung.",
+      "pipeline_failure": "Lượt lịch sử bị cắt; lượt trace mới hoàn tất cả ba bước. Chưa biết tầng gây cắt cũ."
+    },
+    {
+      "id": "06_ambiguous_ok",
+      "input_judgement": "Hợp lý: ok không đủ để chọn ví.",
+      "benchmark_concern": "Có thể ghi thêm trạng thái thanh toán cũ có nguồn, nhưng không thay câu chưa chốt ví.",
+      "baseline_failure": "Không evidence/reason; sai loại và mất unresolved chính.",
+      "pipeline_failure": "Không giữ đầy đủ câu chưa chốt ví; ghi đề xuất thành issue."
+    },
+    {
+      "id": "07_let_me_check",
+      "input_judgement": "Hợp lý: ý định xem chưa phải nhận sửa.",
+      "benchmark_concern": "Status issue chưa định nghĩa; unresolved/needs_confirmation cho ý định mơ hồ chưa mô tả rõ.",
+      "baseline_failure": "Giữ blocker nhưng mất câu hỏi về người nhận; sai status theo gold.",
+      "pipeline_failure": "Bước 1 bỏ T4; thiếu blocker chưa tái hiện và nội dung chưa giao."
+    },
+    {
+      "id": "08_self_commit_label",
+      "input_judgement": "Hợp lý với chính sách không dùng nhãn làm danh tính.",
+      "benchmark_concern": "Tách cam kết đã có khỏi danh tính chưa biết sẽ rõ hơn một status chung.",
+      "baseline_failure": "Task bị đổi thành issue; mất trường due; confirmed không hợp chính sách actor.",
+      "pipeline_failure": "Nội dung việc có nhưng confirmed với owner null; guard chặn."
+    },
+    {
+      "id": "09_named_assignee_no_speaker",
+      "input_judgement": "Hợp lý: tên Lan nằm trong lời giao.",
+      "benchmark_concern": "Tiền tố trước làm lệch due dù quan hệ deadline được giữ.",
+      "baseline_failure": "Candidate đúng câu/người/hạn nhưng due null và reason trống.",
+      "pipeline_failure": "Đúng ngữ nghĩa; lỗi chuẩn hóa due trước thứ Sáu."
+    },
+    {
+      "id": "10_indirect_consensus",
+      "input_judgement": "Hợp lý: nhiều lượt đồng thuận dùng một cột.",
+      "benchmark_concern": "Topic báo cáo/màn hình báo cáo là alias.",
+      "baseline_failure": "Đúng nghĩa, trượt exact topic.",
+      "pipeline_failure": "Đúng nghĩa, trượt exact topic."
+    },
+    {
+      "id": "11_unresolved_budget",
+      "input_judgement": "Hợp lý: hoãn chọn vì thiếu báo giá.",
+      "benchmark_concern": "Cần định nghĩa unresolved so với needs_confirmation; có blocker chưa đủ báo giá ngoài gold.",
+      "baseline_failure": "Đúng nghĩa, trượt topic.",
+      "pipeline_failure": "Nội dung hoãn đúng, chỉ status khác gold; không đủ để nói model hiểu sai sự kiện."
+    },
+    {
+      "id": "12_reopen_confirmed",
+      "input_judgement": "Hợp lý: lịch phát hành bị mở lại vì vấn đề mới.",
+      "benchmark_concern": "Gold bỏ issue hoàn tiền có thật; scorer coi mục dư là lỗi.",
+      "baseline_failure": "Candidate giữ câu chốt cũ; unresolved/confirmed mâu thuẫn.",
+      "pipeline_failure": "Giữ hoãn nhưng type decision; issue có nguồn bị phạt thêm vì ngoài gold."
+    },
+    {
+      "id": "13_speakerless_pending",
+      "input_judgement": "Hợp lý: cuối họp chưa chọn cách tải.",
+      "benchmark_concern": "Khác chuỗi diễn đạt và topic; status chưa định nghĩa đầy đủ.",
+      "baseline_failure": "Đúng câu hỏi mở, khác cách viết và topic.",
+      "pipeline_failure": "Nội dung chưa thống nhất đúng, status khác gold; chưa đủ quy trách nhiệm ngữ nghĩa thuần túy."
+    },
+    {
+      "id": "14_request_not_assignment",
+      "input_judgement": "Hợp lý: yêu cầu tháng chưa thành việc.",
+      "benchmark_concern": "Status request chưa định nghĩa; phản hồi chữ nhỏ cũng có nguồn nhưng gold không liệt kê.",
+      "baseline_failure": "Sai type, không evidence, thiếu câu chưa chọn trường thời gian.",
+      "pipeline_failure": "Bước 1 bỏ T2; mất yêu cầu bộ lọc tháng, chỉ còn vấn đề chung."
+    },
+    {
+      "id": "15_conditional_task",
+      "input_judgement": "Hợp lý: Lan nhận có điều kiện, sandbox chưa mở.",
+      "benchmark_concern": "Gold cần owner Lan; guard không nhận em mới nhận; status issue chưa rõ.",
+      "baseline_failure": "Bỏ action có điều kiện; thông tin sandbox không đủ thay việc.",
+      "pipeline_failure": "Candidate thay action bằng issue; oracle Lan đúng cũng bị guard bác."
+    },
+    {
+      "id": "16_clear_decision",
+      "input_judgement": "Hợp lý: phát hành 2.1 thứ Hai được chốt rõ.",
+      "benchmark_concern": "Ngày trong decision có thật nhưng schema chỉ cho action có due.",
+      "baseline_failure": "Đúng nghĩa, trượt topic dài.",
+      "pipeline_failure": "Candidate đúng nghĩa nhưng due trên decision làm guard chặn."
+    },
+    {
+      "id": "17_clear_assignment",
+      "input_judgement": "Hợp lý nhưng tải nhiều nhóm: sáu mục trong 24 lượt.",
+      "benchmark_concern": "Exact topic, status issue/request chưa rõ; cần chấm theo item thay all-or-nothing.",
+      "baseline_failure": "Thiếu feedback, owner null, sai type/status; thêm định nghĩa contract vẫn chưa hết lỗi.",
+      "pipeline_failure": "Bước 1 bỏ feedback T7; sai trạng thái/người/hạn ở nhiều mục."
+    },
+    {
+      "id": "18_anonymous_assignment",
+      "input_judgement": "Hợp lý với chính sách không dùng speaker label làm tên thật.",
+      "benchmark_concern": "Status trộn độ rõ của việc và danh tính; cần chính sách explicit.",
+      "baseline_failure": "Đặt owner Người nói 2; guard chặn.",
+      "pipeline_failure": "Đặt owner Người nói 2; guard chặn."
+    },
+    {
+      "id": "19_speakerless_commitment",
+      "input_judgement": "Hợp lý: việc/hạn rõ, người chưa rõ.",
+      "benchmark_concern": "Không nên bắt biết tên thật để coi lời nhận việc tồn tại; cần tách actor uncertainty.",
+      "baseline_failure": "Confirmed với owner null; guard chặn.",
+      "pipeline_failure": "Tạo owner Speaker null (T5); guard chặn."
+    },
+    {
+      "id": "20_explicit_name_in_content",
+      "input_judgement": "Hợp lý: Huy giao Mai, Mai nhận.",
+      "benchmark_concern": "Exact topic gây fail; metric invented_owner_due báo hai trường bịa dù đúng nguồn.",
+      "baseline_failure": "Đúng nghĩa, trượt topic.",
+      "pipeline_failure": "Đúng nghĩa, trượt topic."
+    },
+    {
+      "id": "H01_reminders",
+      "input_judgement": "Hợp lý: bỏ SMS, chọn in-app có giới hạn.",
+      "benchmark_concern": "History bắt T2/T7/T15, không chấp nhận chuỗi T3/T6/T15 đã đủ chứng minh đổi kênh; topic typo cũng bị phạt.",
+      "baseline_failure": "Giữ kết luận/điều kiện và đổi kênh đúng, trượt topic và exact history.",
+      "pipeline_failure": "Gắn lịch demo cho nhắc lịch; history mất SMS."
+    },
+    {
+      "id": "H02_conditional_export",
+      "input_judgement": "Hợp lý: Ngọc chỉ xuất sau pháp chế và phải mã hóa.",
+      "benchmark_concern": "Status issue/request chưa rõ, nhưng mất điều kiện là lỗi thật không phụ thuộc ontology.",
+      "baseline_failure": "Bỏ request và blocker; conditional action confirmed.",
+      "pipeline_failure": "Bước 1 bỏ request T4; content/reason sai điều kiện và verifier vẫn pass."
+    },
+    {
+      "id": "H03_reopened_backup",
+      "input_judgement": "Hợp lý: hủy 30 ngày, chưa chọn số ngày mới.",
+      "benchmark_concern": "Status issue chưa rõ; yêu cầu exact history có thể phạt trace khác nhưng cùng nghĩa.",
+      "baseline_failure": "Không hồi sinh 30 ngày nhưng bỏ blocker dung lượng.",
+      "pipeline_failure": "Bước 1 bỏ blocker/kết luận cuối; sau đó giữ câu chưa chốt nhưng sai status."
+    },
+    {
+      "id": "H04_discount_request",
+      "input_judgement": "Hợp lý: đề nghị 20% chưa chốt và Huy nhận có điều kiện.",
+      "benchmark_concern": "Status request chưa định nghĩa; một câu tổng hợp không bao phủ đủ ba nhóm kỳ vọng.",
+      "baseline_failure": "Chỉ còn unresolved; bỏ request 20% và action Huy.",
+      "pipeline_failure": "Bước 1 bỏ request/action; câu chưa chốt bị đổi thành action confirmed và bị chặn."
+    },
+    {
+      "id": "H05_webhook_limit",
+      "input_judgement": "Hợp lý: giới hạn retry và Mai nhận gửi báo cáo.",
+      "benchmark_concern": "Guard không nhận em sẽ gửi; có thể bổ sung T14 nêu tên để qua.",
+      "baseline_failure": "Decision đúng; mất hạn của action trong content/field.",
+      "pipeline_failure": "Mất owner/hạn và đổi trạng thái việc đã nhận; history thiếu đề xuất ban đầu."
+    },
+    {
+      "id": "H06_unsettled_rota",
+      "input_judgement": "Hợp lý: hai/ba người chưa chọn, chưa có lịch để xếp.",
+      "benchmark_concern": "Status issue chưa định nghĩa; cần phân biệt không giao việc với mất blocker.",
+      "baseline_failure": "Không bịa assignment nhưng bỏ blocker lịch làm việc.",
+      "pipeline_failure": "Thiếu blocker và trace phương án; nội dung chưa chốt đúng nhưng status khác gold."
+    }
+  ]
+}

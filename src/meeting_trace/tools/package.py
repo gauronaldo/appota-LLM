@@ -11,7 +11,7 @@ from ..config import PATHS
 
 ROOT = PATHS.root
 
-ROOT_FILES = ['README.md', 'TESTS.md', 'pyproject.toml', 'requirements.txt', 'run.cmd', 'run.ps1',
+ROOT_FILES = ['README.md', 'TESTS.md', 'DEBUG.md', 'pyproject.toml', 'requirements.txt', 'run.cmd', 'run.ps1',
               '.env.example', '.gitignore', '.gitattributes', '.editorconfig']
 SOURCE_DIRS = ['src', 'tests', 'data', '.github']
 SHOWCASE_DOCS = ['docs/architecture.md', 'docs/development.md', 'docs/reports/TESTS.md',

@@ -1,0 +1,65 @@
+{
+  "kind": "code_boundary_probes_no_model",
+  "not_benchmark": true,
+  "probes": [
+    {
+      "id": "self_will_send",
+      "expected": "accept known-speaker commitment",
+      "accepted": false,
+      "blocked": [
+        {
+          "item": {
+            "id": "P1",
+            "topic": "báo cáo",
+            "type": "action",
+            "status": "confirmed",
+            "content": "Em sẽ gửi báo cáo trước thứ Sáu.",
+            "owner": "Mai",
+            "due": "thứ Sáu",
+            "evidence": [
+              {
+                "turn_id": "T1",
+                "quote": "Em sẽ gửi báo cáo trước thứ Sáu."
+              }
+            ],
+            "reason": "Boundary probe",
+            "history": []
+          },
+          "errors": [
+            "Người phụ trách thiếu bằng chứng giao việc hoặc tự nhận việc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "self_accept_send",
+      "expected": "accept known-speaker commitment",
+      "accepted": true,
+      "blocked": []
+    },
+    {
+      "id": "named_but_not_assigned",
+      "expected": "reject unsupported/unconditional action",
+      "accepted": true,
+      "blocked": []
+    },
+    {
+      "id": "drop_condition",
+      "expected": "reject unsupported/unconditional action",
+      "accepted": true,
+      "blocked": []
+    },
+    {
+      "id": "overridden_decision",
+      "expected": "reject cancelled decision",
+      "accepted": true,
+      "blocked": []
+    },
+    {
+      "id": "unresolved_status_ambiguity",
+      "expected": "schema permits status that disagrees with gold policy",
+      "accepted": true,
+      "blocked": []
+    }
+  ]
+}

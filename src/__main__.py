@@ -16,6 +16,10 @@ COMMANDS = {
     'read-results': 'meeting_trace.tools.read_results',
     'record-reviews': 'meeting_trace.tools.record_reviews',
     'report': 'meeting_trace.evaluation.submission_report',
+    'debug': 'meeting_trace.evaluation.debugging',
+    'debug-live': 'meeting_trace.evaluation.debug_live',
+    'debug-verifier': 'meeting_trace.evaluation.debug_verifier',
+    'debug-report': 'meeting_trace.evaluation.debug_report',
 }
 
 

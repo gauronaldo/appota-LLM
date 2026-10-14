@@ -6,6 +6,8 @@ Qwen 7B: chấm tự động prompt đơn **0/20**, pipeline **1/20**; sáu case
 Chạy ngay bằng **Python 3.10+**, `python src`; mặc định quy tắc local, không cần Ollama, API key hay pip dependency.
 Giới hạn chính: **chưa chứng minh chất lượng cốt lõi**; [TESTS.md](TESTS.md) tách lỗi định dạng/ngữ nghĩa và công khai thất bại.
 
+[DEBUG.md](DEBUG.md) phân tích từng tầng và đủ 26 case: đã tái hiện lỗi guard/verifier và lỗi scorer/contract. Các thử nghiệm debug riêng không thay điểm benchmark hay sửa pipeline đã đóng băng.
+
 ## Chạy thử trên máy
 
 ```bash

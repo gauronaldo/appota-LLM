@@ -1,0 +1,63 @@
+{
+  "kind": "scorer_boundary_probes_not_quality_score",
+  "probes": [
+    {
+      "id": "negated_05_unnamed_reversal",
+      "expected": "fail contradictory conclusion",
+      "actual_passed": true,
+      "content": "Không chuyển sang cổng B cho đợt thử tiếp theo.",
+      "score": {
+        "id": "05_unnamed_reversal",
+        "title": "Đổi cổng thanh toán trong transcript không có người nói",
+        "group": "change",
+        "input_format": "plain",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "decision/thanh toán: cổng B (confirmed, owner=None, due=None, conditions=[])",
+        "actual": "decision/thanh toán: Không chuyển sang cổng B cho đợt thử tiếp theo. (confirmed, owner=None, due=None)",
+        "lesson": "Transcript vẫn có kết luận rõ dù thiếu người nói; parser hiện tại phải được đánh giá là chưa hỗ trợ, không biến lỗi input thành kết quả trống đạt.",
+        "metrics": {
+          "decision_tp": 1,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 2,
+          "invented_owner_due": 0
+        }
+      }
+    },
+    {
+      "id": "negated_03_switch_condition",
+      "expected": "fail contradictory conclusion",
+      "actual_passed": true,
+      "content": "Không chọn gói B nếu pháp chế duyệt điều khoản lưu dữ liệu.",
+      "score": {
+        "id": "03_switch_condition",
+        "title": "Đổi nhà cung cấp nhưng giữ điều kiện phê duyệt",
+        "group": "change",
+        "input_format": "labels",
+        "dataset_version": "2.0",
+        "passed": true,
+        "errors": [],
+        "expectation": "decision/email: gói B (confirmed, owner=None, due=None, conditions=['nếu pháp chế duyệt'])",
+        "actual": "decision/email: Không chọn gói B nếu pháp chế duyệt điều khoản lưu dữ liệu. (confirmed, owner=None, due=None)",
+        "lesson": "Điều kiện là một phần của quyết định; không được biến chọn có điều kiện thành quyền triển khai ngay.",
+        "metrics": {
+          "decision_tp": 1,
+          "decision_fp": 0,
+          "decision_fn": 0,
+          "intermediate_promoted": 0,
+          "intermediate_total": 2,
+          "invented_owner_due": 0
+        }
+      }
+    },
+    {
+      "id": "legitimate_fields_counted_invented",
+      "expected": "owner Mai and due thứ Sáu have source; neither is invented",
+      "metric": 2,
+      "source_canonical_sha256": "4191a410187b4170255d668b9d546dd582fc828f374d852336979a94193cc9fe"
+    }
+  ]
+}
