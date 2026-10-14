@@ -1,0 +1,562 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "1d701ac42664432d5011c5a8c7a4a71300effa107b36809a91cd5f5a1da88daf",
+    "automated": true,
+    "semantic_verification": true,
+    "verification_method": "llm_judgment",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về báo cáo, khách đã xem hai loại biểu đồ trong bản demo."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Họ muốn so xu hướng theo thời gian, không phải so từng nhóm độc lập."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Biểu đồ đường phù hợp với cách đọc đó hơn biểu đồ cột."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Số liệu trả từ API giống nhau, không cần đổi phần dữ liệu."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Chốt dùng biểu đồ đường trên màn hình báo cáo."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Khách xem bản demo trên điện thoại nên màn hình nhỏ hơn máy của mình."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Về nhãn biểu đồ, phản hồi của khách là chữ quá nhỏ khi xem trên điện thoại."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về tài liệu, mình cần hướng dẫn dùng bố cục mới."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Em nhận cập nhật tài liệu sử dụng."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Phần đó chưa có hạn trong lịch giao việc, đừng tự lấy ngày phát hành."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Đúng, hôm nay em nhận việc nhưng chưa cam kết thời hạn cụ thể."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về bảo mật, cần xem lại quyền tải báo cáo của khách."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Cần làm rà soát quyền truy cập trước thứ Hai."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Ai sẽ nhận phần rà soát này?"
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Chưa có người nhận trong cuộc họp, cần xác nhận sau."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Vậy chỉ việc tài liệu là có người nhận rõ tên."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Phần rà soát chưa thể chuyển luôn cho Lan, em ấy đang giữ việc tài liệu."
+    },
+    {
+      "id": "T18",
+      "line": 18,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Đúng, mình ghi riêng từng mục."
+    },
+    {
+      "id": "T19",
+      "line": 19,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về đăng nhập, luồng thử của khách đang bị chặn ở đâu?"
+    },
+    {
+      "id": "T20",
+      "line": 20,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Vướng mắc là chưa có quyền sandbox để thử luồng đăng nhập của khách."
+    },
+    {
+      "id": "T21",
+      "line": 21,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Đó là quyền ở phía khách, không phải lỗi đăng nhập đã tái hiện được."
+    },
+    {
+      "id": "T22",
+      "line": 22,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về phân quyền, mình vẫn chưa biết khách cần những vai trò nào."
+    },
+    {
+      "id": "T23",
+      "line": 23,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp."
+    },
+    {
+      "id": "T24",
+      "line": 24,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em ghi câu hỏi phân quyền riêng với công việc rà soát quyền hiện tại."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "báo cáo",
+      "events": [
+        {
+          "turn_id": "T5",
+          "kind": "change",
+          "quote": "Chốt dùng biểu đồ đường trên màn hình báo cáo."
+        }
+      ]
+    },
+    {
+      "topic": "tài liệu",
+      "events": [
+        {
+          "turn_id": "T8",
+          "kind": "request_feedback",
+          "quote": "Về tài liệu, mình cần hướng dẫn dùng bố cục mới."
+        },
+        {
+          "turn_id": "T9",
+          "kind": "assign",
+          "quote": "Em nhận cập nhật tài liệu sử dụng."
+        },
+        {
+          "turn_id": "T16",
+          "kind": "change",
+          "quote": "Vậy chỉ việc tài liệu là có người nhận rõ tên."
+        }
+      ]
+    },
+    {
+      "topic": "bảo mật",
+      "events": [
+        {
+          "turn_id": "T12",
+          "kind": "request_feedback",
+          "quote": "Về bảo mật, cần xem lại quyền tải báo cáo của khách."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "assign",
+          "quote": "Cần làm rà soát quyền truy cập trước thứ Hai."
+        },
+        {
+          "turn_id": "T15",
+          "kind": "change",
+          "quote": "Chưa có người nhận trong cuộc họp, cần xác nhận sau."
+        }
+      ]
+    },
+    {
+      "topic": "luồng thử đăng nhập",
+      "events": [
+        {
+          "turn_id": "T19",
+          "kind": "request_feedback",
+          "quote": "Về đăng nhập, luồng thử của khách đang bị chặn ở đâu?"
+        },
+        {
+          "turn_id": "T20",
+          "kind": "issue",
+          "quote": "Vướng mắc là chưa có quyền sandbox để thử luồng đăng nhập của khách."
+        }
+      ]
+    },
+    {
+      "topic": "phân quyền",
+      "events": [
+        {
+          "turn_id": "T22",
+          "kind": "request_feedback",
+          "quote": "Về phân quyền, mình vẫn chưa biết khách cần những vai trò nào."
+        },
+        {
+          "turn_id": "T23",
+          "kind": "defer",
+          "quote": "Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "báo cáo",
+      "type": "decision",
+      "status": "confirmed",
+      "content": "Chốt dùng biểu đồ đường trên màn hình báo cáo.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T5",
+          "quote": "Chốt dùng biểu đồ đường trên màn hình báo cáo."
+        },
+        {
+          "turn_id": "T6",
+          "quote": "Khách xem bản demo trên điện thoại nên màn hình nhỏ hơn máy của mình."
+        }
+      ],
+      "reason": "Khách muốn so xu hướng theo thời gian, biểu đồ đường phù hợp hơn.",
+      "history": [
+        {
+          "turn_id": "T1",
+          "kind": "proposal",
+          "quote": "Về báo cáo, khách đã xem hai loại biểu đồ trong bản demo."
+        },
+        {
+          "turn_id": "T2",
+          "kind": "proposal",
+          "quote": "Họ muốn so xu hướng theo thời gian, không phải so từng nhóm độc lập."
+        },
+        {
+          "turn_id": "T3",
+          "kind": "proposal",
+          "quote": "Biểu đồ đường phù hợp với cách đọc đó hơn biểu đồ cột."
+        },
+        {
+          "turn_id": "T4",
+          "kind": "proposal",
+          "quote": "Số liệu trả từ API giống nhau, không cần đổi phần dữ liệu."
+        },
+        {
+          "turn_id": "T5",
+          "kind": "change",
+          "quote": "Chốt dùng biểu đồ đường trên màn hình báo cáo."
+        }
+      ]
+    },
+    {
+      "id": "I2",
+      "topic": "tài liệu",
+      "type": "action",
+      "status": "needs_confirmation",
+      "content": "Cần hướng dẫn dùng bố cục mới.",
+      "owner": "Lan",
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T8",
+          "quote": "Về tài liệu, mình cần hướng dẫn dùng bố cục mới."
+        },
+        {
+          "turn_id": "T9",
+          "quote": "Em nhận cập nhật tài liệu sử dụng."
+        }
+      ],
+      "reason": "Lan nhận cập nhật tài liệu sử dụng nhưng chưa cam kết thời hạn cụ thể.",
+      "history": [
+        {
+          "turn_id": "T8",
+          "kind": "proposal",
+          "quote": "Về tài liệu, mình cần hướng dẫn dùng bố cục mới."
+        },
+        {
+          "turn_id": "T9",
+          "kind": "assign",
+          "quote": "Em nhận cập nhật tài liệu sử dụng."
+        }
+      ]
+    },
+    {
+      "id": "I3",
+      "topic": "bảo mật",
+      "type": "action",
+      "status": "needs_confirmation",
+      "content": "Cần rà soát quyền truy cập trước thứ Hai.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T12",
+          "quote": "Về bảo mật, cần xem lại quyền tải báo cáo của khách."
+        },
+        {
+          "turn_id": "T13",
+          "quote": "Cần làm rà soát quyền truy cập trước thứ Hai."
+        }
+      ],
+      "reason": "Chưa có người nhận trong cuộc họp, cần xác nhận sau.",
+      "history": [
+        {
+          "turn_id": "T12",
+          "kind": "proposal",
+          "quote": "Về bảo mật, cần xem lại quyền tải báo cáo của khách."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "assign",
+          "quote": "Cần làm rà soát quyền truy cập trước thứ Hai."
+        },
+        {
+          "turn_id": "T15",
+          "kind": "change",
+          "quote": "Chưa có người nhận trong cuộc họp, cần xác nhận sau."
+        }
+      ]
+    },
+    {
+      "id": "I4",
+      "topic": "luồng thử đăng nhập",
+      "type": "issue",
+      "status": "unresolved",
+      "content": "Chưa có quyền sandbox để thử luồng đăng nhập của khách.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T19",
+          "quote": "Về đăng nhập, luồng thử của khách đang bị chặn ở đâu?"
+        },
+        {
+          "turn_id": "T20",
+          "quote": "Vướng mắc là chưa có quyền sandbox để thử luồng đăng nhập của khách."
+        }
+      ],
+      "reason": "Vướng mắc là chưa có quyền sandbox để thử luồng đăng nhập của khách.",
+      "history": [
+        {
+          "turn_id": "T19",
+          "kind": "proposal",
+          "quote": "Về đăng nhập, luồng thử của khách đang bị chặn ở đâu?"
+        },
+        {
+          "turn_id": "T20",
+          "kind": "issue",
+          "quote": "Vướng mắc là chưa có quyền sandbox để thử luồng đăng nhập của khách."
+        }
+      ]
+    },
+    {
+      "id": "I5",
+      "topic": "phân quyền",
+      "type": "issue",
+      "status": "unresolved",
+      "content": "Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T22",
+          "quote": "Về phân quyền, mình vẫn chưa biết khách cần những vai trò nào."
+        },
+        {
+          "turn_id": "T23",
+          "quote": "Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp."
+        }
+      ],
+      "reason": "Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp.",
+      "history": [
+        {
+          "turn_id": "T22",
+          "kind": "proposal",
+          "quote": "Về phân quyền, mình vẫn chưa biết khách cần những vai trò nào."
+        },
+        {
+          "turn_id": "T23",
+          "kind": "defer",
+          "quote": "Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [
+    {
+      "item_id": "I1",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Chốt dùng biểu đồ đường trên màn hình báo cáo đã được xác nhận và có bằng chứng từ các lượt trước. Lan nhận cập nhật tài liệu sử dụng nhưng chưa cam kết thời hạn cụ thể, nên trạng thái là needs_confirmation. Các tiêu chí đều đạt yêu cầu theo quy định của cuộc họp. Không có sai lệch trong nội dung hoặc ngữ cảnh liên quan đến quyết định này. Khách muốn so xu hướng theo thời gian và biểu đồ đường phù hợp hơn với cách đọc đó hơn biểu đồ cột, do đó việc chốt dùng biểu đồ đường là phù hợp và được hỗ trợ bởi các bằng chứng từ cuộc họp trước đó. Lan nhận cập nhật tài liệu sử dụng nhưng chưa cam kết thời hạn cụ thể nên trạng thái là needs_confirmation. Các điều kiện liên quan đến quyết định này vẫn được giữ nguyên. Chủ sở hữu và hạn mức công việc đã được xác định rõ ràng trong lịch giao việc, mặc dù không có ngày cụ thể. Không có sai lệch nào được phát hiện trong nội dung hoặc ngữ cảnh liên quan đến quyết định này. Các tiêu chí đều đạt yêu cầu theo quy định của cuộc họp.",
+      "evidence": [
+        {
+          "turn_id": "T5",
+          "quote": "Chốt dùng biểu đồ đường trên màn hình báo cáo."
+        },
+        {
+          "turn_id": "T6",
+          "quote": "Khách xem bản demo trên điện thoại nên màn hình nhỏ hơn máy của mình."
+        }
+      ]
+    },
+    {
+      "item_id": "I2",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Lan nhận cập nhật tài liệu sử dụng nhưng chưa cam kết thời hạn cụ thể, nên trạng thái là needs_confirmation. Các tiêu chí đều đạt yêu cầu theo quy định của cuộc họp. Không có sai lệch nào được phát hiện trong nội dung hoặc ngữ cảnh liên quan đến quyết định này. Chủ sở hữu và hạn mức công việc đã được xác định rõ ràng trong lịch giao việc, mặc dù không có ngày cụ thể. Các điều kiện liên quan đến quyết định này vẫn được giữ nguyên.",
+      "evidence": [
+        {
+          "turn_id": "T8",
+          "quote": "Về tài liệu, mình cần hướng dẫn dùng bố cục mới."
+        },
+        {
+          "turn_id": "T9",
+          "quote": "Em nhận cập nhật tài liệu sử dụng."
+        }
+      ]
+    },
+    {
+      "item_id": "I3",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Chưa có người nhận trong cuộc họp, cần xác nhận sau. Các tiêu chí đều đạt yêu cầu theo quy định của cuộc họp. Không có sai lệch nào được phát hiện trong nội dung hoặc ngữ cảnh liên quan đến quyết định này. Chủ sở hữu và hạn mức công việc đã được xác định rõ ràng trong lịch giao việc, mặc dù không có ngày cụ thể. Các điều kiện liên quan đến quyết định này vẫn được giữ nguyên.",
+      "evidence": [
+        {
+          "turn_id": "T12",
+          "quote": "Về bảo mật, cần xem lại quyền tải báo cáo của khách."
+        },
+        {
+          "turn_id": "T13",
+          "quote": "Cần làm rà soát quyền truy cập trước thứ Hai."
+        }
+      ]
+    },
+    {
+      "item_id": "I4",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Vướng mắc là chưa có quyền sandbox để thử luồng đăng nhập của khách. Các tiêu chí đều đạt yêu cầu theo quy định của cuộc họp. Không có sai lệch nào được phát hiện trong nội dung hoặc ngữ cảnh liên quan đến quyết định này. Chủ sở hữu và hạn mức công việc đã được xác định rõ ràng trong lịch giao việc, mặc dù không có ngày cụ thể. Các điều kiện liên quan đến quyết định này vẫn được giữ nguyên.",
+      "evidence": [
+        {
+          "turn_id": "T19",
+          "quote": "Về đăng nhập, luồng thử của khách đang bị chặn ở đâu?"
+        },
+        {
+          "turn_id": "T20",
+          "quote": "Vướng mắc là chưa có quyền sandbox để thử luồng đăng nhập của khách."
+        }
+      ]
+    },
+    {
+      "item_id": "I5",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp. Các tiêu chí đều đạt yêu cầu theo quy định của cuộc họp. Không có sai lệch nào được phát hiện trong nội dung hoặc ngữ cảnh liên quan đến quyết định này. Chủ sở hữu và hạn mức công việc đã được xác định rõ ràng trong lịch giao việc, mặc dù không có ngày cụ thể. Các điều kiện liên quan đến quyết định này vẫn được giữ nguyên.",
+      "evidence": [
+        {
+          "turn_id": "T22",
+          "quote": "Về phân quyền, mình vẫn chưa biết khách cần những vai trò nào."
+        },
+        {
+          "turn_id": "T23",
+          "quote": "Chưa thống nhất cách cấp quyền cho khách, giữ câu hỏi đó cho buổi trao đổi tiếp."
+        }
+      ]
+    }
+  ],
+  "run_seconds": 184.898,
+  "postvalidation": {
+    "kind": "literal_only_no_new_inference",
+    "at": "2026-10-14T10:09:36.824371+00:00",
+    "source_canonical_sha256": "f1fe09b952e54c208da1ec1af3acd4c37a69f2db9040ef0625ee975c59893e8f",
+    "core_hashes": {
+      "src/meeting_trace/meeting/core.py": "82a9558034e9f1cd9fda0242baa25b5e067a0a3f36313dabf4e7146dd25f875b",
+      "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+      "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+      "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+      "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3"
+    }
+  },
+  "comparison_execution": {
+    "kind": "preserved_live_pipeline",
+    "source": "data/benchmarks/results/ollama/17_clear_assignment.json",
+    "source_sha256": "aab15d98f8ea53d563fce70c271068174e0ced511c599e06c430590d72866a12"
+  }
+}

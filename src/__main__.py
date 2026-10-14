@@ -11,13 +11,18 @@ COMMANDS = {
     'package': 'meeting_trace.tools.package',
     'verify-probes': 'meeting_trace.tools.verify_probes',
     'revalidate': 'meeting_trace.evaluation.revalidate',
+    'compare': 'meeting_trace.evaluation.comparison',
+    'author-holdout': 'meeting_trace.tools.author_holdout',
+    'read-results': 'meeting_trace.tools.read_results',
+    'record-reviews': 'meeting_trace.tools.record_reviews',
+    'report': 'meeting_trace.evaluation.submission_report',
 }
 
 
 def main():
     parser = argparse.ArgumentParser(
         description='Meeting Trace source commands. Default: serve.',
-        usage='python src [serve|extract|evaluate|test|package|verify-probes|revalidate] [options]')
+        usage='python src [' + '|'.join(COMMANDS) + '] [options]')
     args = sys.argv[1:]
     if args and args[0] in ('-h', '--help'):
         parser.print_help()

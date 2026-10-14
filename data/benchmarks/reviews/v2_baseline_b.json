@@ -1,0 +1,194 @@
+{
+  "suite": "v2",
+  "arm": "baseline_b",
+  "rubric_version": "author-read-1.0",
+  "reviewer": "Codex/AI được tác giả ủy quyền",
+  "independent": false,
+  "human_performed": false,
+  "authorized_by_author": true,
+  "reviewed_at": "2026-10-14T11:13:17.818645+00:00",
+  "total": 20,
+  "semantic_passed": 8,
+  "cases": [
+    {
+      "id": "01_change_ab",
+      "semantic_pass": true,
+      "ready_without_edit": false,
+      "error_class": "Định dạng/schema",
+      "reason": "Giữ B cuối ở T13/T14 và lịch sử bỏ máy chủ riêng. Candidate Lan nhận cấu hình trước thứ Sáu có cả tên/hạn trong content và evidence T15/T16, nhưng owner/due để null nên bị chặn. Đúng nghĩa candidate, chưa đủ trường cấu trúc.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/01_change_ab.json",
+      "source_canonical_sha256": "be4f99bdc1f5829d213928559ea6359db0a8209d7cc26fc68a2c57878905ce75"
+    },
+    {
+      "id": "02_change_aba",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Câu sáng thứ Năm trùng kết luận cuối, nhưng evidence chỉ đến T8: tại đó đã đổi sang chiều. Không dẫn T15 chốt lại sáng, nên đúng câu chưa chứng minh được hiểu lần đảo cuối.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/02_change_aba.json",
+      "source_canonical_sha256": "a785f7b06bb17fd8791e85a2d4aab991f57e15db6148d0493f42a3df0773b6b0"
+    },
+    {
+      "id": "03_switch_condition",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Giữ điều kiện pháp chế nhưng ghi lựa chọn B thành unresolved/unresolved thay cho quyết định có điều kiện. Không gộp hai loại này sau khi xem output.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/03_switch_condition.json",
+      "source_canonical_sha256": "3d21ef73f331babe5ecb79571966cea8ded2b27683df8b875ce20dd1e7aa5283"
+    },
+    {
+      "id": "04_interleaved",
+      "semantic_pass": true,
+      "ready_without_edit": false,
+      "error_class": "Định dạng",
+      "reason": "Giữ B cho lưu trữ và đề xuất demo chiều thứ Tư ở trạng thái unresolved, evidence có T17 còn mở. Lịch trình bày/lịch demo là cùng đối tượng; tên topic khác fixture.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/04_interleaved.json",
+      "source_canonical_sha256": "f7565915acbaf11b4868ce0a426aa84ac9efc637bb0537c03a6bdc02ac4d3e4c"
+    },
+    {
+      "id": "05_unnamed_reversal",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Định dạng + ngữ nghĩa",
+      "reason": "Giữ cổng B đúng T14 nhưng biến chính sách giữ A cho giao dịch cũ thành action mới và giả định có lỗi thành issue; nội dung phụ trả bằng tiếng Trung. Không tính chỉ một quyết định đúng là cả case đạt.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/05_unnamed_reversal.json",
+      "source_canonical_sha256": "7207e81603626e17e0ff4e8583c2a0d439e03d29b6b71f6e309fc4c1eece45e0"
+    },
+    {
+      "id": "06_ambiguous_ok",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Định dạng + ngữ nghĩa",
+      "reason": "Hai candidates không có evidence/reason; đề xuất ví chưa chốt bị ghi thành issue. Không có bản ghi đầy đủ cho nội dung mở chính.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/06_ambiguous_ok.json",
+      "source_canonical_sha256": "84b60de0bdbdf61946be3ca74625e18b4f90b0535c0e986d8e112a38fdb76bd5"
+    },
+    {
+      "id": "07_let_me_check",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Giữ blocker chưa tái hiện, nhưng status unresolved khác needs_confirmation và bỏ nội dung điều tra chưa được giao. Không bịa sửa lỗi là điểm tốt, chưa đủ cả case.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/07_let_me_check.json",
+      "source_canonical_sha256": "2626043277a6ca2c6aea766ed12ee96338183925a09e422ca8ae8ebccbf9499d"
+    },
+    {
+      "id": "08_self_commit_label",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Lời nhận xem lỗi/báo chiều nay bị ghi issue/confirmed thay action/needs_confirmation khi danh tính chưa biết. Hạn cũng chưa vào trường due.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/08_self_commit_label.json",
+      "source_canonical_sha256": "19604853b0068f2782f0c6cafbb191fd67fe6f56762ab2d12b4a52e7523906b3"
+    },
+    {
+      "id": "09_named_assignee_no_speaker",
+      "semantic_pass": true,
+      "ready_without_edit": false,
+      "error_class": "Định dạng/schema",
+      "reason": "Candidate giữ đúng Lan, báo cáo và trước thứ Sáu trong content; evidence T9 giao việc có thật. due null và reason trống làm guard chặn, cần chuẩn hóa trường thay vì suy luận thêm việc mới.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/09_named_assignee_no_speaker.json",
+      "source_canonical_sha256": "b7eaeed7027db091a0acdd191cb5af98dd1286d2e5e1b5df120bdcd937db2480"
+    },
+    {
+      "id": "10_indirect_consensus",
+      "semantic_pass": true,
+      "ready_without_edit": false,
+      "error_class": "Định dạng",
+      "reason": "Giữ một cột, dữ liệu không đổi, evidence bao gồm T13 đồng thuận cuối. Topic dài hơn báo cáo nhưng cùng màn hình điện thoại.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/10_indirect_consensus.json",
+      "source_canonical_sha256": "7c5fe14c1c5b1b190f2f62e3961cb0ee8f39666a16f9ee23ccb0f7bbbf77daa1"
+    },
+    {
+      "id": "11_unresolved_budget",
+      "semantic_pass": true,
+      "ready_without_edit": false,
+      "error_class": "Định dạng",
+      "reason": "Giữ hoãn chọn hạ tầng đến khi đủ báo giá ở unresolved/unresolved và evidence T13. Không tạo assignment chuyển dữ liệu; chỉ khác tên topic.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/11_unresolved_budget.json",
+      "source_canonical_sha256": "312092a5eab60ed97b3cf42b1da1ce799a21aafe03769c61e4573969c79493df"
+    },
+    {
+      "id": "12_reopen_confirmed",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Candidate vẫn giữ câu phát hành thứ Hai từ T3, dù evidence có T12 hoãn. unresolved/confirmed mâu thuẫn và bị chặn; không phải chỉ lỗi viết tên topic. Issue hoàn tiền có nguồn.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/12_reopen_confirmed.json",
+      "source_canonical_sha256": "2bb39e7fa98257fda66c46120132bfa9ff488da9c9c64070c220403aa9aa2924"
+    },
+    {
+      "id": "13_speakerless_pending",
+      "semantic_pass": true,
+      "ready_without_edit": false,
+      "error_class": "Định dạng",
+      "reason": "Ghi cần hiểu mục đích trước khi quyết định cách tải với unresolved/unresolved; evidence T12 nêu chưa thống nhất. Nội dung cùng câu hỏi mở, khác chuỗi chưa thống nhất và tên topic fixture.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/13_speakerless_pending.json",
+      "source_canonical_sha256": "eff4162e49086a92856c0ebb63335e5ad218faff10ce1193e2b3594f92b34ba4"
+    },
+    {
+      "id": "14_request_not_assignment",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Định dạng + ngữ nghĩa",
+      "reason": "Candidate giữ yêu cầu bộ lọc nhưng gán issue, không evidence và thiếu câu chưa chọn trường thời gian T12. Không tạo assignment là đúng nhưng chưa đủ trích xuất.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/14_request_not_assignment.json",
+      "source_canonical_sha256": "56e248526302a97004f1a4cf93bbb7d02eec2fa5183f5f948838b36bcd0fc821"
+    },
+    {
+      "id": "15_conditional_task",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Bỏ lời Lan nhận kiểm tra hoàn tiền khi có sandbox T6; giữ blocker nhưng confirmed sai quy ước, thêm nội dung tiếng Trung. Không thay action có điều kiện bằng câu bàn lại cách thử.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/15_conditional_task.json",
+      "source_canonical_sha256": "6eb9dd610f7a32578703dedf03ab31d139a5fe01edd034e35a369e486c1b6e17"
+    },
+    {
+      "id": "16_clear_decision",
+      "semantic_pass": true,
+      "ready_without_edit": false,
+      "error_class": "Định dạng",
+      "reason": "Quyết định 2.1 thứ Hai có evidence T11/T12, owner/due null hợp schema. Topic Phát hành bản 2.1 khác tên ngắn của fixture.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/16_clear_decision.json",
+      "source_canonical_sha256": "57a4866ac0e1bc96b45d0b5d36228e6f9727f824b84134f6f20b327e9270319e"
+    },
+    {
+      "id": "17_clear_assignment",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Định dạng + ngữ nghĩa",
+      "reason": "Có biểu đồ đường và audit trước thứ Hai; mất phản hồi chữ nhỏ, owner Lan không vào trường, sandbox và phân quyền sai loại/trạng thái. Case nhiều nhóm chưa đủ.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/17_clear_assignment.json",
+      "source_canonical_sha256": "4752e4615d58e2bc6cfee8f965e1b455362dd45dc0dd73ba6e70b26c229c8320"
+    },
+    {
+      "id": "18_anonymous_assignment",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Người nói 2 được dùng làm owner/confirmed; đây là nhãn chứ chưa phải danh tính. Guard chặn, cần giữ null và needs_confirmation.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/18_anonymous_assignment.json",
+      "source_canonical_sha256": "4d50124b8b352d804b309d173c233b3313a3466dc676b4af68baad09c485b652"
+    },
+    {
+      "id": "19_speakerless_commitment",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Giữ việc thay ảnh/hạn nhưng confirmed với owner null sai khi không xác định người nói. Guard chặn, chưa giải quyết bất định danh tính.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/19_speakerless_commitment.json",
+      "source_canonical_sha256": "7570f3d6dec18f9cfaf9caa4414a079f166ff0430042d704271267e429be6280"
+    },
+    {
+      "id": "20_explicit_name_in_content",
+      "semantic_pass": true,
+      "ready_without_edit": false,
+      "error_class": "Định dạng",
+      "reason": "Mai gửi báo cáo đúng T9/T10, hạn thứ Sáu đúng và không tạo việc đối soát mới. Topic dài hơn báo cáo, không nhầm đối tượng.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/v2/baseline_b/20_explicit_name_in_content.json",
+      "source_canonical_sha256": "4191a410187b4170255d668b9d546dd582fc828f374d852336979a94193cc9fe"
+    }
+  ]
+}

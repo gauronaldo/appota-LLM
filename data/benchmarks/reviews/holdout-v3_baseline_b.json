@@ -1,0 +1,68 @@
+{
+  "suite": "holdout-v3",
+  "arm": "baseline_b",
+  "rubric_version": "author-read-1.0",
+  "reviewer": "Codex/AI được tác giả ủy quyền",
+  "independent": false,
+  "human_performed": false,
+  "authorized_by_author": true,
+  "reviewed_at": "2026-10-14T11:13:17.820636+00:00",
+  "total": 6,
+  "semantic_passed": 1,
+  "cases": [
+    {
+      "id": "H01_reminders",
+      "semantic_pass": true,
+      "ready_without_edit": false,
+      "error_class": "Định dạng",
+      "reason": "Giữ đúng thông báo trong ứng dụng chỉ cho lịch xác nhận T15, lịch sử SMS bị bỏ T3/T6. Topic nhắn lịch là cách viết lệch của nhắc lịch, cùng đối tượng.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/holdout-v3/baseline_b/H01_reminders.json",
+      "source_canonical_sha256": "f40f9d549e573bc47fc7e66107821d94e9c07f54a682126d8fc5caffd2975b01"
+    },
+    {
+      "id": "H02_conditional_export",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Giữ điều kiện trong content nhưng action confirmed thay needs_confirmation; bỏ phản hồi CSV mã hóa và blocker pháp chế. Không chỉ sai tiền tố deadline.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/holdout-v3/baseline_b/H02_conditional_export.json",
+      "source_canonical_sha256": "f983aeb4dfc31b22fc24bbc11d808e0a7ac3d0c0fa90197223de00accfe9e906"
+    },
+    {
+      "id": "H03_reopened_backup",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Giữ chưa chốt số ngày và không hồi sinh 30 ngày, nhưng bỏ issue thiếu dung lượng T11. Lịch sử có T3/T12 nhưng thiếu lần đề xuất 14 ngày trong history.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/holdout-v3/baseline_b/H03_reopened_backup.json",
+      "source_canonical_sha256": "291becd5c1b5591583ad10315fda41af9ea4b3b2efa633017d47a239a4fcfcc0"
+    },
+    {
+      "id": "H04_discount_request",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Giữ câu chưa chốt tăng, nhưng bỏ phản hồi 20% và công việc Huy nhận có điều kiện T11. Một câu unresolved chưa bao phủ ba nhóm kỳ vọng.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/holdout-v3/baseline_b/H04_discount_request.json",
+      "source_canonical_sha256": "b2f0e1984cfacbf052dba4570561bfb58602a7327cbf4f8a6a90b9590ba4a125"
+    },
+    {
+      "id": "H05_webhook_limit",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Định dạng + ngữ nghĩa",
+      "reason": "Quyết định giới hạn đúng và giữ mọi điều kiện. Action Mai có nguồn T14/T15 nhưng due null và content cũng không giữ thứ Sáu; mất thông tin hạn, không chỉ sai cách viết trường.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/holdout-v3/baseline_b/H05_webhook_limit.json",
+      "source_canonical_sha256": "01053a4ceb660d524a4f61f890e6af6518bb9ee385dfe67f9857dcb418fef7c6"
+    },
+    {
+      "id": "H06_unsettled_rota",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Không bịa người trực/assignment, giữ hai phương án ở unresolved; bỏ issue chưa có lịch làm việc T10, nên chưa đủ case.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/holdout-v3/baseline_b/H06_unsettled_rota.json",
+      "source_canonical_sha256": "b04af3373c98b26a3e8a4457398971dde3b39217d27d1b0b979f8e3e200beecf"
+    }
+  ]
+}

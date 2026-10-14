@@ -1,0 +1,18 @@
+Quân: Webhook thất bại ở phía nhận thì mình cần thống nhất cách gửi lại.
+Mai: Có thể gửi lại liên tục cho đến khi nhận được phản hồi thành công.
+Dũng: Nếu phía nhận ngừng hoạt động cả ngày thì hàng đợi sẽ phình rất lớn.
+Quân: Đúng, mình phải có giới hạn để không chặn các thông báo sau.
+Linh: Phía đối tác thường khôi phục trong vài phút, nhưng không bảo đảm luôn như vậy.
+Mai: Vậy gửi lại tối đa ba lần, cách nhau 30 giây được không?
+Dũng: Sau lần thứ ba vẫn lỗi thì ghi trạng thái thất bại cho người vận hành xem.
+Quân: Không tự coi thất bại là thành công để bỏ qua nhé.
+Linh: Trạng thái đó cần nhìn được trong màn hình theo dõi hiện có.
+Mai: Màn hình đã có chỗ hiển thị lỗi, không cần tạo một màn hình mới cho lần này.
+Dũng: Khoảng 30 giây có đủ cho đối tác đáp lại không?
+Linh: Với thời gian phản hồi đã đo thì đủ để thử cách này.
+Quân: Chốt gửi lại tối đa ba lần, cách nhau 30 giây; sau đó vẫn lỗi thì giữ trạng thái thất bại.
+Quân: Mai gửi báo cáo kiểm tra webhook cho nhóm sau khi thử cấu hình này nhé.
+Mai: Em sẽ gửi báo cáo kiểm tra webhook trước thứ Sáu.
+Dũng: Trong báo cáo nhớ giữ cả trường hợp đối tác không hoạt động.
+Mai: Em hiểu phạm vi kiểm tra, không chỉ gửi trường hợp thành công.
+Quân: Mình kết thúc ở giới hạn gửi lại và việc gửi báo cáo đã thống nhất.

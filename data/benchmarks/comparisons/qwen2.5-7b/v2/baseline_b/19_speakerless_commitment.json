@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "cc64f6908592f1a03afeb634e99d7d40abe812dcf1b28b4b8ad16f4c7a8145cd",
+    "automated": true,
+    "semantic_verification": false,
+    "verification_method": "literal_rules",
+    "approval_required": true,
+    "arm": "baseline_b",
+    "prompt_version": "B-1.0",
+    "model_calls": 1
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Bản hướng dẫn hiện vẫn có ảnh của giao diện cũ."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Khách dùng ảnh đó để tìm nút nên dễ bấm nhầm chỗ."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Phần nội dung chữ đã đúng, chỉ cần thay ảnh ở ba bước."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Ai có thể làm phần đó trước khi gửi cho khách?"
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Em nhận thay ảnh hướng dẫn trước ngày mai."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Có cần viết lại toàn bộ tài liệu không?"
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Không, chỉ thay ba ảnh rồi kiểm tra lại thứ tự bước."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Người nhận việc có quyền mở tài liệu chung rồi."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Ảnh mới cần chụp ở màn hình điện thoại hay máy tính?"
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Khách đang dùng máy tính, lần này mình chụp màn hình máy tính."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Vậy ảnh ở phần đăng nhập cũng dùng máy tính cho nhất quán nhé."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Đúng, chỉ thay ảnh thôi, không đổi những hướng dẫn đã được khách kiểm tra."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nếu có một bước không khớp giao diện thì đánh dấu để mình xem lại."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Không có quyết định sản phẩm mới trong phần trao đổi này."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Mình kết thúc ở đây, tài liệu mới vẫn lưu cùng thư mục với bản hiện tại."
+    }
+  ],
+  "topics": [],
+  "items": [],
+  "review_queue": [
+    {
+      "item": {
+        "id": "T4",
+        "topic": "Thay ảnh hướng dẫn",
+        "type": "action",
+        "status": "confirmed",
+        "content": "Người nhận việc thay ba ảnh hướng dẫn và kiểm tra lại thứ tự bước trước ngày mai.",
+        "owner": null,
+        "due": "trước ngày mai",
+        "evidence": [
+          {
+            "turn_id": "T4",
+            "quote": "Ai có thể làm phần đó trước khi gửi cho khách?"
+          },
+          {
+            "turn_id": "T5",
+            "quote": "Em nhận thay ảnh hướng dẫn trước ngày mai."
+          }
+        ],
+        "reason": "Người nhận việc đã xác nhận và có thời hạn cụ thể.",
+        "history": [
+          {
+            "turn_id": "T4",
+            "kind": "proposal",
+            "quote": "Ai có thể làm phần đó trước khi gửi cho khách?"
+          },
+          {
+            "turn_id": "T5",
+            "kind": "assign",
+            "quote": "Em nhận thay ảnh hướng dẫn trước ngày mai."
+          }
+        ]
+      },
+      "errors": [
+        "Công việc đã xác định cần người nhận; thiếu người thì cần xác nhận"
+      ]
+    }
+  ],
+  "semantic_checks": [],
+  "run_seconds": 4.474,
+  "comparison_execution": {
+    "kind": "live_once_no_retry"
+  }
+}

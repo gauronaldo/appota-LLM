@@ -1,0 +1,34 @@
+{
+  "id": "H01_reminders",
+  "title": "Đổi kênh nhắc lịch sau khi kiểm tra chi phí",
+  "group": "change",
+  "input_format": "named",
+  "items": [
+    {
+      "topic": "nhắc lịch",
+      "type": "decision",
+      "contains": "thông báo trong ứng dụng",
+      "status": "confirmed",
+      "owner": null,
+      "due": null,
+      "conditions": [
+        "chỉ cho lịch đã xác nhận"
+      ],
+      "evidence_turn": "T15"
+    }
+  ],
+  "lesson": "Giữ kênh cuối và phạm vi lịch đã xác nhận; không tự tạo cơ chế SMS dự phòng.",
+  "split": "fresh_holdout",
+  "dataset_version": "3.0",
+  "history_turns": [
+    "T2",
+    "T7",
+    "T15"
+  ],
+  "intermediate_turns": [
+    "T2"
+  ],
+  "transcript_sha256": "7894015d5a6e984a1f0b3274f8801bc2f64b7bdbc14bdd17908f69281161e509",
+  "authored_before_inference": true,
+  "labeler": "Codex/AI hỗ trợ tác giả, không độc lập"
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "H01_reminders",
+    "title": "Đổi kênh nhắc lịch sau khi kiểm tra chi phí",
+    "group": "change",
+    "input_format": "named",
+    "dataset_version": "3.0",
+    "transcript_sha256": "7894015d5a6e984a1f0b3274f8801bc2f64b7bdbc14bdd17908f69281161e509",
+    "transcript": "data/holdout-v3/H01_reminders.txt",
+    "expected": "tests/fixtures/holdout-v3/H01_reminders.expected.json",
+    "expected_sha256": "2c96a8b13c07f9222609c0b8c0b7296311a72e1ae9fb943e24720bc26ff70e17"
+  },
+  {
+    "id": "H02_conditional_export",
+    "title": "Giao việc bằng tên trong transcript không có người nói",
+    "group": "clear",
+    "input_format": "plain",
+    "dataset_version": "3.0",
+    "transcript_sha256": "b605c3a4b06089706e8c59140bd6e0f3ffb7cb1833b27cf928690e3efeab24fd",
+    "transcript": "data/holdout-v3/H02_conditional_export.txt",
+    "expected": "tests/fixtures/holdout-v3/H02_conditional_export.expected.json",
+    "expected_sha256": "04a300034a43c83b54a641fc1cda3197fae704ae3e230bf420419812bed25ace"
+  },
+  {
+    "id": "H03_reopened_backup",
+    "title": "Quyết định sao lưu được mở lại vì dung lượng",
+    "group": "unresolved",
+    "input_format": "labels",
+    "dataset_version": "3.0",
+    "transcript_sha256": "219d45b4b6eff47e349a56cf7e861f5f4a0155cfe7c7927045c4a402409bbf33",
+    "transcript": "data/holdout-v3/H03_reopened_backup.txt",
+    "expected": "tests/fixtures/holdout-v3/H03_reopened_backup.expected.json",
+    "expected_sha256": "1eef21bda8f818980ac857e37b265dc0126c7c64dcdbf75c500ba16e3a6596f8"
+  },
+  {
+    "id": "H04_discount_request",
+    "title": "Phản hồi kinh doanh và lời nhận việc có điều kiện",
+    "group": "indirect",
+    "input_format": "mixed",
+    "dataset_version": "3.0",
+    "transcript_sha256": "0d54da113f970ff01092ee3a4fc7b0a5e0d3a78250f55d2db63dbdbaa6f924ae",
+    "transcript": "data/holdout-v3/H04_discount_request.txt",
+    "expected": "tests/fixtures/holdout-v3/H04_discount_request.expected.json",
+    "expected_sha256": "41ac07d0bd0c355a396e2a80c8ee601065d218769831597bd3a5b8fe6f80a111"
+  },
+  {
+    "id": "H05_webhook_limit",
+    "title": "Chốt giới hạn webhook và người gửi báo cáo",
+    "group": "clear",
+    "input_format": "named",
+    "dataset_version": "3.0",
+    "transcript_sha256": "36ab12eeb825c6d0040af0c1bc50e00de2fc78e0528ebebd7b69b153cf985eea",
+    "transcript": "data/holdout-v3/H05_webhook_limit.txt",
+    "expected": "tests/fixtures/holdout-v3/H05_webhook_limit.expected.json",
+    "expected_sha256": "5c3f6614ca49652396149315e57d3e6086b0776ab3b22b6d2a09099e23795f47"
+  },
+  {
+    "id": "H06_unsettled_rota",
+    "title": "Ok và để em xem chưa tạo người phụ trách lịch trực",
+    "group": "indirect",
+    "input_format": "plain",
+    "dataset_version": "3.0",
+    "transcript_sha256": "0071a71e24d7ea3ddd3b0e7cba11d7033fb1eab81ecbbaf06eaa7ed11a6e9e64",
+    "transcript": "data/holdout-v3/H06_unsettled_rota.txt",
+    "expected": "tests/fixtures/holdout-v3/H06_unsettled_rota.expected.json",
+    "expected_sha256": "fcfc3788b1e53ee38c599ed7fa015d130f93e30944b1b410f277c5f65bd477be"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "id": "H03_reopened_backup",
+  "title": "Quyết định sao lưu được mở lại vì dung lượng",
+  "group": "unresolved",
+  "input_format": "labels",
+  "items": [
+    {
+      "topic": "sao lưu",
+      "type": "unresolved",
+      "contains": "chưa chốt số ngày giữ bản sao",
+      "status": "unresolved",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T16"
+    },
+    {
+      "topic": "dung lượng",
+      "type": "issue",
+      "contains": "chưa có số liệu dung lượng",
+      "status": "needs_confirmation",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T11"
+    }
+  ],
+  "lesson": "Không giữ quyết định đã hủy; một phương án thay thế được nhắc đến chưa trở thành lựa chọn cuối.",
+  "split": "fresh_holdout",
+  "dataset_version": "3.0",
+  "history_turns": [
+    "T3",
+    "T8",
+    "T13",
+    "T16"
+  ],
+  "intermediate_turns": [
+    "T3",
+    "T8"
+  ],
+  "transcript_sha256": "219d45b4b6eff47e349a56cf7e861f5f4a0155cfe7c7927045c4a402409bbf33",
+  "authored_before_inference": true,
+  "labeler": "Codex/AI hỗ trợ tác giả, không độc lập"
+}

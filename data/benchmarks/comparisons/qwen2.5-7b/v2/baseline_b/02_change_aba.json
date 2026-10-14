@@ -1,0 +1,227 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "039636020bcc57166bdfc5246f4da6412deef199bcbfd9e1b26b9f0e67cc18d5",
+    "automated": true,
+    "semantic_verification": false,
+    "verification_method": "literal_rules",
+    "approval_required": true,
+    "arm": "baseline_b",
+    "prompt_version": "B-1.0",
+    "model_calls": 1
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về lịch demo, khách đang giữ hai khung giờ cho mình."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Đề xuất chọn phương án A, sáng thứ Năm. Huy lúc đó cũng có mặt."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Sáng thứ Năm anh đi cùng nhóm hỗ trợ, vẫn tham gia được."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Bản dữ liệu demo cần chạy trước một lần để tránh chờ trên màn hình."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Đợt trước chạy thử khoảng mười phút, em đang kiểm tra bản mới."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Khách vừa nhắn buổi sáng có cuộc họp khác."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Nếu đổi thì chiều thứ Năm bên mình có ai vướng không?"
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về lịch demo, chốt phương án B, chuyển sang chiều thứ Năm."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Em chưa gửi lịch chính thức, để em hỏi lại người phụ trách phía khách."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Chiều anh có lịch hỗ trợ nhưng có thể đổi."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Mình cần chắc có người ra quyết định bên khách tham gia nữa."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Em vừa nhận phản hồi: người duyệt chỉ tham gia buổi sáng."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Vậy cuộc họp kia của họ đã xử lý thế nào?"
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Họ dời cuộc họp kia rồi, giữ lại khung sáng ban đầu cho mình."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về lịch demo, chốt quay về phương án A, sáng thứ Năm."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Như vậy anh không cần đổi lịch hỗ trợ chiều nữa."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em ghi rõ lịch chiều đã bị thay, để người đọc không dùng nhầm."
+    },
+    {
+      "id": "T18",
+      "line": 18,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Lịch gửi ra sẽ chỉ có buổi sáng."
+    },
+    {
+      "id": "T19",
+      "line": 19,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Mình thống nhất nội dung chính rồi, dừng phần này nhé."
+    }
+  ],
+  "topics": [],
+  "items": [
+    {
+      "id": "T8",
+      "topic": "Lịch demo",
+      "type": "decision",
+      "status": "confirmed",
+      "content": "Chốt lịch demo sáng thứ Năm.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T2",
+          "quote": "Đề xuất chọn phương án A, sáng thứ Năm. Huy lúc đó cũng có mặt."
+        },
+        {
+          "turn_id": "T4",
+          "quote": "Bản dữ liệu demo cần chạy trước một lần để tránh chờ trên màn hình."
+        },
+        {
+          "turn_id": "T5",
+          "quote": "Đợt trước chạy thử khoảng mười phút, em đang kiểm tra bản mới."
+        },
+        {
+          "turn_id": "T6",
+          "quote": "Khách vừa nhắn buổi sáng có cuộc họp khác."
+        },
+        {
+          "turn_id": "T7",
+          "quote": "Nếu đổi thì chiều thứ Năm bên mình có ai vướng không?"
+        },
+        {
+          "turn_id": "T8",
+          "quote": "Về lịch demo, chốt phương án B, chuyển sang chiều thứ Năm."
+        }
+      ],
+      "reason": "多次讨论后最终确定了上午的演示时间。",
+      "history": [
+        {
+          "turn_id": "T2",
+          "kind": "proposal",
+          "quote": "Đề xuất chọn phương án A, sáng thứ Năm. Huy lúc đó cũng có mặt."
+        },
+        {
+          "turn_id": "T4",
+          "kind": "issue",
+          "quote": "Bản dữ liệu demo cần chạy trước một lần để tránh chờ trên màn hình."
+        },
+        {
+          "turn_id": "T5",
+          "kind": "issue",
+          "quote": "Đợt trước chạy thử khoảng mười phút, em đang kiểm tra bản mới."
+        },
+        {
+          "turn_id": "T6",
+          "kind": "request_feedback",
+          "quote": "Khách vừa nhắn buổi sáng có cuộc họp khác."
+        },
+        {
+          "turn_id": "T7",
+          "kind": "proposal",
+          "quote": "Nếu đổi thì chiều thứ Năm bên mình có ai vướng không?"
+        },
+        {
+          "turn_id": "T8",
+          "kind": "finalize",
+          "quote": "Về lịch demo, chốt phương án B, chuyển sang chiều thứ Năm."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [],
+  "run_seconds": 99.036,
+  "comparison_execution": {
+    "kind": "live_once_no_retry"
+  }
+}

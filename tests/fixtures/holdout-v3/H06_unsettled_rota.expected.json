@@ -1,0 +1,43 @@
+{
+  "id": "H06_unsettled_rota",
+  "title": "Ok và để em xem chưa tạo người phụ trách lịch trực",
+  "group": "indirect",
+  "input_format": "plain",
+  "items": [
+    {
+      "topic": "lịch trực",
+      "type": "unresolved",
+      "contains": "chưa thống nhất lịch trực",
+      "status": "unresolved",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T17"
+    },
+    {
+      "topic": "lịch làm việc",
+      "type": "issue",
+      "contains": "chưa có lịch làm việc",
+      "status": "needs_confirmation",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T10"
+    }
+  ],
+  "lesson": "Không biến ok/để em xem thành một công việc đã giao; giữ thiếu danh tính thay vì tạo người phụ trách.",
+  "split": "fresh_holdout",
+  "dataset_version": "3.0",
+  "history_turns": [
+    "T2",
+    "T7",
+    "T17"
+  ],
+  "intermediate_turns": [
+    "T2",
+    "T7"
+  ],
+  "transcript_sha256": "0071a71e24d7ea3ddd3b0e7cba11d7033fb1eab81ecbbaf06eaa7ed11a6e9e64",
+  "authored_before_inference": true,
+  "labeler": "Codex/AI hỗ trợ tác giả, không độc lập"
+}

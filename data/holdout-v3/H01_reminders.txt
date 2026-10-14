@@ -1,0 +1,18 @@
+Linh: Mình bàn nốt chuyện nhắc lịch cho tuần đầu mở thử nhé.
+Dũng: Cho gửi SMS đi, khách không mở ứng dụng vẫn nhìn thấy.
+Linh: Tạm chọn SMS, nhưng mình phải biết phí trước khi triển khai.
+Hạnh: Nhà mạng tính cả những tin khách không nhận được do sai số điện thoại.
+Quân: Với lượng lịch hiện tại thì khoản đó cao hơn dự toán khá nhiều.
+Linh: Vậy SMS không còn phù hợp với tuần thử này rồi.
+Dũng: Mình chuyển sang thông báo trong ứng dụng được không? Phần đó đã có sẵn.
+Hạnh: Cách đó không phát sinh phí theo từng tin.
+Quân: Nhưng chỉ gửi cho lịch đã xác nhận, lịch nháp thay đổi liên tục sẽ rất phiền.
+Linh: Đúng, lịch nháp chưa phải lời hẹn với khách.
+Hạnh: Thông báo hiện có đi qua hàng đợi, không hiện ngay lập tức.
+Quân: Trễ vài phút thì vẫn dùng được, mình nhắc trước buổi hẹn khá lâu.
+Dũng: Khách tắt thông báo thì mình có tự gửi SMS thay thế không?
+Hạnh: Đợt này chưa có phần chuyển kênh như vậy.
+Linh: Chốt dùng thông báo trong ứng dụng, chỉ cho lịch đã xác nhận. SMS không dùng ở tuần thử này.
+Dũng: Như vậy khách tắt thông báo thì chưa có kênh thay thế ở phiên bản này.
+Quân: Em sẽ giải thích giới hạn đó khi được hỏi, không hứa có SMS dự phòng.
+Linh: Ừ, phần kênh nhắc lịch dừng ở kết luận vừa rồi.

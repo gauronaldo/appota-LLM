@@ -1,0 +1,46 @@
+{
+  "id": "H05_webhook_limit",
+  "title": "Chốt giới hạn webhook và người gửi báo cáo",
+  "group": "clear",
+  "input_format": "named",
+  "items": [
+    {
+      "topic": "webhook",
+      "type": "decision",
+      "contains": "gửi lại",
+      "status": "confirmed",
+      "owner": null,
+      "due": null,
+      "conditions": [
+        "tối đa ba lần",
+        "cách nhau 30 giây",
+        "trạng thái thất bại"
+      ],
+      "evidence_turn": "T13"
+    },
+    {
+      "topic": "kiểm tra webhook",
+      "type": "action",
+      "contains": "báo cáo kiểm tra webhook",
+      "status": "confirmed",
+      "owner": "Mai",
+      "due": "thứ Sáu",
+      "conditions": [],
+      "evidence_turn": "T15"
+    }
+  ],
+  "lesson": "Giữ giới hạn số lần/khoảng cách và trạng thái sau thất bại; giao và nhận cùng một báo cáo là một công việc.",
+  "split": "fresh_holdout",
+  "dataset_version": "3.0",
+  "history_turns": [
+    "T2",
+    "T6",
+    "T13"
+  ],
+  "intermediate_turns": [
+    "T2"
+  ],
+  "transcript_sha256": "36ab12eeb825c6d0040af0c1bc50e00de2fc78e0528ebebd7b69b153cf985eea",
+  "authored_before_inference": true,
+  "labeler": "Codex/AI hỗ trợ tác giả, không độc lập"
+}

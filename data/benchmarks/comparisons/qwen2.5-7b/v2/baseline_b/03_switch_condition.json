@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "fd94f5f90df631183e24471abc089d09c2a527c2bce6de443fd2b9f1de87ff0b",
+    "automated": true,
+    "semantic_verification": false,
+    "verification_method": "literal_rules",
+    "approval_required": true,
+    "arm": "baseline_b",
+    "prompt_version": "B-1.0",
+    "model_calls": 1
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Mình cần chọn nhà cung cấp gửi email cho đợt ra mắt."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Gói A rẻ hơn nếu chỉ nhìn số lượng email dự kiến."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": null,
+      "speaker_label": "Người nói 3",
+      "text": "Gói đó có lưu dữ liệu ở khu vực mình yêu cầu không?"
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Trong báo giá chưa ghi, em chưa hỏi lại."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Điều đó phải được xác nhận trước khi ký."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": null,
+      "speaker_label": "Người nói 3",
+      "text": "Bên B đã trả lời phần khu vực lưu trữ, nhưng giá cao hơn một chút."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Vậy em nghiêng sang B. Ít nhất mình biết rõ phần dữ liệu."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Hợp đồng B đã được bên pháp chế xem chưa?"
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": null,
+      "speaker_label": "Người nói 3",
+      "text": "Chưa, mới có bản nháp họ gửi chiều qua."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Nếu bỏ điều kiện này thì mình đang quyết hơi sớm."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Đúng, không được xem đây là quyền ký ngay."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Chốt chọn gói B nếu pháp chế duyệt điều khoản lưu dữ liệu."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": null,
+      "speaker_label": "Người nói 3",
+      "text": "Nếu họ không duyệt thì mình quay lại so sánh, không tự dùng A đúng không?"
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Đúng, khi đó cần một quyết định khác."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Em ghi cả điều kiện, không chỉ ghi mỗi tên gói."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": null,
+      "speaker_label": "Người nói 3",
+      "text": "Bản báo giá hiện tại vẫn dùng để tham khảo thôi."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Mình dừng ở đây, chưa ký trong hôm nay."
+    }
+  ],
+  "topics": [],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "Chọn nhà cung cấp cho đợt ra mắt",
+      "type": "unresolved",
+      "status": "unresolved",
+      "content": "Chốt chọn gói B nếu pháp chế duyệt điều khoản lưu dữ liệu.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T12",
+          "quote": "Chốt chọn gói B nếu pháp chế duyệt điều khoản lưu dữ liệu."
+        }
+      ],
+      "reason": "Gói B đã được so sánh và có điều kiện rõ ràng, nhưng chưa được pháp chế xem xét.",
+      "history": [
+        {
+          "turn_id": "T1",
+          "kind": "proposal",
+          "quote": "Mình cần chọn nhà cung cấp gửi email cho đợt ra mắt."
+        },
+        {
+          "turn_id": "T2",
+          "kind": "support",
+          "quote": "Gói A rẻ hơn nếu chỉ nhìn số lượng email dự kiến."
+        },
+        {
+          "turn_id": "T3",
+          "kind": "issue",
+          "quote": "Gói đó có lưu dữ liệu ở khu vực mình yêu cầu không?"
+        },
+        {
+          "turn_id": "T4",
+          "kind": "request_feedback",
+          "quote": "Trong báo giá chưa ghi, em chưa hỏi lại."
+        },
+        {
+          "turn_id": "T5",
+          "kind": "issue",
+          "quote": "Điều đó phải được xác nhận trước khi ký."
+        },
+        {
+          "turn_id": "T6",
+          "kind": "support",
+          "quote": "Bên B đã trả lời phần khu vực lưu trữ, nhưng giá cao hơn một chút."
+        },
+        {
+          "turn_id": "T7",
+          "kind": "proposal",
+          "quote": "Vậy em nghiêng sang B. Ít nhất mình biết rõ phần dữ liệu."
+        },
+        {
+          "turn_id": "T8",
+          "kind": "issue",
+          "quote": "Hợp đồng B đã được bên pháp chế xem chưa?"
+        },
+        {
+          "turn_id": "T9",
+          "kind": "request_feedback",
+          "quote": "Chưa, mới có bản nháp họ gửi chiều qua."
+        },
+        {
+          "turn_id": "T10",
+          "kind": "issue",
+          "quote": "Nếu bỏ điều kiện này thì mình đang quyết hơi sớm."
+        },
+        {
+          "turn_id": "T11",
+          "kind": "support",
+          "quote": "Đúng, không được xem đây là quyền ký ngay."
+        },
+        {
+          "turn_id": "T12",
+          "kind": "finalize",
+          "quote": "Chốt chọn gói B nếu pháp chế duyệt điều khoản lưu dữ liệu."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "request_feedback",
+          "quote": "Nếu họ không duyệt thì mình quay lại so sánh, không tự dùng A đúng không?"
+        },
+        {
+          "turn_id": "T14",
+          "kind": "support",
+          "quote": "Đúng, khi đó cần một quyết định khác."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [],
+  "run_seconds": 151.945,
+  "comparison_execution": {
+    "kind": "live_once_no_retry"
+  }
+}

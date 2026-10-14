@@ -1,0 +1,14 @@
+{
+  "version": "author-read-1.0",
+  "reviewer": "Codex/AI được tác giả ủy quyền",
+  "independent": false,
+  "human_performed": false,
+  "source": "Đọc toàn transcript, kỳ vọng, items và candidates bị guard chặn; không hỏi Qwen để chấm.",
+  "semantic_pass": "Đủ thông tin chính theo kỳ vọng, đúng đối tượng/kết luận cuối/loại/trạng thái/điều kiện/người/hạn, không có dữ liệu không được nguồn hỗ trợ.",
+  "format": "Tên chủ đề cùng đối tượng, cách viết số tương đương hoặc tiền tố hạn khi quan hệ trước/sau vẫn được giữ trong content/evidence; trường thừa chỉ là schema nếu không đổi nghĩa.",
+  "state": "Giữ phân biệt confirmed/needs_confirmation/unresolved/insufficient_information theo quy ước sản phẩm, không gộp trạng thái sau khi xem output.",
+  "quarantine": "Có thể ghi nội dung candidate đúng nhưng bị chặn schema; semantic_pass không có nghĩa item được chấp nhận hoặc dùng được ngay.",
+  "ready": "ready_without_edit là đạt hợp đồng fixture đầy đủ không cần chuẩn hóa; không đo việc người dùng đã duyệt/xuất qua UI.",
+  "extras": "Không tự coi mọi thông tin ngoài gold là bịa: xem nguồn và tính hữu ích; ghi thiếu phạm vi gold nếu có. Không sửa gold.",
+  "use": "Không đổi điểm tự động; không chỉnh output; đánh giá không độc lập và không thay cho PM/dữ liệu thật."
+}

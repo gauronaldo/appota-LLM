@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "3e37eaf2e77ce618739a41c1a2c5db4cd4b73b771fb1020603a5f74065e6e196",
+    "automated": true,
+    "semantic_verification": false,
+    "verification_method": "literal_rules"
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Đợt thử trước mình tích hợp cổng A vì tài liệu dễ đọc hơn."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nếu tiếp tục A thì gần như không cần thay giao diện thanh toán."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nhưng phí giao dịch tháng vừa rồi cao hơn con số trong báo giá ban đầu."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Có tính cả phí tối thiểu theo tháng không?"
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Có, bên kế toán đã cộng vào rồi."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Cổng B có hỗ trợ hoàn tiền một phần không?"
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Bên họ xác nhận có, nhưng mình phải gọi thêm một API."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nhóm tích hợp có đủ thời gian cho thay đổi này trước đợt thử tiếp không?"
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nếu chỉ làm luồng thanh toán và hoàn tiền thì có thể."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Vậy chuyển sang B có vẻ hợp lý hơn cho đợt tiếp."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Đừng bỏ qua phần đối soát; lần trước lỗi nằm ở đó."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Bên B có file đối soát mẫu, mình đã đọc cấu trúc."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Phí đã được xác nhận bằng email, không còn là giá tạm tính."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Chốt chuyển sang cổng B cho đợt thử tiếp theo."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Cổng A vẫn giữ cho giao dịch cũ, không xóa lịch sử."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nếu có vấn đề ở môi trường thử thì phải báo lại, không tự đổi sang A."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Ghi giúp phần quyết định này để người vắng mặt biết."
+    }
+  ],
+  "topics": [],
+  "items": [],
+  "review_queue": [],
+  "error": {
+    "stage": "pipeline",
+    "type": "ValueError",
+    "message": "Ollama chưa hoàn tất hoặc output bị cắt ngắn."
+  },
+  "run_seconds": 128.436,
+  "postvalidation": {
+    "kind": "literal_only_no_new_inference",
+    "at": "2026-10-14T10:09:36.778618+00:00",
+    "source_canonical_sha256": "d6811cf4d946022155edfdbcaf46774ffd0999ac50d1c5b452887d99fe5f5a6e",
+    "core_hashes": {
+      "src/meeting_trace/meeting/core.py": "82a9558034e9f1cd9fda0242baa25b5e067a0a3f36313dabf4e7146dd25f875b",
+      "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+      "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+      "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+      "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3"
+    }
+  },
+  "comparison_execution": {
+    "kind": "preserved_live_pipeline",
+    "source": "data/benchmarks/results/ollama/05_unnamed_reversal.json",
+    "source_sha256": "bbb3021dfe78050741998b68ee157d529f65af8a6c31b414450be274044171a5"
+  }
+}

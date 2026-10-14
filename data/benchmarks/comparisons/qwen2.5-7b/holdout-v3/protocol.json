@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-14T11:03:39.148217+00:00",
+  "engine": "ollama",
+  "model": "qwen2.5:7b",
+  "hashes": {
+    "src/meeting_trace/meeting/core.py": "82a9558034e9f1cd9fda0242baa25b5e067a0a3f36313dabf4e7146dd25f875b",
+    "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+    "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+    "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+    "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3",
+    "src/meeting_trace/meeting/baseline.py": "caf1c1320e1cf87b0cbf376e21d8834dd974d42f5db987d31faaa1e6f157cdd0",
+    "src/meeting_trace/evaluation/comparison.py": "88d2b4ca0a7c0480f05b19b7652adfeeb205512be5eed8d33e79e3ea9513c20b",
+    "src/meeting_trace/evaluation/scoring.py": "6febcece4e51b30b327d3032b50435ebbda8f1572fdf387d88259be24531657d"
+  },
+  "manifest_sha256": "4aec20830db6103423ca4639e7d08d64b6d541bc83a6716cade58bed065c38fd",
+  "arms": [
+    "baseline_b",
+    "pipeline"
+  ],
+  "baseline_version": "B-1.0",
+  "dataset_independent": false,
+  "no_retry": true,
+  "provider_options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 4000
+  }
+}

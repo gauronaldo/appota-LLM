@@ -1,0 +1,48 @@
+{
+  "id": "H02_conditional_export",
+  "title": "Giao việc bằng tên trong transcript không có người nói",
+  "group": "clear",
+  "input_format": "plain",
+  "items": [
+    {
+      "topic": "xuất dữ liệu",
+      "type": "request_feedback",
+      "contains": "CSV đã mã hóa",
+      "status": "needs_confirmation",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T4"
+    },
+    {
+      "topic": "pháp chế",
+      "type": "issue",
+      "contains": "chưa xác nhận",
+      "status": "needs_confirmation",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T6"
+    },
+    {
+      "topic": "xuất dữ liệu",
+      "type": "action",
+      "contains": "CSV đã mã hóa",
+      "status": "needs_confirmation",
+      "owner": "Ngọc",
+      "due": "thứ Năm",
+      "conditions": [
+        "sau khi pháp chế xác nhận"
+      ],
+      "evidence_turn": "T14"
+    }
+  ],
+  "lesson": "Tên người nhận đến từ nội dung giao việc; cam kết phụ thuộc pháp chế chưa thể coi là công việc vô điều kiện.",
+  "split": "fresh_holdout",
+  "dataset_version": "3.0",
+  "history_turns": [],
+  "intermediate_turns": [],
+  "transcript_sha256": "b605c3a4b06089706e8c59140bd6e0f3ffb7cb1833b27cf928690e3efeab24fd",
+  "authored_before_inference": true,
+  "labeler": "Codex/AI hỗ trợ tác giả, không độc lập"
+}

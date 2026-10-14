@@ -1,0 +1,165 @@
+{
+  "suite": "holdout-v3",
+  "arm": "pipeline",
+  "total": 6,
+  "expected_total": 6,
+  "passed": 0,
+  "cases": [
+    {
+      "id": "H01_reminders",
+      "title": "Đổi kênh nhắc lịch sau khi kiểm tra chi phí",
+      "group": "change",
+      "input_format": "named",
+      "dataset_version": "3.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai decision: nhắc lịch / thông báo trong ứng dụng",
+        "Mục ngoài kỳ vọng: decision / lịch demo / Chốt dùng thông báo trong ứng dụng, chỉ cho lịch đã xác nhận. SMS không dùng ở tuần thử này.",
+        "Thiếu diễn biến T2",
+        "Thiếu diễn biến T7"
+      ],
+      "expectation": "decision/nhắc lịch: thông báo trong ứng dụng (confirmed, owner=None, due=None, conditions=['chỉ cho lịch đã xác nhận'])",
+      "actual": "decision/lịch demo: Chốt dùng thông báo trong ứng dụng, chỉ cho lịch đã xác nhận. SMS không dùng ở tuần thử này. (confirmed, owner=None, due=None)",
+      "lesson": "Giữ kênh cuối và phạm vi lịch đã xác nhận; không tự tạo cơ chế SMS dự phòng.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 1,
+        "decision_fn": 1,
+        "intermediate_promoted": 0,
+        "intermediate_total": 1,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "H02_conditional_export",
+      "title": "Giao việc bằng tên trong transcript không có người nói",
+      "group": "clear",
+      "input_format": "plain",
+      "dataset_version": "3.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai request_feedback: xuất dữ liệu / CSV đã mã hóa",
+        "pháp chế: status kỳ vọng 'needs_confirmation', thực tế 'unresolved'",
+        "Thiếu/sai action: xuất dữ liệu / CSV đã mã hóa",
+        "Mục ngoài kỳ vọng: action / danh sách khách / Danh sách khách của đợt thử cần gửi cho đối tác để họ kiểm tra số liệu.",
+        "Mục ngoài kỳ vọng: issue / hạn giao / Nếu trả lời của pháp chế đến muộn, hạn giao cũng cần được trao đổi lại."
+      ],
+      "expectation": "request_feedback/xuất dữ liệu: CSV đã mã hóa (needs_confirmation, owner=None, due=None, conditions=[]); issue/pháp chế: chưa xác nhận (needs_confirmation, owner=None, due=None, conditions=[]); action/xuất dữ liệu: CSV đã mã hóa (needs_confirmation, owner=Ngọc, due=thứ Năm, conditions=['sau khi pháp chế xác nhận'])",
+      "actual": "action/danh sách khách: Danh sách khách của đợt thử cần gửi cho đối tác để họ kiểm tra số liệu. (confirmed, owner=Ngọc, due=trước thứ Năm); issue/pháp chế: Vướng mắc là pháp chế chưa xác nhận quyền xuất bản danh sách. (unresolved, owner=None, due=None); issue/hạn giao: Nếu trả lời của pháp chế đến muộn, hạn giao cũng cần được trao đổi lại. (unresolved, owner=None, due=None)",
+      "lesson": "Tên người nhận đến từ nội dung giao việc; cam kết phụ thuộc pháp chế chưa thể coi là công việc vô điều kiện.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 0,
+        "invented_owner_due": 2
+      }
+    },
+    {
+      "id": "H03_reopened_backup",
+      "title": "Quyết định sao lưu được mở lại vì dung lượng",
+      "group": "unresolved",
+      "input_format": "labels",
+      "dataset_version": "3.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai unresolved: sao lưu / chưa chốt số ngày giữ bản sao",
+        "Thiếu/sai issue: dung lượng / chưa có số liệu dung lượng",
+        "Mục ngoài kỳ vọng: unresolved / lưu trữ / Hôm nay chưa chốt số ngày giữ bản sao, cả bảy, mười bốn và ba mươi ngày đều chưa được chọn.",
+        "Thiếu diễn biến T13",
+        "Thiếu diễn biến T16"
+      ],
+      "expectation": "unresolved/sao lưu: chưa chốt số ngày giữ bản sao (unresolved, owner=None, due=None, conditions=[]); issue/dung lượng: chưa có số liệu dung lượng (needs_confirmation, owner=None, due=None, conditions=[])",
+      "actual": "unresolved/lưu trữ: Hôm nay chưa chốt số ngày giữ bản sao, cả bảy, mười bốn và ba mươi ngày đều chưa được chọn. (needs_confirmation, owner=None, due=None)",
+      "lesson": "Không giữ quyết định đã hủy; một phương án thay thế được nhắc đến chưa trở thành lựa chọn cuối.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 2,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "H04_discount_request",
+      "title": "Phản hồi kinh doanh và lời nhận việc có điều kiện",
+      "group": "indirect",
+      "input_format": "mixed",
+      "dataset_version": "3.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai request_feedback: hạn mức giảm giá / 20%",
+        "Thiếu/sai unresolved: hạn mức giảm giá / chưa chốt tăng hạn mức giảm giá",
+        "Thiếu/sai action: hạn mức giảm giá / cập nhật bảng hạn mức giảm giá",
+        "1 mục không qua validator",
+        "Thiếu diễn biến T2",
+        "Thiếu diễn biến T10"
+      ],
+      "expectation": "request_feedback/hạn mức giảm giá: 20% (needs_confirmation, owner=None, due=None, conditions=[]); unresolved/hạn mức giảm giá: chưa chốt tăng hạn mức giảm giá (unresolved, owner=None, due=None, conditions=[]); action/hạn mức giảm giá: cập nhật bảng hạn mức giảm giá (needs_confirmation, owner=Huy, due=thứ Hai, conditions=['Nếu tài chính xác nhận'])",
+      "actual": "Không có mục",
+      "lesson": "Yêu cầu của kinh doanh chưa là quyết định; việc được nhận có điều kiện phải giữ điều kiện và chưa tự chuyển thành vô điều kiện.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 1,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "H05_webhook_limit",
+      "title": "Chốt giới hạn webhook và người gửi báo cáo",
+      "group": "clear",
+      "input_format": "named",
+      "dataset_version": "3.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai action: kiểm tra webhook / báo cáo kiểm tra webhook",
+        "Mục ngoài kỳ vọng: action / webhook / Mai gửi báo cáo kiểm tra webhook cho nhóm sau khi thử cấu hình này nhé.",
+        "Thiếu diễn biến T2"
+      ],
+      "expectation": "decision/webhook: gửi lại (confirmed, owner=None, due=None, conditions=['tối đa ba lần', 'cách nhau 30 giây', 'trạng thái thất bại']); action/kiểm tra webhook: báo cáo kiểm tra webhook (confirmed, owner=Mai, due=thứ Sáu, conditions=[])",
+      "actual": "decision/webhook: Chốt gửi lại tối đa ba lần, cách nhau 30 giây; sau đó vẫn lỗi thì giữ trạng thái thất bại. (confirmed, owner=None, due=None); action/webhook: Mai gửi báo cáo kiểm tra webhook cho nhóm sau khi thử cấu hình này nhé. (needs_confirmation, owner=None, due=None)",
+      "lesson": "Giữ giới hạn số lần/khoảng cách và trạng thái sau thất bại; giao và nhận cùng một báo cáo là một công việc.",
+      "metrics": {
+        "decision_tp": 1,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 1,
+        "invented_owner_due": 0
+      }
+    },
+    {
+      "id": "H06_unsettled_rota",
+      "title": "Ok và để em xem chưa tạo người phụ trách lịch trực",
+      "group": "indirect",
+      "input_format": "plain",
+      "dataset_version": "3.0",
+      "passed": false,
+      "errors": [
+        "Thiếu/sai unresolved: lịch trực / chưa thống nhất lịch trực",
+        "Thiếu/sai issue: lịch làm việc / chưa có lịch làm việc",
+        "Mục ngoài kỳ vọng: unresolved / lịch trực hỗ trợ / Hôm nay chưa thống nhất lịch trực; chưa giao ai chốt danh sách.",
+        "Thiếu diễn biến T2",
+        "Thiếu diễn biến T7"
+      ],
+      "expectation": "unresolved/lịch trực: chưa thống nhất lịch trực (unresolved, owner=None, due=None, conditions=[]); issue/lịch làm việc: chưa có lịch làm việc (needs_confirmation, owner=None, due=None, conditions=[])",
+      "actual": "unresolved/lịch trực hỗ trợ: Hôm nay chưa thống nhất lịch trực; chưa giao ai chốt danh sách. (needs_confirmation, owner=None, due=None)",
+      "lesson": "Không biến ok/để em xem thành một công việc đã giao; giữ thiếu danh tính thay vì tạo người phụ trách.",
+      "metrics": {
+        "decision_tp": 0,
+        "decision_fp": 0,
+        "decision_fn": 0,
+        "intermediate_promoted": 0,
+        "intermediate_total": 2,
+        "invented_owner_due": 0
+      }
+    }
+  ],
+  "review_independent": false,
+  "completed": true
+}

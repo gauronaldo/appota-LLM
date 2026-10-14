@@ -1,0 +1,18 @@
+Người nói 1: Thời gian giữ bản sao lưu hiện cần được thống nhất lại.
+Người nói 2: Bảy ngày thì hơi ngắn nếu cuối tháng mới phát hiện lỗi dữ liệu.
+Người nói 1: Vậy chốt giữ ba mươi ngày để đủ thời gian đối chiếu.
+Người nói 3: Em hỏi lại phần dung lượng, mình đã tính cả bản sao hằng ngày chưa?
+Người nói 2: Con số hôm qua mới tính dữ liệu gốc.
+Người nói 3: Bản sao đầy đủ khá lớn, không phải ngày nào cũng chỉ lưu phần thay đổi.
+Người nói 1: Anh nghĩ phần còn trống đủ, nhưng chưa có bảng tính chi tiết.
+Người nói 2: Mình có thể giảm xuống mười bốn ngày nếu ba mươi ngày không đủ.
+Người nói 3: Em đang nhìn giới hạn gói hiện tại, nó không tự tăng dung lượng.
+Người nói 2: Mua thêm lúc này có vượt dự toán không?
+Người nói 3: Vướng mắc là chưa có số liệu dung lượng của bản sao hằng ngày.
+Người nói 1: Như vậy câu chốt ba mươi ngày lúc đầu chưa có cơ sở đủ chắc.
+Người nói 1: Hủy kết luận ba mươi ngày, mình mở lại phần này.
+Người nói 2: Mười bốn ngày cũng mới là phương án để cân nhắc thôi.
+Người nói 3: Khi có dung lượng thực tế thì mới biết phương án nào dùng được.
+Người nói 1: Hôm nay chưa chốt số ngày giữ bản sao, cả bảy, mười bốn và ba mươi ngày đều chưa được chọn.
+Người nói 2: Em ghi lại để người đọc không hiểu ba mươi ngày còn hiệu lực.
+Người nói 3: Ừ, lần tới mình quay lại với số liệu thực tế.

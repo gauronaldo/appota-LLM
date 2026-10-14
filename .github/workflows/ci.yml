@@ -20,6 +20,8 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: Unit, integration and regression tests
         run: python src test
+      - name: Verify submission report matches saved JSON
+        run: python src report --check
       - name: Verify development baseline
         run: python src evaluate --split dev --verify-only
       - name: Verify holdout baseline

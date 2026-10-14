@@ -1,0 +1,328 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "0071a71e24d7ea3ddd3b0e7cba11d7033fb1eab81ecbbaf06eaa7ed11a6e9e64",
+    "automated": true,
+    "semantic_verification": false,
+    "verification_method": "literal_rules",
+    "approval_required": true,
+    "arm": "baseline_b",
+    "prompt_version": "B-1.0",
+    "model_calls": 1
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Lịch trực hỗ trợ trong đợt mở thử vẫn còn hai cách xếp."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Mình có thể xếp hai người luân phiên để mỗi người có thời gian làm việc khác."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nếu chỉ có hai người thì hôm một người nghỉ sẽ khó thay thế."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Đúng, nhưng đợt thử cũng chưa có nhiều yêu cầu hỗ trợ."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Có cần ba người cùng chia ca ngay từ đầu không?"
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Có thể, nhưng phải xem nhóm hỗ trợ có người trống lịch không đã."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Phương án ba người chia ca cũng đáng cân nhắc, chưa biết có đủ người không."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Để em xem lịch bên đó."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Ok với việc hỏi trước, chưa nên gửi lịch cho khách lúc này."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Vướng mắc là chưa có lịch làm việc của nhóm hỗ trợ để kiểm tra ca trùng."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Em nói xem lịch thôi, chưa nhận việc chốt danh sách trực."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Ừ, mình cũng chưa giao ai trách nhiệm chốt danh sách trong buổi này."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nếu hỏi được thì lần tới sẽ có cơ sở để chọn hai hay ba người."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Khách có đang chờ một ngày chính thức mở hỗ trợ chưa?"
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Họ mới hỏi khoảng thời gian dự kiến, chưa yêu cầu lịch từng ca."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Vậy đừng tự ghi tên người trực khi chưa biết người nào tham gia được."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Hôm nay chưa thống nhất lịch trực; chưa giao ai chốt danh sách."
+    },
+    {
+      "id": "T18",
+      "line": 18,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Mình giữ hai phương án và câu hỏi về lịch làm việc cho buổi sau."
+    }
+  ],
+  "topics": [],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "Lịch trực hỗ trợ trong đợt mở thử",
+      "type": "unresolved",
+      "status": "unresolved",
+      "content": "Cần cân nhắc hai phương án: luân phiên hai người hoặc chia ca ba người, dựa trên lịch làm việc của nhóm hỗ trợ.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T1",
+          "quote": "Lịch trực hỗ trợ trong đợt mở thử vẫn còn hai cách xếp."
+        },
+        {
+          "turn_id": "T2",
+          "quote": "Mình có thể xếp hai người luân phiên để mỗi người có thời gian làm việc khác."
+        },
+        {
+          "turn_id": "T3",
+          "quote": "Nếu chỉ có hai người thì hôm một người nghỉ sẽ khó thay thế."
+        },
+        {
+          "turn_id": "T4",
+          "quote": "Đúng, nhưng đợt thử cũng chưa có nhiều yêu cầu hỗ trợ."
+        },
+        {
+          "turn_id": "T5",
+          "quote": "Có cần ba người cùng chia ca ngay từ đầu không?"
+        },
+        {
+          "turn_id": "T6",
+          "quote": "Có thể, nhưng phải xem nhóm hỗ trợ có người trống lịch không đã."
+        },
+        {
+          "turn_id": "T7",
+          "quote": "Phương án ba người chia ca cũng đáng cân nhắc, chưa biết có đủ người không."
+        },
+        {
+          "turn_id": "T8",
+          "quote": "Để em xem lịch bên đó."
+        },
+        {
+          "turn_id": "T9",
+          "quote": "Ok với việc hỏi trước, chưa nên gửi lịch cho khách lúc này."
+        },
+        {
+          "turn_id": "T10",
+          "quote": "Vướng mắc là chưa có lịch làm việc của nhóm hỗ trợ để kiểm tra ca trùng."
+        },
+        {
+          "turn_id": "T11",
+          "quote": "Em nói xem lịch thôi, chưa nhận việc chốt danh sách trực."
+        },
+        {
+          "turn_id": "T12",
+          "quote": "Ừ, mình cũng chưa giao ai trách nhiệm chốt danh sách trong buổi này."
+        },
+        {
+          "turn_id": "T13",
+          "quote": "Nếu hỏi được thì lần tới sẽ có cơ sở để chọn hai hay ba người."
+        },
+        {
+          "turn_id": "T14",
+          "quote": "Khách có đang chờ một ngày chính thức mở hỗ trợ chưa?"
+        },
+        {
+          "turn_id": "T15",
+          "quote": "Họ mới hỏi khoảng thời gian dự kiến, chưa yêu cầu lịch từng ca."
+        },
+        {
+          "turn_id": "T16",
+          "quote": "Vậy đừng tự ghi tên người trực khi chưa biết người nào tham gia được."
+        },
+        {
+          "turn_id": "T17",
+          "quote": "Hôm nay chưa thống nhất lịch trực; chưa giao ai chốt danh sách."
+        },
+        {
+          "turn_id": "T18",
+          "quote": "Mình giữ hai phương án và câu hỏi về lịch làm việc cho buổi sau."
+        }
+      ],
+      "reason": "Phương án chưa được thống nhất và chưa có người chịu trách nhiệm chốt danh sách.",
+      "history": [
+        {
+          "turn_id": "T1",
+          "kind": "proposal",
+          "quote": "Lịch trực hỗ trợ trong đợt mở thử vẫn còn hai cách xếp."
+        },
+        {
+          "turn_id": "T2",
+          "kind": "proposal",
+          "quote": "Mình có thể xếp hai người luân phiên để mỗi người có thời gian làm việc khác."
+        },
+        {
+          "turn_id": "T3",
+          "kind": "issue",
+          "quote": "Nếu chỉ có hai người thì hôm một người nghỉ sẽ khó thay thế."
+        },
+        {
+          "turn_id": "T4",
+          "kind": "support",
+          "quote": "Đúng, nhưng đợt thử cũng chưa có nhiều yêu cầu hỗ trợ."
+        },
+        {
+          "turn_id": "T5",
+          "kind": "proposal",
+          "quote": "Có cần ba người cùng chia ca ngay từ đầu không?"
+        },
+        {
+          "turn_id": "T6",
+          "kind": "support",
+          "quote": "Có thể, nhưng phải xem nhóm hỗ trợ có người trống lịch không đã."
+        },
+        {
+          "turn_id": "T7",
+          "kind": "proposal",
+          "quote": "Phương án ba người chia ca cũng đáng cân nhắc, chưa biết có đủ người không."
+        },
+        {
+          "turn_id": "T8",
+          "kind": "request_feedback",
+          "quote": "Để em xem lịch bên đó."
+        },
+        {
+          "turn_id": "T9",
+          "kind": "request_feedback",
+          "quote": "Ok với việc hỏi trước, chưa nên gửi lịch cho khách lúc này."
+        },
+        {
+          "turn_id": "T10",
+          "kind": "issue",
+          "quote": "Vướng mắc là chưa có lịch làm việc của nhóm hỗ trợ để kiểm tra ca trùng."
+        },
+        {
+          "turn_id": "T11",
+          "kind": "support",
+          "quote": "Em nói xem lịch thôi, chưa nhận việc chốt danh sách trực."
+        },
+        {
+          "turn_id": "T12",
+          "kind": "support",
+          "quote": "Ừ, mình cũng chưa giao ai trách nhiệm chốt danh sách trong buổi này."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "proposal",
+          "quote": "Nếu hỏi được thì lần tới sẽ có cơ sở để chọn hai hay ba người."
+        },
+        {
+          "turn_id": "T14",
+          "kind": "issue",
+          "quote": "Khách có đang chờ một ngày chính thức mở hỗ trợ chưa?"
+        },
+        {
+          "turn_id": "T15",
+          "kind": "support",
+          "quote": "Họ mới hỏi khoảng thời gian dự kiến, chưa yêu cầu lịch từng ca."
+        },
+        {
+          "turn_id": "T16",
+          "kind": "request_feedback",
+          "quote": "Vậy đừng tự ghi tên người trực khi chưa biết người nào tham gia được."
+        },
+        {
+          "turn_id": "T17",
+          "kind": "issue",
+          "quote": "Hôm nay chưa thống nhất lịch trực; chưa giao ai chốt danh sách."
+        },
+        {
+          "turn_id": "T18",
+          "kind": "request_feedback",
+          "quote": "Mình giữ hai phương án và câu hỏi về lịch làm việc cho buổi sau."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [],
+  "run_seconds": 14.566,
+  "comparison_execution": {
+    "kind": "live_once_no_retry"
+  }
+}

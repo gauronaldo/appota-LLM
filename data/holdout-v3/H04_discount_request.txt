@@ -1,0 +1,18 @@
+Lan: Phần hạn mức giảm giá có phản hồi từ nhóm kinh doanh.
+Lan: Họ muốn tăng hạn mức giảm giá lên 20% cho đợt giới thiệu.
+Nhóm tài chính đã xem đề xuất này chưa?
+Lan: Chưa, họ mới nhận bảng dự toán sáng nay.
+Huy: Mức đang chạy là 10%, mình chưa đổi cấu hình nào.
+Nếu lên 20% thì có áp dụng cho mọi khách hàng không?
+Lan: Câu hỏi đó cũng chưa được trả lời, bên kinh doanh mới nêu mức mong muốn.
+Huy: Em không muốn cập nhật bảng rồi sau đó phải thu lại vì chưa được duyệt.
+Vậy hôm nay mình ghi phản hồi, còn số mới cần chờ tài chính.
+Lan: Đúng, chưa chốt tăng hạn mức giảm giá trong buổi này.
+Huy: Nếu tài chính xác nhận, em nhận cập nhật bảng hạn mức giảm giá trước thứ Hai.
+Chưa có xác nhận thì phần bảng vẫn để như đang dùng nhé.
+Huy: Ừ, lời nhận việc của em chỉ có hiệu lực sau xác nhận đó.
+Lan: Nếu tài chính không đồng ý thì không cập nhật theo đề xuất 20%.
+Mình có cần hứa với kinh doanh về ngày áp dụng chưa?
+Lan: Chưa hứa, vì thời điểm xác nhận còn chưa biết.
+Huy: Phần hạn mức và điều kiện cập nhật đã rõ như vậy.
+Lan: Em dừng phần trao đổi này ở phản hồi và câu chưa chốt.

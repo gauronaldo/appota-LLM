@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "c16ceb0cac3af37e9e0dc76e86104f11770de321ce12719d43c874dbba6884a2",
+    "automated": true,
+    "semantic_verification": false,
+    "verification_method": "literal_rules",
+    "approval_required": true,
+    "arm": "baseline_b",
+    "prompt_version": "B-1.0",
+    "model_calls": 1
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Môi trường thử của đối tác vẫn chặn địa chỉ mạng của mình."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Họ đã nhận yêu cầu mở quyền từ tuần trước chưa?"
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Họ nhận rồi nhưng chưa xác nhận lúc nào hoàn tất."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Vậy nhóm mình chưa chạy được luồng tích hợp từ đầu đến cuối."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Phần tích hợp có người nhận xử lý khi có quyền không?"
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Nếu đối tác mở quyền sandbox thì em mới nhận kiểm tra luồng hoàn tiền."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Em chưa cam kết bắt đầu trước khi quyền được mở, đúng không?"
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Đúng, hiện em không có cách chạy thử trên môi trường của họ."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Mình cũng chưa có ngày mở quyền để suy ra hạn kiểm tra."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Không nên ghi thứ Sáu chỉ vì đó là lịch demo dự kiến."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Vướng mắc là đối tác chưa mở quyền sandbox cho nhóm."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Cần giữ điều kiện của lời nhận việc trong bản ghi."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Nếu quyền không được mở thì mình phải bàn lại cách kiểm tra."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em ghi công việc ở trạng thái cần xác nhận, chưa có deadline."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Lỗi này thuộc quyền truy cập, chưa phải lỗi của luồng hoàn tiền."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Đúng, hôm nay chưa có bằng chứng để kết luận luồng đó hỏng."
+    }
+  ],
+  "topics": [],
+  "items": [
+    {
+      "id": "T11",
+      "topic": "Vướng mắc là đối tác chưa mở quyền sandbox cho nhóm.",
+      "type": "issue",
+      "status": "confirmed",
+      "content": "Đối tác chưa mở quyền sandbox.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T11",
+          "quote": "Vướng mắc là đối tác chưa mở quyền sandbox cho nhóm."
+        }
+      ],
+      "reason": "明确指出合作伙伴未开放沙盒权限。",
+      "history": [
+        {
+          "turn_id": "T11",
+          "kind": "issue",
+          "quote": "Vướng mắc là đối tác chưa mở quyền sandbox cho nhóm."
+        }
+      ]
+    },
+    {
+      "id": "T14",
+      "topic": "Nếu quyền không được mở thì mình phải bàn lại cách kiểm tra.",
+      "type": "unresolved",
+      "status": "unresolved",
+      "content": "如果权限未开放，则需要重新讨论测试方法。",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T13",
+          "quote": "Nếu quyền không được mở thì mình phải bàn lại cách kiểm tra."
+        },
+        {
+          "turn_id": "T14",
+          "quote": "Em ghi công việc ở trạng thái cần xác nhận, chưa có deadline."
+        }
+      ],
+      "reason": "讨论了在权限未开放的情况下如何进行测试，但没有明确解决方案。",
+      "history": [
+        {
+          "turn_id": "T13",
+          "kind": "issue",
+          "quote": "Nếu quyền không được mở thì mình phải bàn lại cách kiểm tra."
+        },
+        {
+          "turn_id": "T14",
+          "kind": "request_feedback",
+          "quote": "Em ghi công việc ở trạng thái cần xác nhận, chưa có deadline."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [],
+  "run_seconds": 7.282,
+  "comparison_execution": {
+    "kind": "live_once_no_retry"
+  }
+}

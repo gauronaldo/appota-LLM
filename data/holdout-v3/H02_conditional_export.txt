@@ -1,0 +1,18 @@
+Danh sách khách của đợt thử cần gửi cho đối tác để họ kiểm tra số liệu.
+Họ đã có màn hình xem tổng số, nhưng không có danh sách từng dòng.
+File gửi ra vẫn dùng các cột đã được duyệt ở lần làm trước.
+Phản hồi của đối tác là họ cần CSV đã mã hóa, không nhận file mở trực tiếp.
+Mình không bổ sung số điện thoại hoặc địa chỉ vào file lần này.
+Vướng mắc là pháp chế chưa xác nhận quyền xuất bản danh sách.
+Hồ sơ đã được gửi đi, nhưng chưa có câu trả lời về phạm vi được chia sẻ.
+Vậy hiện chưa ai nên tạo file rồi gửi ra ngoài.
+Ngọc có tài khoản xuất dữ liệu, đúng không?
+Có, Ngọc đã dùng tài khoản đó để làm bản thử nội bộ.
+Tài khoản dùng được không thay cho việc pháp chế đồng ý.
+Đúng, đây là hai điều kiện khác nhau.
+Nếu pháp chế không xác nhận thì mình dừng việc gửi, không tìm tài khoản khác để làm.
+Ngọc xuất bản CSV đã mã hóa sau khi pháp chế xác nhận, hạn trước thứ Năm.
+Ngọc đã biết việc này; khi có xác nhận thì bạn ấy mới thực hiện.
+Trước lúc đó, quyền xuất vẫn giữ như cũ nhưng chưa được dùng cho đối tác.
+Nếu trả lời của pháp chế đến muộn, hạn giao cũng cần được trao đổi lại.
+Mình kết thúc phần danh sách ở điều kiện và hạn vừa nêu.

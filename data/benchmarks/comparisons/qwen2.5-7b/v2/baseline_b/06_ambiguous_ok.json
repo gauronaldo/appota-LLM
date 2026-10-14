@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "1ddb1dde0b17dc3293b7450307702dd6d46c3e3f7af11ee88fcd4115f563f01d",
+    "automated": true,
+    "semantic_verification": false,
+    "verification_method": "literal_rules",
+    "approval_required": true,
+    "arm": "baseline_b",
+    "prompt_version": "B-1.0",
+    "model_calls": 1
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Về thanh toán, bản demo còn dùng chuyển khoản thủ công."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Ok, anh nói tiếp đi."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Luồng tích hợp cần đổi cả màn hình xác nhận."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Bên đối tác có gửi tài liệu sandbox chưa?"
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Mới gửi link đăng ký, anh chưa có tài khoản chạy thử."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Để em xem đã, màn hình hiện tại còn lỗi căn lề."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Câu ok lúc nãy là em đồng ý triển khai luôn à?"
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Em chỉ nói là nghe được, chưa xem đủ khối lượng."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Nếu vậy mình chưa biết phần này có kịp cùng đợt thử không."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Anh cũng chưa có số giờ ước tính chính xác."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Mình đang gần hết giờ, hôm nay không lấy im lặng làm đồng ý nhé."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Chưa chốt chuyện thêm ví điện tử ở đợt này."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Em hiểu, không coi đó là việc đã được giao cho em."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Bản ghi sẽ giữ nó ở phần đang bàn."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Đúng, hiện mới là đề xuất."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Còn phần thanh toán hiện tại vẫn chạy như cũ."
+    }
+  ],
+  "topics": [],
+  "items": [],
+  "review_queue": [
+    {
+      "item": {
+        "id": "T1",
+        "topic": "Thanh toán",
+        "type": "unresolved",
+        "status": "unresolved",
+        "content": "Bản demo còn dùng chuyển khoản thủ công.",
+        "owner": null,
+        "due": null,
+        "evidence": [],
+        "reason": "",
+        "history": [
+          {
+            "turn_id": "T17",
+            "kind": "finalize",
+            "quote": "Còn phần thanh toán hiện tại vẫn chạy như cũ."
+          }
+        ]
+      },
+      "errors": [
+        "reason đang trống",
+        "Không có evidence"
+      ]
+    },
+    {
+      "item": {
+        "id": "T2",
+        "topic": "Thanh toán - ví điện tử",
+        "type": "issue",
+        "status": "unresolved",
+        "content": "Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác.",
+        "owner": null,
+        "due": null,
+        "evidence": [],
+        "reason": "",
+        "history": [
+          {
+            "turn_id": "T2",
+            "kind": "proposal",
+            "quote": "Đề xuất thêm ví điện tử ở đợt thử này để khách bớt thao tác."
+          },
+          {
+            "turn_id": "T13",
+            "kind": "request_feedback",
+            "quote": "Chưa chốt chuyện thêm ví điện tử ở đợt này."
+          }
+        ]
+      },
+      "errors": [
+        "reason đang trống",
+        "Không có evidence"
+      ]
+    }
+  ],
+  "semantic_checks": [],
+  "run_seconds": 5.833,
+  "comparison_execution": {
+    "kind": "live_once_no_retry"
+  }
+}

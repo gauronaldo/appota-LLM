@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "7894015d5a6e984a1f0b3274f8801bc2f64b7bdbc14bdd17908f69281161e509",
+    "automated": true,
+    "semantic_verification": false,
+    "verification_method": "literal_rules",
+    "approval_required": true,
+    "arm": "baseline_b",
+    "prompt_version": "B-1.0",
+    "model_calls": 1
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Linh",
+      "speaker_label": "Linh",
+      "text": "Mình bàn nốt chuyện nhắc lịch cho tuần đầu mở thử nhé."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Dũng",
+      "speaker_label": "Dũng",
+      "text": "Cho gửi SMS đi, khách không mở ứng dụng vẫn nhìn thấy."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Linh",
+      "speaker_label": "Linh",
+      "text": "Tạm chọn SMS, nhưng mình phải biết phí trước khi triển khai."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Hạnh",
+      "speaker_label": "Hạnh",
+      "text": "Nhà mạng tính cả những tin khách không nhận được do sai số điện thoại."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Quân",
+      "speaker_label": "Quân",
+      "text": "Với lượng lịch hiện tại thì khoản đó cao hơn dự toán khá nhiều."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Linh",
+      "speaker_label": "Linh",
+      "text": "Vậy SMS không còn phù hợp với tuần thử này rồi."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Dũng",
+      "speaker_label": "Dũng",
+      "text": "Mình chuyển sang thông báo trong ứng dụng được không? Phần đó đã có sẵn."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Hạnh",
+      "speaker_label": "Hạnh",
+      "text": "Cách đó không phát sinh phí theo từng tin."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Quân",
+      "speaker_label": "Quân",
+      "text": "Nhưng chỉ gửi cho lịch đã xác nhận, lịch nháp thay đổi liên tục sẽ rất phiền."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Linh",
+      "speaker_label": "Linh",
+      "text": "Đúng, lịch nháp chưa phải lời hẹn với khách."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Hạnh",
+      "speaker_label": "Hạnh",
+      "text": "Thông báo hiện có đi qua hàng đợi, không hiện ngay lập tức."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Quân",
+      "speaker_label": "Quân",
+      "text": "Trễ vài phút thì vẫn dùng được, mình nhắc trước buổi hẹn khá lâu."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Dũng",
+      "speaker_label": "Dũng",
+      "text": "Khách tắt thông báo thì mình có tự gửi SMS thay thế không?"
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Hạnh",
+      "speaker_label": "Hạnh",
+      "text": "Đợt này chưa có phần chuyển kênh như vậy."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Linh",
+      "speaker_label": "Linh",
+      "text": "Chốt dùng thông báo trong ứng dụng, chỉ cho lịch đã xác nhận. SMS không dùng ở tuần thử này."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Dũng",
+      "speaker_label": "Dũng",
+      "text": "Như vậy khách tắt thông báo thì chưa có kênh thay thế ở phiên bản này."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": "Quân",
+      "speaker_label": "Quân",
+      "text": "Em sẽ giải thích giới hạn đó khi được hỏi, không hứa có SMS dự phòng."
+    },
+    {
+      "id": "T18",
+      "line": 18,
+      "speaker": "Linh",
+      "speaker_label": "Linh",
+      "text": "Ừ, phần kênh nhắc lịch dừng ở kết luận vừa rồi."
+    }
+  ],
+  "topics": [],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "Phương án nhắn lịch cho tuần thử nghiệm",
+      "type": "decision",
+      "status": "confirmed",
+      "content": "Dùng thông báo trong ứng dụng, chỉ cho lịch đã xác nhận. SMS không dùng ở tuần thử này.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T15",
+          "quote": "Chốt dùng thông báo trong ứng dụng, chỉ cho lịch đã xác nhận. SMS không dùng ở tuần thử này."
+        }
+      ],
+      "reason": "Đã thảo luận và quyết định rõ ràng",
+      "history": [
+        {
+          "turn_id": "T3",
+          "kind": "proposal",
+          "quote": "Tạm chọn SMS, nhưng mình phải biết phí trước khi triển khai."
+        },
+        {
+          "turn_id": "T6",
+          "kind": "request_feedback",
+          "quote": "Vậy SMS không còn phù hợp với tuần thử này rồi."
+        },
+        {
+          "turn_id": "T15",
+          "kind": "finalize",
+          "quote": "Chốt dùng thông báo trong ứng dụng, chỉ cho lịch đã xác nhận. SMS không dùng ở tuần thử này."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [],
+  "run_seconds": 4.94,
+  "comparison_execution": {
+    "kind": "live_once_no_retry"
+  }
+}

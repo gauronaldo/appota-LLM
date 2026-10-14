@@ -1,0 +1,68 @@
+{
+  "suite": "holdout-v3",
+  "arm": "pipeline",
+  "rubric_version": "author-read-1.0",
+  "reviewer": "Codex/AI được tác giả ủy quyền",
+  "independent": false,
+  "human_performed": false,
+  "authorized_by_author": true,
+  "reviewed_at": "2026-10-14T11:13:17.823705+00:00",
+  "total": 6,
+  "semantic_passed": 0,
+  "cases": [
+    {
+      "id": "H01_reminders",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Nội dung nhắc lịch và điều kiện đúng T15 nhưng gắn lịch demo, là đối tượng khác; history bỏ diễn biến SMS T3/T6/T7. Verifier cùng model vẫn cho qua.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/holdout-v3/pipeline/H01_reminders.json",
+      "source_canonical_sha256": "9acf32b5b03377d1b2336bca8a21a63ede9ce387a12bb05987ff875238e46fb3"
+    },
+    {
+      "id": "H02_conditional_export",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Action mất CSV mã hóa và điều kiện pháp chế trong content, confirmed thay needs_confirmation; phản hồi bị bỏ và blocker sai trạng thái. Evidence chứa điều kiện không bù cho content đã bỏ điều kiện.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/holdout-v3/pipeline/H02_conditional_export.json",
+      "source_canonical_sha256": "d25176d42cf6e4ca80aaaf704566c8dcc0e9953e72a7fab8b8ef7970fb08d35b"
+    },
+    {
+      "id": "H03_reopened_backup",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Giữ chưa chốt số ngày, nhưng needs_confirmation thay unresolved và mất issue dung lượng T11. Không dùng đúng một câu nội dung để nhận cả case đạt.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/holdout-v3/pipeline/H03_reopened_backup.json",
+      "source_canonical_sha256": "90e7ddd0f26c05e6bb683f98604fe5ed2cb870f3a98e55b27379947475c746f9"
+    },
+    {
+      "id": "H04_discount_request",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Ghi câu chưa chốt thành action confirmed không owner; guard chặn. Mất phản hồi 20% và việc Huy nhận có điều kiện.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/holdout-v3/pipeline/H04_discount_request.json",
+      "source_canonical_sha256": "4d058802dcaf3c444f9776171d10280e0c9f7c62414c20d017c340b6ef958e87"
+    },
+    {
+      "id": "H05_webhook_limit",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Định dạng + ngữ nghĩa",
+      "reason": "Giới hạn ba lần/30 giây/thất bại đúng. Việc Mai đã nhận bị để owner/due null và needs_confirmation, content mất thứ Sáu. Thiếu đề xuất gửi vô hạn T2 trong history.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/holdout-v3/pipeline/H05_webhook_limit.json",
+      "source_canonical_sha256": "172bc7a23d8c539295cdb2e51a08b27fb60a4ae353746e96ad8e26ba245ee6cb"
+    },
+    {
+      "id": "H06_unsettled_rota",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Giữ câu chưa thống nhất nhưng status needs_confirmation thay unresolved, bỏ issue lịch làm việc và diễn biến hai/ba người. Không bịa assignment là điểm tốt.",
+      "source": "data/benchmarks/comparisons/qwen2.5-7b/holdout-v3/pipeline/H06_unsettled_rota.json",
+      "source_canonical_sha256": "4da563e7590e8a7b66e6916a0b12ecbb4188eb26b85248576a6adbc4edf0e985"
+    }
+  ]
+}

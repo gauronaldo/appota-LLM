@@ -1,0 +1,260 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "d8df9e24ac28239caa6b99ae52f264e8aa6ffc74860c60590571ca85ee1e561f",
+    "automated": true,
+    "semantic_verification": true,
+    "verification_method": "llm_judgment",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Có khách nói bấm đăng nhập hai lần mới vào được."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Họ dùng trình duyệt nào? Em chưa thấy lỗi đó ở máy mình."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Bản ghi hỗ trợ nói Safari trên điện thoại."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Để em xem lỗi này đã."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Ý em là nhận sửa luôn hay cần xem mới biết?"
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Em cần xem video để biết có phải lỗi sản phẩm không."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Video có trong phiếu hỗ trợ, nhưng lúc bấm hơi khuất tay."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Có thể lần đầu họ chưa đóng bàn phím, mình không nên đoán."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Đúng, chưa có bằng chứng cho một nguyên nhân cụ thể."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Vậy hiện chưa có người nhận làm bản sửa."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Cũng chưa có hạn giải quyết mà mình có thể hứa với khách."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Vướng mắc là chưa tái hiện được lỗi đăng nhập trên môi trường thử."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Em ghi đây là báo cáo lỗi chưa xác minh."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Đừng ghi câu để em xem thành em cam kết sửa trong hôm nay."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": "Minh",
+      "speaker_label": "Minh",
+      "text": "Đồng ý, chưa giao việc sửa khi chưa rõ lỗi."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Thông tin trình duyệt trong phiếu có thể dùng để điều tra sau."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": "Mai",
+      "speaker_label": "Mai",
+      "text": "Phần này vẫn cần người phụ trách hỗ trợ làm rõ với khách."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "báo cáo lỗi",
+      "events": [
+        {
+          "turn_id": "T12",
+          "kind": "change",
+          "quote": "Vướng mắc là chưa tái hiện được lỗi đăng nhập trên môi trường thử."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "support",
+          "quote": "Em ghi đây là báo cáo lỗi chưa xác minh."
+        },
+        {
+          "turn_id": "T14",
+          "kind": "request_feedback",
+          "quote": "Đừng ghi câu để em xem thành em cam kết sửa trong hôm nay."
+        },
+        {
+          "turn_id": "T15",
+          "kind": "support",
+          "quote": "Đồng ý, chưa giao việc sửa khi chưa rõ lỗi."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "I1",
+      "topic": "báo cáo lỗi",
+      "type": "issue",
+      "status": "unresolved",
+      "content": "Có khách báo đăng nhập hai lần mới vào được, nhưng chưa xác định nguyên nhân cụ thể.",
+      "owner": null,
+      "due": null,
+      "evidence": [
+        {
+          "turn_id": "T12",
+          "quote": "Vướng mắc là chưa tái hiện được lỗi đăng nhập trên môi trường thử."
+        },
+        {
+          "turn_id": "T13",
+          "quote": "Em ghi đây là báo cáo lỗi chưa xác minh."
+        },
+        {
+          "turn_id": "T14",
+          "quote": "Đừng ghi câu để em xem thành em cam kết sửa trong hôm nay."
+        },
+        {
+          "turn_id": "T15",
+          "quote": "Đồng ý, chưa giao việc sửa khi chưa rõ lỗi."
+        }
+      ],
+      "reason": "Chưa xác định nguyên nhân cụ thể và chưa giao việc sửa lỗi.",
+      "history": [
+        {
+          "turn_id": "T12",
+          "kind": "change",
+          "quote": "Vướng mắc là chưa tái hiện được lỗi đăng nhập trên môi trường thử."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "support",
+          "quote": "Em ghi đây là báo cáo lỗi chưa xác minh."
+        },
+        {
+          "turn_id": "T14",
+          "kind": "request_feedback",
+          "quote": "Đừng ghi câu để em xem thành em cam kết sửa trong hôm nay."
+        },
+        {
+          "turn_id": "T15",
+          "kind": "support",
+          "quote": "Đồng ý, chưa giao việc sửa khi chưa rõ lỗi."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [
+    {
+      "item_id": "I1",
+      "supported": "pass",
+      "topic_correct": "pass",
+      "current": "pass",
+      "conditions_preserved": "pass",
+      "assignment_supported": "pass",
+      "reason": "Chưa xác định nguyên nhân cụ thể và chưa giao việc sửa lỗi, nhưng các quyết định vẫn giữ nguyên không thay đổi trạng thái hoặc hạn thời gian. Các điều kiện liên quan vẫn được bảo toàn và nội dung vẫn giữ nguyên như ban đầu khi chưa rõ ràng về nguyên nhân và người nhận trách nhiệm.",
+      "evidence": [
+        {
+          "turn_id": "T12",
+          "quote": "Vướng mắc là chưa tái hiện được lỗi đăng nhập trên môi trường thử."
+        },
+        {
+          "turn_id": "T13",
+          "quote": "Em ghi đây là báo cáo lỗi chưa xác minh."
+        },
+        {
+          "turn_id": "T14",
+          "quote": "Đừng ghi câu để em xem thành em cam kết sửa trong hôm nay."
+        },
+        {
+          "turn_id": "T15",
+          "quote": "Đồng ý, chưa giao việc sửa khi chưa rõ lỗi."
+        }
+      ]
+    }
+  ],
+  "run_seconds": 62.951,
+  "postvalidation": {
+    "kind": "literal_only_no_new_inference",
+    "at": "2026-10-14T10:09:36.784649+00:00",
+    "source_canonical_sha256": "72359fb9f5194bcf7255b5fb6ad3c39cf3c28c51fc6799698808d605851dc51d",
+    "core_hashes": {
+      "src/meeting_trace/meeting/core.py": "82a9558034e9f1cd9fda0242baa25b5e067a0a3f36313dabf4e7146dd25f875b",
+      "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+      "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+      "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+      "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3"
+    }
+  },
+  "comparison_execution": {
+    "kind": "preserved_live_pipeline",
+    "source": "data/benchmarks/results/ollama/07_let_me_check.json",
+    "source_sha256": "3f37d4114fddeb7e320531aad6ae63baa08d61ed2f0ba424c3782d0f9180a41c"
+  }
+}

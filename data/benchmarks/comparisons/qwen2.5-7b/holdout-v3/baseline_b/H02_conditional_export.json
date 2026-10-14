@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "b605c3a4b06089706e8c59140bd6e0f3ffb7cb1833b27cf928690e3efeab24fd",
+    "automated": true,
+    "semantic_verification": false,
+    "verification_method": "literal_rules",
+    "approval_required": true,
+    "arm": "baseline_b",
+    "prompt_version": "B-1.0",
+    "model_calls": 1
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Danh sách khách của đợt thử cần gửi cho đối tác để họ kiểm tra số liệu."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Họ đã có màn hình xem tổng số, nhưng không có danh sách từng dòng."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "File gửi ra vẫn dùng các cột đã được duyệt ở lần làm trước."
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Phản hồi của đối tác là họ cần CSV đã mã hóa, không nhận file mở trực tiếp."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Mình không bổ sung số điện thoại hoặc địa chỉ vào file lần này."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Vướng mắc là pháp chế chưa xác nhận quyền xuất bản danh sách."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Hồ sơ đã được gửi đi, nhưng chưa có câu trả lời về phạm vi được chia sẻ."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Vậy hiện chưa ai nên tạo file rồi gửi ra ngoài."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Ngọc có tài khoản xuất dữ liệu, đúng không?"
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Có, Ngọc đã dùng tài khoản đó để làm bản thử nội bộ."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Tài khoản dùng được không thay cho việc pháp chế đồng ý."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Đúng, đây là hai điều kiện khác nhau."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nếu pháp chế không xác nhận thì mình dừng việc gửi, không tìm tài khoản khác để làm."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Ngọc xuất bản CSV đã mã hóa sau khi pháp chế xác nhận, hạn trước thứ Năm."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Ngọc đã biết việc này; khi có xác nhận thì bạn ấy mới thực hiện."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Trước lúc đó, quyền xuất vẫn giữ như cũ nhưng chưa được dùng cho đối tác."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nếu trả lời của pháp chế đến muộn, hạn giao cũng cần được trao đổi lại."
+    },
+    {
+      "id": "T18",
+      "line": 18,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Mình kết thúc phần danh sách ở điều kiện và hạn vừa nêu."
+    }
+  ],
+  "topics": [],
+  "items": [
+    {
+      "id": "T14",
+      "topic": "Danh sách khách cho đợt thử",
+      "type": "action",
+      "status": "confirmed",
+      "content": "Ngọc xuất bản CSV đã mã hóa sau khi pháp chế xác nhận, hạn trước thứ Năm.",
+      "owner": "Ngọc",
+      "due": "trước thứ Năm",
+      "evidence": [
+        {
+          "turn_id": "T14",
+          "quote": "Ngọc xuất bản CSV đã mã hóa sau khi pháp chế xác nhận, hạn trước thứ Năm."
+        },
+        {
+          "turn_id": "T15",
+          "quote": "Ngọc đã biết việc này; khi có xác nhận thì bạn ấy mới thực hiện."
+        }
+      ],
+      "reason": "Ngọc đã đồng ý và xác nhận thời gian cụ thể.",
+      "history": [
+        {
+          "turn_id": "T6",
+          "kind": "issue",
+          "quote": "Vướng mắc là pháp chế chưa xác nhận quyền xuất bản danh sách."
+        },
+        {
+          "turn_id": "T13",
+          "kind": "request_feedback",
+          "quote": "Nếu pháp chế không xác nhận thì mình dừng việc gửi, không tìm tài khoản khác để làm."
+        },
+        {
+          "turn_id": "T14",
+          "kind": "finalize",
+          "quote": "Ngọc xuất bản CSV đã mã hóa sau khi pháp chế xác nhận, hạn trước thứ Năm."
+        }
+      ]
+    }
+  ],
+  "review_queue": [],
+  "semantic_checks": [],
+  "run_seconds": 5.117,
+  "comparison_execution": {
+    "kind": "live_once_no_retry"
+  }
+}

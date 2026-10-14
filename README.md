@@ -1,122 +1,111 @@
 # Meeting Trace — Meeting Intelligence MVP
 
-Mission 2: **transcript → diễn biến → dữ liệu có evidence → kiểm chứng → duyệt từng mục → xuất**.
+Biến transcript thành quyết định cuối, công việc, vướng mắc, yêu cầu/phản hồi và nội dung chưa chốt, kèm bằng chứng.
+Luồng: transcript → theo dõi diễn biến → trích xuất → kiểm tra → duyệt từng mục → xuất JSON/biên bản.
+Qwen 7B: chấm tự động prompt đơn **0/20**, pipeline **1/20**; sáu case mới **0/6** ở cả hai nhánh.
+Chạy ngay bằng **Python 3.10+**, `python src`; mặc định quy tắc local, không cần Ollama, API key hay pip dependency.
+Giới hạn chính: **chưa chứng minh chất lượng cốt lõi**; [TESTS.md](TESTS.md) tách lỗi định dạng/ngữ nghĩa và công khai thất bại.
 
-Mục tiêu là giữ kết luận cuối (A đổi sang B thì giữ B), công việc, vướng mắc, yêu cầu/phản hồi và nội dung chưa chốt. Model được huấn luyện sẵn; project triển khai pipeline, schema, kiểm tra bằng chứng, workflow duyệt và đánh giá.
-
-## Chạy trên máy
-
-Python 3.10+, source không cần pip dependency. Với LLM local, cần Ollama đang chạy và model đã cài:
+## Chạy thử trên máy
 
 ```bash
 git clone https://github.com/gauronaldo/appota-LLM.git
 cd appota-LLM
-ollama list
 python src
 ```
 
-Mở http://127.0.0.1:8501. Windows có thể dùng run.cmd; nếu cổng bận: `python src --port 8502`. Dừng bằng Ctrl+C.
+Mở [http://127.0.0.1:8501](http://127.0.0.1:8501). Windows có thể dùng `run.cmd`; cổng bận thì `python src --port 8502`. Dừng bằng Ctrl+C.
 
-UI mặc định **Qwen local · Ollama**, model **qwen2.5:7b**. Model khác đã cài có thể nhập trong ô Model. App chỉ gọi http://127.0.0.1:11434, không tự tải model hoặc chuyển sang cloud. Quy tắc local là baseline chạy được không cần Ollama.
+Mặc định **Quy tắc local · chạy ngay** để trải nghiệm workflow. Đây là baseline regex, không đại diện cho khả năng hiểu của AI. Để chạy LLM thật, cần Ollama đang chạy và `qwen2.5:7b` đã được cài: kiểm tra `ollama list`, chọn **Qwen local · cần Ollama** trong UI. App chỉ gọi loopback `127.0.0.1:11434`, không tự tải model hay chuyển sang cloud. Nếu chưa cài Ollama/model, chọn lại quy tắc local.
 
-1. Chọn mẫu, bấm **Nạp transcript**, rồi **Phân tích**. Mỗi dòng một lượt; tên người nói tùy chọn.
-2. Đối chiếu evidence và diễn biến. Kết quả tự động chưa được con người duyệt.
-3. Xác nhận từng mục, sửa hoặc loại bỏ. Mục cách ly cũng phải được xử lý; có thể sửa chủ đề, loại, trạng thái, nội dung, người nhận, hạn và evidence.
-4. Mỗi lần sửa/khôi phục làm mất xác nhận cũ. Với LLM, xác nhận sẽ kiểm chứng lại.
-5. Chỉ khi mọi mục đã xác nhận hoặc loại bỏ mới xuất **JSON + biên bản Markdown**. Server kiểm tra điều kiện xuất; cờ trên browser không cấp quyền duyệt.
+1. Chọn mẫu → **Nạp transcript** → **Phân tích cuộc họp**. Mỗi dòng một lượt, tên người nói tùy chọn.
+2. Đối chiếu evidence và lịch sử thay đổi. **Xem kết quả đã chạy** đọc JSON lưu sẵn, không phải inference mới.
+3. Xác nhận, sửa hoặc loại từng mục, kể cả mục bị cách ly. Sửa sẽ mất xác nhận cũ; LLM kiểm chứng lại khi xác nhận.
+4. Khi mọi mục đã xử lý, xuất JSON và biên bản Markdown. Server kiểm tra quyền xuất và giữ audit chỉnh sửa.
 
-Phiên duyệt lưu trong RAM server, hết hạn sau hai giờ hoặc khi server khởi động lại. Không có đăng nhập hay lưu trữ production. File xuất giữ bản tự động, các mục bị loại và audit chỉnh sửa. CLI `extract` tạo **bản nháp để kiểm tra**, không phải bản đã duyệt.
+Phiên duyệt lưu trong RAM, hết hạn sau hai giờ hoặc khi server khởi động lại. `status=confirmed` do model gán không thay cho xác nhận của người dùng. CLI `extract` chỉ tạo bản nháp. Với baseline luật, nội dung sửa không khớp câu nguồn có thể bị chặn; dùng LLM để kiểm chứng paraphrase.
 
-## Flow và kiểm chứng
+## Kết quả thực tế
 
-- Parser gán T1, T2… và số dòng. Thiếu tên/nhãn ẩn danh giữ `speaker=null`; `speaker_label` chỉ để phân biệt lượt, không trở thành owner.
-- LLM bước 1 gom chủ đề và diễn biến; bước 2 tạo thông tin cuối, giữ điều kiện và gộp một việc được nhắc lại. Không nạp fixture kỳ vọng vào prompt.
-- Model chỉ chọn ID evidence/history; code lấy quote trực tiếp từ text của ID đó. Code kiểm tra schema, ID thật, quote nguyên văn và người nhận/hạn có evidence. Model vẫn có thể chọn sai ID hoặc suy diễn sai nội dung.
-- LLM bước 3 kiểm tra: nội dung được hỗ trợ, đúng chủ đề, còn hiệu lực ở cuối họp, đủ điều kiện, giao việc/người nhận/hạn đúng. `fail` hoặc `uncertain` đưa vào review queue. Verdict sai ID/schema/evidence không được tin.
-- Người dùng vẫn duyệt từng mục. Bộ kiểm chứng dùng cùng model, có thể sai cùng extractor; `semantic_verification=true` nghĩa là **đã chạy kiểm tra**, không bảo đảm chính xác.
-- Baseline regex không chứng nhận paraphrase hoặc suy luận; sửa nội dung không khớp câu nguồn bị chặn để dùng LLM kiểm chứng.
-
-Một item gồm id/topic/type/status/content/owner/due/evidence/reason/history. Deadline giữ cụm thời gian nguyên văn; thiếu để null. `status=confirmed` tự động khác `human_review.state=confirmed`.
-
-Adapter Ollama dùng chat API, schema trong format, temperature=0, seed=42. Tham chiếu [Ollama Structured Outputs](https://docs.ollama.com/capabilities/structured-outputs). Structured JSON không tự bảo đảm đúng ngữ nghĩa.
-
-## Kiểm thử và giới hạn số liệu
-
-Suite v2 giữ nguyên **20 transcript, 20 kỳ vọng và manifest hash**: 12 có tên, 3 nhãn ẩn danh, 4 không nhãn, 1 trộn; bốn nhóm × năm case. Transcript tổng hợp, chưa được gán nhãn độc lập.
-
-Baseline ban đầu **6/20** được giữ cùng source/freeze tại `data/benchmarks/baselines/v2-initial/`. Phiên mới đánh giá lại **bộ đã xem**; 12 dev / 8 split holdout cũ không còn được gọi là kiểm thử kín độc lập. Không sửa kỳ vọng để nâng điểm.
-
-- Quy tắc: [dev JSON](data/benchmarks/results/local/dev_report.json), [kiểm tra lại JSON](data/benchmarks/results/local/holdout_report.json).
-- Qwen chạy thật: [dev JSON](data/benchmarks/results/ollama/dev_report.json), [kiểm tra lại JSON](data/benchmarks/results/ollama/holdout_report.json).
-- [Probe kiểm chứng riêng](data/benchmarks/safety/ollama_probes.json). Có accept/reject khớp 6/7, nhưng nhiều lý do/tiêu chí sai và bác nhầm một mục đúng; không coi là độ chính xác ngữ nghĩa 86%.
-- Output nguyên bản: `data/benchmarks/results/local/`, `data/benchmarks/results/ollama/`.
-
-Chấm một-một vẫn dùng chủ đề/nội dung chuỗi, trạng thái, owner/due, ID evidence và điều kiện. Cách diễn đạt tương đương có thể bị đánh trượt; xem cả lỗi từng case. Kết quả tự động chưa đo độ chính xác sau PM duyệt hoặc thời gian hoàn tất công việc. Kiểm thử kỹ thuật xanh không đồng nghĩa benchmark ngữ nghĩa đạt.
-
-| Phiên | Phát triển | Split kiểm tra lại | Tổng |
+| Bộ | Cấu hình | Chấm tự động toàn case | Đọc ngữ nghĩa toàn case |
 | --- | --- | --- | --- |
-| Quy tắc ban đầu | 6/12 | 0/8 | 6/20 |
-| Quy tắc sau sửa parser | 7/12 | 0/8 | 7/20 |
-| Qwen 2.5 7B chạy thật | 1/12 | 0/8 | 1/20 |
+| V2 — 20 case đã xem | B: một prompt Qwen | 0/20 | 8/20 |
+| V2 — 20 case đã xem | C: pipeline Qwen | 1/20 | 5/20 |
+| V3 — 6 case mới, chạy một lượt mỗi nhánh | B: một prompt Qwen | 0/6 | 1/6 |
+| V3 — 6 case mới, chạy một lượt mỗi nhánh | C: pipeline Qwen | 0/6 | 0/6 |
 
-**Qwen hiện chưa đạt chất lượng cần để chứng minh giả thuyết cốt lõi.** Có lỗi định dạng/chủ đề theo quy ước chấm, và lỗi ngữ nghĩa thật về loại, trạng thái, bỏ sót và verifier. 53 kiểm thử kỹ thuật qua chỉ xác nhận cơ chế code, nguồn dữ liệu và export gate. Mỗi report có Kỳ vọng → Thực tế → Đạt/Chưa đạt → Điều học được; UI đọc cùng dữ liệu để hiển thị.
+**Chấm đọc bởi Codex/AI được tác giả ủy quyền, không độc lập, không phải chấm bởi người thật.** Đã đọc transcript, kỳ vọng, items và candidates cách ly. Chấm ngữ nghĩa có thể công nhận candidate đúng nhưng bị chặn schema; **8/20 và 5/20 không phải tỷ lệ dữ liệu dùng được sau duyệt**. Chưa đo đủ bộ sau người dùng sửa/duyệt.
 
-Case 02 A → B → A đạt toàn bộ. Case 09 nhận đúng Lan gửi báo cáo dù không có người nói nhưng due có thêm “trước”; case 10 nhận đúng một cột nhưng tên topic khác. Case 12 còn sai type decision cho nội dung chưa chốt; case 05 output bị cắt nên pipeline từ chối. Qwen decision TP/FP/FN là 3/3/5 (precision 0,5; recall 0,375). Một tỷ lệ case thấp không có nghĩa chỉ 5% phát biểu đúng; các lỗi ngữ nghĩa thật vẫn cần giải quyết.
+Điểm tự động giữ nguyên gold/scorer: so chủ đề và chuỗi nội dung, loại/trạng thái, người/hạn, điều kiện, evidence và history; có mục cách ly hoặc dư thì trượt. Đọc ngữ nghĩa cho phép cách diễn đạt cùng đối tượng, vẫn phạt sai trạng thái, thiếu nội dung, nhầm chủ đề hoặc bỏ điều kiện. C/09 đúng Lan gửi trước thứ Sáu nhưng khác tiền tố deadline; C/10 đúng một cột nhưng khác tên topic; C/16 candidate phát hành đúng nhưng có due không hợp schema. C/02 A → B → A đạt tự động; C/05 bị cắt output; nhiều case khác còn lỗi hiểu thật.
 
-Lượt inference nguyên bản/source/freeze lưu tại baselines/qwen-v2-live. Sau chạy, code bổ sung chặn owner là đại từ chưa xác định và sửa flag kiểm chứng khi bước đó bị bỏ qua vì không có candidate hợp lệ. Lệnh revalidate hậu kiểm trên output đã lưu, không gọi model mới, không nâng mục cách ly, không sửa nội dung và không đổi điểm 1/20. Report giữ core hashes/timestamp inference gốc cùng provenance hậu kiểm riêng.
+Cùng `qwen2.5:7b` Q4_K_M, temperature=0, seed=42, context=8192, output tối đa=4000 token. V2 chạy B mới, C tái sử dụng output inference thật đã lưu và hậu kiểm code. B dùng hướng dẫn tiếng Anh, C tiếng Việt: **so sánh hai cấu hình này chưa cô lập tác động số bước**, không kiểm soát latency đồng thời. V3 chạy thật cả hai nhánh, mỗi case đúng một lượt, không retry hoặc chỉnh pipeline sau khi xem kết quả.
+
+V2 có 20 hội thoại tổng hợp: 12 có tên, 3 nhãn ẩn danh, 4 không nhãn, 1 trộn. Tám case holdout cũ đã được xem nên không còn kín. V3 có sáu hội thoại mới, gán nhãn trước inference và giữ nguyên đến cuối; kín với quá trình chỉnh pipeline, **chưa phải tập mù/gán nhãn độc lập**. Chưa chạy model mạnh hơn vì phạm vi chỉ local; chưa đủ cơ sở khẳng định nhiều bước giúp hay hại, hoặc thiết kế không khả thi trên model khác.
+
+- [TESTS.md — đủ 26 tình huống](TESTS.md): Kỳ vọng → Thực tế → Đạt/Chưa đạt → Điều học được, cả B và C.
+- [So sánh Qwen, JSON và protocol](data/benchmarks/comparisons/qwen2.5-7b/), [chấm đọc và rubric](data/benchmarks/reviews/).
+- [Bộ mới và manifest](data/holdout-v3/manifest.json), [kỳ vọng v3](tests/fixtures/holdout-v3/).
+- [Luật ban đầu 6/20](data/benchmarks/baselines/v2-initial/), [luật sau sửa parser 7/20](data/benchmarks/results/local/), [Qwen gốc và hậu kiểm](data/benchmarks/results/ollama/).
+- [Probe verifier riêng](data/benchmarks/safety/ollama_probes.json): accept/reject khớp 6/7 nhưng lý do còn sai; không coi là độ chính xác ngữ nghĩa 86%.
+
+## Project triển khai gì?
+
+Model đã được huấn luyện sẵn, project không train/fine-tune. Phần triển khai biến đầu ra model thành dữ liệu có thể kiểm tra và duyệt:
+
+- Parser gán T1, T2…; thiếu tên/nhãn ẩn danh giữ `speaker=null`. Nhãn “Người nói 2” không trở thành người nhận việc.
+- Pipeline C: gom chủ đề/diễn biến → trích xuất kết luận cuối → kiểm chứng nội dung, chủ đề, hiệu lực, điều kiện và giao việc. Baseline B dùng một prompt, không có bước model kiểm chứng.
+- Model chọn ID evidence/history; code lấy quote trực tiếp từ transcript, kiểm tra schema, ID, người nhận và hạn có nguồn. Không nạp kỳ vọng test vào prompt.
+- Lỗi hoặc verdict không chắc chắn chuyển sang hàng chờ duyệt. Verifier dùng cùng Qwen vẫn có thể bỏ lọt sai và bác nhầm đúng; chạy kiểm chứng không đồng nghĩa đã đúng.
+- Server quản lý xác nhận từng mục, vô hiệu xác nhận khi sửa và chặn xuất khi còn mục chưa xử lý. Bản xuất lưu nguồn, bản tự động và audit.
+
+Item có `id/topic/type/status/content/owner/due/evidence/reason/history`. Điều kiện phải giữ trong content; thời gian/người chưa rõ để null. Parser là heuristic theo dòng, chưa nhận diện speaker từ audio. Luật yếu với tham chiếu, đồng thuận ngầm và hội thoại tự nhiên. Chưa có auth, lưu trữ production, tích hợp công việc hay kiểm thử transcript thật.
+
+## Kiểm tra và tái tạo báo cáo
 
 ```bash
 python src test
+python src report --check
 python src evaluate --split dev --verify-only
 python src evaluate --split holdout --verify-only
-python src extract data/examples/01_change_ab.txt --engine ollama --model qwen2.5:7b --output runtime/draft.json
-python src evaluate --engine ollama --model qwen2.5:7b --split dev
-python src evaluate --engine ollama --model qwen2.5:7b --split holdout
 python src package --verify
-python src revalidate
-python src verify-probes --engine ollama --model qwen2.5:7b
 ```
 
-Chạy evaluation LLM gọi model thật, có thể chậm và không bảo đảm tái lập byte dù temperature=0. Lỗi API/schema/evidence được ghi thất bại, không dùng kết quả quy tắc thay thế. Freeze revision mới là `freeze-v2.json`; freeze cũ giữ nguyên.
+Các lệnh này không gọi LLM. `python src report` sinh TESTS.md từ JSON đã lưu, kiểm tra nguồn chấm đọc không bị đổi. Kiểm thử kỹ thuật xanh xác nhận cơ chế code, không thay cho benchmark chất lượng.
 
-## OpenAI tùy chọn
+```bash
+python src extract data/examples/01_change_ab.txt --engine ollama --model qwen2.5:7b --output runtime/draft.json
+python src compare --suite v2 --model qwen2.5:7b --report-only
+python src compare --suite holdout-v3 --model qwen2.5:7b --report-only
+```
 
-Đặt OPENAI_API_KEY và OPENAI_MODEL ở biến môi trường trước khi chạy server; app không tự load .env. Chọn engine openai hoặc truyền `--engine openai`. Chế độ này gửi transcript đến OpenAI; chế độ ollama ở máy. Không ghi key vào source hoặc chat. OpenAI chưa chạy API thật trong lượt này.
+`extract` gọi model mới; hai lệnh `--report-only` chỉ đọc output. Protocol v3 đã hoàn tất: không chạy lại/tune rồi gọi bộ đó là kín. Vòng cải tiến tiếp theo cần bộ mới. Hash/protocol và lịch sử baseline ở JSON để đối chiếu; không retry nhằm chọn kết quả đẹp.
 
-Adapter dùng Responses API và Structured Outputs, store=false. Tham chiếu [official OpenAI documentation](https://developers.openai.com/api/docs/guides/structured-outputs?api-mode=responses).
+Adapter OpenAI có sẵn nhưng chưa chạy thật. Tự đặt `OPENAI_API_KEY` và `OPENAI_MODEL` trong biến môi trường nếu muốn dùng; không gửi key vào chat/source, app không tự đọc `.env`. Engine OpenAI gửi transcript tới provider. Bản đánh giá hiện tại chỉ dùng Ollama local.
 
-## Hạn chế
-
-- Qwen 7B vẫn có thể bỏ sót, gắn nhầm chủ đề, chọn sai evidence, bỏ điều kiện hoặc nhận nhầm cam kết. Kiểm chứng bằng cùng model chưa phải người gán nhãn độc lập.
-- Parser dùng dấu hai chấm và tên viết hoa để đoán nhãn; các tiền tố giống tên có thể mơ hồ. Một dòng tương ứng một lượt, chưa nhận diện speaker từ audio.
-- Quy tắc local vẫn yếu với tham chiếu, đồng thuận ngầm, giao việc tự nhiên và việc lặp.
-- Mục sai được cách ly có thể làm giảm recall. Phải sửa có bằng chứng hoặc loại bỏ; không có nút xác nhận tất cả.
-- Chưa có audio/video, Jira/Notion, kho tri thức, auth, nghiên cứu PM hoặc kiểm thử với transcript thật ẩn danh. Server chỉ nghe loopback; hiện chạy local, chưa deploy online.
-
-## Source showcase
+## Source và bài nộp
 
 ```text
 src/meeting_trace/
-  meeting/       parser, local/LLM pipeline, schema, verifier, review workflow
-  web/           HTTP local và UI
-  evaluation/    runner, scoring, reporting
-  tools/         test runner, source packager
-tests/           unit, integration, regression, fixture kỳ vọng
-data/examples/   transcript v2 và index
-data/benchmarks/ freeze mới/cũ, baseline và kết quả thực tế
+  meeting/       parser, schema, baseline B, pipeline C, verifier, review
+  web/           server local và UI
+  evaluation/    scoring, comparison, báo cáo từ JSON
+  tools/         test runner, package, ghi nhận chấm đọc
+tests/           unit, integration, regression, kỳ vọng cố định
+data/            transcript tổng hợp, benchmark và kết quả thật
+TESTS.md         báo cáo test đọc được, sinh từ JSON
 .github/         CI
 ```
 
-Source và tool đều ở src; không có scripts. Repo/package không gom virtualenv, cache, API key, export người dùng, Word nguồn hoặc ghi chú riêng.
+Source/tool ở `src`, không có `scripts`. Không đưa virtualenv, cache, key, export người dùng, Word nguồn hoặc ghi chú riêng lên repo. `docs/` giữ local theo lựa chọn của tác giả; báo cáo bắt buộc công khai là TESTS.md tại root. Packager có thể thêm tài liệu local nếu có, bản clone không cần docs.
 
-Tài liệu trình bày/báo cáo Markdown giữ ở workspace local, ngoài Git, theo việc thư mục docs đã được xóa trên remote. Packager có thể bổ sung tài liệu local nếu có; bản clone không cần docs để chạy hoặc kiểm thử.
+**Bản chạy thử:** local theo phạm vi đã chọn; chưa deploy online. Có thể trải nghiệm workflow không cần tải model vài GB. **Video tối đa 5 phút:** chưa có link được cung cấp; còn cần tác giả quay và bổ sung để hoàn tất bài nộp.
 
 ## Ba câu trả lời Mission 2
 
-**Phần chọn chứng minh:** kết luận cuối theo chủ đề, điều kiện và evidence, rồi duyệt trước xuất. Một tình huống A → B → A đã chạy đúng; số liệu hiện tại chưa đủ để kết luận giải pháp khả thi với cuộc họp tự nhiên.
+**1. Phần quan trọng nhất và vì sao chọn:** Tôi chọn giữ đúng kết luận cuối theo chủ đề, điều kiện và bằng chứng, rồi duyệt trước xuất. Giữ quyết định đã bị hủy hoặc bỏ điều kiện sẽ tạo dữ liệu sai cho công việc. C/02 chứng minh được chuỗi A → B → A; code chứng minh được liên kết nguồn và cổng duyệt/xuất. Tuy vậy, kết quả toàn bộ Qwen và sáu case mới chưa đủ xác nhận giả thuyết về chất lượng. Muốn kết luận khả thi cần kiểm thử model mạnh hơn và transcript thật có nhãn độc lập.
 
-**Đổi so với Mission 1:** thêm baseline regex lúc chưa có key, rồi dùng Qwen local, parser không bắt buộc tên, verifier và duyệt trên server. Suite tự nhiên hơn phơi bày giới hạn, nên giữ kỳ vọng và lịch sử thất bại. Lượt đánh giá lại không được nhận là tập kín độc lập.
+**2. Thay đổi so với Mission 1 và nguyên nhân:** Tôi thêm baseline luật lúc chưa có API, thử Qwen local, cho phép thiếu nhãn người nói và giữ bất định danh tính. Hội thoại tự nhiên hơn làm lộ sai loại, trạng thái, giao việc và điều kiện, nên thêm kiểm chứng và duyệt trên server. Xem lại holdout cũ làm mất tính kín; tôi ghi rõ thay đổi và tạo sáu case mới có nhãn trước khi chạy một lần cuối. Tôi cũng hiện thực baseline B để đối chiếu C: chấm đọc B tốt hơn trong phép thử này, nhưng prompt/ngôn ngữ và thời điểm khác nhau nên chưa kết luận nguyên nhân nằm ở số bước.
 
-**Dễ sai và cách tránh dữ liệu không tồn tại:** tham chiếu chủ đề, đồng thuận gián tiếp, loại/trạng thái và cam kết có điều kiện. Code lấy quote từ ID, kiểm tra schema/người/hạn, giữ null và cách ly lỗi; model kiểm tra ý nghĩa, người dùng phải duyệt từng mục. Verifier cùng model vẫn sai nên chưa bảo đảm không tạo dữ liệu sai.
+**3. Thông tin dễ sai và cách tránh dữ liệu không tồn tại:** Dễ sai nhất là lời nhận việc có điều kiện/thiếu danh tính, chủ đề khi trao đổi đan xen và trạng thái sau khi mở lại quyết định. Project giữ null, lấy quote từ ID thật, kiểm tra người/hạn có nguồn, cách ly lỗi và yêu cầu duyệt từng mục. H02 cho thấy verifier cùng model vẫn cho qua action mất điều kiện; có evidence không đồng nghĩa content đúng nghĩa. Vì vậy MVP chưa tự đẩy dữ liệu vào công việc; cần đối chiếu nguồn, cải tiến trên bộ phát triển mới và đánh giá tiếp trước khi sử dụng tự động.
 
-AI hỗ trợ source, UI, schema, prompt, test, fixture tổng hợp và tài liệu. Không train/fine-tune; gán nhãn chưa được kiểm tra độc lập. Tác giả cần tự đối chiếu và bổ sung phần đã thực sự kiểm chứng cùng video tối đa 5 phút.
+AI hỗ trợ code, prompt, fixture tổng hợp, tài liệu và chấm đọc theo ủy quyền của tác giả. Chấm không độc lập; nhãn chưa được kiểm tra bởi người thứ ba.

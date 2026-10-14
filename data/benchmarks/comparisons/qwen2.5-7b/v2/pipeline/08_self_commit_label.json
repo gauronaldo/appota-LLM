@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "2363c85fb6164728fb9cb0309bb24ad899979a2d5d2294eaad4e20abe9caa7f3",
+    "automated": true,
+    "semantic_verification": false,
+    "verification_method": "literal_rules",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Video lỗi giỏ hàng đã có trong nhóm, mọi người xem được chưa?"
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Em xem rồi, lúc đổi số lượng thì tổng tiền không cập nhật."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": null,
+      "speaker_label": "Người nói 3",
+      "text": "Trên bản web hay bản điện thoại?"
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Web. Em thử lại được bằng đúng sản phẩm trong video."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Như vậy có bằng chứng để xử lý, không cần đợi khách gửi thêm."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": null,
+      "speaker_label": "Người nói 3",
+      "text": "Phần tính tổng nằm cùng module với khuyến mãi."
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Em đã đọc module đó trong đợt trước."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Để em xem lỗi này và báo lại chiều nay."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Có cần đổi người đang làm phần khuyến mãi không?"
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Chưa cần, việc trước mắt là tìm chỗ không cập nhật."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": null,
+      "speaker_label": "Người nói 3",
+      "text": "Trong phiếu hỗ trợ có cả mã sản phẩm và thời điểm khách thao tác."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Mình cần biết nguyên nhân trước, chưa nhất thiết phải có bản sửa ngay."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Đúng, em sẽ báo lại những gì tái hiện được, không hứa một cách sửa khi chưa xem code."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": null,
+      "speaker_label": "Người nói 3",
+      "text": "Kết quả chiều nay có thể trao đổi trong luồng hỗ trợ này."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": null,
+      "speaker_label": "Người nói 1",
+      "text": "Được, hôm nay mình chỉ xử lý trường hợp trong video, chưa mở rộng sang mọi loại giỏ hàng."
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": null,
+      "speaker_label": "Người nói 2",
+      "text": "Em đã rõ phạm vi đó."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "lỗi giỏ hàng",
+      "events": [
+        {
+          "turn_id": "T8",
+          "kind": "change",
+          "quote": "Để em xem lỗi này và báo lại chiều nay."
+        },
+        {
+          "turn_id": "T15",
+          "kind": "change",
+          "quote": "Được, hôm nay mình chỉ xử lý trường hợp trong video, chưa mở rộng sang mọi loại giỏ hàng."
+        }
+      ]
+    }
+  ],
+  "items": [],
+  "review_queue": [
+    {
+      "item": {
+        "id": "I1",
+        "topic": "lỗi giỏ hàng",
+        "type": "action",
+        "status": "confirmed",
+        "content": "Để em xem lỗi này và báo lại chiều nay.",
+        "owner": null,
+        "due": null,
+        "evidence": [
+          {
+            "turn_id": "T8",
+            "quote": "Để em xem lỗi này và báo lại chiều nay."
+          }
+        ],
+        "reason": "Người nói 2 sẽ xác định nguyên nhân của vấn đề và báo cáo kết quả trong buổi chiều cùng ngày.",
+        "history": [
+          {
+            "turn_id": "T8",
+            "kind": "change",
+            "quote": "Để em xem lỗi này và báo lại chiều nay."
+          },
+          {
+            "turn_id": "T15",
+            "kind": "change",
+            "quote": "Được, hôm nay mình chỉ xử lý trường hợp trong video, chưa mở rộng sang mọi loại giỏ hàng."
+          }
+        ]
+      },
+      "errors": [
+        "Công việc đã xác định cần người nhận; thiếu người thì cần xác nhận"
+      ]
+    }
+  ],
+  "semantic_checks": [],
+  "run_seconds": 20.226,
+  "postvalidation": {
+    "kind": "literal_only_no_new_inference",
+    "at": "2026-10-14T10:09:36.787810+00:00",
+    "source_canonical_sha256": "c85c57d001f70e6c770dd8f3c382b909e8951393285196680fff66ad1a82aacc",
+    "core_hashes": {
+      "src/meeting_trace/meeting/core.py": "82a9558034e9f1cd9fda0242baa25b5e067a0a3f36313dabf4e7146dd25f875b",
+      "src/meeting_trace/meeting/schema.py": "c9e0e2093fab37d3a92676627423d59c61f430fc649635e1b02872ce01b86d0c",
+      "src/meeting_trace/meeting/prompts.py": "fdac9613c0f7d5b08a84103f149427924cce77580de32648da03ae063a5479bc",
+      "src/meeting_trace/meeting/llm.py": "6c094730ae888f787cfad7b3f0927d774d04f60555aa61459f89a5443986d7bf",
+      "src/meeting_trace/meeting/review.py": "0879a14691528ebbc7d13dc2f318f2f1cb704dce105b1d95e40856ef2b29b4d3"
+    }
+  },
+  "comparison_execution": {
+    "kind": "preserved_live_pipeline",
+    "source": "data/benchmarks/results/ollama/08_self_commit_label.json",
+    "source_sha256": "b6b0070f9d173ab65a07ec014d6913252929c940da2c8d79e7396264dc804d79"
+  }
+}

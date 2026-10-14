@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "engine": "ollama",
+    "model": "qwen2.5:7b",
+    "transcript_sha256": "0d54da113f970ff01092ee3a4fc7b0a5e0d3a78250f55d2db63dbdbaa6f924ae",
+    "automated": true,
+    "semantic_verification": false,
+    "verification_method": "literal_rules",
+    "approval_required": true
+  },
+  "turns": [
+    {
+      "id": "T1",
+      "line": 1,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Phần hạn mức giảm giá có phản hồi từ nhóm kinh doanh."
+    },
+    {
+      "id": "T2",
+      "line": 2,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Họ muốn tăng hạn mức giảm giá lên 20% cho đợt giới thiệu."
+    },
+    {
+      "id": "T3",
+      "line": 3,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nhóm tài chính đã xem đề xuất này chưa?"
+    },
+    {
+      "id": "T4",
+      "line": 4,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Chưa, họ mới nhận bảng dự toán sáng nay."
+    },
+    {
+      "id": "T5",
+      "line": 5,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Mức đang chạy là 10%, mình chưa đổi cấu hình nào."
+    },
+    {
+      "id": "T6",
+      "line": 6,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Nếu lên 20% thì có áp dụng cho mọi khách hàng không?"
+    },
+    {
+      "id": "T7",
+      "line": 7,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Câu hỏi đó cũng chưa được trả lời, bên kinh doanh mới nêu mức mong muốn."
+    },
+    {
+      "id": "T8",
+      "line": 8,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Em không muốn cập nhật bảng rồi sau đó phải thu lại vì chưa được duyệt."
+    },
+    {
+      "id": "T9",
+      "line": 9,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Vậy hôm nay mình ghi phản hồi, còn số mới cần chờ tài chính."
+    },
+    {
+      "id": "T10",
+      "line": 10,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Đúng, chưa chốt tăng hạn mức giảm giá trong buổi này."
+    },
+    {
+      "id": "T11",
+      "line": 11,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Nếu tài chính xác nhận, em nhận cập nhật bảng hạn mức giảm giá trước thứ Hai."
+    },
+    {
+      "id": "T12",
+      "line": 12,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Chưa có xác nhận thì phần bảng vẫn để như đang dùng nhé."
+    },
+    {
+      "id": "T13",
+      "line": 13,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Ừ, lời nhận việc của em chỉ có hiệu lực sau xác nhận đó."
+    },
+    {
+      "id": "T14",
+      "line": 14,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Nếu tài chính không đồng ý thì không cập nhật theo đề xuất 20%."
+    },
+    {
+      "id": "T15",
+      "line": 15,
+      "speaker": null,
+      "speaker_label": null,
+      "text": "Mình có cần hứa với kinh doanh về ngày áp dụng chưa?"
+    },
+    {
+      "id": "T16",
+      "line": 16,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Chưa hứa, vì thời điểm xác nhận còn chưa biết."
+    },
+    {
+      "id": "T17",
+      "line": 17,
+      "speaker": "Huy",
+      "speaker_label": "Huy",
+      "text": "Phần hạn mức và điều kiện cập nhật đã rõ như vậy."
+    },
+    {
+      "id": "T18",
+      "line": 18,
+      "speaker": "Lan",
+      "speaker_label": "Lan",
+      "text": "Em dừng phần trao đổi này ở phản hồi và câu chưa chốt."
+    }
+  ],
+  "topics": [
+    {
+      "topic": "hạn mức giảm giá",
+      "events": [
+        {
+          "turn_id": "T10",
+          "kind": "change",
+          "quote": "Đúng, chưa chốt tăng hạn mức giảm giá trong buổi này."
+        },
+        {
+          "turn_id": "T9",
+          "kind": "defer",
+          "quote": "Vậy hôm nay mình ghi phản hồi, còn số mới cần chờ tài chính."
+        }
+      ]
+    }
+  ],
+  "items": [],
+  "review_queue": [
+    {
+      "item": {
+        "id": "I1",
+        "topic": "hạn mức giảm giá",
+        "type": "action",
+        "status": "confirmed",
+        "content": "Phần hạn mức giảm giá chưa chốt tăng trong buổi này.",
+        "owner": null,
+        "due": null,
+        "evidence": [
+          {
+            "turn_id": "T10",
+            "quote": "Đúng, chưa chốt tăng hạn mức giảm giá trong buổi này."
+          },
+          {
+            "turn_id": "T9",
+            "quote": "Vậy hôm nay mình ghi phản hồi, còn số mới cần chờ tài chính."
+          }
+        ],
+        "reason": "Lan và Huy đã xác nhận không chốt tăng hạn mức giảm giá trong buổi này, chỉ ghi phản hồi chờ tài chính xác nhận.",
+        "history": [
+          {
+            "turn_id": "T10",
+            "kind": "change",
+            "quote": "Đúng, chưa chốt tăng hạn mức giảm giá trong buổi này."
+          },
+          {
+            "turn_id": "T9",
+            "kind": "defer",
+            "quote": "Vậy hôm nay mình ghi phản hồi, còn số mới cần chờ tài chính."
+          }
+        ]
+      },
+      "errors": [
+        "Công việc đã xác định cần người nhận; thiếu người thì cần xác nhận"
+      ]
+    }
+  ],
+  "semantic_checks": [],
+  "run_seconds": 6.434,
+  "comparison_execution": {
+    "kind": "live_once_no_retry"
+  }
+}

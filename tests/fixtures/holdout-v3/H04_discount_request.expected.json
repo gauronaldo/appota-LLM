@@ -1,0 +1,53 @@
+{
+  "id": "H04_discount_request",
+  "title": "Phản hồi kinh doanh và lời nhận việc có điều kiện",
+  "group": "indirect",
+  "input_format": "mixed",
+  "items": [
+    {
+      "topic": "hạn mức giảm giá",
+      "type": "request_feedback",
+      "contains": "20%",
+      "status": "needs_confirmation",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T2"
+    },
+    {
+      "topic": "hạn mức giảm giá",
+      "type": "unresolved",
+      "contains": "chưa chốt tăng hạn mức giảm giá",
+      "status": "unresolved",
+      "owner": null,
+      "due": null,
+      "conditions": [],
+      "evidence_turn": "T10"
+    },
+    {
+      "topic": "hạn mức giảm giá",
+      "type": "action",
+      "contains": "cập nhật bảng hạn mức giảm giá",
+      "status": "needs_confirmation",
+      "owner": "Huy",
+      "due": "thứ Hai",
+      "conditions": [
+        "Nếu tài chính xác nhận"
+      ],
+      "evidence_turn": "T11"
+    }
+  ],
+  "lesson": "Yêu cầu của kinh doanh chưa là quyết định; việc được nhận có điều kiện phải giữ điều kiện và chưa tự chuyển thành vô điều kiện.",
+  "split": "fresh_holdout",
+  "dataset_version": "3.0",
+  "history_turns": [
+    "T2",
+    "T10"
+  ],
+  "intermediate_turns": [
+    "T2"
+  ],
+  "transcript_sha256": "0d54da113f970ff01092ee3a4fc7b0a5e0d3a78250f55d2db63dbdbaa6f924ae",
+  "authored_before_inference": true,
+  "labeler": "Codex/AI hỗ trợ tác giả, không độc lập"
+}

@@ -1,0 +1,194 @@
+{
+  "suite": "v2",
+  "arm": "pipeline",
+  "rubric_version": "author-read-1.0",
+  "reviewer": "Codex/AI được tác giả ủy quyền",
+  "independent": false,
+  "human_performed": false,
+  "authorized_by_author": true,
+  "reviewed_at": "2026-10-14T11:13:17.812619+00:00",
+  "total": 20,
+  "semantic_passed": 5,
+  "cases": [
+    {
+      "id": "01_change_ab",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Định dạng + ngữ nghĩa",
+      "reason": "Candidate chọn B đúng nhưng gắn owner Lan vào decision; mất việc cấu hình tại T16 và không giữ đề xuất A. Không thể coi chỉ là lỗi định dạng.",
+      "source": "data/benchmarks/results/ollama/01_change_ab.json",
+      "source_canonical_sha256": "dec678d208ab26733c4b635c38d93fc9b2c6818329f2bf828147088a05b529a5"
+    },
+    {
+      "id": "02_change_aba",
+      "semantic_pass": true,
+      "ready_without_edit": true,
+      "error_class": "Đạt",
+      "reason": "T15 chốt lại sáng thứ Năm; evidence/history giữ T2, T8, T15. Không nâng lịch chiều thành kết luận cuối.",
+      "source": "data/benchmarks/results/ollama/02_change_aba.json",
+      "source_canonical_sha256": "8c4c9f4c72a4a19bb232ef1bc0469e4e87c6980f21b20904b5b4246ff89adf04"
+    },
+    {
+      "id": "03_switch_condition",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Giữ B và điều kiện ở T12, nhưng gắn chủ đề lưu trữ thay cho lựa chọn dịch vụ email T1; tạo candidate ký hợp đồng từ câu chưa ký T17. Câu hỏi pháp chế là thông tin có thật, không tự coi nó là hallucination.",
+      "source": "data/benchmarks/results/ollama/03_switch_condition.json",
+      "source_canonical_sha256": "68f8f229f9e9bec2962c30a548e2bd630a47321148612cd4cb51e24a5d31cfc6"
+    },
+    {
+      "id": "04_interleaved",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Nhận đúng B thuộc lưu trữ T15, nhưng lịch demo còn mở T8/T17 bị ghi thành issue và mất phương án chiều thứ Tư trong content.",
+      "source": "data/benchmarks/results/ollama/04_interleaved.json",
+      "source_canonical_sha256": "e3507d7ef35c737b0a9429f73837d54a03c795edd4a372a852ab0dfa5a1911d4"
+    },
+    {
+      "id": "05_unnamed_reversal",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Hệ thống",
+      "reason": "Model output bị cắt; không có kết quả để nhận là hiểu đúng. Parser đã nhận input không nhãn.",
+      "source": "data/benchmarks/results/ollama/05_unnamed_reversal.json",
+      "source_canonical_sha256": "bbb3021dfe78050741998b68ee157d529f65af8a6c31b414450be274044171a5"
+    },
+    {
+      "id": "06_ambiguous_ok",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "T13 chưa chốt ví điện tử; output ghi đề xuất ví thành issue và giữ thanh toán cũ thành decision. Chưa thể hiện đúng nội dung chưa chốt chính.",
+      "source": "data/benchmarks/results/ollama/06_ambiguous_ok.json",
+      "source_canonical_sha256": "14a902d13037409993166dfd0fcda2d2589e48b90fd720d98f03602d3fea46df"
+    },
+    {
+      "id": "07_let_me_check",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Không bịa việc sửa là điểm tốt, nhưng thiếu blocker chưa tái hiện T12 và thiếu trạng thái/diễn biến xem lỗi chưa được giao T4/T10. Chưa biết nguyên nhân không đồng nghĩa chưa tái hiện.",
+      "source": "data/benchmarks/results/ollama/07_let_me_check.json",
+      "source_canonical_sha256": "3f37d4114fddeb7e320531aad6ae63baa08d61ed2f0ba424c3782d0f9180a41c"
+    },
+    {
+      "id": "08_self_commit_label",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Định dạng + ngữ nghĩa",
+      "reason": "Đúng lời xem lỗi/báo chiều nay T8, nhưng status confirmed với owner null thay cho needs_confirmation; due cũng bị mất khỏi trường cấu trúc. Guard chặn.",
+      "source": "data/benchmarks/results/ollama/08_self_commit_label.json",
+      "source_canonical_sha256": "b6b0070f9d173ab65a07ec014d6913252929c940da2c8d79e7396264dc804d79"
+    },
+    {
+      "id": "09_named_assignee_no_speaker",
+      "semantic_pass": true,
+      "ready_without_edit": false,
+      "error_class": "Định dạng",
+      "reason": "T9 giao Lan gửi báo cáo trước thứ Sáu; output giữ đúng người/việc/hạn/phần ghi chú. due có tiền tố trước khác quy ước fixture, không đổi nghĩa deadline.",
+      "source": "data/benchmarks/results/ollama/09_named_assignee_no_speaker.json",
+      "source_canonical_sha256": "710592e460379e4199f6dbf6ad29fa7e2c6952883ca72f2a13707e5a29ad2ef0"
+    },
+    {
+      "id": "10_indirect_consensus",
+      "semantic_pass": true,
+      "ready_without_edit": false,
+      "error_class": "Định dạng",
+      "reason": "T7/T13 đồng thuận dùng một cột. Màn hình báo cáo là tên cụ thể của đối tượng báo cáo, không phải nhầm sang một chủ đề khác.",
+      "source": "data/benchmarks/results/ollama/10_indirect_consensus.json",
+      "source_canonical_sha256": "790647ccad97f3a21b9c94ca8f00bf6cc74f577beb9aa98880e936c60dcba1ac"
+    },
+    {
+      "id": "11_unresolved_budget",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Content hoãn lựa chọn là đúng và không tạo việc chuyển dữ liệu, nhưng status needs_confirmation thay unresolved khác quy ước trạng thái đã chọn cho nội dung rõ ràng chưa chốt.",
+      "source": "data/benchmarks/results/ollama/11_unresolved_budget.json",
+      "source_canonical_sha256": "e1fcf0bd74cf4ed62a00db0bcb8aee0581f657bfa07d9abf97ea0b73e4361249"
+    },
+    {
+      "id": "12_reopen_confirmed",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Giữ câu hoãn T12 nhưng type decision thay unresolved. Issue hoàn tiền có bằng chứng T6, không phạt chỉ vì gold chưa liệt kê; lỗi chính vẫn là loại của kết luận mở lại.",
+      "source": "data/benchmarks/results/ollama/12_reopen_confirmed.json",
+      "source_canonical_sha256": "f926cb96bd99939739770c2bb144b326bec2bcda3ed1775856ee8884ff62d26b"
+    },
+    {
+      "id": "13_speakerless_pending",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Định dạng + ngữ nghĩa",
+      "reason": "Tên cách xuất báo cáo là cùng đối tượng; content chưa thống nhất đúng T12. Tuy nhiên status needs_confirmation thay unresolved vẫn là sai trạng thái, không tính toàn case đạt.",
+      "source": "data/benchmarks/results/ollama/13_speakerless_pending.json",
+      "source_canonical_sha256": "941db289a044fcafd42f9d5dc1849a61e631d9446d135a51fcc21eea374678e7"
+    },
+    {
+      "id": "14_request_not_assignment",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Không biến yêu cầu thành assignment là đúng, nhưng mất nội dung bộ lọc theo tháng T2 và câu chưa thống nhất trường thời gian T12; chỉ còn một issue chung chung.",
+      "source": "data/benchmarks/results/ollama/14_request_not_assignment.json",
+      "source_canonical_sha256": "a33e52eab552f952b1296518811056afafbc47cac8798535f34d2bffa8018564"
+    },
+    {
+      "id": "15_conditional_task",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Giữ vấn đề quyền truy cập, nhưng bỏ công việc Lan nhận kiểm tra hoàn tiền khi có sandbox T6. Ba issue không thay thế action có điều kiện.",
+      "source": "data/benchmarks/results/ollama/15_conditional_task.json",
+      "source_canonical_sha256": "af0d30edfac6295fc1f8a50b2ffaef1d925d12ca121599f93fdbf215f95f9ac5"
+    },
+    {
+      "id": "16_clear_decision",
+      "semantic_pass": true,
+      "ready_without_edit": false,
+      "error_class": "Định dạng/schema",
+      "reason": "Candidate giữ đúng quyết định phát hành 2.1 vào thứ Hai T11. due không được phép nằm trên decision nên bị guard chặn; thời điểm đó có thật, không phải ngày bịa. Ngữ nghĩa candidate đúng nhưng chưa dùng được.",
+      "source": "data/benchmarks/results/ollama/16_clear_decision.json",
+      "source_canonical_sha256": "600eba3cb28c93f3bb8fc51c9658877ec51f0a3bffe6cb5181032a089413133f"
+    },
+    {
+      "id": "17_clear_assignment",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Định dạng + ngữ nghĩa",
+      "reason": "Đúng biểu đồ đường và giữ người nhận Lan, nhưng mất phản hồi nhãn chữ T7; sai status việc tài liệu đã nhận T9; mất due T13 và ghi phân quyền chưa chốt thành issue.",
+      "source": "data/benchmarks/results/ollama/17_clear_assignment.json",
+      "source_canonical_sha256": "aab15d98f8ea53d563fce70c271068174e0ced511c599e06c430590d72866a12"
+    },
+    {
+      "id": "18_anonymous_assignment",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Công việc có thật T6, nhưng owner Người nói 2 không phải danh tính; status confirmed sai với actor chưa biết. Guard chặn trước khi xuất.",
+      "source": "data/benchmarks/results/ollama/18_anonymous_assignment.json",
+      "source_canonical_sha256": "511610e84c50eec60f661be76c218003b1b1bcdf09bc0f72c4d81deba7ad47e2"
+    },
+    {
+      "id": "19_speakerless_commitment",
+      "semantic_pass": false,
+      "ready_without_edit": false,
+      "error_class": "Ngữ nghĩa",
+      "reason": "Công việc/hạn có nguồn T5, nhưng owner Speaker null (T5) là định danh tự tạo; cần null và needs_confirmation. Guard chặn.",
+      "source": "data/benchmarks/results/ollama/19_speakerless_commitment.json",
+      "source_canonical_sha256": "ddc65f5cae6dac2e56f330889db3ee721ae8467794326efad62b0ba322bee109"
+    },
+    {
+      "id": "20_explicit_name_in_content",
+      "semantic_pass": true,
+      "ready_without_edit": false,
+      "error_class": "Định dạng",
+      "reason": "Huy giao Mai ở T9, Mai xác nhận T10. Output đúng Mai/việc/hạn; báo cáo tháng và báo cáo cùng đối tượng, chỉ khác tên topic so với fixture.",
+      "source": "data/benchmarks/results/ollama/20_explicit_name_in_content.json",
+      "source_canonical_sha256": "e94df62529f21ece86f046a4d84f1dc53952d90a6c9914cab7c1d8229a68346f"
+    }
+  ]
+}
